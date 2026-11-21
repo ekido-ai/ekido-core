@@ -194,7 +194,7 @@ SESSION=… ORG=… OUT=experiments/results/scale/k6-$(date +%F).json k6 run exp
 
 Sign-in is measured by `POST /v1/auth/email/verify` with a wrong token. That runs the sign-in lookup without sending an email, and a 4xx is the expected answer. The platform has no customer job list yet, so "the job list" is the coordinator's `GET /sepolia/jobs?limit=40`, the one the dashboard and admin pages read.
 
-### Result (21 Nov 2026, staging, client on a home network in India)
+### Result (22 Nov 2026 01:00 IST, i.e. 21 Nov 19:30 UTC; staging; client on a home network in India)
 
 | Endpoint | Requests | p50 | p95 | p99 | Errors |
 |---|---:|---:|---:|---:|---:|
