@@ -1,0 +1,89 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "ticket-sorter-hinglish",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 2,
+    "accumulation": 4,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 400,
+  "completed_step": 400,
+  "resumed_from_step": 320,
+  "train_rows": 626,
+  "test_rows": 100,
+  "mean_loss_last_10": 0.00016779310208221433,
+  "base_eval": null,
+  "eval": {
+    "pass_rate": 0.89,
+    "score": 0.89,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "3a0bf1b879f6fa9f05953b072c9b272554e23a3294ceadd17fc63e055c392ddf",
+    "floor": 0.8,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "complaint",
+        "answer": " complaint",
+        "passed": true
+      },
+      {
+        "reference": "order",
+        "answer": " order",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      },
+      {
+        "reference": "order",
+        "answer": " order",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      },
+      {
+        "reference": "other",
+        "answer": " other",
+        "passed": true
+      },
+      {
+        "reference": "complaint",
+        "answer": " complaint",
+        "passed": true
+      },
+      {
+        "reference": "order",
+        "answer": " order",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/c14-equal-seed-weight/train/checkpoints/step-400"
+  ],
+  "seconds": 91.0
+}
