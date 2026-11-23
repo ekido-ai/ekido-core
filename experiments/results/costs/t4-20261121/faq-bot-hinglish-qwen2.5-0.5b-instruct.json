@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "recipe": "faq-bot-hinglish",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "gpu": "Tesla T4",
+  "core_commit": "0fd7b3e32217bc9d9ab6659e72f5925a7d179751",
+  "worker_commit": "2bfde0d6b4743227900a33d0d140990788425d34",
+  "dataset_sha256": "dc5918dbf377192f3a0d5b342354b2e4c895c8cbf8e2f47646bc798807f17513",
+  "train_rows": 300,
+  "test_rows": 60,
+  "measurement": {
+    "scope": "training loop including checkpoint writes; excludes model loading and evaluation",
+    "steps": 20,
+    "non_padding_tokens": 9202,
+    "input_tokens_including_padding": 9202,
+    "seconds": 37.41028215799997,
+    "non_padding_tokens_per_second": 245.97515627216956,
+    "gpu_name": "Tesla T4",
+    "peak_allocated_bytes": 2518491648,
+    "peak_reserved_bytes": 3663724544
+  },
+  "note": "Short T4 training segment; no tariff or per-million monetary cost was supplied."
+}

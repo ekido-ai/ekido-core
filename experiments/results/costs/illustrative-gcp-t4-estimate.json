@@ -1,0 +1,23 @@
+{
+  "provider": "Google Cloud Compute Engine",
+  "gpu": "NVIDIA T4",
+  "region": "us-central1",
+  "currency": "USD",
+  "gpu_hourly_rate": "0.35",
+  "retrieved_on": "2026-11-21",
+  "source": "https://cloud.google.com/products/compute/gpus-pricing?hl=en",
+  "scope": "Illustrative GPU-only on-demand component, excluding VM, storage, network, taxes and overhead; not the Kaggle bill or an Ekido provider price.",
+  "formula": "hourly_rate * 1,000,000 * measured_loop_seconds / (3600 * measured_non_padding_tokens)",
+  "estimated_gpu_only_usd_per_million_tokens": {
+    "ticket-sorter-hinglish-qwen2.5-0.5b-instruct": "0.4686",
+    "ticket-sorter-hinglish-qwen2.5-1.5b-instruct": "0.5065",
+    "invoice-fields-qwen2.5-0.5b-instruct": "0.1386",
+    "invoice-fields-qwen2.5-1.5b-instruct": "0.1624",
+    "product-descriptions-qwen2.5-0.5b-instruct": "0.3770",
+    "product-descriptions-qwen2.5-1.5b-instruct": "0.4437",
+    "faq-bot-hinglish-qwen2.5-0.5b-instruct": "0.3953",
+    "faq-bot-hinglish-qwen2.5-1.5b-instruct": "0.4662",
+    "review-sentiment-qwen2.5-0.5b-instruct": "0.6240",
+    "review-sentiment-qwen2.5-1.5b-instruct": "0.7274"
+  }
+}

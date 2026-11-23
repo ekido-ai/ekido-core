@@ -1,0 +1,100 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "invoice-fields",
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 1,
+    "accumulation": 8,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 20,
+  "completed_step": 20,
+  "resumed_from_step": 0,
+  "train_rows": 200,
+  "test_rows": 50,
+  "mean_loss_last_10": 0.02148727352032438,
+  "base_eval": null,
+  "eval": {
+    "pass_rate": 0.8,
+    "score": 0.88,
+    "metric": "field_f1",
+    "examples": 50,
+    "eval_set_hash": "a835a5771e8368a40190ecb867bd8a36a67ae3d69520525b283aa01f8819f698",
+    "floor": 0.7,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 201\", \"invoice_no\": \"TEST-00201\", \"date\": \"2024-07-20\", \"total\": \"1507.13\", \"gstin\": \"27ZZZPZ0201Z1Z8\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 201\", \"invoice_no\": \"TEST-00201\", \"date\": \"2024-07-20\", \"total\": \"1507.13\", \"gstin\": \"27ZZZPZ0201Z1Z8\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 202\", \"invoice_no\": \"TEST-00202\", \"date\": \"2024-07-21\", \"total\": \"1514.26\", \"gstin\": \"27ZZZPZ0202Z1Z7\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 202\", \"invoice_no\": \"TEST-00202\", \"date\": \"2024-07-21\", \"total\": \"1514.26\", \"gstin\": \"27ZZZPZ0202Z1Z7\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 203\", \"invoice_no\": \"TEST-00203\", \"date\": \"2024-07-22\", \"total\": \"1521.39\", \"gstin\": \"27ZZZPZ0203Z1Z6\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 203\", \"invoice_no\": \"TEST-00203\", \"date\": \"2024-07-22\", \"total\": \"1521.39\", \"gstin\": \"27ZZZPZ0203Z1Z6\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 204\", \"invoice_no\": \"TEST-00204\", \"date\": \"2024-07-23\", \"total\": \"1528.52\", \"gstin\": \"27ZZZPZ0204Z1Z5\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 204\", \"invoice_no\": \"TEST-00204\", \"date\": \"2024-07-23\", \"total\": \"1528.52\", \"gstin\": \"27ZZZPZ0204Z1Z5\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 205\", \"invoice_no\": \"TEST-00205\", \"date\": \"2024-07-24\", \"total\": \"1535.65\", \"gstin\": \"27ZZZPZ0205Z1Z4\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 205\", \"invoice_no\": \"TEST-00205\", \"date\": \"2024-07-24\", \"total\": \"1535.65\", \"gstin\": \"27ZZZPZ0205Z1Z4\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 206\", \"invoice_no\": \"TEST-00206\", \"date\": \"2024-07-25\", \"total\": \"1542.78\", \"gstin\": \"27ZZZPZ0206Z1Z3\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 206\", \"invoice_no\": \"TEST-00206\", \"date\": \"2024-07-25\", \"total\": \"1542.78\", \"gstin\": \"27ZZZPZ0206Z1Z3\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 207\", \"invoice_no\": \"TEST-00207\", \"date\": \"2024-07-26\", \"total\": \"1549.91\", \"gstin\": \"27ZZZPZ0207Z1Z2\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 207\", \"invoice_no\": \"TEST-00207\", \"date\": \"2024-07-26\", \"total\": \"1549.91\", \"gstin\": \"27ZZZPZ0207Z1Z2\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 208\", \"invoice_no\": \"TEST-00208\", \"date\": \"2024-07-27\", \"total\": \"1556.04\", \"gstin\": \"27ZZZPZ0208Z1Z1\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 208\", \"invoice_no\": \"TEST-00208\", \"date\": \"2024-07-27\", \"total\": \"1556.04\", \"gstin\": \"27ZZZPZ0208Z1Z1\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 209\", \"invoice_no\": \"TEST-00209\", \"date\": \"2024-07-28\", \"total\": \"1563.17\", \"gstin\": \"27ZZZPZ0209Z1Z0\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 209\", \"invoice_no\": \"TEST-00209\", \"date\": \"2024-07-28\", \"total\": \"1563.17\", \"gstin\": \"27ZZZPZ0209Z1Z0\"}",
+        "passed": true
+      },
+      {
+        "reference": "{\"vendor\": \"Zevix Sample Supplier 210\", \"invoice_no\": \"TEST-00210\", \"date\": \"2024-07-29\", \"total\": \"1570.30\", \"gstin\": \"27ZZZPZ0210Z1Z7\"}",
+        "answer": " {\"vendor\": \"Zevix Sample Supplier 210\", \"invoice_no\": \"TEST-00210\", \"date\": \"2024-07-29\", \"total\": \"1570.30\", \"gstin\": \"27ZZZPZ0210Z1Z7\"}",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/cost-matrix/invoice-fields-qwen2.5-0.5b-instruct/training/checkpoints/step-20"
+  ],
+  "seconds": 185.9,
+  "training_metrics": {
+    "scope": "training loop including checkpoint writes; excludes model loading and evaluation",
+    "steps": 20,
+    "non_padding_tokens": 25810,
+    "input_tokens_including_padding": 25810,
+    "seconds": 36.78230042800004,
+    "non_padding_tokens_per_second": 701.6961881033541,
+    "gpu_name": "Tesla T4",
+    "peak_allocated_bytes": 2616961536,
+    "peak_reserved_bytes": 3428843520
+  }
+}

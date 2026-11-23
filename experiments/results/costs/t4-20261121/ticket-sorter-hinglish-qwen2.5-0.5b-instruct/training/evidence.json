@@ -1,0 +1,100 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "ticket-sorter-hinglish",
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 1,
+    "accumulation": 8,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 20,
+  "completed_step": 20,
+  "resumed_from_step": 0,
+  "train_rows": 500,
+  "test_rows": 100,
+  "mean_loss_last_10": 2.779487630724907,
+  "base_eval": null,
+  "eval": {
+    "pass_rate": 0.44,
+    "score": 0.44,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+    "floor": 0.8,
+    "meets_floor": false,
+    "samples": [
+      {
+        "reference": "order",
+        "answer": " order The customer support",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      },
+      {
+        "reference": "complaint",
+        "answer": " order The customer support",
+        "passed": false
+      },
+      {
+        "reference": "other",
+        "answer": " other <sep>",
+        "passed": true
+      },
+      {
+        "reference": "question",
+        "answer": " other; \nReason",
+        "passed": false
+      },
+      {
+        "reference": "refund",
+        "answer": " other <|end",
+        "passed": false
+      },
+      {
+        "reference": "other",
+        "answer": " complaint The customer support",
+        "passed": false
+      },
+      {
+        "reference": "refund",
+        "answer": " other <sep>",
+        "passed": false
+      },
+      {
+        "reference": "complaint",
+        "answer": " other <sep>",
+        "passed": false
+      },
+      {
+        "reference": "complaint",
+        "answer": " complaint The customer support",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/cost-matrix/ticket-sorter-hinglish-qwen2.5-0.5b-instruct/training/checkpoints/step-20"
+  ],
+  "seconds": 54.9,
+  "training_metrics": {
+    "scope": "training loop including checkpoint writes; excludes model loading and evaluation",
+    "steps": 20,
+    "non_padding_tokens": 8291,
+    "input_tokens_including_padding": 8291,
+    "seconds": 39.964807052,
+    "non_padding_tokens_per_second": 207.45752604816056,
+    "gpu_name": "Tesla T4",
+    "peak_allocated_bytes": 2464087552,
+    "peak_reserved_bytes": 2954887168
+  }
+}
