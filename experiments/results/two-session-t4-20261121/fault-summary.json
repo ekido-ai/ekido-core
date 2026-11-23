@@ -1,0 +1,30 @@
+{
+  "session": "B",
+  "core_revision": "0a9db037170024a1f32748e0b5dcbe14a1a88a3a",
+  "worker_revision": "74bf4e753ab30f4ce3b88a577a16b425c6fac923",
+  "source_archive_sha256": "cac28f7c8221f5c1e239f788a8eaa07120f7050e9acce75ee176365433a97bf9",
+  "gpu_info_a_used": {
+    "uuid": "GPU-937f8a56-6d5f-fb32-4de9-6813f5efce03",
+    "name": "Tesla T4"
+  },
+  "gpu_info_b": "0, GPU-5369f702-d076-bc65-e3fc-0354ab1360b0, Tesla T4, 14912 MiB, 56\n1, GPU-76ff1261-9f75-ebf7-2ad9-c21c6d89ce25, Tesla T4, 14912 MiB, 56\n",
+  "gpu_b_used": {
+    "uuid": "GPU-5369f702-d076-bc65-e3fc-0354ab1360b0",
+    "name": "Tesla T4"
+  },
+  "different_gpu_uuid": true,
+  "same_gpu_model": true,
+  "killed_after_step": 105,
+  "resumed_step": 80,
+  "lost_steps": 25,
+  "seconds_process_start_to_resumed_line": 48.985,
+  "seconds_process_start_to_first_resumed_step": 52.044,
+  "wall_clock_gap_a_kill_to_b_start_seconds": 533.9,
+  "completed_step": 400,
+  "test_pass_rate": 0.79,
+  "test_examples": 100,
+  "integrity": "source snapshot, checkpoint manifest and dataset SHA-256 matched session A",
+  "test_note": "Previously reused synthetic test; not an independent evaluation",
+  "scope_note": "Two separate Kaggle sessions; the checkpoint was moved by hand through a notebook output. Not provider-to-provider failover, not a staging settlement, and the GPU model may be the same.",
+  "timing_note": "No single kill-to-resume clock exists: the gap between sessions includes manual transfer. Only the time inside session B (process start to first resumed step) is measured."
+}

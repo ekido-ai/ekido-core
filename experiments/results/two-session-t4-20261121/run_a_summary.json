@@ -1,0 +1,15 @@
+{
+  "session": "A",
+  "core_revision": "0a9db037170024a1f32748e0b5dcbe14a1a88a3a",
+  "worker_revision": "74bf4e753ab30f4ce3b88a577a16b425c6fac923",
+  "source_archive_sha256": "cac28f7c8221f5c1e239f788a8eaa07120f7050e9acce75ee176365433a97bf9",
+  "gpu_info": "0, GPU-937f8a56-6d5f-fb32-4de9-6813f5efce03, Tesla T4, 14912 MiB, 50\n1, GPU-80bc5713-2472-7b57-1c66-53c7390c4a41, Tesla T4, 14912 MiB, 52\n",
+  "used_gpu_uuid": "GPU-937f8a56-6d5f-fb32-4de9-6813f5efce03",
+  "used_gpu_name": "Tesla T4",
+  "killed_after_step": 105,
+  "kill_time_utc": "2026-11-21T13:50:35.143645+00:00",
+  "checkpoint_step": 80,
+  "checkpoint_manifest_sha256": "4a192e350300a4437eed096487d8450dd1cc6ef9d1c099eca4ccbc04ee507127",
+  "dataset_sha256": "2a3e623bdcf690f3301894c3b1b75e0e72bb8e63a99245e91760f4765083debc",
+  "note": "Session A of a two-session test; the checkpoint is moved to session B by hand."
+}
