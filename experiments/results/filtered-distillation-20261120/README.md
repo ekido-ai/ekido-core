@@ -36,6 +36,22 @@ similarity between a generated invoice input and a test input was 0.746. The
 perfect invoice score should be understood in that context. FAQ remains below
 its quality floor.
 
+## FAQ factual mismatch audit
+
+The FAQ scorer uses token overlap and a 0.4 per-example ROUGE-L pass mark;
+it does not check whether the answer's facts agree with the reference. In
+the seven reported FAQ passes, manual inspection identified at least three
+clear contradictions: a 6 pm rather than 5 pm closing time, an answer
+saying the clinic is open on Sundays when the reference says closed, and a
+fee of 100 TL instead of 400 rupees. Their individual scores still exceed 0.4.
+The examples are fictional, but this demonstrates that a pass can include an
+incorrect fact; the 7/60 result must not be treated as seven factually correct
+answers. `faq-factual-audit.json` records the cases and
+`python experiments/results/filtered-distillation-20261120/faq-factual-audit.py`
+reproduces the scorer results. The three examples are not a complete semantic
+audit. A factual evaluation method needs explicit design and review before it
+can replace the shared quality policy.
+
 The runtime source is workers `69f37fe0dd5b88f8773085f7f1dbdd221d2b8906`;
 core source is `0a9db037170024a1f32748e0b5dcbe14a1a88a3a`. The worker
 requests teacher revision `a09a35458c702b33eeacc393d103063234e8bc28`, while
