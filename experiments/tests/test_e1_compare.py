@@ -176,6 +176,28 @@ class E1Comparison(TestCase):
         self.assertEqual(result['runs']['student']['passed'], 0)
         self.assertAlmostEqual(result['runs']['student']['results'][0]['score'], .8)
 
+    def test_invoice_allows_a_numeric_total_but_not_nan_or_boolean(self):
+        values = {'vendor': 'Acme', 'invoice_no': 'INV-1', 'date': '2026-01-02', 'total': 42.0, 'gstin': 'ABC123'}
+        for value, accepted in ((42.0, True), (float('nan'), False), (True, False)):
+            values['total'] = value
+            target = json.dumps(values)
+            row = {'text': 'invoice A', 'json': target}
+            self.dataset.write_text(json.dumps(row) + '\n', encoding='utf-8', newline='\n')
+            self.train.write_text(json.dumps({'text': 'invoice B', 'json': target}) + '\n', encoding='utf-8')
+            digest = e1.sha(self.dataset.read_bytes())
+            self.review.write_text(json.dumps({'recipe_id': 'invoice-fields', 'dataset_sha256': digest,
+                'confirmed': True, 'reviewer': 'x', 'evidence': 'x'}), encoding='utf-8')
+            for role in e1.ROLES:
+                self.contents[role]['dataset_sha256'] = digest
+                self.contents[role]['records'] = [{'input_sha256': e1.sha(row['text'].encode()), 'answer': target,
+                                                   'input_tokens': 10, 'output_tokens': 5}]
+            self.save_runs()
+            if accepted:
+                self.assertEqual(self.compare()['runs']['base']['passed'], 1)
+            else:
+                with self.assertRaisesRegex(ValueError, 'required fields'):
+                    self.compare()
+
 
 if __name__ == '__main__':
     main()

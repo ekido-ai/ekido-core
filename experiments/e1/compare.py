@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import sys
 import tempfile
@@ -131,7 +132,10 @@ def compare(dataset_file: Path, train_file: Path, review_file: Path, run_files: 
             except (TypeError, ValueError):
                 raise ValueError('invalid invoice target') from None
             required = ('vendor', 'invoice_no', 'date', 'total', 'gstin')
-            if not isinstance(fields, dict) or any(not isinstance(fields.get(k), str) or not fields[k].strip() for k in required):
+            def valid_field(value):
+                return ((isinstance(value, str) and bool(value.strip()))
+                        or (type(value) is int) or (type(value) is float and math.isfinite(value)))
+            if not isinstance(fields, dict) or any(not valid_field(fields.get(k)) for k in required):
                 raise ValueError('invoice target must have all required fields')
     heldout = [normalise(row[source]) for row in rows]
     if len(set(heldout)) != len(heldout) or set(heldout) & {normalise(row[source]) for row in training}:
