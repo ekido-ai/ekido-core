@@ -4,9 +4,8 @@ import os
 import subprocess
 import sys
 import tempfile
-import unittest
 from pathlib import Path
-from unittest import mock
+from unittest import TestCase, main, mock
 
 PATH = Path(__file__).resolve().parents[1] / 'e1' / 'compare.py'
 spec = importlib.util.spec_from_file_location('e1_compare', PATH)
@@ -14,7 +13,7 @@ e1 = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(e1)
 
 
-class E1Comparison(unittest.TestCase):
+class E1Comparison(TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
@@ -179,4 +178,4 @@ class E1Comparison(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    main()
