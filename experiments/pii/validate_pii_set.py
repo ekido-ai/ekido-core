@@ -7,8 +7,9 @@ Each line is {"text": str, "spans": [{"start": int, "end": int, "type": str}]}. 
 - every span lies inside its text, is non-empty, has a known type, and doesn't overlap another span on that line
 - at least 60 lines with no spans, so false positives can be measured
 - every type appears at least 10 times
-- AADHAAR spans are 12 digits that pass the Verhoeff check, PAN spans look like ABCDE1234F, and EMAIL spans
-  contain an @ (so labels match what they claim to be)
+- AADHAAR spans are 12 digits that pass the Verhoeff check and start with 0 or 1 (UIDAI never issues those, so no real person
+  holds one); PAN spans look like ABCDE1234F with a 4th letter that is not a holder-type code (P C H F A T B L J G, so no real PAN
+  has it); PHONE spans are ten digits starting with 5 (an unallocated series), after an optional +91 or 0; EMAIL spans contain an @
 - no duplicate texts, and DATASHEET.md exists next to the set.
 
 Exit code 0 means it passed. Every problem is printed.
@@ -25,6 +26,7 @@ from pathlib import Path
 TYPES = {"NAME", "PHONE", "EMAIL", "AADHAAR", "PAN", "GSTIN", "UPI_ID", "ADDRESS"}
 MIN_LINES, MIN_CLEAN, MIN_PER_TYPE = 300, 60, 10
 PAN = re.compile(r"^[A-Z]{5}\d{4}[A-Z]$")
+ISSUED_PAN_TYPES = "PCHFATBLJG"
 
 # Verhoeff tables (the checksum Aadhaar numbers use).
 _D = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [1, 2, 3, 4, 0, 6, 7, 8, 9, 5], [2, 3, 4, 0, 1, 7, 8, 9, 5, 6],
@@ -92,10 +94,17 @@ def validate(path: Path) -> list[str]:
             value = text[start:end]
             if kind == "AADHAAR":
                 digits = re.sub(r"[\s-]", "", value)
-                if not (len(digits) == 12 and digits.isdigit() and digits[0] not in "01" and verhoeff_ok(digits)):
-                    errors.append(f"line {number}: AADHAAR span {value!r} isn't 12 digits passing the Verhoeff check")
+                if not (len(digits) == 12 and digits.isdigit() and digits[0] in "01" and verhoeff_ok(digits)):
+                    errors.append(f"line {number}: AADHAAR span {value!r} isn't 12 digits passing the Verhoeff check and starting with 0 or 1 (a number UIDAI cannot issue)")
             elif kind == "PAN" and not PAN.match(value):
                 errors.append(f"line {number}: PAN span {value!r} doesn't look like ABCDE1234F")
+            elif kind == "PAN" and value[3] in ISSUED_PAN_TYPES:
+                errors.append(f"line {number}: PAN span {value!r} has an issued holder-type letter {value[3]!r} as its 4th letter, so it could belong to a real person")
+            elif kind == "PHONE":
+                number_only = re.sub(r"[^0-9]", "", value)
+                tail = number_only[-10:]
+                if len(number_only) not in (10, 11, 12) or tail[:1] != "5" or (len(number_only) == 12 and not number_only.startswith("91")) or (len(number_only) == 11 and not number_only.startswith("0")):
+                    errors.append(f"line {number}: PHONE span {value!r} isn't a ten-digit number starting with 5 (an unallocated series), after an optional +91 or 0")
             elif kind == "EMAIL" and "@" not in value:
                 errors.append(f"line {number}: EMAIL span {value!r} has no @")
     for kind in sorted(TYPES):
