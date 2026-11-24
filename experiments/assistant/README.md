@@ -16,12 +16,16 @@ Use an actual authorized API URL instead of the placeholder. HTTPS is required
 except for numeric loopback HTTP. Redirects and environment proxies are disabled.
 The scorer preflights all mappings, fails without overwriting existing results,
 and stops on a transport failure without claiming a completed score. Results
-include the prompt-set hash, per-case prompt and response hashes, structural
-valid-spec rate, expected recipe/language/label match rate, and each refusal or
+include the prompt-set hash, per-case prompt and response hashes, the valid-proposal
+rate, expected recipe/language/label match rate, request latency (p50 and p95, in
+milliseconds), the version of the recipe cards that answered, and each refusal or
 miss. They omit prompt and response bodies; use synthetic prompts only.
 
-The 90% target applies to structurally valid previews. Report the separate
-expected-match rate as well: a valid but wrong recipe is not a correct answer.
+The assistant answers with a proposal (a recipe, and the next step: upload, or quote
+when the dataset sent matches), never a job spec: the quote path builds the only spec.
+A valid proposal names one recipe and reaches the quote for the dataset sent.
+The 90% target applies to valid proposals. Report the separate
+expected-match rate as well: a valid but wrong language or labels is not a correct answer.
 `review` is recorded separately and does not count as an explicit refusal.
 Model screening and passing this test do not constitute human policy approval.
 

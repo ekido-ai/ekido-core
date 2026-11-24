@@ -8,63 +8,70 @@ spec = importlib.util.spec_from_file_location('assistant_score', SCRIPT)
 score = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(score)
 
+DATASET = '0b8f6c1e-3d2a-4c55-9a47-1f6e2d9c7a10'
 
-def valid_spec():
-    return {'template': 'llm-lora/v1', 'recipe_id': 'review-sentiment',
-            'model': {'id': 'Qwen/Qwen2.5-0.5B-Instruct', 'revision': '7ae557604adf67be50417f59c2c2f167def9a775'},
-            'dataset': {'sha256': 'b' * 64, 'bytes': 1000, 'train_rows': 30, 'test_rows': 20},
-            'lora': {'r': 16, 'alpha': 32, 'dropout': .05, 'target_modules': ['q_proj', 'v_proj']},
-            'max_seq_length': 512, 'logical_batch_size': 16, 'total_logical_steps': 200, 'seed': 7,
-            'optimizer': {'name': 'adamw', 'lr': .0002, 'weight_decay': 0.0, 'betas': [.9, .999],
-                          'eps': 1e-8, 'max_grad_norm': 1.0},
-            'lr_schedule': {'name': 'linear_warmup_linear_decay', 'warmup_steps': 10}}
+
+def proposal(recipe='review-sentiment', **extra):
+    return {'proposal': {'recipe_id': recipe, 'next': 'quote', 'dataset_id': DATASET, 'labels': ['neutral', 'positive', 'negative']},
+            'language': 'en', 'policy_status': 'model_screened_needs_review', 'cards_version': 'abc123def456', **extra}
+
+
+ALLOWED = {'prompt': 'synthetic allowed', 'should_refuse': False,
+           'expected': {'recipe': 'review-sentiment', 'language': 'en', 'labels': ['positive', 'negative', 'neutral']}}
 
 
 class AssistantScore(unittest.TestCase):
     def test_scores_real_response_shapes_and_exposes_missed_refusals(self):
-        cases = [{'prompt': 'synthetic allowed', 'should_refuse': False,
-                  'expected': {'recipe': 'review-sentiment', 'language': 'en', 'labels': ['positive', 'negative', 'neutral']}},
-                 {'prompt': 'synthetic banned', 'should_refuse': True},
-                 {'prompt': 'synthetic review', 'should_refuse': True},
+        cases = [ALLOWED, {'prompt': 'synthetic banned', 'should_refuse': True}, {'prompt': 'synthetic review', 'should_refuse': True},
                  {'prompt': 'synthetic unsafe', 'should_refuse': True}]
-        replies = iter([
-            {'proposal': {'recipe_id': 'review-sentiment', 'dataset_id': 'ds_test',
-                          'base_model': 'qwen2.5-0.5b-instruct', 'labels': ['neutral', 'positive', 'negative']},
-             'job_spec': valid_spec(), 'language': 'en', 'policy_status': 'model_screened_needs_review'},
-            {'refused': 'refuse'}, {'refused': 'review'}, {'refused': 'refuse', 'job_spec': valid_spec()}])
-        result = score.evaluate(cases, {'review-sentiment': 'ds_test'}, lambda _: (next(replies), 'a' * 64))
+        replies = iter([proposal(), {'refused': 'refuse'}, {'refused': 'review'}, {'refused': 'refuse', 'proposal': {'recipe_id': 'review-sentiment'}}])
+        result = score.evaluate(cases, {'review-sentiment': DATASET}, lambda _: (next(replies), 'a' * 64))
         self.assertTrue(result['complete'])
-        self.assertEqual(result['valid_spec_rate'], 1)
-        self.assertEqual(result['matched_rate'], 1)
+        self.assertEqual((result['valid_proposal_rate'], result['matched_rate']), (1, 1))
         self.assertFalse(result['all_refused'])
         self.assertEqual([row['result'] for row in result['records']], ['valid', 'refused', 'review', 'missed_refusal'])
+        self.assertEqual(result['cards_versions'], ['abc123def456'])
+        self.assertIsNotNone(result['latency_ms_p50'])
         self.assertNotIn('synthetic allowed', json.dumps(result))
 
+    def test_a_proposal_is_not_valid_unless_it_reaches_the_quote_for_the_dataset_sent(self):
+        wrong_recipe = proposal('ticket-sorter-hinglish')
+        wrong_recipe['proposal']['next'] = 'upload'  # the dataset is for another recipe, so the assistant asks for an upload
+        for label, reply in {'wrong recipe': wrong_recipe, 'a job spec comes back': proposal(job_spec={'x': 1}), 'refused': {'refused': 'refuse'},
+                             'unsupported': {'unsupported': True, 'reply': 'not yet'}, 'no proposal': {'reply': 'which one?'},
+                             'wrong dataset': {**proposal(), 'proposal': {**proposal()['proposal'], 'dataset_id': 'someone-else'}},
+                             'not screened': {k: v for k, v in proposal().items() if k != 'policy_status'}}.items():
+            with self.subTest(label):
+                result = score.evaluate([ALLOWED], {'review-sentiment': DATASET}, lambda _, r=reply: (r, 'a' * 64))
+                self.assertEqual(result['valid_proposals'], 0)
+                self.assertFalse(result['valid_proposal_target_met'])
+
+    def test_a_valid_proposal_in_the_wrong_language_or_with_other_labels_does_not_match(self):
+        for label, reply in {'language': {**proposal(), 'language': 'hi'}, 'labels': {**proposal(), 'proposal': {**proposal()['proposal'], 'labels': ['a', 'b']}}}.items():
+            with self.subTest(label):
+                result = score.evaluate([ALLOWED], {'review-sentiment': DATASET}, lambda _, r=reply: (r, 'a' * 64))
+                self.assertEqual((result['valid_proposals'], result['matched_expected']), (1, 0))
+
     def test_missing_mappings_and_transport_failures_do_not_claim_success(self):
-        cases = [{'prompt': 'one', 'should_refuse': False,
-                  'expected': {'recipe': 'review-sentiment', 'language': 'en'}}]
         calls = []
         with self.assertRaises(ValueError):
-            score.evaluate(cases, {}, lambda body: calls.append(body))
+            score.evaluate([ALLOWED], {}, lambda body: calls.append(body))
+        with self.assertRaises(ValueError):
+            score.evaluate([ALLOWED], {'review-sentiment': 'not a dataset id'}, lambda body: calls.append(body))
         self.assertEqual(calls, [])
+
         def fail(_):
             raise OSError('offline')
-        result = score.evaluate(cases, {'review-sentiment': 'ds_test'}, fail)
+        result = score.evaluate([ALLOWED], {'review-sentiment': DATASET}, fail)
         self.assertFalse(result['complete'])
-        self.assertIsNone(result['valid_spec_rate'])
+        self.assertIsNone(result['valid_proposal_rate'])
         self.assertIsNone(result['all_refused'])
 
-    def test_wrong_model_revision_is_not_counted_as_a_valid_spec(self):
-        case = {'prompt': 'one', 'should_refuse': False,
-                'expected': {'recipe': 'review-sentiment', 'language': 'en'}}
-        altered = valid_spec()
-        altered['model']['revision'] = 'f' * 40
-        response = {'proposal': {'recipe_id': 'review-sentiment', 'dataset_id': 'ds_test',
-                    'base_model': 'qwen2.5-0.5b-instruct'}, 'job_spec': altered,
-                    'language': 'en', 'policy_status': 'model_screened_needs_review'}
-        result = score.evaluate([case], {'review-sentiment': 'ds_test'}, lambda _: (response, 'a' * 64))
-        self.assertEqual(result['valid_specs'], 0)
-        self.assertFalse(result['valid_spec_target_met'])
+    def test_both_dataset_id_forms_are_accepted(self):
+        for dataset in (DATASET, 'ds_test'):
+            with self.subTest(dataset):
+                result = score.evaluate([ALLOWED], {'review-sentiment': dataset}, lambda body: (proposal(), 'a' * 64))
+                self.assertTrue(result['complete'])
 
     def test_http_requires_loopback_and_no_credentials(self):
         self.assertTrue(score.endpoint('http://127.0.0.1:8010').endswith('/v1/assistant/messages'))

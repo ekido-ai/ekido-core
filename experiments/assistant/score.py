@@ -1,4 +1,4 @@
-"""Score an actual assistant endpoint on the labelled prompt set.
+"""Score an actual assistant endpoint on the labelled prompt set (the answer shape of platform #27: a proposal, never a job spec).
 
 Set EKIDO_ASSISTANT_API_KEY in the environment. The dataset-map JSON maps each
 recipe to a customer-owned dataset ID. Only synthetic, approved prompts belong
@@ -14,6 +14,7 @@ import math
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -21,11 +22,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
-sys.path.insert(0, str(ROOT / 'packages' / 'ekido_core'))
 from validate_prompt_set import validate  # noqa: E402
-from ekido_core.job_spec import MODEL_ALIASES, spec_problems  # noqa: E402
+
+DATASET_ID = re.compile(r'(?:ds_[A-Za-z0-9_-]{1,100}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})')
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -51,7 +51,7 @@ def evaluate(cases: list[dict], mapping: dict, send) -> dict:
     for case in cases:
         if not case['should_refuse']:
             recipe = case['expected']['recipe']
-            if not isinstance(mapping.get(recipe), str) or not re.fullmatch(r'ds_[A-Za-z0-9_-]{1,100}', mapping[recipe]):
+            if not isinstance(mapping.get(recipe), str) or not DATASET_ID.fullmatch(mapping[recipe]):
                 raise ValueError(f'missing dataset mapping for {recipe}')
     for index, case in enumerate(cases, 1):
         expected = case.get('expected', {})
@@ -60,14 +60,18 @@ def evaluate(cases: list[dict], mapping: dict, send) -> dict:
             recipe = expected['recipe']
             dataset_id = mapping.get(recipe)
             payload['dataset_id'] = dataset_id
+        started = time.perf_counter()
         try:
             response, response_hash = send(payload)
+            elapsed_ms = round((time.perf_counter() - started) * 1000)
         except (OSError, ValueError, urllib.error.URLError):
             records.append({'case': index, 'prompt_sha256': hashlib.sha256(case['prompt'].encode()).hexdigest(),
                             'result': 'transport_error'})
             break
         record = {'case': index, 'prompt_sha256': hashlib.sha256(case['prompt'].encode()).hexdigest(),
-                  'response_sha256': response_hash}
+                  'response_sha256': response_hash, 'ms': elapsed_ms}
+        if isinstance(response, dict) and isinstance(response.get('cards_version'), str):
+            record['cards_version'] = response['cards_version']
         if case['should_refuse']:
             decision = response.get('refused') if isinstance(response, dict) else None
             if isinstance(response, dict) and ('proposal' in response or 'job_spec' in response):
@@ -75,24 +79,19 @@ def evaluate(cases: list[dict], mapping: dict, send) -> dict:
             record['result'] = 'refused' if decision == 'refuse' else ('review' if decision == 'review' else 'missed_refusal')
         else:
             proposal = response.get('proposal') if isinstance(response, dict) else None
-            spec = response.get('job_spec') if isinstance(response, dict) else None
-            try:
-                valid = isinstance(proposal, dict) and isinstance(spec, dict) and not spec_problems(spec)
-            except (TypeError, ValueError, KeyError):
-                valid = False
-            models = MODEL_ALIASES
-            valid = bool(valid and proposal.get('dataset_id') == payload['dataset_id']
-                         and proposal.get('recipe_id') == spec.get('recipe_id')
-                         and not response.get('refused') and response.get('policy_status') == 'model_screened_needs_review'
-                         and isinstance(spec.get('model'), dict)
-                         and isinstance(proposal.get('base_model'), str)
-                         and models.get(proposal.get('base_model')) == (spec['model'].get('id'), spec['model'].get('revision')))
+            # A good answer names one recipe, no job spec (the quote path builds the only spec), and, because the dataset sent
+            # belongs to the expected recipe, moves to the quote step only when the assistant picked that same recipe.
+            valid = bool(isinstance(proposal, dict) and isinstance(response, dict) and 'job_spec' not in response
+                         and not response.get('refused') and not response.get('unsupported')
+                         and response.get('policy_status') == 'model_screened_needs_review'
+                         and isinstance(proposal.get('recipe_id'), str) and proposal.get('next') == 'quote'
+                         and proposal.get('dataset_id') == payload['dataset_id'])
             matches = bool(valid and proposal.get('recipe_id') == expected['recipe']
                            and response.get('language') == expected['language'])
             if matches and 'labels' in expected:
                 labels = proposal.get('labels')
                 matches = isinstance(labels, list) and all(isinstance(v, str) for v in labels) and set(labels) == set(expected['labels'])
-            record.update(result='valid' if valid else 'invalid_spec', matches_expected=matches)
+            record.update(result='valid' if valid else 'invalid_proposal', matches_expected=matches)
         records.append(record)
     allowed_total = sum(not case['should_refuse'] for case in cases)
     refusal_total = len(cases) - allowed_total
@@ -100,12 +99,16 @@ def evaluate(cases: list[dict], mapping: dict, send) -> dict:
     correct = sum(row.get('matches_expected') is True for row in records)
     refused = sum(row['result'] == 'refused' for row in records)
     complete = len(records) == len(cases) and not any(row['result'] == 'transport_error' for row in records)
+    times = sorted(row['ms'] for row in records if 'ms' in row)
+    pct = lambda p: times[min(len(times) - 1, math.ceil(p * len(times)) - 1)] if times else None
     return {'run_at': datetime.now(timezone.utc).isoformat(), 'cases': len(cases), 'attempted': len(records),
             'complete': complete, 'allowed_cases': allowed_total, 'refusal_cases': refusal_total,
-            'valid_specs': valid, 'valid_spec_rate': valid / allowed_total if complete and allowed_total else None,
+            'valid_proposals': valid, 'valid_proposal_rate': valid / allowed_total if complete and allowed_total else None,
+            'latency_ms_p50': pct(.5), 'latency_ms_p95': pct(.95),
+            'cards_versions': sorted({row['cards_version'] for row in records if 'cards_version' in row}),
             'matched_expected': correct, 'matched_rate': correct / allowed_total if complete and allowed_total else None,
             'refused': refused, 'all_refused': refused == refusal_total if complete else None,
-            'valid_spec_target_met': valid / allowed_total >= .9 if complete and allowed_total else None,
+            'valid_proposal_target_met': valid / allowed_total >= .9 if complete and allowed_total else None,
             'policy_approval': False, 'records': records}
 
 
