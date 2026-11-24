@@ -2,9 +2,14 @@
 
     python -I experiments/pii/generate_pii_set.py [--out path/to/pii-set.jsonl]
 
-Everything is made up. Names, places and amounts are drawn from short lists of common words; phone numbers, Aadhaar,
-PAN, GSTIN and UPI IDs are random values in the right format (Aadhaar numbers pass the Verhoeff check, GSTIN
-numbers pass their own check digit). Emails use the reserved example.com / example.org / example.net domains. The
+Everything is made up, and no identifier can belong to a real person. Names, places and amounts are drawn from short lists of
+common words. Phone numbers, Aadhaar, PAN, GSTIN and UPI IDs have the right shape but cannot be issued:
+- Aadhaar numbers pass the Verhoeff check but start with 0 or 1, which UIDAI never issues;
+- mobile numbers start with 5, a series India does not allocate (real mobiles start with 6 to 9), and are always written with a
+  +91 or 0 prefix or with a space or hyphen inside, never as a bare ten-digit string;
+- PANs use a 4th letter that is not one of the ten holder-type codes (P C H F A T B L J G), so no PAN carries it;
+- GSTINs pass their own check digit but contain such a PAN, so none can be real.
+Emails use the reserved example.com / example.org / example.net domains. The
 output is fixed by the seed, so the same command always writes the same file. Span offsets are computed while the
 text is built, never typed by hand.
 """
@@ -63,7 +68,7 @@ def digits(rng: random.Random, n: int) -> str:
 
 def aadhaar_digits(rng: random.Random) -> str:
     while True:
-        body = rng.choice("23456789") + digits(rng, 10)
+        body = rng.choice("01") + digits(rng, 10)  # 0 and 1 are never the first digit of an issued Aadhaar number
         for last in "0123456789":
             if verhoeff_ok(body + last):
                 return body + last
@@ -77,9 +82,13 @@ def not_aadhaar_digits(rng: random.Random) -> str:
             return candidate
 
 
+ISSUED_PAN_TYPES = "PCHFATBLJG"  # the 4th letter of a real PAN is one of these ten holder types
+UNUSED_PAN_TYPES = "DEKMNQRSUVWXYZ"  # letters that are not a holder type, so no real PAN has them
+
+
 def pan(rng: random.Random) -> str:
     letters = "ABCDEFGHJKLMNPRSTUVWXYZ"
-    return "".join(rng.choice(letters) for _ in range(3)) + "P" + rng.choice(letters) + digits(rng, 4) + rng.choice(letters)
+    return "".join(rng.choice(letters) for _ in range(3)) + rng.choice(UNUSED_PAN_TYPES) + rng.choice(letters) + digits(rng, 4) + rng.choice(letters)
 
 
 def gstin(rng: random.Random) -> str:
@@ -106,14 +115,14 @@ class Maker:
         return first[1] if self.deva else first[0]
 
     def phone(self) -> str:
-        number = self.rng.choice("6789") + digits(self.rng, 9)
+        number = "5" + digits(self.rng, 9)  # India allocates no mobile series starting with 5, so this is nobody's number
         style = self.rng.randrange(4)
         if style == 0:
-            return number
-        if style == 1:
             return "+91" + number
-        if style == 2:
+        if style == 1:
             return f"+91 {number[:5]} {number[5:]}"
+        if style == 2:
+            return "0" + number
         return f"{number[:5]}-{number[5:]}"
 
     def email(self) -> str:
@@ -153,15 +162,15 @@ class Maker:
     def amount(self) -> str:
         return str(self.rng.choice([199, 349, 499, 899, 1250, 2499, 3999]) + self.rng.randint(0, 40))
 
-    def long_ref(self) -> str:  # 10 digits starting 6-9: looks like a phone number but is a tracking number
-        return self.rng.choice("6789") + digits(self.rng, 9)
+    def long_ref(self) -> str:  # 10 digits: looks like a phone number but is a tracking number (starts with 5, so it is nobody's number)
+        return "5" + digits(self.rng, 9)
 
     def bare_ref(self) -> str:  # 12 digits that fail Verhoeff: looks like Aadhaar but is not
         return not_aadhaar_digits(self.rng)
 
-    def pan_like(self) -> str:  # coupon code shaped like a PAN: five letters, four digits, a letter
+    def pan_like(self) -> str:  # coupon code shaped like a PAN: five letters, four digits, a letter (4th letter never a holder type)
         letters = "ABCDEFGHJKLMNPRSTUVWXYZ"
-        return "".join(self.rng.choice(letters) for _ in range(5)) + digits(self.rng, 4) + self.rng.choice(letters)
+        return "".join(self.rng.choice(letters) for _ in range(3)) + self.rng.choice(UNUSED_PAN_TYPES) + self.rng.choice(letters) + digits(self.rng, 4) + self.rng.choice(letters)
 
     def product(self) -> str:
         return self.rng.choice(PRODUCTS)

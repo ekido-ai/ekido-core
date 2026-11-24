@@ -2,6 +2,7 @@
 import csv
 import importlib.util
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -19,6 +20,7 @@ def load(relative: str):
 datasets = load("recipes/validate_dataset.py")
 pii = load("pii/validate_pii_set.py")
 prompts = load("assistant/validate_prompt_set.py")
+pii_generator = load("pii/generate_pii_set.py")
 
 SHEET = "\n".join(f"## {s}\ntext" for s in datasets.DATASHEET_SECTIONS)
 
@@ -96,8 +98,8 @@ class RecipeDatasets(unittest.TestCase):
 
 
 def aadhaar() -> str:
-    """A made-up 12-digit number that passes the Verhoeff check."""
-    base = "23412341234"
+    """A made-up 12-digit number that passes the Verhoeff check and starts with 0 (UIDAI never issues those)."""
+    base = "01234123412"
     for last in "0123456789":
         if pii.verhoeff_ok(base + last):
             return base + last
@@ -106,7 +108,7 @@ def aadhaar() -> str:
 
 def pii_lines(clean=60) -> list[dict]:
     samples = {
-        "NAME": "Ravi Kumar", "PHONE": "9876543210", "EMAIL": "ravi@example.com", "AADHAAR": aadhaar(),
+        "NAME": "Ravi Kumar", "PHONE": "+91 54321 09876", "EMAIL": "ravi@example.com", "AADHAAR": aadhaar(),
         "PAN": "ABCDE1234F", "GSTIN": "27ABCDE1234F1Z5", "UPI_ID": "ravi@okbank", "ADDRESS": "12 MG Road, Pune",
     }
     lines = []
@@ -135,12 +137,56 @@ class PiiSet(unittest.TestCase):
         lines = pii_lines()
         lines[0]["spans"][0]["end"] = 999
         lines[1]["spans"][0]["type"] = "SSN"
-        bad = {"text": "aadhaar 2341 2341 2340", "spans": [{"start": 8, "end": 22, "type": "AADHAAR"}]}
-        lines.append(bad if not pii.verhoeff_ok("234123412340") else {"text": "x", "spans": []})
+        bad = {"text": "aadhaar 0123 4123 4120", "spans": [{"start": 8, "end": 22, "type": "AADHAAR"}]}
+        lines.append(bad if not pii.verhoeff_ok("012341234120") else {"text": "x", "spans": []})
         joined = "\n".join(pii.validate(self.write(lines)))
         self.assertIn("outside the text", joined)
         self.assertIn("'SSN'", joined)
         self.assertIn("Verhoeff", joined)
+
+    def test_identifiers_that_could_belong_to_a_real_person_are_refused(self):
+        real_aadhaar = next("2341234123" + d + c for d in "0123456789" for c in "0" if pii.verhoeff_ok("2341234123" + d + c))
+        shapes = {
+            "AADHAAR": real_aadhaar,                  # starts with 2: a number UIDAI could have issued
+            "PAN": "ABCPE1234F",                      # 4th letter P: an individual's PAN
+            "PHONE": "9876543210",                    # a mobile series that is allocated
+        }
+        for kind, value in shapes.items():
+            with self.subTest(kind):
+                lines = pii_lines()
+                lines.append({"text": f"x {value}", "spans": [{"start": 2, "end": 2 + len(value), "type": kind}]})
+                joined = "\n".join(pii.validate(self.write(lines)))
+                self.assertTrue(any(word in joined for word in ("cannot issue", "holder-type", "unallocated")), joined)
+
+    def test_every_identifier_in_the_committed_set_is_one_that_cannot_be_issued(self):
+        path = HERE / "pii" / "pii-set.jsonl"
+        self.assertEqual(pii.validate(path), [])
+        rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+        seen = {"AADHAAR": 0, "PAN": 0, "PHONE": 0, "GSTIN": 0}
+        for row in rows:
+            for span in row["spans"]:
+                value = row["text"][span["start"]:span["end"]]
+                kind = span["type"]
+                if kind == "AADHAAR":
+                    self.assertIn(value.replace(" ", "").replace("-", "")[0], "01", value)
+                elif kind == "PAN":
+                    self.assertNotIn(value[3], "PCHFATBLJG", value)
+                elif kind == "PHONE":
+                    self.assertEqual(re.sub(r"[^0-9]", "", value)[-10:][0], "5", value)
+                elif kind == "GSTIN":
+                    self.assertNotIn(value[5], "PCHFATBLJG", value)  # the PAN inside a GSTIN is an unissuable one
+                else:
+                    continue
+                seen[kind] += 1
+        self.assertTrue(all(count >= 10 for count in seen.values()), seen)  # not vacuous
+
+    def test_the_committed_set_is_exactly_what_the_seeded_generator_writes(self):
+        expected = "".join(json.dumps(record, ensure_ascii=False) + "\n" for record in pii_generator.build())
+        self.assertEqual((HERE / "pii" / "pii-set.jsonl").read_text(encoding="utf-8").replace("\r\n", "\n"), expected)
+
+    def test_look_alike_numbers_on_clean_lines_are_not_labelled(self):
+        rows = [json.loads(line) for line in (HERE / "pii" / "pii-set.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+        self.assertGreaterEqual(sum(1 for r in rows if not r["spans"]), 60)
 
     def test_needs_clean_lines_and_a_datasheet(self):
         joined = "\n".join(pii.validate(self.write(pii_lines(clean=5), datasheet=False)))
