@@ -1,0 +1,600 @@
+{"split": "train", "text": "I disliked using the scarf and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "Mujhe pillow bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "mug se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "Maine desk lamp ka package khola.", "label": "neutral"}
+{"split": "train", "text": "I am very disappointed with the bedsheet.", "label": "negative"}
+{"split": "train", "text": "scarf se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "I am very disappointed with the frying pan.", "label": "negative"}
+{"split": "train", "text": "Maine running shoe ka package khola.", "label": "neutral"}
+{"split": "train", "text": "Mere liye scarf lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "Main bedsheet se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "Maine notebook ka package khola.", "label": "neutral"}
+{"split": "train", "text": "Maine mug ka package khola.", "label": "neutral"}
+{"split": "train", "text": "The running shoe was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "यह t-shirt मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "pillow ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "मुझे mug बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "frying pan एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "The frying pan was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "mug ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "The water bottle arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "Mujhe notebook aaj mila.", "label": "neutral"}
+{"split": "train", "text": "Maine frying pan ka package khola.", "label": "neutral"}
+{"split": "train", "text": "desk lamp का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "I opened the package containing the mug.", "label": "neutral"}
+{"split": "train", "text": "Mere liye bedsheet lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "backpack एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "frying pan का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "power bank ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "The mug was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "Mere liye running shoe lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "Mujhe frying pan bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "I am very disappointed with the power bank.", "label": "negative"}
+{"split": "train", "text": "Mere liye notebook lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "यह scarf मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "I received the pillow today.", "label": "neutral"}
+{"split": "train", "text": "Mujhe desk lamp aaj mila.", "label": "neutral"}
+{"split": "train", "text": "pillow meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "Maine scarf ka package khola.", "label": "neutral"}
+{"split": "train", "text": "desk lamp सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "Mere liye power bank lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "Main frying pan se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "pillow ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "The notebook arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "Really pleased with the bedsheet; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "The desk lamp did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "power bank meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "Main scarf se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "bedsheet लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "backpack लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "Really pleased with the mug; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "desk lamp ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "scarf se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "यह notebook मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "I opened the package containing the desk lamp.", "label": "neutral"}
+{"split": "train", "text": "t-shirt का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "I like the water bottle and found it useful.", "label": "positive"}
+{"split": "train", "text": "I enjoyed using the pillow and would recommend it.", "label": "positive"}
+{"split": "train", "text": "I opened the package containing the scarf.", "label": "neutral"}
+{"split": "train", "text": "t-shirt se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "scarf लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "मैंने power bank मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "The t-shirt was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "मुझे t-shirt आज मिला।", "label": "neutral"}
+{"split": "train", "text": "pillow subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "backpack se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "I regret buying the water bottle; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "I have placed the water bottle on the table.", "label": "neutral"}
+{"split": "train", "text": "मुझे notebook बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "bedsheet ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "मैंने scarf मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "bedsheet लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "यह frying pan मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "Mere liye t-shirt lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "Mujhe notebook bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "The bedsheet was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "bedsheet का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "Mujhe backpack aaj mila.", "label": "neutral"}
+{"split": "train", "text": "मुझे power bank बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "Main t-shirt se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "मैंने running shoe मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "I like the scarf and found it useful.", "label": "positive"}
+{"split": "train", "text": "water bottle se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "Maine pillow ka package khola.", "label": "neutral"}
+{"split": "train", "text": "The t-shirt did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "I am very disappointed with the desk lamp.", "label": "negative"}
+{"split": "train", "text": "I opened the package containing the t-shirt.", "label": "neutral"}
+{"split": "train", "text": "मुझे backpack बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "I received the t-shirt today.", "label": "neutral"}
+{"split": "train", "text": "The bedsheet was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "I am very happy with the t-shirt.", "label": "positive"}
+{"split": "train", "text": "Main desk lamp se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "Mujhe desk lamp bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "I have placed the running shoe on the table.", "label": "neutral"}
+{"split": "train", "text": "यह power bank मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "Mujhe backpack bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "Mere liye frying pan lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "The desk lamp arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "mug meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "water bottle सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "I opened the package containing the notebook.", "label": "neutral"}
+{"split": "train", "text": "notebook ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "desk lamp लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "I regret buying the mug; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "I regret buying the scarf; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "यह bedsheet मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "backpack subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "I have placed the notebook on the table.", "label": "neutral"}
+{"split": "train", "text": "The desk lamp was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "power bank meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "Main scarf se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "Maine mug table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "I disliked using the backpack and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "t-shirt subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "notebook meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "यह water bottle मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "मुझे bedsheet बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "notebook ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "frying pan se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "bedsheet meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "मुझे pillow बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "scarf mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "मैंने mug मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "I disliked using the frying pan and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "pillow सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "I like the desk lamp and found it useful.", "label": "positive"}
+{"split": "train", "text": "pillow का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "t-shirt meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "mug se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "Maine backpack ka package khola.", "label": "neutral"}
+{"split": "train", "text": "Mere liye frying pan lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "I regret buying the pillow; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "frying pan subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "The pillow arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "Maine running shoe table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "मैंने frying pan मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "I received the scarf today.", "label": "neutral"}
+{"split": "train", "text": "Main notebook se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "I disliked using the t-shirt and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "यह water bottle मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "I am very happy with the mug.", "label": "positive"}
+{"split": "train", "text": "I received the backpack today.", "label": "neutral"}
+{"split": "train", "text": "Main power bank se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "I am very happy with the frying pan.", "label": "positive"}
+{"split": "train", "text": "desk lamp ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "running shoe लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "मैंने notebook मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "मैंने water bottle मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "power bank लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "notebook mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "I opened the package containing the pillow.", "label": "neutral"}
+{"split": "train", "text": "water bottle एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "I am very happy with the pillow.", "label": "positive"}
+{"split": "train", "text": "The t-shirt was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "frying pan meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "The power bank was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "I enjoyed using the power bank and would recommend it.", "label": "positive"}
+{"split": "train", "text": "Mere liye pillow lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "running shoe meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "Main frying pan se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "scarf subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "desk lamp का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "pillow ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "I have placed the power bank on the table.", "label": "neutral"}
+{"split": "train", "text": "I enjoyed using the t-shirt and would recommend it.", "label": "positive"}
+{"split": "train", "text": "Maine water bottle ka package khola.", "label": "neutral"}
+{"split": "train", "text": "t-shirt se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "मुझे mug बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "Really pleased with the frying pan; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "The backpack was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "I received the mug today.", "label": "neutral"}
+{"split": "train", "text": "I am very happy with the water bottle.", "label": "positive"}
+{"split": "train", "text": "Mujhe frying pan bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "मैंने desk lamp मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "Main running shoe se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "frying pan सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "Mujhe mug bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "I have placed the scarf on the table.", "label": "neutral"}
+{"split": "train", "text": "Main water bottle se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "I like the t-shirt and found it useful.", "label": "positive"}
+{"split": "train", "text": "Really pleased with the running shoe; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "I enjoyed using the mug and would recommend it.", "label": "positive"}
+{"split": "train", "text": "frying pan meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "I disliked using the running shoe and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "t-shirt सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "mug meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "I have placed the bedsheet on the table.", "label": "neutral"}
+{"split": "train", "text": "notebook एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "Maine backpack table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "I disliked using the notebook and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "mug subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "Maine frying pan table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "मुझे running shoe आज मिला।", "label": "neutral"}
+{"split": "train", "text": "desk lamp meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "I have placed the pillow on the table.", "label": "neutral"}
+{"split": "train", "text": "mug का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "यह frying pan मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "bedsheet meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "Mere liye bedsheet lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "मुझे notebook बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "t-shirt का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "backpack का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "The backpack did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "I am very disappointed with the mug.", "label": "negative"}
+{"split": "train", "text": "मुझे bedsheet आज मिला।", "label": "neutral"}
+{"split": "train", "text": "mug ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "mug ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "notebook का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "frying pan ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "I am very happy with the bedsheet.", "label": "positive"}
+{"split": "train", "text": "Main mug se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "notebook लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "notebook ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "मुझे pillow आज मिला।", "label": "neutral"}
+{"split": "train", "text": "Maine bedsheet ka package khola.", "label": "neutral"}
+{"split": "train", "text": "मुझे power bank बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "desk lamp subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "Maine desk lamp table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "backpack का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "The bedsheet arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "power bank का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "running shoe subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "The water bottle was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "water bottle का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "यह notebook मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "bedsheet का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "Mujhe pillow aaj mila.", "label": "neutral"}
+{"split": "train", "text": "scarf का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "मुझे pillow बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "यह mug मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "I received the bedsheet today.", "label": "neutral"}
+{"split": "train", "text": "Mere liye scarf lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "Mere liye pillow lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "Mujhe power bank bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "water bottle se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "bedsheet एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "The water bottle was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "water bottle ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "running shoe लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "running shoe mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "I am very disappointed with the water bottle.", "label": "negative"}
+{"split": "train", "text": "मुझे frying pan बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "I regret buying the frying pan; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "Mujhe mug aaj mila.", "label": "neutral"}
+{"split": "train", "text": "The running shoe did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "I like the power bank and found it useful.", "label": "positive"}
+{"split": "train", "text": "water bottle meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "Mujhe water bottle aaj mila.", "label": "neutral"}
+{"split": "train", "text": "I am very happy with the power bank.", "label": "positive"}
+{"split": "train", "text": "I like the bedsheet and found it useful.", "label": "positive"}
+{"split": "train", "text": "Maine t-shirt ka package khola.", "label": "neutral"}
+{"split": "train", "text": "I enjoyed using the running shoe and would recommend it.", "label": "positive"}
+{"split": "train", "text": "Main t-shirt se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "water bottle meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "I have placed the mug on the table.", "label": "neutral"}
+{"split": "train", "text": "I regret buying the backpack; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "t-shirt एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "मुझे bedsheet बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "The running shoe was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "मुझे scarf बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "backpack ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "bedsheet ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "frying pan ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "Mujhe power bank aaj mila.", "label": "neutral"}
+{"split": "train", "text": "I like the notebook and found it useful.", "label": "positive"}
+{"split": "train", "text": "I like the frying pan and found it useful.", "label": "positive"}
+{"split": "train", "text": "The frying pan was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "The backpack was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "t-shirt meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "Really pleased with the power bank; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "I opened the package containing the power bank.", "label": "neutral"}
+{"split": "train", "text": "The notebook was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "desk lamp se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "notebook का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "Maine power bank ka package khola.", "label": "neutral"}
+{"split": "train", "text": "scarf का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "water bottle ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "pillow se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "मैंने pillow मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "The scarf was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "Mujhe pillow bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "Main notebook se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "The desk lamp was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "Mere liye running shoe lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "pillow mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "t-shirt ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "I opened the package containing the frying pan.", "label": "neutral"}
+{"split": "train", "text": "Main power bank se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "running shoe ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "मुझे running shoe बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "pillow लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "The t-shirt arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "I regret buying the running shoe; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "I enjoyed using the bedsheet and would recommend it.", "label": "positive"}
+{"split": "train", "text": "mug mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "water bottle लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "I am very disappointed with the running shoe.", "label": "negative"}
+{"split": "train", "text": "I have placed the desk lamp on the table.", "label": "neutral"}
+{"split": "train", "text": "The scarf arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "मुझे frying pan बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "Mujhe running shoe bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "bedsheet mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "Mere liye notebook lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "यह desk lamp मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "backpack meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "यह mug मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "Mujhe power bank bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "The mug arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "मुझे water bottle बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "I am very disappointed with the backpack.", "label": "negative"}
+{"split": "train", "text": "I disliked using the mug and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "notebook meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "मुझे t-shirt बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "Mujhe desk lamp bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "I am very happy with the running shoe.", "label": "positive"}
+{"split": "train", "text": "running shoe ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "running shoe एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "The water bottle was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "t-shirt लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "The frying pan arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "मुझे notebook आज मिला।", "label": "neutral"}
+{"split": "train", "text": "I received the frying pan today.", "label": "neutral"}
+{"split": "train", "text": "यह bedsheet मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "Mujhe scarf bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "Mujhe notebook bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "power bank एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "The notebook was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "water bottle ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "I regret buying the desk lamp; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "frying pan ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "Really pleased with the scarf; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "running shoe का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "backpack mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "The pillow was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "scarf meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "Maine water bottle table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "desk lamp se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "Mere liye water bottle lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "Mujhe water bottle bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "यह pillow मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "मुझे desk lamp बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "scarf लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "The power bank did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "Mere liye desk lamp lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "The desk lamp was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "Really pleased with the desk lamp; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "Mere liye t-shirt lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "I enjoyed using the backpack and would recommend it.", "label": "positive"}
+{"split": "train", "text": "bedsheet se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "Really pleased with the pillow; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "Main pillow se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "Mujhe t-shirt bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "The scarf was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "मैंने backpack मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "यह running shoe मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "यह t-shirt मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "The bedsheet was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "मुझे frying pan आज मिला।", "label": "neutral"}
+{"split": "train", "text": "Main mug se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "मुझे t-shirt बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "The notebook did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "I have placed the frying pan on the table.", "label": "neutral"}
+{"split": "train", "text": "t-shirt ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "water bottle mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "Main pillow se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "I disliked using the power bank and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "scarf सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "I enjoyed using the desk lamp and would recommend it.", "label": "positive"}
+{"split": "train", "text": "यह power bank मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "scarf ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "The notebook was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "Maine scarf table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "Mujhe scarf bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "The power bank was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "Mere liye backpack lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "pillow लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "The t-shirt was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "I regret buying the bedsheet; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "Mujhe mug bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "Mujhe t-shirt aaj mila.", "label": "neutral"}
+{"split": "train", "text": "मुझे mug आज मिला।", "label": "neutral"}
+{"split": "train", "text": "The bedsheet did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "Mere liye mug lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "I like the mug and found it useful.", "label": "positive"}
+{"split": "train", "text": "Maine pillow table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "mug का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "I am very disappointed with the scarf.", "label": "negative"}
+{"split": "train", "text": "I regret buying the power bank; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "I am very happy with the notebook.", "label": "positive"}
+{"split": "train", "text": "running shoe ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "water bottle subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "The scarf did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "Mujhe bedsheet bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "notebook se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "I am very happy with the desk lamp.", "label": "positive"}
+{"split": "train", "text": "power bank se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "desk lamp ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "The mug was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "The frying pan did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "Mujhe running shoe bilkul pasand nahi aaya.", "label": "negative"}
+{"split": "train", "text": "backpack se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "running shoe se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "power bank सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "I enjoyed using the frying pan and would recommend it.", "label": "positive"}
+{"split": "train", "text": "मुझे desk lamp बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "I received the running shoe today.", "label": "neutral"}
+{"split": "train", "text": "Mujhe backpack bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "यह scarf मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "I disliked using the pillow and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "I disliked using the water bottle and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "Mere liye power bank lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "मुझे scarf बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "Mujhe frying pan aaj mila.", "label": "neutral"}
+{"split": "train", "text": "Really pleased with the notebook; it meets my needs.", "label": "positive"}
+{"split": "train", "text": "Maine power bank table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "mug लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "I regret buying the t-shirt; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "I received the notebook today.", "label": "neutral"}
+{"split": "train", "text": "यह pillow मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "The pillow did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "bedsheet सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "I am very disappointed with the notebook.", "label": "negative"}
+{"split": "train", "text": "mug लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "backpack सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "Mere liye water bottle lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "I regret buying the notebook; it was a poor experience.", "label": "negative"}
+{"split": "train", "text": "The scarf was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "desk lamp meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "I received the water bottle today.", "label": "neutral"}
+{"split": "train", "text": "t-shirt mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "मैंने bedsheet मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "bedsheet subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "backpack ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "Mere liye desk lamp lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "notebook लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "Maine notebook table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "The water bottle did not meet my needs and I dislike it.", "label": "negative"}
+{"split": "train", "text": "मुझे backpack आज मिला।", "label": "neutral"}
+{"split": "train", "text": "power bank ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "desk lamp एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "running shoe se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "bedsheet se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "The pillow was delivered this morning.", "label": "neutral"}
+{"split": "train", "text": "Mujhe running shoe aaj mila.", "label": "neutral"}
+{"split": "train", "text": "मुझे running shoe बहुत पसंद आया।", "label": "positive"}
+{"split": "train", "text": "frying pan लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "water bottle का अनुभव खराब रहा, मैं नाराज हूँ।", "label": "negative"}
+{"split": "train", "text": "backpack लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "मैंने t-shirt मेज पर रखा है।", "label": "neutral"}
+{"split": "train", "text": "I have placed the t-shirt on the table.", "label": "neutral"}
+{"split": "train", "text": "power bank लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "notebook subah deliver hua tha.", "label": "neutral"}
+{"split": "train", "text": "Mere liye mug lena galat faisla tha.", "label": "negative"}
+{"split": "train", "text": "मुझे water bottle बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "The pillow was a bad purchase for me.", "label": "negative"}
+{"split": "train", "text": "frying pan लेकर मैं असंतुष्ट हूँ।", "label": "negative"}
+{"split": "train", "text": "Mere liye backpack lena sahi faisla tha.", "label": "positive"}
+{"split": "train", "text": "pillow meri zarurat ke liye sahi nahi tha aur mujhe pasand nahi hai.", "label": "negative"}
+{"split": "train", "text": "Main running shoe se khush hoon, umeed par khara utara.", "label": "positive"}
+{"split": "train", "text": "power bank se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "मुझे backpack बिल्कुल पसंद नहीं आया।", "label": "negative"}
+{"split": "train", "text": "scarf meri zarurat ke liye sahi tha aur mujhe pasand hai.", "label": "positive"}
+{"split": "train", "text": "power bank ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "I opened the package containing the water bottle.", "label": "neutral"}
+{"split": "train", "text": "I am very disappointed with the pillow.", "label": "negative"}
+{"split": "train", "text": "I enjoyed using the water bottle and would recommend it.", "label": "positive"}
+{"split": "train", "text": "I opened the package containing the backpack.", "label": "neutral"}
+{"split": "train", "text": "Mujhe bedsheet bahut pasand aaya.", "label": "positive"}
+{"split": "train", "text": "pillow se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "scarf ka experience kharab raha, main naraaz hoon.", "label": "negative"}
+{"split": "train", "text": "I opened the package containing the bedsheet.", "label": "neutral"}
+{"split": "train", "text": "The power bank arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "Maine t-shirt table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "मुझे power bank आज मिला।", "label": "neutral"}
+{"split": "train", "text": "pillow एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "frying pan mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "t-shirt ka experience achha raha, main khush hoon.", "label": "positive"}
+{"split": "train", "text": "notebook se main asantusht hoon, achha nahi laga.", "label": "negative"}
+{"split": "train", "text": "I am very disappointed with the t-shirt.", "label": "negative"}
+{"split": "train", "text": "mug सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "running shoe का अनुभव अच्छा रहा, मैं खुश हूँ।", "label": "positive"}
+{"split": "train", "text": "I enjoyed using the notebook and would recommend it.", "label": "positive"}
+{"split": "train", "text": "I enjoyed using the scarf and would recommend it.", "label": "positive"}
+{"split": "train", "text": "Main desk lamp se niraash hoon, umeed par khara nahi utara.", "label": "negative"}
+{"split": "train", "text": "frying pan se main santusht hoon, achha laga.", "label": "positive"}
+{"split": "train", "text": "The backpack was a good purchase for me.", "label": "positive"}
+{"split": "train", "text": "यह desk lamp मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "train", "text": "The running shoe arrived in a box.", "label": "neutral"}
+{"split": "train", "text": "scarf ek box mein aaya hai.", "label": "neutral"}
+{"split": "train", "text": "Mujhe scarf aaj mila.", "label": "neutral"}
+{"split": "train", "text": "t-shirt लेकर मैं संतुष्ट हूँ।", "label": "positive"}
+{"split": "train", "text": "Maine bedsheet table par rakha hai.", "label": "neutral"}
+{"split": "train", "text": "I disliked using the bedsheet and cannot recommend it.", "label": "negative"}
+{"split": "train", "text": "scarf एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "notebook सुबह डिलीवर हुआ था।", "label": "neutral"}
+{"split": "train", "text": "यह backpack मेरी जरूरत के लिए अच्छा नहीं है।", "label": "negative"}
+{"split": "train", "text": "I am very happy with the backpack.", "label": "positive"}
+{"split": "train", "text": "I received the power bank today.", "label": "neutral"}
+{"split": "train", "text": "mug एक डिब्बे में आया है।", "label": "neutral"}
+{"split": "train", "text": "power bank mere paas ab aa gaya hai.", "label": "neutral"}
+{"split": "train", "text": "यह backpack मेरी जरूरत के लिए अच्छा है।", "label": "positive"}
+{"split": "test", "text": "running shoe खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "water bottle खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "pillow khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "desk lamp खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "bedsheet खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "I am pleased that the water bottle suits what I needed.", "label": "positive"}
+{"split": "test", "text": "Meri zarurat ke hisaab se power bank bura nikla, main dukhi hoon.", "label": "negative"}
+{"split": "test", "text": "I am unhappy that the backpack does not suit what I needed.", "label": "negative"}
+{"split": "test", "text": "शाम को मैंने bedsheet पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "The parcel included one scarf.", "label": "neutral"}
+{"split": "test", "text": "Meri zarurat ke hisaab se t-shirt bura nikla, main dukhi hoon.", "label": "negative"}
+{"split": "test", "text": "Parcel ke andar ek bedsheet tha.", "label": "neutral"}
+{"split": "test", "text": "I am pleased that the backpack suits what I needed.", "label": "positive"}
+{"split": "test", "text": "पार्सल के अंदर एक backpack था।", "label": "neutral"}
+{"split": "test", "text": "water bottle khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "desk lamp khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "Shaam ko maine running shoe unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "The parcel included one power bank.", "label": "neutral"}
+{"split": "test", "text": "Shaam ko maine water bottle unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "I unpacked the backpack in the evening.", "label": "neutral"}
+{"split": "test", "text": "backpack khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से pillow खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"split": "test", "text": "Meri zarurat ke hisaab se water bottle achha nikla, main khush hoon.", "label": "positive"}
+{"split": "test", "text": "पार्सल के अंदर एक notebook था।", "label": "neutral"}
+{"split": "test", "text": "Shaam ko maine pillow unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से running shoe अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से water bottle खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"split": "test", "text": "frying pan खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "शाम को मैंने power bank पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "Parcel ke andar ek power bank tha.", "label": "neutral"}
+{"split": "test", "text": "running shoe khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "The parcel included one desk lamp.", "label": "neutral"}
+{"split": "test", "text": "I am pleased that the notebook suits what I needed.", "label": "positive"}
+{"split": "test", "text": "scarf खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "Parcel ke andar ek t-shirt tha.", "label": "neutral"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से power bank अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"split": "test", "text": "शाम को मैंने pillow पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "Shaam ko maine backpack unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "Meri zarurat ke hisaab se desk lamp bura nikla, main dukhi hoon.", "label": "negative"}
+{"split": "test", "text": "शाम को मैंने water bottle पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "शाम को मैंने t-shirt पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "desk lamp खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "I am pleased that the t-shirt suits what I needed.", "label": "positive"}
+{"split": "test", "text": "I am pleased that the running shoe suits what I needed.", "label": "positive"}
+{"split": "test", "text": "bedsheet khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से t-shirt अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"split": "test", "text": "backpack खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "scarf khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "The mug has been a pleasant purchase and I am satisfied.", "label": "positive"}
+{"split": "test", "text": "notebook खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "Shaam ko maine bedsheet unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "I am unhappy that the water bottle does not suit what I needed.", "label": "negative"}
+{"split": "test", "text": "शाम को मैंने notebook पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "scarf खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "Parcel ke andar ek backpack tha.", "label": "neutral"}
+{"split": "test", "text": "शाम को मैंने desk lamp पैकेट से निकाला।", "label": "neutral"}
+{"split": "test", "text": "frying pan khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "running shoe खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "Shaam ko maine power bank unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "The desk lamp has been an unpleasant purchase and I am dissatisfied.", "label": "negative"}
+{"split": "test", "text": "The water bottle has been a pleasant purchase and I am satisfied.", "label": "positive"}
+{"split": "test", "text": "पार्सल के अंदर एक bedsheet था।", "label": "neutral"}
+{"split": "test", "text": "The t-shirt has been an unpleasant purchase and I am dissatisfied.", "label": "negative"}
+{"split": "test", "text": "desk lamp khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से notebook अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"split": "test", "text": "pillow khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "mug खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "I am pleased that the mug suits what I needed.", "label": "positive"}
+{"split": "test", "text": "water bottle खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "I unpacked the pillow in the evening.", "label": "neutral"}
+{"split": "test", "text": "power bank खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "The running shoe has been an unpleasant purchase and I am dissatisfied.", "label": "negative"}
+{"split": "test", "text": "power bank khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "Meri zarurat ke hisaab se mug achha nikla, main khush hoon.", "label": "positive"}
+{"split": "test", "text": "I am pleased that the desk lamp suits what I needed.", "label": "positive"}
+{"split": "test", "text": "पार्सल के अंदर एक water bottle था।", "label": "neutral"}
+{"split": "test", "text": "scarf khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "pillow खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "pillow खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से scarf खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"split": "test", "text": "I am unhappy that the notebook does not suit what I needed.", "label": "negative"}
+{"split": "test", "text": "notebook khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "Parcel ke andar ek notebook tha.", "label": "neutral"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से running shoe खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"split": "test", "text": "Shaam ko maine notebook unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "Parcel ke andar ek scarf tha.", "label": "neutral"}
+{"split": "test", "text": "mug khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"split": "test", "text": "t-shirt खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "Shaam ko maine frying pan unpack kiya.", "label": "neutral"}
+{"split": "test", "text": "The parcel included one t-shirt.", "label": "neutral"}
+{"split": "test", "text": "bedsheet खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"split": "test", "text": "I am pleased that the frying pan suits what I needed.", "label": "positive"}
+{"split": "test", "text": "Meri zarurat ke hisaab se running shoe bura nikla, main dukhi hoon.", "label": "negative"}
+{"split": "test", "text": "Meri zarurat ke hisaab se notebook bura nikla, main dukhi hoon.", "label": "negative"}
+{"split": "test", "text": "I am unhappy that the desk lamp does not suit what I needed.", "label": "negative"}
+{"split": "test", "text": "water bottle khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से backpack अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"split": "test", "text": "मेरी जरूरत के हिसाब से notebook खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"split": "test", "text": "Parcel ke andar ek running shoe tha.", "label": "neutral"}
+{"split": "test", "text": "पार्सल के अंदर एक t-shirt था।", "label": "neutral"}

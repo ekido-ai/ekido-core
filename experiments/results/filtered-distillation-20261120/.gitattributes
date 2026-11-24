@@ -1,0 +1,4 @@
+# Preserve downloaded evidence exactly.
+* -text
+*.py whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol

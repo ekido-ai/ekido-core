@@ -1,0 +1,6 @@
+# Preserve downloaded evidence byte for byte.
+* -text
+*.py whitespace=cr-at-eol
+*.log whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol
+*.json whitespace=cr-at-eol

@@ -1,0 +1,27 @@
+{
+  "test_eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+  "source_summary_sha256": "a75610e96efa0aab606bd30c52a305dcd3d69982b79370f2067dba10d728f342",
+  "model": "Q8_0",
+  "correct": 83,
+  "rows": 100,
+  "inferred_semantic_families": 42,
+  "family_size_histogram": {
+    "1": 11,
+    "2": 13,
+    "3": 12,
+    "4": 3,
+    "5": 3
+  },
+  "kish_n_assuming_perfect_within_family_correlation": 34.014,
+  "iid_wilson_95_percent_interval": [
+    0.7445,
+    0.8911
+  ],
+  "family_bootstrap_95_percent_interval": [
+    0.7282,
+    0.9216
+  ],
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261121,
+  "qualification": "Inferred semantic groups and reused synthetic data; intervals are sensitivity illustrations, not customer-data confidence or quality-gate decisions."
+}

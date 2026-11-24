@@ -1,0 +1,541 @@
+text,json
+"Seller: Fictional Amber Kite Supplies
+Tax registration: 07ZZZPZ0500Z1Z8
+Address: Fictional Lane, Example District
+Document: DOC-0731-X
+Invoice date: 2024-01-13
+Item A: INR 900.00
+Item B: INR 300.00
+Tax: INR 37.00
+Grand total: INR 1237.00","{""vendor"": ""Fictional Amber Kite Supplies"", ""invoice_no"": ""DOC-0731-X"", ""date"": ""2024-01-13"", ""total"": ""1237.00"", ""gstin"": ""07ZZZPZ0500Z1Z8""}"
+"Document: AK/2025/0131
+Invoice date: 17/01/2024
+Seller: Fictional Blue Elm Workshop
+Tax registration: 09ZZZPZ0501Z1Z3
+Item A: INR 913.00
+Item B: INR 307.00
+Tax: INR 38.00
+Address: Fictional Lane, Example District
+Grand total: INR 1,258.00","{""vendor"": ""Fictional Blue Elm Workshop"", ""invoice_no"": ""AK/2025/0131"", ""date"": ""2024-01-17"", ""total"": ""1258.00"", ""gstin"": ""09ZZZPZ0501Z1Z3""}"
+"Grand total: INR 1279.00
+Document: DOC-0733-X
+Invoice date: 21 Jan 2024
+Address: Fictional Lane, Example District
+Item A: INR 926.00
+Item B: INR 314.00
+Tax: INR 39.00
+Seller: Fictional Copper Lake Goods
+Tax registration: 19ZZZPZ0502Z1Z1","{""vendor"": ""Fictional Copper Lake Goods"", ""invoice_no"": ""DOC-0733-X"", ""date"": ""2024-01-21"", ""total"": ""1279.00"", ""gstin"": ""19ZZZPZ0502Z1Z1""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Ivory Finch Traders
+Tax registration: 27ZZZPZ0503Z1Z3
+Grand total: INR 1,300.00
+Item A: INR 939.00
+Item B: INR 321.00
+Tax: INR 40.00
+Document: AK/2024/0133
+Invoice date: 2024-01-25","{""vendor"": ""Fictional Ivory Finch Traders"", ""invoice_no"": ""AK/2024/0133"", ""date"": ""2024-01-25"", ""total"": ""1300.00"", ""gstin"": ""27ZZZPZ0503Z1Z3""}"
+"Item A: INR 952.00
+Item B: INR 328.00
+Tax: INR 41.00
+Document: DOC-0735-X
+Invoice date: 13/02/2024
+Seller: Fictional Violet Reed Tools
+Tax registration: 29ZZZPZ0504Z1ZY
+Grand total: INR 1321.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Violet Reed Tools"", ""invoice_no"": ""DOC-0735-X"", ""date"": ""2024-02-13"", ""total"": ""1321.00"", ""gstin"": ""29ZZZPZ0504Z1ZY""}"
+"Seller: Fictional Silver Fern Textiles
+Tax registration: 33ZZZPZ0505Z1Z8
+Address: Fictional Lane, Example District
+Document: AK/2026/0135
+Invoice date: 17 Feb 2024
+Item A: INR 965.00
+Item B: INR 335.00
+Tax: INR 42.00
+Grand total: INR 1,342.00","{""vendor"": ""Fictional Silver Fern Textiles"", ""invoice_no"": ""AK/2026/0135"", ""date"": ""2024-02-17"", ""total"": ""1342.00"", ""gstin"": ""33ZZZPZ0505Z1Z8""}"
+"Document: DOC-0737-X
+Invoice date: 2024-02-21
+Seller: Fictional Cedar Moon Parts
+Tax registration: 07ZZZPZ0506Z1Z2
+Item A: INR 978.00
+Item B: INR 342.00
+Tax: INR 43.00
+Address: Fictional Lane, Example District
+Grand total: INR 1363.00","{""vendor"": ""Fictional Cedar Moon Parts"", ""invoice_no"": ""DOC-0737-X"", ""date"": ""2024-02-21"", ""total"": ""1363.00"", ""gstin"": ""07ZZZPZ0506Z1Z2""}"
+"Grand total: INR 1,384.00
+Document: AK/2025/0137
+Invoice date: 25/02/2024
+Address: Fictional Lane, Example District
+Item A: INR 991.00
+Item B: INR 349.00
+Tax: INR 44.00
+Seller: Fictional Paper Cloud Studio
+Tax registration: 09ZZZPZ0507Z1ZX","{""vendor"": ""Fictional Paper Cloud Studio"", ""invoice_no"": ""AK/2025/0137"", ""date"": ""2024-02-25"", ""total"": ""1384.00"", ""gstin"": ""09ZZZPZ0507Z1ZX""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Coral Grove Store
+Tax registration: 19ZZZPZ0508Z1ZV
+Grand total: INR 1405.00
+Item A: INR 1004.00
+Item B: INR 356.00
+Tax: INR 45.00
+Document: DOC-0739-X
+Invoice date: 13 Mar 2024","{""vendor"": ""Fictional Coral Grove Store"", ""invoice_no"": ""DOC-0739-X"", ""date"": ""2024-03-13"", ""total"": ""1405.00"", ""gstin"": ""19ZZZPZ0508Z1ZV""}"
+"Item A: INR 1017.00
+Item B: INR 363.00
+Tax: INR 46.00
+Document: AK/2024/0139
+Invoice date: 2024-03-17
+Seller: Fictional Maple Stone Materials
+Tax registration: 27ZZZPZ0509Z1ZX
+Grand total: INR 1,426.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Maple Stone Materials"", ""invoice_no"": ""AK/2024/0139"", ""date"": ""2024-03-17"", ""total"": ""1426.00"", ""gstin"": ""27ZZZPZ0509Z1ZX""}"
+"Seller: Fictional Amber Kite Supplies
+Tax registration: 29ZZZPZ0510Z1Z0
+Address: Fictional Lane, Example District
+Document: DOC-0741-X
+Invoice date: 21/03/2024
+Item A: INR 1030.00
+Item B: INR 370.00
+Tax: INR 47.00
+Grand total: INR 1447.00","{""vendor"": ""Fictional Amber Kite Supplies"", ""invoice_no"": ""DOC-0741-X"", ""date"": ""2024-03-21"", ""total"": ""1447.00"", ""gstin"": ""29ZZZPZ0510Z1Z0""}"
+"Document: AK/2026/0141
+Invoice date: 25 Mar 2024
+Seller: Fictional Blue Elm Workshop
+Tax registration: 33ZZZPZ0511Z1ZA
+Item A: INR 1043.00
+Item B: INR 377.00
+Tax: INR 48.00
+Address: Fictional Lane, Example District
+Grand total: INR 1,468.00","{""vendor"": ""Fictional Blue Elm Workshop"", ""invoice_no"": ""AK/2026/0141"", ""date"": ""2024-03-25"", ""total"": ""1468.00"", ""gstin"": ""33ZZZPZ0511Z1ZA""}"
+"Grand total: INR 1489.00
+Document: DOC-0743-X
+Invoice date: 2024-04-13
+Address: Fictional Lane, Example District
+Item A: INR 1056.00
+Item B: INR 384.00
+Tax: INR 49.00
+Seller: Fictional Copper Lake Goods
+Tax registration: 07ZZZPZ0512Z1Z4","{""vendor"": ""Fictional Copper Lake Goods"", ""invoice_no"": ""DOC-0743-X"", ""date"": ""2024-04-13"", ""total"": ""1489.00"", ""gstin"": ""07ZZZPZ0512Z1Z4""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Ivory Finch Traders
+Tax registration: 09ZZZPZ0513Z1ZZ
+Grand total: INR 1,510.00
+Item A: INR 1069.00
+Item B: INR 391.00
+Tax: INR 50.00
+Document: AK/2025/0143
+Invoice date: 17/04/2024","{""vendor"": ""Fictional Ivory Finch Traders"", ""invoice_no"": ""AK/2025/0143"", ""date"": ""2024-04-17"", ""total"": ""1510.00"", ""gstin"": ""09ZZZPZ0513Z1ZZ""}"
+"Item A: INR 1082.00
+Item B: INR 398.00
+Tax: INR 51.00
+Document: DOC-0745-X
+Invoice date: 21 Apr 2024
+Seller: Fictional Violet Reed Tools
+Tax registration: 19ZZZPZ0514Z1ZX
+Grand total: INR 1531.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Violet Reed Tools"", ""invoice_no"": ""DOC-0745-X"", ""date"": ""2024-04-21"", ""total"": ""1531.00"", ""gstin"": ""19ZZZPZ0514Z1ZX""}"
+"Seller: Fictional Silver Fern Textiles
+Tax registration: 27ZZZPZ0515Z1ZZ
+Address: Fictional Lane, Example District
+Document: AK/2024/0145
+Invoice date: 2024-04-25
+Item A: INR 1095.00
+Item B: INR 405.00
+Tax: INR 52.00
+Grand total: INR 1,552.00","{""vendor"": ""Fictional Silver Fern Textiles"", ""invoice_no"": ""AK/2024/0145"", ""date"": ""2024-04-25"", ""total"": ""1552.00"", ""gstin"": ""27ZZZPZ0515Z1ZZ""}"
+"Document: DOC-0747-X
+Invoice date: 13/05/2024
+Seller: Fictional Cedar Moon Parts
+Tax registration: 29ZZZPZ0516Z1ZU
+Item A: INR 1108.00
+Item B: INR 412.00
+Tax: INR 53.00
+Address: Fictional Lane, Example District
+Grand total: INR 1573.00","{""vendor"": ""Fictional Cedar Moon Parts"", ""invoice_no"": ""DOC-0747-X"", ""date"": ""2024-05-13"", ""total"": ""1573.00"", ""gstin"": ""29ZZZPZ0516Z1ZU""}"
+"Grand total: INR 1,594.00
+Document: AK/2026/0147
+Invoice date: 17 May 2024
+Address: Fictional Lane, Example District
+Item A: INR 1121.00
+Item B: INR 419.00
+Tax: INR 54.00
+Seller: Fictional Paper Cloud Studio
+Tax registration: 33ZZZPZ0517Z1Z4","{""vendor"": ""Fictional Paper Cloud Studio"", ""invoice_no"": ""AK/2026/0147"", ""date"": ""2024-05-17"", ""total"": ""1594.00"", ""gstin"": ""33ZZZPZ0517Z1Z4""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Coral Grove Store
+Tax registration: 07ZZZPZ0518Z1ZY
+Grand total: INR 1615.00
+Item A: INR 1134.00
+Item B: INR 426.00
+Tax: INR 55.00
+Document: DOC-0749-X
+Invoice date: 2024-05-21","{""vendor"": ""Fictional Coral Grove Store"", ""invoice_no"": ""DOC-0749-X"", ""date"": ""2024-05-21"", ""total"": ""1615.00"", ""gstin"": ""07ZZZPZ0518Z1ZY""}"
+"Item A: INR 1147.00
+Item B: INR 433.00
+Tax: INR 56.00
+Document: AK/2025/0149
+Invoice date: 25/05/2024
+Seller: Fictional Maple Stone Materials
+Tax registration: 09ZZZPZ0519Z1ZT
+Grand total: INR 1,636.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Maple Stone Materials"", ""invoice_no"": ""AK/2025/0149"", ""date"": ""2024-05-25"", ""total"": ""1636.00"", ""gstin"": ""09ZZZPZ0519Z1ZT""}"
+"Seller: Fictional Amber Kite Supplies
+Tax registration: 19ZZZPZ0520Z1ZZ
+Address: Fictional Lane, Example District
+Document: DOC-0751-X
+Invoice date: 13 Jun 2024
+Item A: INR 1160.00
+Item B: INR 440.00
+Tax: INR 57.00
+Grand total: INR 1657.00","{""vendor"": ""Fictional Amber Kite Supplies"", ""invoice_no"": ""DOC-0751-X"", ""date"": ""2024-06-13"", ""total"": ""1657.00"", ""gstin"": ""19ZZZPZ0520Z1ZZ""}"
+"Document: AK/2024/0151
+Invoice date: 2024-06-17
+Seller: Fictional Blue Elm Workshop
+Tax registration: 27ZZZPZ0521Z1Z1
+Item A: INR 1173.00
+Item B: INR 447.00
+Tax: INR 58.00
+Address: Fictional Lane, Example District
+Grand total: INR 1,678.00","{""vendor"": ""Fictional Blue Elm Workshop"", ""invoice_no"": ""AK/2024/0151"", ""date"": ""2024-06-17"", ""total"": ""1678.00"", ""gstin"": ""27ZZZPZ0521Z1Z1""}"
+"Grand total: INR 1699.00
+Document: DOC-0753-X
+Invoice date: 21/06/2024
+Address: Fictional Lane, Example District
+Item A: INR 1186.00
+Item B: INR 454.00
+Tax: INR 59.00
+Seller: Fictional Copper Lake Goods
+Tax registration: 29ZZZPZ0522Z1ZW","{""vendor"": ""Fictional Copper Lake Goods"", ""invoice_no"": ""DOC-0753-X"", ""date"": ""2024-06-21"", ""total"": ""1699.00"", ""gstin"": ""29ZZZPZ0522Z1ZW""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Ivory Finch Traders
+Tax registration: 33ZZZPZ0523Z1Z6
+Grand total: INR 1,720.00
+Item A: INR 1199.00
+Item B: INR 461.00
+Tax: INR 60.00
+Document: AK/2026/0153
+Invoice date: 25 Jun 2024","{""vendor"": ""Fictional Ivory Finch Traders"", ""invoice_no"": ""AK/2026/0153"", ""date"": ""2024-06-25"", ""total"": ""1720.00"", ""gstin"": ""33ZZZPZ0523Z1Z6""}"
+"Item A: INR 1212.00
+Item B: INR 468.00
+Tax: INR 61.00
+Document: DOC-0755-X
+Invoice date: 2024-07-13
+Seller: Fictional Violet Reed Tools
+Tax registration: 07ZZZPZ0524Z1Z0
+Grand total: INR 1741.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Violet Reed Tools"", ""invoice_no"": ""DOC-0755-X"", ""date"": ""2024-07-13"", ""total"": ""1741.00"", ""gstin"": ""07ZZZPZ0524Z1Z0""}"
+"Seller: Fictional Silver Fern Textiles
+Tax registration: 09ZZZPZ0525Z1ZV
+Address: Fictional Lane, Example District
+Document: AK/2025/0155
+Invoice date: 17/07/2024
+Item A: INR 1225.00
+Item B: INR 475.00
+Tax: INR 62.00
+Grand total: INR 1,762.00","{""vendor"": ""Fictional Silver Fern Textiles"", ""invoice_no"": ""AK/2025/0155"", ""date"": ""2024-07-17"", ""total"": ""1762.00"", ""gstin"": ""09ZZZPZ0525Z1ZV""}"
+"Document: DOC-0757-X
+Invoice date: 21 Jul 2024
+Seller: Fictional Cedar Moon Parts
+Tax registration: 19ZZZPZ0526Z1ZT
+Item A: INR 1238.00
+Item B: INR 482.00
+Tax: INR 63.00
+Address: Fictional Lane, Example District
+Grand total: INR 1783.00","{""vendor"": ""Fictional Cedar Moon Parts"", ""invoice_no"": ""DOC-0757-X"", ""date"": ""2024-07-21"", ""total"": ""1783.00"", ""gstin"": ""19ZZZPZ0526Z1ZT""}"
+"Grand total: INR 1,804.00
+Document: AK/2024/0157
+Invoice date: 2024-07-25
+Address: Fictional Lane, Example District
+Item A: INR 1251.00
+Item B: INR 489.00
+Tax: INR 64.00
+Seller: Fictional Paper Cloud Studio
+Tax registration: 27ZZZPZ0527Z1ZV","{""vendor"": ""Fictional Paper Cloud Studio"", ""invoice_no"": ""AK/2024/0157"", ""date"": ""2024-07-25"", ""total"": ""1804.00"", ""gstin"": ""27ZZZPZ0527Z1ZV""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Coral Grove Store
+Tax registration: 29ZZZPZ0528Z1ZQ
+Grand total: INR 1825.00
+Item A: INR 1264.00
+Item B: INR 496.00
+Tax: INR 65.00
+Document: DOC-0759-X
+Invoice date: 13/08/2024","{""vendor"": ""Fictional Coral Grove Store"", ""invoice_no"": ""DOC-0759-X"", ""date"": ""2024-08-13"", ""total"": ""1825.00"", ""gstin"": ""29ZZZPZ0528Z1ZQ""}"
+"Item A: INR 1277.00
+Item B: INR 503.00
+Tax: INR 66.00
+Document: AK/2026/0159
+Invoice date: 17 Aug 2024
+Seller: Fictional Maple Stone Materials
+Tax registration: 33ZZZPZ0529Z1Z0
+Grand total: INR 1,846.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Maple Stone Materials"", ""invoice_no"": ""AK/2026/0159"", ""date"": ""2024-08-17"", ""total"": ""1846.00"", ""gstin"": ""33ZZZPZ0529Z1Z0""}"
+"Seller: Fictional Amber Kite Supplies
+Tax registration: 07ZZZPZ0530Z1Z2
+Address: Fictional Lane, Example District
+Document: DOC-0761-X
+Invoice date: 2024-08-21
+Item A: INR 1290.00
+Item B: INR 510.00
+Tax: INR 67.00
+Grand total: INR 1867.00","{""vendor"": ""Fictional Amber Kite Supplies"", ""invoice_no"": ""DOC-0761-X"", ""date"": ""2024-08-21"", ""total"": ""1867.00"", ""gstin"": ""07ZZZPZ0530Z1Z2""}"
+"Document: AK/2025/0161
+Invoice date: 25/08/2024
+Seller: Fictional Blue Elm Workshop
+Tax registration: 09ZZZPZ0531Z1ZX
+Item A: INR 1303.00
+Item B: INR 517.00
+Tax: INR 68.00
+Address: Fictional Lane, Example District
+Grand total: INR 1,888.00","{""vendor"": ""Fictional Blue Elm Workshop"", ""invoice_no"": ""AK/2025/0161"", ""date"": ""2024-08-25"", ""total"": ""1888.00"", ""gstin"": ""09ZZZPZ0531Z1ZX""}"
+"Grand total: INR 1909.00
+Document: DOC-0763-X
+Invoice date: 13 Sep 2024
+Address: Fictional Lane, Example District
+Item A: INR 1316.00
+Item B: INR 524.00
+Tax: INR 69.00
+Seller: Fictional Copper Lake Goods
+Tax registration: 19ZZZPZ0532Z1ZV","{""vendor"": ""Fictional Copper Lake Goods"", ""invoice_no"": ""DOC-0763-X"", ""date"": ""2024-09-13"", ""total"": ""1909.00"", ""gstin"": ""19ZZZPZ0532Z1ZV""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Ivory Finch Traders
+Tax registration: 27ZZZPZ0533Z1ZX
+Grand total: INR 1,930.00
+Item A: INR 1329.00
+Item B: INR 531.00
+Tax: INR 70.00
+Document: AK/2024/0163
+Invoice date: 2024-09-17","{""vendor"": ""Fictional Ivory Finch Traders"", ""invoice_no"": ""AK/2024/0163"", ""date"": ""2024-09-17"", ""total"": ""1930.00"", ""gstin"": ""27ZZZPZ0533Z1ZX""}"
+"Item A: INR 1342.00
+Item B: INR 538.00
+Tax: INR 71.00
+Document: DOC-0765-X
+Invoice date: 21/09/2024
+Seller: Fictional Violet Reed Tools
+Tax registration: 29ZZZPZ0534Z1ZS
+Grand total: INR 1951.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Violet Reed Tools"", ""invoice_no"": ""DOC-0765-X"", ""date"": ""2024-09-21"", ""total"": ""1951.00"", ""gstin"": ""29ZZZPZ0534Z1ZS""}"
+"Seller: Fictional Silver Fern Textiles
+Tax registration: 33ZZZPZ0535Z1Z2
+Address: Fictional Lane, Example District
+Document: AK/2026/0165
+Invoice date: 25 Sep 2024
+Item A: INR 1355.00
+Item B: INR 545.00
+Tax: INR 72.00
+Grand total: INR 1,972.00","{""vendor"": ""Fictional Silver Fern Textiles"", ""invoice_no"": ""AK/2026/0165"", ""date"": ""2024-09-25"", ""total"": ""1972.00"", ""gstin"": ""33ZZZPZ0535Z1Z2""}"
+"Document: DOC-0767-X
+Invoice date: 2024-10-13
+Seller: Fictional Cedar Moon Parts
+Tax registration: 07ZZZPZ0536Z1ZW
+Item A: INR 1368.00
+Item B: INR 552.00
+Tax: INR 73.00
+Address: Fictional Lane, Example District
+Grand total: INR 1993.00","{""vendor"": ""Fictional Cedar Moon Parts"", ""invoice_no"": ""DOC-0767-X"", ""date"": ""2024-10-13"", ""total"": ""1993.00"", ""gstin"": ""07ZZZPZ0536Z1ZW""}"
+"Grand total: INR 2,014.00
+Document: AK/2025/0167
+Invoice date: 17/10/2024
+Address: Fictional Lane, Example District
+Item A: INR 1381.00
+Item B: INR 559.00
+Tax: INR 74.00
+Seller: Fictional Paper Cloud Studio
+Tax registration: 09ZZZPZ0537Z1ZR","{""vendor"": ""Fictional Paper Cloud Studio"", ""invoice_no"": ""AK/2025/0167"", ""date"": ""2024-10-17"", ""total"": ""2014.00"", ""gstin"": ""09ZZZPZ0537Z1ZR""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Coral Grove Store
+Tax registration: 19ZZZPZ0538Z1ZP
+Grand total: INR 2035.00
+Item A: INR 1394.00
+Item B: INR 566.00
+Tax: INR 75.00
+Document: DOC-0769-X
+Invoice date: 21 Oct 2024","{""vendor"": ""Fictional Coral Grove Store"", ""invoice_no"": ""DOC-0769-X"", ""date"": ""2024-10-21"", ""total"": ""2035.00"", ""gstin"": ""19ZZZPZ0538Z1ZP""}"
+"Item A: INR 1407.00
+Item B: INR 573.00
+Tax: INR 76.00
+Document: AK/2024/0169
+Invoice date: 2024-10-25
+Seller: Fictional Maple Stone Materials
+Tax registration: 27ZZZPZ0539Z1ZR
+Grand total: INR 2,056.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Maple Stone Materials"", ""invoice_no"": ""AK/2024/0169"", ""date"": ""2024-10-25"", ""total"": ""2056.00"", ""gstin"": ""27ZZZPZ0539Z1ZR""}"
+"Seller: Fictional Amber Kite Supplies
+Tax registration: 29ZZZPZ0540Z1ZU
+Address: Fictional Lane, Example District
+Document: DOC-0771-X
+Invoice date: 13/11/2024
+Item A: INR 1420.00
+Item B: INR 580.00
+Tax: INR 77.00
+Grand total: INR 2077.00","{""vendor"": ""Fictional Amber Kite Supplies"", ""invoice_no"": ""DOC-0771-X"", ""date"": ""2024-11-13"", ""total"": ""2077.00"", ""gstin"": ""29ZZZPZ0540Z1ZU""}"
+"Document: AK/2026/0171
+Invoice date: 17 Nov 2024
+Seller: Fictional Blue Elm Workshop
+Tax registration: 33ZZZPZ0541Z1Z4
+Item A: INR 1433.00
+Item B: INR 587.00
+Tax: INR 78.00
+Address: Fictional Lane, Example District
+Grand total: INR 2,098.00","{""vendor"": ""Fictional Blue Elm Workshop"", ""invoice_no"": ""AK/2026/0171"", ""date"": ""2024-11-17"", ""total"": ""2098.00"", ""gstin"": ""33ZZZPZ0541Z1Z4""}"
+"Grand total: INR 2119.00
+Document: DOC-0773-X
+Invoice date: 2024-11-21
+Address: Fictional Lane, Example District
+Item A: INR 1446.00
+Item B: INR 594.00
+Tax: INR 79.00
+Seller: Fictional Copper Lake Goods
+Tax registration: 07ZZZPZ0542Z1ZY","{""vendor"": ""Fictional Copper Lake Goods"", ""invoice_no"": ""DOC-0773-X"", ""date"": ""2024-11-21"", ""total"": ""2119.00"", ""gstin"": ""07ZZZPZ0542Z1ZY""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Ivory Finch Traders
+Tax registration: 09ZZZPZ0543Z1ZT
+Grand total: INR 2,140.00
+Item A: INR 1459.00
+Item B: INR 601.00
+Tax: INR 80.00
+Document: AK/2025/0173
+Invoice date: 25/11/2024","{""vendor"": ""Fictional Ivory Finch Traders"", ""invoice_no"": ""AK/2025/0173"", ""date"": ""2024-11-25"", ""total"": ""2140.00"", ""gstin"": ""09ZZZPZ0543Z1ZT""}"
+"Item A: INR 1472.00
+Item B: INR 608.00
+Tax: INR 81.00
+Document: DOC-0775-X
+Invoice date: 13 Dec 2024
+Seller: Fictional Violet Reed Tools
+Tax registration: 19ZZZPZ0544Z1ZR
+Grand total: INR 2161.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Violet Reed Tools"", ""invoice_no"": ""DOC-0775-X"", ""date"": ""2024-12-13"", ""total"": ""2161.00"", ""gstin"": ""19ZZZPZ0544Z1ZR""}"
+"Seller: Fictional Silver Fern Textiles
+Tax registration: 27ZZZPZ0545Z1ZT
+Address: Fictional Lane, Example District
+Document: AK/2024/0175
+Invoice date: 2024-12-17
+Item A: INR 1485.00
+Item B: INR 615.00
+Tax: INR 82.00
+Grand total: INR 2,182.00","{""vendor"": ""Fictional Silver Fern Textiles"", ""invoice_no"": ""AK/2024/0175"", ""date"": ""2024-12-17"", ""total"": ""2182.00"", ""gstin"": ""27ZZZPZ0545Z1ZT""}"
+"Document: DOC-0777-X
+Invoice date: 21/12/2024
+Seller: Fictional Cedar Moon Parts
+Tax registration: 29ZZZPZ0546Z1ZO
+Item A: INR 1498.00
+Item B: INR 622.00
+Tax: INR 83.00
+Address: Fictional Lane, Example District
+Grand total: INR 2203.00","{""vendor"": ""Fictional Cedar Moon Parts"", ""invoice_no"": ""DOC-0777-X"", ""date"": ""2024-12-21"", ""total"": ""2203.00"", ""gstin"": ""29ZZZPZ0546Z1ZO""}"
+"Grand total: INR 2,224.00
+Document: AK/2026/0177
+Invoice date: 25 Dec 2024
+Address: Fictional Lane, Example District
+Item A: INR 1511.00
+Item B: INR 629.00
+Tax: INR 84.00
+Seller: Fictional Paper Cloud Studio
+Tax registration: 33ZZZPZ0547Z1ZY","{""vendor"": ""Fictional Paper Cloud Studio"", ""invoice_no"": ""AK/2026/0177"", ""date"": ""2024-12-25"", ""total"": ""2224.00"", ""gstin"": ""33ZZZPZ0547Z1ZY""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Coral Grove Store
+Tax registration: 07ZZZPZ0548Z1ZS
+Grand total: INR 2245.00
+Item A: INR 1524.00
+Item B: INR 636.00
+Tax: INR 85.00
+Document: DOC-0779-X
+Invoice date: 2025-01-13","{""vendor"": ""Fictional Coral Grove Store"", ""invoice_no"": ""DOC-0779-X"", ""date"": ""2025-01-13"", ""total"": ""2245.00"", ""gstin"": ""07ZZZPZ0548Z1ZS""}"
+"Item A: INR 1537.00
+Item B: INR 643.00
+Tax: INR 86.00
+Document: AK/2025/0179
+Invoice date: 17/01/2025
+Seller: Fictional Maple Stone Materials
+Tax registration: 09ZZZPZ0549Z1ZN
+Grand total: INR 2,266.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Maple Stone Materials"", ""invoice_no"": ""AK/2025/0179"", ""date"": ""2025-01-17"", ""total"": ""2266.00"", ""gstin"": ""09ZZZPZ0549Z1ZN""}"
+"Seller: Fictional Amber Kite Supplies
+Tax registration: 19ZZZPZ0550Z1ZT
+Address: Fictional Lane, Example District
+Document: DOC-0781-X
+Invoice date: 21 Jan 2025
+Item A: INR 1550.00
+Item B: INR 650.00
+Tax: INR 87.00
+Grand total: INR 2287.00","{""vendor"": ""Fictional Amber Kite Supplies"", ""invoice_no"": ""DOC-0781-X"", ""date"": ""2025-01-21"", ""total"": ""2287.00"", ""gstin"": ""19ZZZPZ0550Z1ZT""}"
+"Document: AK/2024/0181
+Invoice date: 2025-01-25
+Seller: Fictional Blue Elm Workshop
+Tax registration: 27ZZZPZ0551Z1ZV
+Item A: INR 1563.00
+Item B: INR 657.00
+Tax: INR 88.00
+Address: Fictional Lane, Example District
+Grand total: INR 2,308.00","{""vendor"": ""Fictional Blue Elm Workshop"", ""invoice_no"": ""AK/2024/0181"", ""date"": ""2025-01-25"", ""total"": ""2308.00"", ""gstin"": ""27ZZZPZ0551Z1ZV""}"
+"Grand total: INR 2329.00
+Document: DOC-0783-X
+Invoice date: 13/02/2025
+Address: Fictional Lane, Example District
+Item A: INR 1576.00
+Item B: INR 664.00
+Tax: INR 89.00
+Seller: Fictional Copper Lake Goods
+Tax registration: 29ZZZPZ0552Z1ZQ","{""vendor"": ""Fictional Copper Lake Goods"", ""invoice_no"": ""DOC-0783-X"", ""date"": ""2025-02-13"", ""total"": ""2329.00"", ""gstin"": ""29ZZZPZ0552Z1ZQ""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Ivory Finch Traders
+Tax registration: 33ZZZPZ0553Z1Z0
+Grand total: INR 2,350.00
+Item A: INR 1589.00
+Item B: INR 671.00
+Tax: INR 90.00
+Document: AK/2026/0183
+Invoice date: 17 Feb 2025","{""vendor"": ""Fictional Ivory Finch Traders"", ""invoice_no"": ""AK/2026/0183"", ""date"": ""2025-02-17"", ""total"": ""2350.00"", ""gstin"": ""33ZZZPZ0553Z1Z0""}"
+"Item A: INR 1602.00
+Item B: INR 678.00
+Tax: INR 91.00
+Document: DOC-0785-X
+Invoice date: 2025-02-21
+Seller: Fictional Violet Reed Tools
+Tax registration: 07ZZZPZ0554Z1ZU
+Grand total: INR 2371.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Violet Reed Tools"", ""invoice_no"": ""DOC-0785-X"", ""date"": ""2025-02-21"", ""total"": ""2371.00"", ""gstin"": ""07ZZZPZ0554Z1ZU""}"
+"Seller: Fictional Silver Fern Textiles
+Tax registration: 09ZZZPZ0555Z1ZP
+Address: Fictional Lane, Example District
+Document: AK/2025/0185
+Invoice date: 25/02/2025
+Item A: INR 1615.00
+Item B: INR 685.00
+Tax: INR 92.00
+Grand total: INR 2,392.00","{""vendor"": ""Fictional Silver Fern Textiles"", ""invoice_no"": ""AK/2025/0185"", ""date"": ""2025-02-25"", ""total"": ""2392.00"", ""gstin"": ""09ZZZPZ0555Z1ZP""}"
+"Document: DOC-0787-X
+Invoice date: 13 Mar 2025
+Seller: Fictional Cedar Moon Parts
+Tax registration: 19ZZZPZ0556Z1ZN
+Item A: INR 1628.00
+Item B: INR 692.00
+Tax: INR 93.00
+Address: Fictional Lane, Example District
+Grand total: INR 2413.00","{""vendor"": ""Fictional Cedar Moon Parts"", ""invoice_no"": ""DOC-0787-X"", ""date"": ""2025-03-13"", ""total"": ""2413.00"", ""gstin"": ""19ZZZPZ0556Z1ZN""}"
+"Grand total: INR 2,434.00
+Document: AK/2024/0187
+Invoice date: 2025-03-17
+Address: Fictional Lane, Example District
+Item A: INR 1641.00
+Item B: INR 699.00
+Tax: INR 94.00
+Seller: Fictional Paper Cloud Studio
+Tax registration: 27ZZZPZ0557Z1ZP","{""vendor"": ""Fictional Paper Cloud Studio"", ""invoice_no"": ""AK/2024/0187"", ""date"": ""2025-03-17"", ""total"": ""2434.00"", ""gstin"": ""27ZZZPZ0557Z1ZP""}"
+"Address: Fictional Lane, Example District
+Seller: Fictional Coral Grove Store
+Tax registration: 29ZZZPZ0558Z1ZK
+Grand total: INR 2455.00
+Item A: INR 1654.00
+Item B: INR 706.00
+Tax: INR 95.00
+Document: DOC-0789-X
+Invoice date: 21/03/2025","{""vendor"": ""Fictional Coral Grove Store"", ""invoice_no"": ""DOC-0789-X"", ""date"": ""2025-03-21"", ""total"": ""2455.00"", ""gstin"": ""29ZZZPZ0558Z1ZK""}"
+"Item A: INR 1667.00
+Item B: INR 713.00
+Tax: INR 96.00
+Document: AK/2026/0189
+Invoice date: 25 Mar 2025
+Seller: Fictional Maple Stone Materials
+Tax registration: 33ZZZPZ0559Z1ZU
+Grand total: INR 2,476.00
+Address: Fictional Lane, Example District","{""vendor"": ""Fictional Maple Stone Materials"", ""invoice_no"": ""AK/2026/0189"", ""date"": ""2025-03-25"", ""total"": ""2476.00"", ""gstin"": ""33ZZZPZ0559Z1ZU""}"

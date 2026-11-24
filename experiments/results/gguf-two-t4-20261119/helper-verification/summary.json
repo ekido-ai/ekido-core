@@ -1,0 +1,1028 @@
+{
+  "llama_cpp_revision": "f8caa5ea30b5775512906ae3b7ee53b21a7a6e1d",
+  "eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+  "reference_pass_rate": 0.82,
+  "previous": {
+    "Q4_K_M": 0.71,
+    "Q8_0": 0.76
+  },
+  "raw_completion": {
+    "Q4_K_M": {
+      "pass_rate": 0.79,
+      "examples": 100,
+      "answers": [
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "other [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "other [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "other [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "other [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        }
+      ],
+      "difference_from_hf": -0.029999999999999916,
+      "gguf_sha256": "f7662060ca12c4da39c732f0803e486fc9bb60b9d58989a3c54666c2a5dcde6d"
+    },
+    "Q8_0": {
+      "pass_rate": 0.83,
+      "examples": 100,
+      "answers": [
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "other [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "order [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "other [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "other [end of text]",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order [end of text]",
+          "passed": true
+        }
+      ],
+      "difference_from_hf": 0.010000000000000009,
+      "gguf_sha256": "f55f13555a84dd5452edabb9c35ab9310774036e0a1f1779cd79e16251c56380"
+    }
+  },
+  "worker_export_sha256": "c993361d3718b4d14d2644185459c936ec69725f7de4576a674b10f5314ba556"
+}

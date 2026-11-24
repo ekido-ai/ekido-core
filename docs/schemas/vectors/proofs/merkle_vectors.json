@@ -1,0 +1,294 @@
+{
+  "hash": "keccak-256",
+  "leaf": "leaf hash = keccak256(0x00 || leaf bytes), where the leaf bytes are the UTF-8 of the string in `leaves`",
+  "node": "node hash = keccak256(0x01 || left || right); a tree of n leaves splits at the largest power of two below n (RFC 6962)",
+  "check": "an audit path is the sibling hashes from the leaf up; verify with the algorithm in RFC 9162, section 2.1.3.2, using these hashes",
+  "trees": [
+    {
+      "name": "one",
+      "leaves": [
+        "proof-0"
+      ],
+      "root": "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d",
+      "paths": [
+        []
+      ]
+    },
+    {
+      "name": "two",
+      "leaves": [
+        "proof-0",
+        "proof-1"
+      ],
+      "root": "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+      "paths": [
+        [
+          "8b76c08633900c9e45cacfc8c8401ad511b72a402b4073662322f17e1edacc44"
+        ],
+        [
+          "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d"
+        ]
+      ]
+    },
+    {
+      "name": "three",
+      "leaves": [
+        "proof-0",
+        "proof-1",
+        "proof-2"
+      ],
+      "root": "b713faeaa237d0e559390517d1517ac6caf914c3c17bd5750d77f7cd8a59799d",
+      "paths": [
+        [
+          "8b76c08633900c9e45cacfc8c8401ad511b72a402b4073662322f17e1edacc44",
+          "1a2c45850b1a49e9490d03caae798da88f9a384bf6a81d7853528ab975435115"
+        ],
+        [
+          "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d",
+          "1a2c45850b1a49e9490d03caae798da88f9a384bf6a81d7853528ab975435115"
+        ],
+        [
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a"
+        ]
+      ]
+    },
+    {
+      "name": "five",
+      "leaves": [
+        "proof-0",
+        "proof-1",
+        "proof-2",
+        "proof-3",
+        "proof-4"
+      ],
+      "root": "c9e0506c8e301c26a829e92ccf83090fcc4ffa9b841c5d1c4e490d38786c4690",
+      "paths": [
+        [
+          "8b76c08633900c9e45cacfc8c8401ad511b72a402b4073662322f17e1edacc44",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015"
+        ],
+        [
+          "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015"
+        ],
+        [
+          "164ec200fe78390a53e84593a2e107bd0df9d2b2bba5562e3459eda5ea493d15",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015"
+        ],
+        [
+          "1a2c45850b1a49e9490d03caae798da88f9a384bf6a81d7853528ab975435115",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015"
+        ],
+        [
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ]
+      ]
+    },
+    {
+      "name": "seven",
+      "leaves": [
+        "proof-0",
+        "proof-1",
+        "proof-2",
+        "proof-3",
+        "proof-4",
+        "proof-5",
+        "proof-6"
+      ],
+      "root": "4931e278d8577f15dea3fbe34d65d4c3f0ad9acab869b87dbdef0aec56edfddb",
+      "paths": [
+        [
+          "8b76c08633900c9e45cacfc8c8401ad511b72a402b4073662322f17e1edacc44",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "ace11ab8f259225e54d8ca4083c8b8b3cd92930f8e8158b47f6f97372ce75a4c"
+        ],
+        [
+          "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "ace11ab8f259225e54d8ca4083c8b8b3cd92930f8e8158b47f6f97372ce75a4c"
+        ],
+        [
+          "164ec200fe78390a53e84593a2e107bd0df9d2b2bba5562e3459eda5ea493d15",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "ace11ab8f259225e54d8ca4083c8b8b3cd92930f8e8158b47f6f97372ce75a4c"
+        ],
+        [
+          "1a2c45850b1a49e9490d03caae798da88f9a384bf6a81d7853528ab975435115",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "ace11ab8f259225e54d8ca4083c8b8b3cd92930f8e8158b47f6f97372ce75a4c"
+        ],
+        [
+          "8649e2fa410abd9523dbe7cc4db21fbb68f44a92a55d2146033bc34f0e869d38",
+          "56d061928ff01bf36dd6c3bde56e1a102f9762d3f6da8e41e9d5aeaa4b1e4d76",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ],
+        [
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015",
+          "56d061928ff01bf36dd6c3bde56e1a102f9762d3f6da8e41e9d5aeaa4b1e4d76",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ],
+        [
+          "506f1afb75fd82357788af5ef8e7c61e201e5bb5fcfb74d1759a584dc624bfcb",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ]
+      ]
+    },
+    {
+      "name": "eight",
+      "leaves": [
+        "proof-0",
+        "proof-1",
+        "proof-2",
+        "proof-3",
+        "proof-4",
+        "proof-5",
+        "proof-6",
+        "proof-7"
+      ],
+      "root": "f522cc225624c8266fb15f9f5c70887577c2da95f789c42a28d1d261a1f61b9f",
+      "paths": [
+        [
+          "8b76c08633900c9e45cacfc8c8401ad511b72a402b4073662322f17e1edacc44",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015"
+        ],
+        [
+          "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015"
+        ],
+        [
+          "164ec200fe78390a53e84593a2e107bd0df9d2b2bba5562e3459eda5ea493d15",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015"
+        ],
+        [
+          "1a2c45850b1a49e9490d03caae798da88f9a384bf6a81d7853528ab975435115",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015"
+        ],
+        [
+          "8649e2fa410abd9523dbe7cc4db21fbb68f44a92a55d2146033bc34f0e869d38",
+          "5c27f1922ac2e6f96be8ec13fe101ab480f46a10fdc334b3fe787df5b7bae8fc",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ],
+        [
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015",
+          "5c27f1922ac2e6f96be8ec13fe101ab480f46a10fdc334b3fe787df5b7bae8fc",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ],
+        [
+          "a295ccea91b349447fdae30bf565f7011629c5583416ff0ffa3b54528a7b9de7",
+          "506f1afb75fd82357788af5ef8e7c61e201e5bb5fcfb74d1759a584dc624bfcb",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ],
+        [
+          "56d061928ff01bf36dd6c3bde56e1a102f9762d3f6da8e41e9d5aeaa4b1e4d76",
+          "506f1afb75fd82357788af5ef8e7c61e201e5bb5fcfb74d1759a584dc624bfcb",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0"
+        ]
+      ]
+    },
+    {
+      "name": "thirteen",
+      "leaves": [
+        "proof-0",
+        "proof-1",
+        "proof-2",
+        "proof-3",
+        "proof-4",
+        "proof-5",
+        "proof-6",
+        "proof-7",
+        "proof-8",
+        "proof-9",
+        "proof-10",
+        "proof-11",
+        "proof-12"
+      ],
+      "root": "9bbf636a993fb95bdb3c7b78a4d92cf01e23edd5a9cac8c2f0b42a67917e08cf",
+      "paths": [
+        [
+          "8b76c08633900c9e45cacfc8c8401ad511b72a402b4073662322f17e1edacc44",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "d5d77911b2fe710e954fb09c4b435e45ad0ead754767810c84f7190f9e23857d",
+          "cb7120d02b222ddc51df12c6aac74eab193da68469633ee57a579eed0cfd5b55",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "164ec200fe78390a53e84593a2e107bd0df9d2b2bba5562e3459eda5ea493d15",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "1a2c45850b1a49e9490d03caae798da88f9a384bf6a81d7853528ab975435115",
+          "28ca410215002c8a25d929def8b7e1262a6c073c88da79b46b16ae61c9fbd58a",
+          "feeac4bdfb7831ee979a02a63fac2f2f0b0563d97331c124ed088ef835d1a015",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "8649e2fa410abd9523dbe7cc4db21fbb68f44a92a55d2146033bc34f0e869d38",
+          "5c27f1922ac2e6f96be8ec13fe101ab480f46a10fdc334b3fe787df5b7bae8fc",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "b7c1e58fb8aaded8cd749c4111947f102ea6c24e68d2c0313f5e497579639015",
+          "5c27f1922ac2e6f96be8ec13fe101ab480f46a10fdc334b3fe787df5b7bae8fc",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "a295ccea91b349447fdae30bf565f7011629c5583416ff0ffa3b54528a7b9de7",
+          "506f1afb75fd82357788af5ef8e7c61e201e5bb5fcfb74d1759a584dc624bfcb",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "56d061928ff01bf36dd6c3bde56e1a102f9762d3f6da8e41e9d5aeaa4b1e4d76",
+          "506f1afb75fd82357788af5ef8e7c61e201e5bb5fcfb74d1759a584dc624bfcb",
+          "3cb0db6f16424a7d2c96907a82d5005316a3a2bb74aad6878271a81be90834f0",
+          "6582a3adff84507b901575a2e466953b39c1ae27fd0c963133367f0bd88a024f"
+        ],
+        [
+          "a7fde97de5b00ed33e166de81d7765b3670f7ba01d666639f9f8473e001d394c",
+          "d651449567a198ac3e34a124b77c0cff5d8f8553936b7257f34a1b8c0da8b0c1",
+          "43fe5efc01087d832539869d9cd7406209866a55e0e91e1fae34439bf3fd0457",
+          "f522cc225624c8266fb15f9f5c70887577c2da95f789c42a28d1d261a1f61b9f"
+        ],
+        [
+          "97e913c398286bda66b4532c0fe95bd34946813029af6c366ead5390fb5ea3e9",
+          "d651449567a198ac3e34a124b77c0cff5d8f8553936b7257f34a1b8c0da8b0c1",
+          "43fe5efc01087d832539869d9cd7406209866a55e0e91e1fae34439bf3fd0457",
+          "f522cc225624c8266fb15f9f5c70887577c2da95f789c42a28d1d261a1f61b9f"
+        ],
+        [
+          "a75e4081034cf6338cd18a932d19fc5257fc3bc375b3c5653edb3b82c121561c",
+          "fb379753efd24028969720a4700a79ee019d538760526ea9102556b607de3a51",
+          "43fe5efc01087d832539869d9cd7406209866a55e0e91e1fae34439bf3fd0457",
+          "f522cc225624c8266fb15f9f5c70887577c2da95f789c42a28d1d261a1f61b9f"
+        ],
+        [
+          "cb6f2af0520daeba2bc3f9faebc5cecd437dbf786a9086338928d7bc8dcc0bd1",
+          "fb379753efd24028969720a4700a79ee019d538760526ea9102556b607de3a51",
+          "43fe5efc01087d832539869d9cd7406209866a55e0e91e1fae34439bf3fd0457",
+          "f522cc225624c8266fb15f9f5c70887577c2da95f789c42a28d1d261a1f61b9f"
+        ],
+        [
+          "573b99b8df608e442c884ee674eda4ddbcbee25e32bb9e7b11dbc5cd8f198ffc",
+          "f522cc225624c8266fb15f9f5c70887577c2da95f789c42a28d1d261a1f61b9f"
+        ]
+      ]
+    }
+  ]
+}

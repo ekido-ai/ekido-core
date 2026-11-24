@@ -1,0 +1,4 @@
+# Retain exact downloaded run evidence.
+* -text
+*.py whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol

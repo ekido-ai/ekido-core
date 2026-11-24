@@ -1,0 +1,149 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "review-sentiment",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 1,
+    "accumulation": 8,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 50,
+  "completed_step": 50,
+  "resumed_from_step": 0,
+  "train_rows": 83,
+  "test_rows": 100,
+  "mean_loss_last_10": 0.05904489895765437,
+  "base_eval": {
+    "pass_rate": 0.8,
+    "score": 0.8,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "e2ad8e2df78d665c5d6b1ed61d00c9b8aa692d729f035ffac7f2c3a2d9c82a25",
+    "floor": 0.8,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " Neutral\n\nThe given",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " Neutral\n\nThe sentiment",
+        "passed": true
+      }
+    ]
+  },
+  "eval": {
+    "pass_rate": 0.83,
+    "score": 0.83,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "e2ad8e2df78d665c5d6b1ed61d00c9b8aa692d729f035ffac7f2c3a2d9c82a25",
+    "floor": 0.8,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " positive",
+        "passed": false
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/distillation-matrix/review-sentiment/student/checkpoints/step-50"
+  ],
+  "seconds": 125.9
+}

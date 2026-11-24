@@ -1,0 +1,4 @@
+# Keep supplied evidence and its recorded SHA-256 values byte-for-byte.
+*.json -text
+*.jsonl -text
+*.py -text

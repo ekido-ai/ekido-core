@@ -1,0 +1,312 @@
+[{"stream_name":"stdout","time":1.379271006,"data":"Found existing installation: torchao 0.10.0\n"}
+,{"stream_name":"stdout","time":1.447242068,"data":"Uninstalling torchao-0.10.0:\n"}
+,{"stream_name":"stdout","time":1.915018169,"data":"  Successfully uninstalled torchao-0.10.0\n"}
+,{"stream_name":"stderr","time":8.599013417,"data":"hint: Using 'master' as the name for the initial branch. This default branch name\n"}
+,{"stream_name":"stderr","time":8.599046119,"data":"hint: is subject to change. To configure the initial branch name to use in all\n"}
+,{"stream_name":"stderr","time":8.599050829,"data":"hint: of your new repositories, which will suppress this warning, call:\n"}
+,{"stream_name":"stderr","time":8.599054064,"data":"hint: \n"}
+,{"stream_name":"stderr","time":8.599057173,"data":"hint: \tgit config --global init.defaultBranch \u003cname\u003e\n"}
+,{"stream_name":"stderr","time":8.599060657999999,"data":"hint: \n"}
+,{"stream_name":"stderr","time":8.599063576,"data":"hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n"}
+,{"stream_name":"stderr","time":8.599066587,"data":"hint: 'development'. The just-created branch can be renamed via this command:\n"}
+,{"stream_name":"stderr","time":8.599069685,"data":"hint: \n"}
+,{"stream_name":"stderr","time":8.599072551,"data":"hint: \tgit branch -m \u003cname\u003e\n"}
+,{"stream_name":"stdout","time":8.601427205,"data":"Initialized empty Git repository in /kaggle/temp/llama.cpp/.git/\n"}
+,{"stream_name":"stderr","time":14.967836783,"data":"From https://github.com/ggml-org/llama.cpp\n"}
+,{"stream_name":"stderr","time":14.967864022,"data":" * branch            f8caa5ea30b5775512906ae3b7ee53b21a7a6e1d -\u003e FETCH_HEAD\n"}
+,{"stream_name":"stderr","time":15.910484162,"data":"HEAD is now at f8caa5e metal : fix the second argument of NSMakeRange (#32602)\n"}
+,{"stream_name":"stdout","time":16.458350132,"data":"-- The C compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":16.663126868,"data":"-- The CXX compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":16.683594846,"data":"-- Detecting C compiler ABI info\n"}
+,{"stream_name":"stdout","time":16.785954066,"data":"-- Detecting C compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":16.806765827,"data":"-- Check for working C compiler: /usr/bin/cc - skipped\n"}
+,{"stream_name":"stdout","time":16.807863415,"data":"-- Detecting C compile features\n"}
+,{"stream_name":"stdout","time":16.808903676,"data":"-- Detecting C compile features - done\n"}
+,{"stream_name":"stdout","time":16.829585201,"data":"-- Detecting CXX compiler ABI info\n"}
+,{"stream_name":"stdout","time":16.915519089,"data":"-- Detecting CXX compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":16.936752331,"data":"-- Check for working CXX compiler: /usr/bin/c++ - skipped\n"}
+,{"stream_name":"stdout","time":16.937235545,"data":"-- Detecting CXX compile features\n"}
+,{"stream_name":"stdout","time":16.938095052,"data":"-- Detecting CXX compile features - done\n"}
+,{"stream_name":"stderr","time":16.948743667,"data":"CMAKE_BUILD_TYPE=Release\n"}
+,{"stream_name":"stdout","time":16.948788616999998,"data":"-- llama.cpp version: 1.0.0-dev\n"}
+,{"stream_name":"stdout","time":16.953887322,"data":"-- Found Git: /usr/bin/git (found version \"2.43.0\")\n"}
+,{"stream_name":"stdout","time":16.978963268,"data":"-- The ASM compiler identification is GNU\n"}
+,{"stream_name":"stdout","time":16.982658329,"data":"-- Found assembler: /usr/bin/cc\n"}
+,{"stream_name":"stdout","time":17.001425593,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n"}
+,{"stream_name":"stdout","time":17.101246285,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n"}
+,{"stream_name":"stdout","time":17.102621452,"data":"-- Found Threads: TRUE\n"}
+,{"stream_name":"stdout","time":17.112107655,"data":"-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF\n"}
+,{"stream_name":"stdout","time":17.134761413,"data":"-- CMAKE_SYSTEM_PROCESSOR: x86_64\n"}
+,{"stream_name":"stdout","time":17.134933279,"data":"-- GGML_SYSTEM_ARCH: x86\n"}
+,{"stream_name":"stdout","time":17.414072823,"data":"-- Found OpenMP_C: -fopenmp (found version \"4.5\")\n"}
+,{"stream_name":"stdout","time":17.504608397,"data":"-- Found OpenMP_CXX: -fopenmp (found version \"4.5\")\n"}
+,{"stream_name":"stdout","time":17.505141084999998,"data":"-- Found OpenMP: TRUE (found version \"4.5\")\n"}
+,{"stream_name":"stdout","time":17.509174491,"data":"-- Including CPU backend\n"}
+,{"stream_name":"stdout","time":17.509761013,"data":"-- x86 detected\n"}
+,{"stream_name":"stdout","time":17.509861805,"data":"-- Adding CPU backend variant ggml-cpu: -march=native \n"}
+,{"stream_name":"stdout","time":17.518852586,"data":"-- ggml version: 1.0.0\n"}
+,{"stream_name":"stdout","time":17.518869565,"data":"-- ggml commit:  f8caa5e\n"}
+,{"stream_name":"stdout","time":17.591580099,"data":"-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version \"3.0.13\")\n"}
+,{"stream_name":"stdout","time":17.592326356,"data":"-- Performing Test OPENSSL_VERSION_SUPPORTED\n"}
+,{"stream_name":"stdout","time":17.662067496,"data":"-- Performing Test OPENSSL_VERSION_SUPPORTED - Success\n"}
+,{"stream_name":"stdout","time":17.662170806,"data":"-- OpenSSL found: 3.0.13\n"}
+,{"stream_name":"stdout","time":17.706640585,"data":"-- Generating embedded license file for target: llama-app\n"}
+,{"stream_name":"stdout","time":17.716083178,"data":"-- Configuring done (1.5s)\n"}
+,{"stream_name":"stdout","time":17.967100712,"data":"-- Generating done (0.2s)\n"}
+,{"stream_name":"stdout","time":17.967907151,"data":"-- Build files have been written to: /kaggle/temp/llama.cpp/build\n"}
+,{"stream_name":"stdout","time":18.211729835,"data":"[  0%] Building CXX object vendor/hash/CMakeFiles/vendor-hash.dir/hash.cpp.o\n"}
+,{"stream_name":"stdout","time":18.213159739,"data":"[  1%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o\n"}
+,{"stream_name":"stdout","time":18.567239798,"data":"[  1%] Building C object vendor/hash/CMakeFiles/vendor-hash.dir/xxhash/xxhash.c.o\n"}
+,{"stream_name":"stdout","time":19.883276565,"data":"[  3%] Building CXX object vendor/hash/CMakeFiles/vendor-hash.dir/sha1/sha1.c.o\n"}
+,{"stream_name":"stdout","time":20.140046801,"data":"[  3%] Building C object vendor/hash/CMakeFiles/vendor-hash.dir/sha256/sha256.c.o\n"}
+,{"stream_name":"stdout","time":20.362979859,"data":"[  4%] Linking CXX static library libvendor-hash.a\n"}
+,{"stream_name":"stdout","time":20.387494786,"data":"[  4%] Built target vendor-hash\n"}
+,{"stream_name":"stdout","time":20.398694964,"data":"[  4%] Building CXX object vendor/cpp-httplib/CMakeFiles/cpp-httplib.dir/httplib.cpp.o\n"}
+,{"stream_name":"stdout","time":20.768827651,"data":"[  4%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o\n"}
+,{"stream_name":"stdout","time":21.083079899,"data":"[  4%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o\n"}
+,{"stream_name":"stdout","time":21.587908772,"data":"[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o\n"}
+,{"stream_name":"stdout","time":24.19503056,"data":"[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o\n"}
+,{"stream_name":"stdout","time":29.339168344,"data":"[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o\n"}
+,{"stream_name":"stdout","time":30.665057602,"data":"[  7%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o\n"}
+,{"stream_name":"stdout","time":30.813320187,"data":"[  7%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o\n"}
+,{"stream_name":"stdout","time":39.182414176,"data":"[  7%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o\n"}
+,{"stream_name":"stdout","time":44.246776287,"data":"[  9%] Linking CXX shared library ../../bin/libggml-base.so\n"}
+,{"stream_name":"stdout","time":44.35831807,"data":"[  9%] Built target ggml-base\n"}
+,{"stream_name":"stdout","time":44.369505645,"data":"[  9%] Building CXX object common/CMakeFiles/llama-common-base.dir/build-info.cpp.o\n"}
+,{"stream_name":"stdout","time":44.662970032,"data":"[ 10%] Linking CXX static library libllama-common-base.a\n"}
+,{"stream_name":"stdout","time":44.681454765,"data":"[ 10%] Built target llama-common-base\n"}
+,{"stream_name":"stdout","time":44.692437411,"data":"[ 12%] Provisioning UI assets\n"}
+,{"stream_name":"stdout","time":44.697442451,"data":"-- UI: downloading from b1: https://huggingface.co/buckets/ggml-org/llama-ui/resolve/b1/dist.tar.gz\n"}
+,{"stream_name":"stdout","time":44.854813187,"data":"-- UI: download dist.tar.gz.sha256 from b1 failed: \"HTTP response code said error\"\n"}
+,{"stream_name":"stdout","time":44.854834827,"data":"-- UI: downloading from latest: https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/dist.tar.gz\n"}
+,{"stream_name":"stdout","time":45.818749018,"data":"-- UI: archive verified and extracted\n"}
+,{"stream_name":"stdout","time":45.818959406,"data":"-- UI: HF download succeeded, stamp updated (ggml-org/llama-ui|b1, resolved: latest)\n"}
+,{"stream_name":"stdout","time":46.41775302,"data":"-- UI: gzip compression applied (/kaggle/temp/llama.cpp/build/ui/apps/chat/ui-gzip/_gzip)\n"}
+,{"stream_name":"stdout","time":46.921312006,"data":"[ 12%] Linking CXX static library libcpp-httplib.a\n"}
+,{"stream_name":"stdout","time":46.95439131,"data":"[ 12%] Built target cpp-httplib\n"}
+,{"stream_name":"stdout","time":46.967091535,"data":"[ 12%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o\n"}
+,{"stream_name":"stdout","time":48.343235905,"data":"[ 12%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o\n"}
+,{"stream_name":"stdout","time":49.59215702,"data":"[ 14%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o\n"}
+,{"stream_name":"stdout","time":54.473945968,"data":"-- UI: embedded 72 assets\n"}
+,{"stream_name":"stdout","time":54.482786312,"data":"[ 14%] Built target llama-ui-assets\n"}
+,{"stream_name":"stdout","time":54.494408865,"data":"[ 14%] Building CXX object ui/apps/chat/CMakeFiles/llama-ui.dir/ui.cpp.o\n"}
+,{"stream_name":"stdout","time":57.932801974,"data":"[ 14%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o\n"}
+,{"stream_name":"stdout","time":57.95368112,"data":"[ 14%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o\n"}
+,{"stream_name":"stdout","time":59.59274635,"data":"[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o\n"}
+,{"stream_name":"stdout","time":60.351424542,"data":"[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o\n"}
+,{"stream_name":"stdout","time":61.204276482,"data":"[ 15%] Linking CXX static library libllama-ui.a\n"}
+,{"stream_name":"stdout","time":61.220412699,"data":"[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o\n"}
+,{"stream_name":"stdout","time":61.264181098,"data":"[ 15%] Built target llama-ui\n"}
+,{"stream_name":"stdout","time":61.268346973,"data":"[ 17%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/tiled/tiled.cpp.o\n"}
+,{"stream_name":"stdout","time":62.195894842,"data":"[ 17%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/tiled/tiled-kernel.cpp.o\n"}
+,{"stream_name":"stdout","time":63.443072087,"data":"[ 17%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o\n"}
+,{"stream_name":"stdout","time":65.766978089,"data":"[ 18%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o\n"}
+,{"stream_name":"stdout","time":66.729165055,"data":"[ 18%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o\n"}
+,{"stream_name":"stdout","time":67.770499098,"data":"[ 18%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o\n"}
+,{"stream_name":"stdout","time":69.164921386,"data":"[ 20%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.o\n"}
+,{"stream_name":"stdout","time":76.372687382,"data":"[ 20%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o\n"}
+,{"stream_name":"stdout","time":77.611019795,"data":"[ 20%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o\n"}
+,{"stream_name":"stdout","time":83.21290158,"data":"[ 21%] Linking CXX shared library ../../bin/libggml-cpu.so\n"}
+,{"stream_name":"stdout","time":83.317518386,"data":"[ 21%] Built target ggml-cpu\n"}
+,{"stream_name":"stdout","time":83.329602415,"data":"[ 23%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o\n"}
+,{"stream_name":"stdout","time":83.330142186,"data":"[ 23%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o\n"}
+,{"stream_name":"stdout","time":84.930998189,"data":"[ 23%] Linking CXX shared library ../../bin/libggml.so\n"}
+,{"stream_name":"stdout","time":85.017731448,"data":"[ 23%] Built target ggml\n"}
+,{"stream_name":"stdout","time":85.030772004,"data":"[ 23%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_11_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":85.031339244,"data":"[ 23%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_10_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":87.940708699,"data":"[ 25%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_9_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":88.512902969,"data":"[ 25%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_8_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":91.727950353,"data":"[ 25%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_7_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":93.035416946,"data":"[ 26%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_6_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":95.852599221,"data":"[ 26%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_5_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":97.028288811,"data":"[ 26%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_4_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":100.540838967,"data":"[ 28%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_3_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":101.416117323,"data":"[ 28%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_2_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":105.976012902,"data":"[ 28%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_1_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":106.028662457,"data":"[ 29%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_0_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":110.161055085,"data":"[ 29%] Building CXX object src/CMakeFiles/llama.dir/llama.cpp.o\n"}
+,{"stream_name":"stdout","time":112.174530906,"data":"[ 29%] Building CXX object src/CMakeFiles/llama.dir/llama-adapter.cpp.o\n"}
+,{"stream_name":"stdout","time":112.190863963,"data":"[ 31%] Building CXX object src/CMakeFiles/llama.dir/llama-arch.cpp.o\n"}
+,{"stream_name":"stdout","time":114.622124088,"data":"[ 31%] Building CXX object src/CMakeFiles/llama.dir/llama-batch.cpp.o\n"}
+,{"stream_name":"stdout","time":115.534503297,"data":"[ 31%] Building CXX object src/CMakeFiles/llama.dir/llama-chat.cpp.o\n"}
+,{"stream_name":"stdout","time":117.890738752,"data":"[ 32%] Building CXX object src/CMakeFiles/llama.dir/llama-context.cpp.o\n"}
+,{"stream_name":"stdout","time":118.395386831,"data":"[ 32%] Building CXX object src/CMakeFiles/llama.dir/llama-cparams.cpp.o\n"}
+,{"stream_name":"stdout","time":118.564746199,"data":"[ 32%] Building CXX object src/CMakeFiles/llama.dir/llama-grammar.cpp.o\n"}
+,{"stream_name":"stdout","time":125.030973775,"data":"[ 34%] Building CXX object src/CMakeFiles/llama.dir/llama-graph.cpp.o\n"}
+,{"stream_name":"stdout","time":126.451472258,"data":"[ 34%] Building CXX object src/CMakeFiles/llama.dir/llama-hparams.cpp.o\n"}
+,{"stream_name":"stdout","time":126.976912043,"data":"[ 34%] Building CXX object src/CMakeFiles/llama.dir/llama-impl.cpp.o\n"}
+,{"stream_name":"stdout","time":127.752839158,"data":"[ 35%] Building CXX object src/CMakeFiles/llama.dir/llama-io.cpp.o\n"}
+,{"stream_name":"stdout","time":128.042209003,"data":"[ 35%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":131.442964392,"data":"[ 35%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-iswa.cpp.o\n"}
+,{"stream_name":"stdout","time":133.725072941,"data":"[ 37%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa.cpp.o\n"}
+,{"stream_name":"stdout","time":135.737463271,"data":"[ 37%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa-iswa.cpp.o\n"}
+,{"stream_name":"stdout","time":137.008218371,"data":"[ 37%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-msa.cpp.o\n"}
+,{"stream_name":"stdout","time":138.143171177,"data":"[ 39%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsv4.cpp.o\n"}
+,{"stream_name":"stdout","time":139.109183101,"data":"[ 39%] Building CXX object src/CMakeFiles/llama.dir/llama-memory.cpp.o\n"}
+,{"stream_name":"stdout","time":140.276939509,"data":"[ 39%] Building CXX object src/CMakeFiles/llama.dir/llama-moe-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":143.512835807,"data":"[ 40%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid.cpp.o\n"}
+,{"stream_name":"stdout","time":144.488722069,"data":"[ 40%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-iswa.cpp.o\n"}
+,{"stream_name":"stdout","time":145.642086114,"data":"[ 40%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-idx.cpp.o\n"}
+,{"stream_name":"stdout","time":146.820927552,"data":"[ 42%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-recurrent.cpp.o\n"}
+,{"stream_name":"stdout","time":148.975201636,"data":"[ 42%] Building CXX object src/CMakeFiles/llama.dir/llama-mmap.cpp.o\n"}
+,{"stream_name":"stdout","time":149.189153606,"data":"[ 42%] Building CXX object src/CMakeFiles/llama.dir/llama-model-loader.cpp.o\n"}
+,{"stream_name":"stdout","time":150.146328844,"data":"[ 43%] Building CXX object src/CMakeFiles/llama.dir/llama-model-saver.cpp.o\n"}
+,{"stream_name":"stdout","time":152.029483355,"data":"[ 43%] Building CXX object src/CMakeFiles/llama.dir/llama-model.cpp.o\n"}
+,{"stream_name":"stdout","time":159.426228654,"data":"[ 43%] Building CXX object src/CMakeFiles/llama.dir/llama-quant.cpp.o\n"}
+,{"stream_name":"stdout","time":166.153350957,"data":"[ 45%] Building CXX object src/CMakeFiles/llama.dir/llama-sampler.cpp.o\n"}
+,{"stream_name":"stdout","time":166.985298893,"data":"[ 45%] Building CXX object src/CMakeFiles/llama.dir/llama-vocab.cpp.o\n"}
+,{"stream_name":"stdout","time":170.780980207,"data":"[ 45%] Building CXX object src/CMakeFiles/llama.dir/unicode-data.cpp.o\n"}
+,{"stream_name":"stdout","time":174.598130963,"data":"[ 46%] Building CXX object src/CMakeFiles/llama.dir/unicode.cpp.o\n"}
+,{"stream_name":"stdout","time":185.128968698,"data":"[ 46%] Linking CXX shared library ../bin/libllama.so\n"}
+,{"stream_name":"stdout","time":185.369337356,"data":"[ 46%] Built target llama\n"}
+,{"stream_name":"stdout","time":185.381316347,"data":"[ 48%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/Unity/unity_4_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":185.383919534,"data":"[ 48%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/parsers.cpp.o\n"}
+,{"stream_name":"stdout","time":187.466637347,"data":"[ 48%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/Unity/unity_3_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":187.669085529,"data":"[ 50%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/cohere2moe.cpp.o\n"}
+,{"stream_name":"stdout","time":191.236470163,"data":"[ 50%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/deepseek.cpp.o\n"}
+,{"stream_name":"stdout","time":193.797156859,"data":"[ 50%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/Unity/unity_2_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":195.874321614,"data":"[ 50%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/functionary-v3-2.cpp.o\n"}
+,{"stream_name":"stdout","time":198.641106142,"data":"[ 51%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/Unity/unity_1_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":199.255700915,"data":"[ 53%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gemma4.cpp.o\n"}
+,{"stream_name":"stdout","time":202.546873755,"data":"[ 53%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/Unity/unity_0_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":203.934493363,"data":"[ 53%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gigachat-v3.cpp.o\n"}
+,{"stream_name":"stdout","time":206.168461736,"data":"[ 53%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd.cpp.o\n"}
+,{"stream_name":"stdout","time":207.219991445,"data":"[ 53%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gpt-oss.cpp.o\n"}
+,{"stream_name":"stdout","time":210.906217217,"data":"[ 54%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/harmony-xml.cpp.o\n"}
+,{"stream_name":"stdout","time":215.003693258,"data":"[ 54%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/inkling.cpp.o\n"}
+,{"stream_name":"stdout","time":217.349464534,"data":"[ 56%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-audio.cpp.o\n"}
+,{"stream_name":"stdout","time":218.866467,"data":"[ 56%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/k2-horizon.cpp.o\n"}
+,{"stream_name":"stdout","time":221.580348977,"data":"[ 56%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-image.cpp.o\n"}
+,{"stream_name":"stdout","time":222.906014633,"data":"[ 57%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k2.cpp.o\n"}
+,{"stream_name":"stdout","time":225.828800295,"data":"[ 57%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper.cpp.o\n"}
+,{"stream_name":"stdout","time":226.60827321,"data":"[ 57%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k3.cpp.o\n"}
+,{"stream_name":"stdout","time":230.358696025,"data":"[ 57%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ling3.cpp.o\n"}
+,{"stream_name":"stdout","time":234.206873127,"data":"[ 59%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/lfm2.cpp.o\n"}
+,{"stream_name":"stdout","time":237.563455846,"data":"[ 59%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/llm-jp-harmony.cpp.o\n"}
+,{"stream_name":"stdout","time":241.161563599,"data":"[ 59%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minicpm5.cpp.o\n"}
+,{"stream_name":"stdout","time":242.989460989,"data":"[ 60%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper-gen.cpp.o\n"}
+,{"stream_name":"stdout","time":244.912665577,"data":"[ 62%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minimax-m3.cpp.o\n"}
+,{"stream_name":"stdout","time":248.948637577,"data":"[ 62%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ministral3.cpp.o\n"}
+,{"stream_name":"stdout","time":252.211150279,"data":"[ 62%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-model.cpp.o\n"}
+,{"stream_name":"stdout","time":252.594886314,"data":"[ 62%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/muse-glimmer.cpp.o\n"}
+,{"stream_name":"stdout","time":256.33113132,"data":"[ 64%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/muse-spark.cpp.o\n"}
+,{"stream_name":"stdout","time":260.047319969,"data":"[ 64%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/qwen3-coder.cpp.o\n"}
+,{"stream_name":"stdout","time":264.077162951,"data":"[ 64%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/translate-gemma.cpp.o\n"}
+,{"stream_name":"stdout","time":267.130390819,"data":"[ 65%] Building CXX object common/CMakeFiles/llama-common.dir/arg.cpp.o\n"}
+,{"stream_name":"stdout","time":267.996878737,"data":"[ 65%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-subcontext.cpp.o\n"}
+,{"stream_name":"stdout","time":275.855330991,"data":"[ 67%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-graph.cpp.o\n"}
+,{"stream_name":"stdout","time":279.130681673,"data":"[ 67%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper-video-ffmpeg.cpp.o\n"}
+,{"stream_name":"stdout","time":280.515450219,"data":"[ 67%] Linking CXX shared library ../../bin/libmtmd.so\n"}
+,{"stream_name":"stdout","time":280.708884073,"data":"[ 67%] Built target mtmd\n"}
+,{"stream_name":"stdout","time":280.713387291,"data":"[ 67%] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-generator.cpp.o\n"}
+,{"stream_name":"stdout","time":284.813954388,"data":"[ 67%] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-helpers.cpp.o\n"}
+,{"stream_name":"stdout","time":287.733660379,"data":"[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/chat-diff-analyzer.cpp.o\n"}
+,{"stream_name":"stdout","time":287.864341689,"data":"[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/chat-peg-parser.cpp.o\n"}
+,{"stream_name":"stdout","time":293.420442293,"data":"[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/chat-tts-norm.cpp.o\n"}
+,{"stream_name":"stdout","time":295.605538308,"data":"[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/chat.cpp.o\n"}
+,{"stream_name":"stdout","time":297.256768522,"data":"[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/common.cpp.o\n"}
+,{"stream_name":"stdout","time":304.88284492,"data":"[ 70%] Building CXX object common/CMakeFiles/llama-common.dir/console.cpp.o\n"}
+,{"stream_name":"stdout","time":305.793135699,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/debug.cpp.o\n"}
+,{"stream_name":"stdout","time":306.620102975,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/download.cpp.o\n"}
+,{"stream_name":"stdout","time":310.673674306,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/fit.cpp.o\n"}
+,{"stream_name":"stdout","time":314.806628357,"data":"[ 73%] Building CXX object common/CMakeFiles/llama-common.dir/file-lock.cpp.o\n"}
+,{"stream_name":"stdout","time":315.579531473,"data":"[ 73%] Building CXX object common/CMakeFiles/llama-common.dir/hf-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":316.198070163,"data":"[ 73%] Building CXX object common/CMakeFiles/llama-common.dir/imatrix-loader.cpp.o\n"}
+,{"stream_name":"stdout","time":317.836902469,"data":"[ 75%] Building CXX object common/CMakeFiles/llama-common.dir/json-schema-to-grammar.cpp.o\n"}
+,{"stream_name":"stdout","time":320.029403263,"data":"[ 75%] Building CXX object common/CMakeFiles/llama-common.dir/json-schema.cpp.o\n"}
+,{"stream_name":"stdout","time":323.241200619,"data":"[ 75%] Building CXX object common/CMakeFiles/llama-common.dir/json.cpp.o\n"}
+,{"stream_name":"stdout","time":326.071650576,"data":"[ 76%] Building CXX object common/CMakeFiles/llama-common.dir/llguidance.cpp.o\n"}
+,{"stream_name":"stdout","time":326.846032744,"data":"[ 76%] Building CXX object common/CMakeFiles/llama-common.dir/log.cpp.o\n"}
+,{"stream_name":"stdout","time":328.378876417,"data":"[ 76%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":329.907484084,"data":"[ 78%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-map.cpp.o\n"}
+,{"stream_name":"stdout","time":331.093739015,"data":"[ 78%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-mod.cpp.o\n"}
+,{"stream_name":"stdout","time":331.344067983,"data":"[ 78%] Building CXX object common/CMakeFiles/llama-common.dir/peg-parser.cpp.o\n"}
+,{"stream_name":"stdout","time":331.45666416,"data":"[ 79%] Building CXX object common/CMakeFiles/llama-common.dir/preset.cpp.o\n"}
+,{"stream_name":"stdout","time":338.115975549,"data":"[ 79%] Building CXX object common/CMakeFiles/llama-common.dir/reasoning-budget.cpp.o\n"}
+,{"stream_name":"stdout","time":339.513429613,"data":"[ 79%] Building CXX object common/CMakeFiles/llama-common.dir/sampling.cpp.o\n"}
+,{"stream_name":"stdout","time":339.629231258,"data":"[ 81%] Building CXX object common/CMakeFiles/llama-common.dir/speculative.cpp.o\n"}
+,{"stream_name":"stdout","time":343.087157781,"data":"[ 81%] Building CXX object common/CMakeFiles/llama-common.dir/subproc.cpp.o\n"}
+,{"stream_name":"stdout","time":343.58374493,"data":"[ 81%] Building CXX object common/CMakeFiles/llama-common.dir/trie.cpp.o\n"}
+,{"stream_name":"stdout","time":344.43974123,"data":"[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/unicode.cpp.o\n"}
+,{"stream_name":"stdout","time":344.792077572,"data":"[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/lexer.cpp.o\n"}
+,{"stream_name":"stdout","time":346.543549428,"data":"[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/parser.cpp.o\n"}
+,{"stream_name":"stdout","time":347.921229393,"data":"[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/runtime.cpp.o\n"}
+,{"stream_name":"stdout","time":350.767016154,"data":"[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/value.cpp.o\n"}
+,{"stream_name":"stdout","time":353.408905155,"data":"[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/string.cpp.o\n"}
+,{"stream_name":"stdout","time":354.748067783,"data":"[ 85%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/caps.cpp.o\n"}
+,{"stream_name":"stdout","time":359.919722991,"data":"[ 85%] Linking CXX shared library ../bin/libllama-common.so\n"}
+,{"stream_name":"stdout","time":360.260478804,"data":"[ 85%] Built target llama-common\n"}
+,{"stream_name":"stdout","time":360.272057442,"data":"[ 87%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-chat.cpp.o\n"}
+,{"stream_name":"stdout","time":360.272639433,"data":"[ 87%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-task.cpp.o\n"}
+,{"stream_name":"stdout","time":366.093137722,"data":"[ 87%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-queue.cpp.o\n"}
+,{"stream_name":"stdout","time":369.30264698,"data":"[ 89%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-common.cpp.o\n"}
+,{"stream_name":"stdout","time":372.131046359,"data":"[ 89%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-decision.cpp.o\n"}
+,{"stream_name":"stdout","time":379.125491536,"data":"[ 89%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-context.cpp.o\n"}
+,{"stream_name":"stdout","time":381.407700303,"data":"[ 90%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-realtime.cpp.o\n"}
+,{"stream_name":"stdout","time":390.122005888,"data":"[ 90%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-stream.cpp.o\n"}
+,{"stream_name":"stdout","time":394.686587074,"data":"[ 90%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-tools.cpp.o\n"}
+,{"stream_name":"stdout","time":398.352325798,"data":"[ 92%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-mcp.cpp.o\n"}
+,{"stream_name":"stdout","time":403.571400677,"data":"[ 92%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-schema.cpp.o\n"}
+,{"stream_name":"stdout","time":407.791732082,"data":"[ 92%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-slot-sched.cpp.o\n"}
+,{"stream_name":"stdout","time":411.626315989,"data":"[ 93%] Linking CXX static library libserver-context.a\n"}
+,{"stream_name":"stdout","time":411.681169581,"data":"[ 93%] Built target server-context\n"}
+,{"stream_name":"stdout","time":411.693928571,"data":"[ 93%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server.cpp.o\n"}
+,{"stream_name":"stdout","time":411.694670797,"data":"[ 93%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-connect.cpp.o\n"}
+,{"stream_name":"stdout","time":414.648581198,"data":"[ 95%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-http.cpp.o\n"}
+,{"stream_name":"stdout","time":419.76139641,"data":"[ 95%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-models.cpp.o\n"}
+,{"stream_name":"stdout","time":422.307267963,"data":"[ 95%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-models-sched.cpp.o\n"}
+,{"stream_name":"stdout","time":435.164109749,"data":"[ 96%] Linking CXX shared library ../../bin/libllama-server-impl.so\n"}
+,{"stream_name":"stdout","time":435.439340932,"data":"[ 96%] Built target llama-server-impl\n"}
+,{"stream_name":"stdout","time":435.450658412,"data":"[ 98%] Building CXX object tools/cli/CMakeFiles/llama-cli-impl.dir/cli.cpp.o\n"}
+,{"stream_name":"stdout","time":435.451058702,"data":"[ 98%] Building CXX object tools/cli/CMakeFiles/llama-cli-impl.dir/cli-client.cpp.o\n"}
+,{"stream_name":"stdout","time":438.30159931,"data":"[ 98%] Building CXX object tools/cli/CMakeFiles/llama-cli-impl.dir/cli-context.cpp.o\n"}
+,{"stream_name":"stdout","time":444.063079214,"data":"[100%] Linking CXX shared library ../../bin/libllama-cli-impl.so\n"}
+,{"stream_name":"stdout","time":444.196639791,"data":"[100%] Built target llama-cli-impl\n"}
+,{"stream_name":"stdout","time":444.208061128,"data":"[100%] Building CXX object tools/cli/CMakeFiles/llama-cli.dir/main.cpp.o\n"}
+,{"stream_name":"stdout","time":444.232975335,"data":"[100%] Linking CXX executable ../../bin/llama-cli\n"}
+,{"stream_name":"stdout","time":444.411100671,"data":"[100%] Built target llama-cli\n"}
+,{"stream_name":"stdout","time":444.452082166,"data":"[  2%] Built target llama-common-base\n"}
+,{"stream_name":"stdout","time":444.465077875,"data":"[ 10%] Built target ggml-base\n"}
+,{"stream_name":"stdout","time":444.470542997,"data":"[ 10%] Built target cpp-httplib\n"}
+,{"stream_name":"stdout","time":444.503661556,"data":"[ 22%] Built target ggml-cpu\n"}
+,{"stream_name":"stdout","time":444.520280092,"data":"[ 25%] Built target ggml\n"}
+,{"stream_name":"stdout","time":444.598811094,"data":"[ 56%] Built target llama\n"}
+,{"stream_name":"stdout","time":444.711008996,"data":"[ 97%] Built target llama-common\n"}
+,{"stream_name":"stdout","time":444.721699974,"data":"[100%] Building CXX object tools/quantize/CMakeFiles/llama-quantize-impl.dir/quantize.cpp.o\n"}
+,{"stream_name":"stdout","time":447.364464618,"data":"[100%] Linking CXX shared library ../../bin/libllama-quantize-impl.so\n"}
+,{"stream_name":"stdout","time":447.472447066,"data":"[100%] Built target llama-quantize-impl\n"}
+,{"stream_name":"stdout","time":447.483389788,"data":"[100%] Building CXX object tools/quantize/CMakeFiles/llama-quantize.dir/main.cpp.o\n"}
+,{"stream_name":"stdout","time":447.507694326,"data":"[100%] Linking CXX executable ../../bin/llama-quantize\n"}
+,{"stream_name":"stdout","time":447.62667897,"data":"[100%] Built target llama-quantize\n"}
+,{"stream_name":"stdout","time":447.632863738,"data":"MERGE checkpoint /kaggle/input/notebooks/vaibhavthegoat/ekido-two-t4-fault/two-t4-fault/train/checkpoints/step-400\n"}
+,{"stream_name":"stderr","time":465.514663223,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":465.635211661,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":489.671534614,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:23,  1.28it/s]\rLoading weights:  40%|████      | 136/338 [00:00\u003c00:01, 201.88it/s]\rLoading weights:  59%|█████▉    | 200/338 [00:01\u003c00:00, 225.36it/s]\rLoading weights:  73%|███████▎  | 248/338 [00:01\u003c00:00, 227.25it/s]\rLoading weights:  85%|████████▍ | 286/338 [00:01\u003c00:00, 234.51it/s]\rLoading weights:  95%|█████████▍| 320/338 [00:01\u003c00:00, 227.35it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 199.40it/s]\n"}
+,{"stream_name":"stderr","time":511.618992703,"data":"\rWriting model shards:   0%|          | 0/1 [00:00\u003c?, ?it/s]\rWriting model shards: 100%|██████████| 1/1 [00:17\u003c00:00, 17.78s/it]\rWriting model shards: 100%|██████████| 1/1 [00:17\u003c00:00, 17.78s/it]\n"}
+,{"stream_name":"stderr","time":521.651418325,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:  73%|███████▎  | 248/338 [00:00\u003c00:00, 2474.79it/s]\rLoading weights: 100%|██████████| 338/338 [00:00\u003c00:00, 2571.85it/s]\n"}
+,{"stream_name":"stdout","time":535.215781208,"data":"MERGED_HF_RESULT 0.82\n"}
+,{"stream_name":"stdout","time":666.309180767,"data":"F16 evaluated 20\n"}
+,{"stream_name":"stdout","time":750.410054093,"data":"F16 evaluated 40\n"}
+,{"stream_name":"stdout","time":837.509015765,"data":"F16 evaluated 60\n"}
+,{"stream_name":"stdout","time":923.539920428,"data":"F16 evaluated 80\n"}
+,{"stream_name":"stdout","time":1005.675974306,"data":"F16 evaluated 100\n"}
+,{"stream_name":"stdout","time":1005.676860346,"data":"RESULT F16 score 0.74 delta -0.07999999999999996\n"}
+,{"stream_name":"stdout","time":1167.888642845,"data":"Q4_K_M evaluated 20\n"}
+,{"stream_name":"stdout","time":1254.759173981,"data":"Q4_K_M evaluated 40\n"}
+,{"stream_name":"stdout","time":1343.618544876,"data":"Q4_K_M evaluated 60\n"}
+,{"stream_name":"stdout","time":1431.605923567,"data":"Q4_K_M evaluated 80\n"}
+,{"stream_name":"stdout","time":1517.302018785,"data":"Q4_K_M evaluated 100\n"}
+,{"stream_name":"stdout","time":1517.303031207,"data":"RESULT Q4_K_M score 0.71 delta -0.10999999999999999\n"}
+,{"stream_name":"stdout","time":1622.526446043,"data":"Q8_0 evaluated 20\n"}
+,{"stream_name":"stdout","time":1710.271576868,"data":"Q8_0 evaluated 40\n"}
+,{"stream_name":"stdout","time":1801.161166534,"data":"Q8_0 evaluated 60\n"}
+,{"stream_name":"stdout","time":1891.253553958,"data":"Q8_0 evaluated 80\n"}
+,{"stream_name":"stdout","time":1977.686588898,"data":"Q8_0 evaluated 100\n"}
+,{"stream_name":"stdout","time":1977.687645021,"data":"RESULT Q8_0 score 0.76 delta -0.05999999999999994\n"}
+,{"stream_name":"stderr","time":1981.18407399,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1981.184099163,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1981.371372598,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1981.371397794,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1982.166852089,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1983.029335938,"data":"[NbConvertApp] Writing 411755 bytes to __results__.html\n"}
+]

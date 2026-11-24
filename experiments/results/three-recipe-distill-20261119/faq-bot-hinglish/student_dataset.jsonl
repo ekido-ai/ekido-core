@@ -1,0 +1,150 @@
+{"split": "train", "question": "मैं एक नया अपॉइंटमेंट कैसे बुक कर सकता हूँ? New Question: मैं नए अपॉइंटमेंट कैसे बुक कर सकता हूँ?", "answer": "अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।"}
+{"split": "train", "question": "मैं अपॉइंटमेंट बुक करने के लिए कहाँ जा सकता हूँ? New Question: अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।", "answer": "अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।"}
+{"split": "train", "question": "मैं अपॉइंटमेंट बुक करने के लिए कहाँ जा सकता हूँ? New Question: मैं अपॉइंटमेंट बुक करने के लिए कहाँ जा सकता हूँ", "answer": "अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।"}
+{"split": "train", "question": "कृपयां क्या सैंपल क्लिनिक का खोलना-बंद होने का समय है?", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "train", "question": "चले जाने के लिए क्लिनिक का खोलना-बंद होने का अवसर कब मिलता है?", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "train", "question": "कौन से वक्त में सैंपल क्लिनिक खुला रहता है?", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "train", "question": "Can I pay for my consultation using cash or UPI at your clinic?", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "train", "question": "Clinic mein payment kyun kiya ja sakta hai? (Why can payment be made at the clinic?)", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "train", "question": "Clinic mein kya payment options milte hain? Mujhe sample clinic cash aur UPI se payment karne mein help chahiye.", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "train", "question": "Kisi kitne din ke baad sample nikalne ke liye charge karte hain? New Question: Kitne din ke baad sample nikalne ke liye charge karte hain?", "answer": "Sample consultation ki fee 400 rupaye hai."}
+{"split": "train", "question": "Kitni taka mein hum sample consultation ki fees dene chahiye? Sample consultation ki fee 400 rupaye hai.", "answer": "Sample consultation ki fee 400 rupaye hai."}
+{"split": "train", "question": "Kitni taka hai sample consultation ke liye? Mujhe consultation fee ke baare mein bata sakte hain?", "answer": "Sample consultation ki fee 400 rupaye hai."}
+{"split": "train", "question": "_________________", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "____", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "____________________________________________?", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "अपॉइंटमेंट की तारीख बदलने का तरीका क्या है?", "answer": "अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से बात करें।"}
+{"split": "train", "question": "मैं अपॉइंटमेंट की तारीख बदलना चाहता हूँ, क्या करूँ? अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से", "answer": "अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से बात करें।"}
+{"split": "train", "question": "अपॉइंटमेंट की तारीख बदलने का प्रक्रिया कैसे होती है? New Question: अपॉइंटमेंट की तारीख बदलने का प्रक्रिया कैसे होती ह", "answer": "अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से बात करें।"}
+{"split": "train", "question": "appointment cancellation ki details chahiye. Certainly! Here’s your new question:", "answer": "Appointment reception desk par book kar sakte hain."}
+{"split": "train", "question": "___________? Appointment reception desk par book kar sakte hain. New Question: Clinic mein jan mein appointent kaise book kar sakte hain?", "answer": "Appointment reception desk par book kar sakte hain."}
+{"split": "train", "question": "___________?", "answer": "Appointment reception desk par book kar sakte hain."}
+{"split": "train", "question": "Koi aise information dena chahiye jo clinic ki privacy policy mein include hain? New Question: Koi aise information dena chahiye jo clinic ki privacy policy mein include hain? (Translation: What kind of information should be included in the clinic's privacy policy?)", "answer": "Sample clinic ki privacy policy ke liye reception se poochhein."}
+{"split": "train", "question": "Kya aap clinic ki privacy policy ko samajhne mein madad kar sakte hain? Example Question: Kya aap visitor privacy ki jaankari de sakte hain?", "answer": "Sample clinic ki privacy policy ke liye reception se poochhein."}
+{"split": "train", "question": "Clinic mein kisi ne apne details ko saman karne ke baad, apan se puchta hai ki kya humein unse contact karne ki koi jagah hai? New Answer: Sample clinic ki privacy policy ke liye reception se poochhein. Question: Clinic mein kisi ne apne details ko saman karne ke baad, apan se puchta hai ki kya humein unse contact karne ki", "answer": "Sample clinic ki privacy policy ke liye reception se poochhein."}
+{"split": "train", "question": "रविवार क्यों सैंपल क्लिनि�क बंद रहता है? To add a new question based on the provided answer that correctly translates to \"Sample Clinic is closed on Saturdays because,\" we can ask:", "answer": "सैंपल क्लिनिक रविवार को बंद रहता है।"}
+{"split": "train", "question": "रविवार कब बंद होता है?", "answer": "सैंपल क्लिनिक रविवार को बंद रहता है।"}
+{"split": "train", "question": "जनवरी 14 रविवार को सैंपल क्लिनिक क्या करती है?", "answer": "सैंपल क्लिनिक रविवार को बंद रहता है।"}
+{"split": "train", "question": "Kya aap Hindi aur English mein baat kar sakte hain? Reception Hindi aur English mein baat kar sakta hai.", "answer": "Reception Hindi aur English mein baat kar sakta hai."}
+{"split": "train", "question": "Kya aap Hindi aur English dono mein baat kar sakte hain? Reception can speak in Hindi and English.", "answer": "Reception Hindi aur English mein baat kar sakta hai."}
+{"split": "train", "question": "Reception ko kis tarah se bahar ka ghata sakta hai?", "answer": "Reception Hindi aur English mein baat kar sakta hai."}
+{"split": "train", "question": "Can you tell me the days when your clinic operates?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "train", "question": "When does the clinic typically close on weekends?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "train", "question": "Could you tell me about the operating hours of your clinic?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "train", "question": "When are the clinic's office hours closed?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "train", "question": "What are the operating days for the clinic? Example Question: Could you tell me about open days? New Question: What are the operating days for the clinic?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "train", "question": "When does your clinic close on weekdays? New Question: When does your clinic close on weekdays?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "train", "question": "Can you guide me on how to schedule a visit?", "answer": "Book an appointment at the reception desk."}
+{"split": "train", "question": "¿Necesito programar una cita con el personal de recepción.?", "answer": "Book an appointment at the reception desk."}
+{"split": "train", "question": "¿Necesito reservar una cita? (Do I need to book a reservation?)", "answer": "Book an appointment at the reception desk."}
+{"split": "train", "question": "Kahan main online consultation apnay booking kar sakta hu? Online consultation appointment se available hai.", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Kya online consultation ke liye register karna padega? Online consultation appointment se available hai. Based on the provided answer, a suitable new question could be:", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Online consultation ke liye kitne din mein baat chahiye? Sure, here's the new question based on your requirement:", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "किस प्रकार से ऑनलाइन कंसल्टेशन का उपयोग कर सकते हैं?", "answer": "ऑनलाइन कंसल्टेशन अपॉइंटमेंट से उपलब्ध है।"}
+{"split": "train", "question": "किस प्रकार से ऑनलाइन कंसल्टेशन लिए जा सकते हैं? New Question: किस प्रकार से ऑनलाइन कंसल्टेशन लिए जा सकते हैं?", "answer": "ऑनलाइन कंसल्टेशन अपॉइंटमेंट से उपलब्ध है।"}
+{"split": "train", "question": "किस प्रकार से ऑनलाइन कंसल्टेशन लेने का अवसर मिल सकता है?", "answer": "ऑनलाइन कंसल्टेशन अपॉइंटमेंट से उपलब्ध है।"}
+{"split": "train", "question": "How do I request a follow-up appointment with the doctor? New Question: How do I request a follow-up appointment with the doctor?", "answer": "Ask reception to arrange a follow-up appointment."}
+{"split": "train", "question": "What should I do if I need a follow-up appointment scheduled?", "answer": "Ask reception to arrange a follow-up appointment."}
+{"split": "train", "question": "How do I request a follow-up appointment with my doctor?", "answer": "Ask reception to arrange a follow-up appointment."}
+{"split": "train", "question": "क्लिनिक की किस प्रोसेस की टाइमिंग दिखाई जाए? यह क्या है?", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "train", "question": "क्लिनिक की कार्यकाल क्या है? Sure, here is the new question:", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "train", "question": "क्लिनिक की कार्यकाल क्या है?", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "train", "question": "Can my test results be accessed via an online portal? If yes, how do I start using it?", "answer": "Ask reception whether your report can be shared online."}
+{"split": "train", "question": "Is it possible to have my medical test results accessible online? New Question: Can I get my medical test results online by asking the reception? New Question: Do you offer an online access option for my medical test reports? New Question: Should I inquire at the reception desk about accessing my test reports online? New Question: Could you check if I can view my test results online through your system?", "answer": "Ask reception whether your report can be shared online."}
+{"split": "train", "question": "Can my medical test results be accessed through an online portal? If yes, how do I start?", "answer": "Ask reception whether your report can be shared online."}
+{"split": "train", "question": "बिना बुकिंग विजिट का आपका दर्शन संभव होगा या नहीं?", "answer": "बिना बुकिंग विजिट अपॉइंटमेंट की उपलब्धता पर निर्भर है।"}
+{"split": "train", "question": "अगर मुझे विजिट करने की आवश्यकता हो और मैं बुकिंग करने में असफल रहता हूँ, तो मैं क्या कर सकता हूँ?", "answer": "बिना बुकिंग विजिट अपॉइंटमेंट की उपलब्धता पर निर्भर है।"}
+{"split": "train", "question": "आप अपॉइंटमेंट के बिना लिस्टरिया टेस्ट के लिए गुप्त रूप से जा सकते हैं या नहीं?", "answer": "बिना बुकिंग विजिट अपॉइंटमेंट की उपलब्धता पर निर्भर है।"}
+{"split": "train", "question": "Do you provide services in both Hindi and English? Example Answer: Yes, our reception can communicate in Hindi and English. **New Question:** Can I ask questions in Hindi and still get assistance?", "answer": "Reception can communicate in Hindi and English."}
+{"split": "train", "question": "Is it possible to converse in Hindi with the reception staff?", "answer": "Reception can communicate in Hindi and English."}
+{"split": "train", "question": "Do you offer language assistance in Hindi? To provide a comprehensive response to your query:", "answer": "Reception can communicate in Hindi and English."}
+{"split": "train", "question": "Online consultation kitne din mein baat ho sakti hai? To which", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Online consultation ki baat karoonge toh kya options milege?", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "online consultation kitne din mein banane wale hain?", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Is the clinic accessible for people using wheelchairs?", "answer": "The sample clinic has a step-free entrance."}
+{"split": "train", "question": "Is the clinic accessible for people using wheelchairs? Example Question: Can you share information about wheelchair access?", "answer": "The sample clinic has a step-free entrance."}
+{"split": "train", "question": "Is the clinic accessible for individuals using a wheelchair? Sure, here’s the new question:", "answer": "The sample clinic has a step-free entrance."}
+{"split": "train", "question": "clinic mein kitne payment options available hain? Sure, here is a new question based on your example:", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "train", "question": "clinic mein kya payment options mein sample cash aur UPI included hai?", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "train", "question": "clinic mein kya payment options available hain?", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "train", "question": "Can you tell me when the clinic is available for visits? Example Question: Where can I find details about opening hours?", "answer": "The sample clinic is open from 9 am to 5 pm."}
+{"split": "train", "question": "What are the operating hours for the sample clinic? To provide an accurate answer, please note that the sample clinic operates from 9 am to 5 pm. If you need more specific details or have other questions about the clinic's schedule, feel free to ask!", "answer": "The sample clinic is open from 9 am to 5 pm."}
+{"split": "train", "question": "What are the operating hours for the clinic? To ensure clarity and accuracy, please provide a question that would elicit the response \"The sample clinic is open from 9 am to 5 pm.\" Example:", "answer": "The sample clinic is open from 9 am to 5 pm."}
+{"split": "train", "question": "Reception se connect karke appointment ko cancel karne ka process deen?", "answer": "Appointment cancel karne ke liye reception se baat karein."}
+{"split": "train", "question": "Reception se connection karte hue appointment cancel karna hai, to kya steps follow karni hain? Answer: Appointment cancel karne ke liye reception se baat karein. Example Question: Please appointment cancellation ki information dein. New Question: Reception se connection karte hue appointment cancel karna hai, to kya steps follow karni hain?", "answer": "Appointment cancel karne ke liye reception se baat karein."}
+{"split": "train", "question": "Reception se appointment cancel karna hai, abhi kitni darjah tak appointment ko cancel kar sakte hain? Appointment cancel karne ke liye reception se baat karein.", "answer": "Appointment cancel karne ke liye reception se baat karein."}
+{"split": "train", "question": "Kahan se report ke open hours mein collection kar sakte hain? Answer: Report open hours mein reception se le sakte hain. New Question: Kahan se report ke open hours mein collection kar sakte hain? Answer: Report open hours mein reception se le sakte hain. New Question: Reception mein kabhi report collection kar sakta hain? Answer: Report open hours mein reception se le sakte hain. New Question: Reception se report", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "train", "question": "Kahan main report ka access lene ke liye pta chahiye hain?", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "train", "question": "Kya hum apne report ke liye mein clinic mein reception se pawan kar sakte hain? Example Question: Kya aap report collection ki jaankari de sakte hain?", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "train", "question": "I want to cancel my upcoming appointment, what should I do? To cancel your upcoming appointment, you should ask the reception to cancel it.", "answer": "Ask reception to cancel an appointment."}
+{"split": "train", "question": "Do I need to speak to someone to cancel my scheduled appointment? Yes, to cancel your scheduled appointment, you should ask the reception to handle it for you. Ask reception to cancel an appointment.", "answer": "Ask reception to cancel an appointment."}
+{"split": "train", "question": "How do I request that my appointment be cancelled? Example Question: Can you share information about cancelling an appointment?", "answer": "Ask reception to cancel an appointment."}
+{"split": "train", "question": "Aapne online consultation ki facility ka upyog kaise kar sakta hain? Answer: Online consultation appointment se available hai.", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Yahan online consultation apne aap booking karne ke tarike ka kya prashn hai? New Question: Yahan online consultation apne aap booking karne ke tarike ka kya prashn hai?", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Kya aap online consultation appointment banaane ka tarika sunne wale hain? Answer: Online consultation appointment se available hai. Example Question: Mujhe online consultation ke baare mein bata sakte hain?", "answer": "Online consultation appointment se available hai."}
+{"split": "train", "question": "Reception se kitne din mein report ke liye time slot de sakte hain?", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "train", "question": "report office timings ka details chahiye. Sure, here is the new question:", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "train", "question": "Reception mein kitne din ka opening timings ka report mil sakta hai?", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "train", "question": "इंतजार का अपने नियमितता क्या है? आप इसके लिए कैसे जाँच सकते हैं? Answer: इंताजर अलग हो सकता है; मौजूदा अन", "answer": "इंतजार अलग हो सकता है; मौजूदा अनुमान रिसेप्शन से पूछें।"}
+{"split": "train", "question": "मौजूदा अनुमा�न के लिए कैसे संपर्क कर सकते हैं? New Question: मौजूदा अनुमान के लिए कैसे संपर्क कर सकते हैं? Translation: How can we contact for", "answer": "इंतजार अलग हो सकता है; मौजूदा अनुमान रिसेप्शन से पूछें।"}
+{"split": "train", "question": "किस परिवर्तन की जाँच के लिए मौजूदा अनुमान लगाने के लिए कहाँ जाऊं? New Question: किस परिवर्तन के लिए मौजूदा अनुमा�न", "answer": "इंतजार अलग हो सकता है; मौजूदा अनुमान रिसेप्शन से पूछें।"}
+{"split": "test", "question": "I have a question: what should I know about opening hours?", "answer": "The sample clinic is open from 9 am to 5 pm."}
+{"split": "test", "question": "Ek sawaal hai: clinic timing ke baare mein kya jaankari hai?", "answer": "Sample clinic subah 9 se shaam 5 baje tak khula hai."}
+{"split": "test", "question": "एक सवाल है: क्लिनिक की टाइमिंग पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"}
+{"split": "test", "question": "I have a question: what should I know about open days?", "answer": "The sample clinic opens Monday to Saturday."}
+{"split": "test", "question": "Ek sawaal hai: clinic ke open days ke baare mein kya jaankari hai?", "answer": "Sample clinic Monday se Saturday khulta hai."}
+{"split": "test", "question": "एक सवाल है: क्लिनिक के खुले दिन पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक सोमवार से शनिवार खुलता है।"}
+{"split": "test", "question": "I have a question: what should I know about Sunday opening?", "answer": "The sample clinic is closed on Sundays."}
+{"split": "test", "question": "Ek sawaal hai: Sunday opening ke baare mein kya jaankari hai?", "answer": "Sample clinic Sunday ko band rehta hai."}
+{"split": "test", "question": "एक सवाल है: रविवार की ओपनिंग पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक रविवार को बंद रहता है।"}
+{"split": "test", "question": "I have a question: what should I know about booking appointments?", "answer": "Book an appointment at the reception desk."}
+{"split": "test", "question": "Ek sawaal hai: appointment booking ke baare mein kya jaankari hai?", "answer": "Appointment reception desk par book kar sakte hain."}
+{"split": "test", "question": "एक सवाल है: अपॉइंटमेंट बुकिंग पर क्या जानकारी है?", "answer": "अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।"}
+{"split": "test", "question": "I have a question: what should I know about rescheduling an appointment?", "answer": "Ask reception to change the appointment date."}
+{"split": "test", "question": "Ek sawaal hai: appointment reschedule ke baare mein kya jaankari hai?", "answer": "Appointment ki date badalne ke liye reception se baat karein."}
+{"split": "test", "question": "एक सवाल है: अपॉइंटमेंट की तारीख बदलने पर क्या जानकारी है?", "answer": "अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से बात करें।"}
+{"split": "test", "question": "I have a question: what should I know about cancelling an appointment?", "answer": "Ask reception to cancel an appointment."}
+{"split": "test", "question": "Ek sawaal hai: appointment cancellation ke baare mein kya jaankari hai?", "answer": "Appointment cancel karne ke liye reception se baat karein."}
+{"split": "test", "question": "एक सवाल है: अपॉइंटमेंट रद्द करने पर क्या जानकारी है?", "answer": "अपॉइंटमेंट रद्द करने के लिए रिसेप्शन से बात करें।"}
+{"split": "test", "question": "I have a question: what should I know about walk-in visits?", "answer": "Walk-ins are subject to appointment availability."}
+{"split": "test", "question": "Ek sawaal hai: walk-in visit ke baare mein kya jaankari hai?", "answer": "Walk-in visit appointment availability par depend karti hai."}
+{"split": "test", "question": "एक सवाल है: बिना बुकिंग विजिट पर क्या जानकारी है?", "answer": "बिना बुकिंग विजिट अपॉइंटमेंट की उपलब्धता पर निर्भर है।"}
+{"split": "test", "question": "I have a question: what should I know about online consultations?", "answer": "Online consultations are available by appointment."}
+{"split": "test", "question": "Ek sawaal hai: online consultation ke baare mein kya jaankari hai?", "answer": "Online consultation appointment se available hai."}
+{"split": "test", "question": "एक सवाल है: ऑनलाइन कंसल्टेशन पर क्या जानकारी है?", "answer": "ऑनलाइन कंसल्टेशन अपॉइंटमेंट से उपलब्ध है।"}
+{"split": "test", "question": "I have a question: what should I know about consultation fee?", "answer": "The sample consultation fee is 400 rupees."}
+{"split": "test", "question": "Ek sawaal hai: consultation fee ke baare mein kya jaankari hai?", "answer": "Sample consultation ki fee 400 rupaye hai."}
+{"split": "test", "question": "एक सवाल है: कंसल्टेशन फीस पर क्या जानकारी है?", "answer": "सैंपल कंसल्टेशन फीस 400 रुपये है।"}
+{"split": "test", "question": "I have a question: what should I know about payment methods?", "answer": "The sample clinic accepts cash and UPI."}
+{"split": "test", "question": "Ek sawaal hai: payment methods ke baare mein kya jaankari hai?", "answer": "Sample clinic cash aur UPI accept karta hai."}
+{"split": "test", "question": "एक सवाल है: भुगतान के तरीके पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक नकद और यूपीआई स्वीकार करता है।"}
+{"split": "test", "question": "I have a question: what should I know about payment receipts?", "answer": "Ask reception for a payment receipt."}
+{"split": "test", "question": "Ek sawaal hai: payment receipt ke baare mein kya jaankari hai?", "answer": "Payment receipt ke liye reception se poochhein."}
+{"split": "test", "question": "एक सवाल है: पेमेंट रसीद पर क्या जानकारी है?", "answer": "भुगतान की रसीद के लिए रिसेप्शन से पूछें।"}
+{"split": "test", "question": "I have a question: what should I know about report collection?", "answer": "Reports can be collected at reception during open hours."}
+{"split": "test", "question": "Ek sawaal hai: report collection ke baare mein kya jaankari hai?", "answer": "Report open hours mein reception se le sakte hain."}
+{"split": "test", "question": "एक सवाल है: रिपोर्ट लेने पर क्या जानकारी है?", "answer": "रिपोर्ट खुले समय में रिसेप्शन से ले सकते हैं।"}
+{"split": "test", "question": "I have a question: what should I know about waiting times?", "answer": "Waiting time varies; ask reception for the current estimate."}
+{"split": "test", "question": "Ek sawaal hai: waiting time ke baare mein kya jaankari hai?", "answer": "Waiting time alag ho sakta hai; current estimate reception se poochhein."}
+{"split": "test", "question": "एक सवाल है: इंतजार का समय पर क्या जानकारी है?", "answer": "इंतजार अलग हो सकता है; मौजूदा अनुमान रिसेप्शन से पूछें।"}
+{"split": "test", "question": "I have a question: what should I know about visits by minors?", "answer": "A parent or guardian should accompany a minor."}
+{"split": "test", "question": "Ek sawaal hai: bachchon ki visit ke baare mein kya jaankari hai?", "answer": "Minor ke saath parent ya guardian aana chahiye."}
+{"split": "test", "question": "एक सवाल है: बच्चों की विजिट पर क्या जानकारी है?", "answer": "नाबालिग के साथ अभिभावक आना चाहिए।"}
+{"split": "test", "question": "I have a question: what should I know about available languages?", "answer": "Reception can communicate in Hindi and English."}
+{"split": "test", "question": "Ek sawaal hai: available languages ke baare mein kya jaankari hai?", "answer": "Reception Hindi aur English mein baat kar sakta hai."}
+{"split": "test", "question": "एक सवाल है: उपलब्ध भाषाओं पर क्या जानकारी है?", "answer": "रिसेप्शन हिंदी और अंग्रेजी में बात कर सकता है।"}
+{"split": "test", "question": "I have a question: what should I know about wheelchair access?", "answer": "The sample clinic has a step-free entrance."}
+{"split": "test", "question": "Ek sawaal hai: wheelchair access ke baare mein kya jaankari hai?", "answer": "Sample clinic mein step-free entrance hai."}
+{"split": "test", "question": "एक सवाल है: व्हीलचेयर एक्सेस पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक में बिना सीढ़ियों वाला प्रवेश है।"}
+{"split": "test", "question": "I have a question: what should I know about parking?", "answer": "The sample clinic has limited parking."}
+{"split": "test", "question": "Ek sawaal hai: parking ke baare mein kya jaankari hai?", "answer": "Sample clinic mein limited parking hai."}
+{"split": "test", "question": "एक सवाल है: पार्किंग पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक में सीमित पार्किंग है।"}
+{"split": "test", "question": "I have a question: what should I know about follow-up appointments?", "answer": "Ask reception to arrange a follow-up appointment."}
+{"split": "test", "question": "Ek sawaal hai: follow-up appointment ke baare mein kya jaankari hai?", "answer": "Follow-up appointment ke liye reception se baat karein."}
+{"split": "test", "question": "एक सवाल है: फॉलो-अप अपॉइंटमेंट पर क्या जानकारी है?", "answer": "फॉलो-अप अपॉइंटमेंट के लिए रिसेप्शन से बात करें।"}
+{"split": "test", "question": "I have a question: what should I know about visitor privacy?", "answer": "Ask reception about the sample clinic privacy policy."}
+{"split": "test", "question": "Ek sawaal hai: visitor privacy ke baare mein kya jaankari hai?", "answer": "Sample clinic ki privacy policy ke liye reception se poochhein."}
+{"split": "test", "question": "एक सवाल है: विजिटर प्राइवेसी पर क्या जानकारी है?", "answer": "सैंपल क्लिनिक की प्राइवेसी पॉलिसी के लिए रिसेप्शन से पूछें।"}
+{"split": "test", "question": "I have a question: what should I know about receiving test reports online?", "answer": "Ask reception whether your report can be shared online."}
+{"split": "test", "question": "Ek sawaal hai: online test report ke baare mein kya jaankari hai?", "answer": "Apni report online mil sakti hai ya nahi, reception se poochhein."}
+{"split": "test", "question": "एक सवाल है: ऑनलाइन टेस्ट रिपोर्ट पर क्या जानकारी है?", "answer": "आपकी रिपोर्ट ऑनलाइन मिल सकती है या नहीं, रिसेप्शन से पूछें।"}

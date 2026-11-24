@@ -3,7 +3,7 @@ name = "ekido-core"
 version = "0.1.0"
 description = "Shared Ekido library: schemas, signing, checkpoints, compiler and statistics"
 requires-python = ">=3.12,<3.13"
-dependencies = ["eth-account", "eth-utils"]
+dependencies = ["eth-account", "eth-utils", "pyrage>=1.4,<2"]
 
 [build-system]
 requires = ["hatchling"]

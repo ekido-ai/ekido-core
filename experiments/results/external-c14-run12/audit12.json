@@ -1,0 +1,85 @@
+{
+ "generation_filter_counts_main": {
+  "trailing_label_rows_dropped": 46,
+  "answer_annotations_removed": 101,
+  "classification_text_rows_dropped": 94
+ },
+ "generation_filter_counts_other_extra": {
+  "trailing_label_rows_dropped": 22,
+  "answer_annotations_removed": 14,
+  "classification_text_rows_dropped": 11
+ },
+ "generated_rows_matching_validation_or_test_inputs_dropped": 0,
+ "teacher_on_real_rows": {
+  "overall": 0.8085,
+  "per_label": {
+   "complaint": 0.9362,
+   "order": 0.9149,
+   "question": 0.7021,
+   "refund": 1.0,
+   "other": 0.4894
+  },
+  "rows": 470
+ },
+ "judge": "none (see header: a full-labelled-data judge would break the 30-seed claim)",
+ "leakage_pattern_counts_in_pool": {},
+ "language_screen_fail_counts": {
+  "replacement_char": 22
+ },
+ "rows_removed_by_leakage_or_screen": 22,
+ "exact_duplicates_within_pool": 4,
+ "near_duplicate_pairs_jaccard_ge_0.85_within_pool": 20,
+ "near_duplicate_rows_dropped": 17,
+ "teacher_self_agreement": {
+  "overall": 0.5974,
+  "per_label": {
+   "complaint": 0.6917,
+   "order": 0.8667,
+   "question": 0.8083,
+   "refund": 0.9583,
+   "other": 0.2233
+  }
+ },
+ "pool_rows": 780,
+ "pool_per_label": {
+  "complaint": 120,
+  "order": 120,
+  "question": 120,
+  "refund": 120,
+  "other": 300
+ },
+ "clean_rows": 741,
+ "clean_per_label": {
+  "complaint": 118,
+  "order": 115,
+  "question": 116,
+  "refund": 114,
+  "other": 278
+ },
+ "verified_rows": 446,
+ "verified_per_label": {
+  "complaint": 83,
+  "order": 99,
+  "question": 93,
+  "refund": 109,
+  "other": 62
+ },
+ "overlap_vs_seeds": {
+  "exact_matches": 0,
+  "rows_with_near_dup_ge_0.85": 2,
+  "rows_with_near_dup_ge_0.60": 19,
+  "max_jaccard": 0.917
+ },
+ "overlap_vs_validation": {
+  "exact_matches": 0,
+  "rows_with_near_dup_ge_0.85": 0,
+  "rows_with_near_dup_ge_0.60": 1,
+  "max_jaccard": 0.7
+ },
+ "overlap_vs_test": {
+  "exact_matches": 0,
+  "rows_with_near_dup_ge_0.85": 0,
+  "rows_with_near_dup_ge_0.60": 0,
+  "max_jaccard": 0.4
+ }
+}

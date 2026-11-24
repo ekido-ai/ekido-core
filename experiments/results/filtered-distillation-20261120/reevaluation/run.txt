@@ -1,0 +1,16 @@
+[{"stream_name":"stdout","time":1.6479564309999999,"data":"Found existing installation: torchao 0.10.0\n"}
+,{"stream_name":"stdout","time":1.726718597,"data":"Uninstalling torchao-0.10.0:\n"}
+,{"stream_name":"stdout","time":2.04957384,"data":"  Successfully uninstalled torchao-0.10.0\n"}
+,{"stream_name":"stderr","time":28.384231691,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":28.423244092,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":52.914397595,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:26,  1.27it/s]\rLoading weights:  47%|████▋     | 159/338 [00:00\u003c00:00, 234.72it/s]\rLoading weights:  70%|██████▉   | 235/338 [00:01\u003c00:00, 231.88it/s]\rLoading weights:  85%|████████▍ | 287/338 [00:01\u003c00:00, 237.54it/s]\rLoading weights:  97%|█████████▋| 329/338 [00:01\u003c00:00, 232.12it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 205.30it/s]\n"}
+,{"stream_name":"stdout","time":221.90209091,"data":"EVAL invoice-fields trainer 1.0 rerun 1.0 mean 1.0\n"}
+,{"stream_name":"stderr","time":224.247351351,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c03:22,  1.66it/s]\rLoading weights:  43%|████▎     | 147/338 [00:00\u003c00:00, 270.55it/s]\rLoading weights:  64%|██████▍   | 218/338 [00:01\u003c00:00, 262.51it/s]\rLoading weights:  79%|███████▉  | 268/338 [00:01\u003c00:00, 238.65it/s]\rLoading weights:  91%|█████████ | 306/338 [00:01\u003c00:00, 242.52it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 225.29it/s]\n"}
+,{"stream_name":"stdout","time":281.958072256,"data":"EVAL faq-bot-hinglish trainer 0.11666666666666667 rerun 0.11666666666666667 mean 0.18378386433491428\n"}
+,{"stream_name":"stderr","time":287.535184808,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":287.535213815,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":287.738303121,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":287.738326595,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":288.469340895,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":289.349212757,"data":"[NbConvertApp] Writing 409386 bytes to __results__.html\n"}
+]

@@ -1,0 +1,147 @@
+{
+  "workload": "distill/v1",
+  "recipe_id": "review-sentiment",
+  "teacher": "Qwen/Qwen2.5-7B-Instruct",
+  "teacher_revision": null,
+  "generation_filter_counts": {
+    "trailing_label_rows_dropped": 93,
+    "answer_annotations_removed": 0,
+    "classification_text_rows_dropped": 0
+  },
+  "generation_settings": {
+    "seed": 42,
+    "per_seed": 3,
+    "attempts_per_output": 3,
+    "max_new_tokens": 96,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "do_sample": true,
+    "teacher_4bit": true
+  },
+  "student": "Qwen/Qwen2.5-1.5B-Instruct",
+  "seed_rows": 30,
+  "generated_rows": 83,
+  "test_rows": 100,
+  "student_eval": {
+    "pass_rate": 0.83,
+    "score": 0.83,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "e2ad8e2df78d665c5d6b1ed61d00c9b8aa692d729f035ffac7f2c3a2d9c82a25",
+    "floor": 0.8,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " positive",
+        "passed": false
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      }
+    ]
+  },
+  "student_base_eval": {
+    "pass_rate": 0.8,
+    "score": 0.8,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "e2ad8e2df78d665c5d6b1ed61d00c9b8aa692d729f035ffac7f2c3a2d9c82a25",
+    "floor": 0.8,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " Neutral\n\nThe given",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " Neutral\n\nThe sentiment",
+        "passed": true
+      }
+    ]
+  }
+}

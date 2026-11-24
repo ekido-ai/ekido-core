@@ -1,5 +1,9 @@
 """The baseline script's scoring, without a model."""
 import importlib.util
+import functools
+import hashlib
+import inspect
+import json
 import unittest
 from pathlib import Path
 
@@ -10,6 +14,14 @@ spec.loader.exec_module(baseline)
 
 
 class Baseline(unittest.TestCase):
+    def test_runtime_fingerprint_uses_decorated_function_source(self):
+        @functools.wraps(json.dumps)
+        def wrapped(*args, **kwargs):
+            return json.dumps(*args, **kwargs)
+
+        expected = hashlib.sha256(Path(inspect.getfile(json.dumps)).read_bytes()).hexdigest()
+        self.assertEqual(baseline.source_sha256(wrapped), expected)
+
     def test_summary_counts_passes_and_keeps_samples(self):
         rows = [{"text": f"review {i}", "label": "positive"} for i in range(4)]
         result = baseline.summarise("review-sentiment", rows, ["positive", "Positive.", "negative", ""])

@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Payment statement for Zevix Sample Supplier 164: document TEST-00164 dated 2024-06-13; GSTIN 27ZZZPZ0164Z1ZU; payable 1248.32 INR.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 164\", \"invoice_no\": \"TEST-00164\", \"date\": \"2024-06-13\", \"total\": \"1248.32\", \"gstin\": \"27ZZZPZ0164Z1ZU\"}"
+  },
+  {
+    "text": "Bill from Zevix Sample Supplier 029; bill number TEST-00029; date 2024-01-30; tax ID 27ZZZPZ0029Z1ZY; amount payable ₹303.77.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 029\", \"invoice_no\": \"TEST-00029\", \"date\": \"2024-01-30\", \"total\": \"303.77\", \"gstin\": \"27ZZZPZ0029Z1ZY\"}"
+  },
+  {
+    "text": "TAX INVOICE\r\nVendor: Zevix Sample Supplier 007\r\nInvoice No: TEST-00007\r\nDate: 2024-01-08\r\nGSTIN: 27ZZZPZ0007Z1Z4\r\nGrand Total: ₹149.91",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 007\", \"invoice_no\": \"TEST-00007\", \"date\": \"2024-01-08\", \"total\": \"149.91\", \"gstin\": \"27ZZZPZ0007Z1Z4\"}"
+  },
+  {
+    "text": "2024-07-09\r\nInvoice TEST-00190\r\nZevix Sample Supplier 190\r\nGST registration 27ZZZPZ0190Z1ZS\r\nBalance to pay: Rs 1430.70",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 190\", \"invoice_no\": \"TEST-00190\", \"date\": \"2024-07-09\", \"total\": \"1430.70\", \"gstin\": \"27ZZZPZ0190Z1ZS\"}"
+  },
+  {
+    "text": "From: Zevix Sample Supplier 071\r\nDocument: TEST-00071\r\nDated: 2024-03-12\r\nRegistered GSTIN: 27ZZZPZ0071Z1ZW\r\nPayable: 597.23 INR",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 071\", \"invoice_no\": \"TEST-00071\", \"date\": \"2024-03-12\", \"total\": \"597.23\", \"gstin\": \"27ZZZPZ0071Z1ZW\"}"
+  },
+  {
+    "text": "Receipt of invoice: seller=Zevix Sample Supplier 063; ref=TEST-00063; issued=2024-03-04; gstin=27ZZZPZ0063Z1ZW; total=₹541.19",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 063\", \"invoice_no\": \"TEST-00063\", \"date\": \"2024-03-04\", \"total\": \"541.19\", \"gstin\": \"27ZZZPZ0063Z1ZW\"}"
+  },
+  {
+    "text": "Zevix Sample Supplier 058 | Tax invoice\r\nTEST-00058 - 2024-02-28\r\nGSTIN 27ZZZPZ0058Z1ZT\r\nNet amount payable Rs 506.54",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 058\", \"invoice_no\": \"TEST-00058\", \"date\": \"2024-02-28\", \"total\": \"506.54\", \"gstin\": \"27ZZZPZ0058Z1ZT\"}"
+  },
+  {
+    "text": "Supplier: Zevix Sample Supplier 036 | GSTIN: 27ZZZPZ0036Z1ZZ | Invoice: TEST-00036 | Invoice date: 2024-02-06 | Total: 352.68",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 036\", \"invoice_no\": \"TEST-00036\", \"date\": \"2024-02-06\", \"total\": \"352.68\", \"gstin\": \"27ZZZPZ0036Z1ZZ\"}"
+  },
+  {
+    "text": "2024-07-08\r\nInvoice TEST-00189\r\nZevix Sample Supplier 189\r\nGST registration 27ZZZPZ0189Z1ZL\r\nBalance to pay: Rs 1423.57",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 189\", \"invoice_no\": \"TEST-00189\", \"date\": \"2024-07-08\", \"total\": \"1423.57\", \"gstin\": \"27ZZZPZ0189Z1ZL\"}"
+  },
+  {
+    "text": "Bill from Zevix Sample Supplier 027; bill number TEST-00027; date 2024-01-28; tax ID 27ZZZPZ0027Z1Z0; amount payable ₹289.51.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 027\", \"invoice_no\": \"TEST-00027\", \"date\": \"2024-01-28\", \"total\": \"289.51\", \"gstin\": \"27ZZZPZ0027Z1Z0\"}"
+  },
+  {
+    "text": "Tax bill from Zevix Sample Supplier 174\r\nNo. TEST-00174\r\nDate 2024-06-23\r\nRegistration 27ZZZPZ0174Z1ZS\r\nTotal due ₹1318.62",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 174\", \"invoice_no\": \"TEST-00174\", \"date\": \"2024-06-23\", \"total\": \"1318.62\", \"gstin\": \"27ZZZPZ0174Z1ZS\"}"
+  },
+  {
+    "text": "Zevix Sample Supplier 140 raised invoice TEST-00140 on 2024-05-20. GSTIN 27ZZZPZ0140Z1Z2. Total charged: ₹1080.20.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 140\", \"invoice_no\": \"TEST-00140\", \"date\": \"2024-05-20\", \"total\": \"1080.20\", \"gstin\": \"27ZZZPZ0140Z1Z2\"}"
+  },
+  {
+    "text": "Bill from Zevix Sample Supplier 023; bill number TEST-00023; date 2024-01-24; tax ID 27ZZZPZ0023Z1Z4; amount payable ₹261.99.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 023\", \"invoice_no\": \"TEST-00023\", \"date\": \"2024-01-24\", \"total\": \"261.99\", \"gstin\": \"27ZZZPZ0023Z1Z4\"}"
+  },
+  {
+    "text": "Invoice ID=TEST-00152 | Seller=Zevix Sample Supplier 152 | Issued=2024-06-01 | GSTIN=27ZZZPZ0152Z1ZY | Total INR=1164.76",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 152\", \"invoice_no\": \"TEST-00152\", \"date\": \"2024-06-01\", \"total\": \"1164.76\", \"gstin\": \"27ZZZPZ0152Z1ZY\"}"
+  },
+  {
+    "text": "INVOICE\r\nTEST-00109\r\n2024-04-19\r\nBilled by Zevix Sample Supplier 109\r\nGSTIN 27ZZZPZ0109Z1Z1\r\nTotal payment Rs 863.17",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 109\", \"invoice_no\": \"TEST-00109\", \"date\": \"2024-04-19\", \"total\": \"863.17\", \"gstin\": \"27ZZZPZ0109Z1Z1\"}"
+  },
+  {
+    "text": "TAX INVOICE\r\nVendor: Zevix Sample Supplier 009\r\nInvoice No: TEST-00009\r\nDate: 2024-01-10\r\nGSTIN: 27ZZZPZ0009Z1Z2\r\nGrand Total: ₹163.17",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 009\", \"invoice_no\": \"TEST-00009\", \"date\": \"2024-01-10\", \"total\": \"163.17\", \"gstin\": \"27ZZZPZ0009Z1Z2\"}"
+  },
+  {
+    "text": "TAX INVOICE\r\nVendor: Zevix Sample Supplier 008\r\nInvoice No: TEST-00008\r\nDate: 2024-01-09\r\nGSTIN: 27ZZZPZ0008Z1Z3\r\nGrand Total: ₹156.04",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 008\", \"invoice_no\": \"TEST-00008\", \"date\": \"2024-01-09\", \"total\": \"156.04\", \"gstin\": \"27ZZZPZ0008Z1Z3\"}"
+  },
+  {
+    "text": "Bill from Zevix Sample Supplier 024; bill number TEST-00024; date 2024-01-25; tax ID 27ZZZPZ0024Z1Z3; amount payable ₹268.12.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 024\", \"invoice_no\": \"TEST-00024\", \"date\": \"2024-01-25\", \"total\": \"268.12\", \"gstin\": \"27ZZZPZ0024Z1Z3\"}"
+  },
+  {
+    "text": "Zevix Sample Supplier 056 | Tax invoice\r\nTEST-00056 - 2024-02-26\r\nGSTIN 27ZZZPZ0056Z1ZV\r\nNet amount payable Rs 492.28",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 056\", \"invoice_no\": \"TEST-00056\", \"date\": \"2024-02-26\", \"total\": \"492.28\", \"gstin\": \"27ZZZPZ0056Z1ZV\"}"
+  },
+  {
+    "text": "Zevix Sample Supplier 060 | Tax invoice\r\nTEST-00060 - 2024-03-01\r\nGSTIN 27ZZZPZ0060Z1ZZ\r\nNet amount payable Rs 520.80",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 060\", \"invoice_no\": \"TEST-00060\", \"date\": \"2024-03-01\", \"total\": \"520.80\", \"gstin\": \"27ZZZPZ0060Z1ZZ\"}"
+  },
+  {
+    "text": "Seller\r\nZevix Sample Supplier 130\r\nReference\r\nTEST-00130\r\nIssued on\r\n2024-05-10\r\nGSTIN\r\n27ZZZPZ0130Z1Z4\r\nTotal\r\n1010.90",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 130\", \"invoice_no\": \"TEST-00130\", \"date\": \"2024-05-10\", \"total\": \"1010.90\", \"gstin\": \"27ZZZPZ0130Z1Z4\"}"
+  },
+  {
+    "text": "Invoice ID=TEST-00155 | Seller=Zevix Sample Supplier 155 | Issued=2024-06-04 | GSTIN=27ZZZPZ0155Z1ZV | Total INR=1185.15",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 155\", \"invoice_no\": \"TEST-00155\", \"date\": \"2024-06-04\", \"total\": \"1185.15\", \"gstin\": \"27ZZZPZ0155Z1ZV\"}"
+  },
+  {
+    "text": "Document type: invoice; supplier: Zevix Sample Supplier 198; document no: TEST-00198; date: 2024-07-17; GSTIN: 27ZZZPZ0198Z1ZK; gross: 1486.74 INR",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 198\", \"invoice_no\": \"TEST-00198\", \"date\": \"2024-07-17\", \"total\": \"1486.74\", \"gstin\": \"27ZZZPZ0198Z1ZK\"}"
+  },
+  {
+    "text": "Bill no. TEST-00144 / date 2024-05-24\r\nIssued by Zevix Sample Supplier 144\r\nGSTIN: 27ZZZPZ0144Z1ZY\r\nFinal total: Rs 1108.72",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 144\", \"invoice_no\": \"TEST-00144\", \"date\": \"2024-05-24\", \"total\": \"1108.72\", \"gstin\": \"27ZZZPZ0144Z1ZY\"}"
+  },
+  {
+    "text": "Zevix Sample Supplier 051 | Tax invoice\r\nTEST-00051 - 2024-02-21\r\nGSTIN 27ZZZPZ0051Z1Z0\r\nNet amount payable Rs 457.63",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 051\", \"invoice_no\": \"TEST-00051\", \"date\": \"2024-02-21\", \"total\": \"457.63\", \"gstin\": \"27ZZZPZ0051Z1Z0\"}"
+  },
+  {
+    "text": "Payment statement for Zevix Sample Supplier 167: document TEST-00167 dated 2024-06-16; GSTIN 27ZZZPZ0167Z1ZR; payable 1269.71 INR.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 167\", \"invoice_no\": \"TEST-00167\", \"date\": \"2024-06-16\", \"total\": \"1269.71\", \"gstin\": \"27ZZZPZ0167Z1ZR\"}"
+  },
+  {
+    "text": "Document type: invoice; supplier: Zevix Sample Supplier 192; document no: TEST-00192; date: 2024-07-11; GSTIN: 27ZZZPZ0192Z1ZQ; gross: 1444.96 INR",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 192\", \"invoice_no\": \"TEST-00192\", \"date\": \"2024-07-11\", \"total\": \"1444.96\", \"gstin\": \"27ZZZPZ0192Z1ZQ\"}"
+  },
+  {
+    "text": "INVOICE\r\nTEST-00108\r\n2024-04-18\r\nBilled by Zevix Sample Supplier 108\r\nGSTIN 27ZZZPZ0108Z1Z2\r\nTotal payment Rs 856.04",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 108\", \"invoice_no\": \"TEST-00108\", \"date\": \"2024-04-18\", \"total\": \"856.04\", \"gstin\": \"27ZZZPZ0108Z1Z2\"}"
+  },
+  {
+    "text": "Zevix Sample Supplier 057 | Tax invoice\r\nTEST-00057 - 2024-02-27\r\nGSTIN 27ZZZPZ0057Z1ZU\r\nNet amount payable Rs 499.41",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 057\", \"invoice_no\": \"TEST-00057\", \"date\": \"2024-02-27\", \"total\": \"499.41\", \"gstin\": \"27ZZZPZ0057Z1ZU\"}"
+  },
+  {
+    "text": "Invoice details: TEST-00115, 2024-04-25, Zevix Sample Supplier 115, GSTIN 27ZZZPZ0115Z1Z3; total billed INR 905.95.",
+    "json": "{\"vendor\": \"Zevix Sample Supplier 115\", \"invoice_no\": \"TEST-00115\", \"date\": \"2024-04-25\", \"total\": \"905.95\", \"gstin\": \"27ZZZPZ0115Z1Z3\"}"
+  }
+]
