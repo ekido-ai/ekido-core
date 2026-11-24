@@ -145,7 +145,7 @@ class CommandLine(unittest.TestCase):
     def test_it_lists_what_staging_still_needs(self):
         code, out, _ = self.run_main("--list-blockers")
         self.assertEqual(code, 0)
-        for needle in ("orders", "settle", "SSM", "reconcile"):
+        for needle in ("Checkout", "INTERNAL_TOKEN", "SSM", "reconcile"):
             self.assertIn(needle, out)
 
     def test_an_existing_result_file_is_never_overwritten(self):

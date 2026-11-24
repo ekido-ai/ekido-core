@@ -48,11 +48,15 @@ CASES = (
 )
 
 STAGING_BLOCKERS = (
-    "POST /v1/quotes/{id}/orders is in the API contract but not built (needs stored quotes)",
-    "nothing calls RazorpayRail.settle or refund from a job's verdict yet (coordinator wiring, ticket C7 follow-up)",
-    "no route lists the ledger or reconciles (an admin route or a one-off script on the server is needed)",
+    # Checked against the Platform and the Coordinator on 24 Nov: the quotes and orders routes, the Razorpay webhook, the settle and refund
+    # routes and the Coordinator's call to them (fiat settlement) now exist. What is still missing:
+    "the staging driver itself is not written: a payment has to be made in Razorpay Checkout (test mode) in a browser, so it needs a browser step",
+    "the staging settings are not in place: RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, RAZORPAY_WEBHOOK_SECRET and INTERNAL_TOKEN on the Platform, "
+    "PLATFORM_URL and PLATFORM_INTERNAL_TOKEN on the Coordinator (ekido-infra sets none of them)",
+    "no route lists the ledger or reconciles (an admin route or a one-off script on the server is needed to compare the ledger with Razorpay)",
     "Razorpay test keys and the webhook secret are not in AWS SSM yet (ticket A1)",
-    "a test job that passes and one that fails the quality check must be startable on staging on demand",
+    "a test job that passes and one that fails the quality check must be startable on staging on demand (POST /v1/orgs/{id}/jobs starts a job from a paid order; "
+    "a job that fails the quality check on purpose still needs a fault or a recipe for it)",
 )
 
 
