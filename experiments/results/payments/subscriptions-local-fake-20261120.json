@@ -1,0 +1,341 @@
+{
+  "tool": "experiments/payments/run_subscriptions_matrix.py",
+  "driver": "local",
+  "evidence_type": "fake gateway and a script-controlled clock: proves the cases and the code paths, says nothing about Razorpay itself",
+  "run_at": "2026-11-20T03:23:04+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "id": 1,
+      "name": "subscribe to each plan",
+      "passed": true,
+      "checks": [
+        {
+          "what": "starter: a new subscription starts pending",
+          "expected": "PENDING",
+          "actual": "PENDING",
+          "ok": true
+        },
+        {
+          "what": "starter: no benefits before the first charge",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        },
+        {
+          "what": "starter: Razorpay was asked for the starter plan",
+          "expected": "starter",
+          "actual": "starter",
+          "ok": true
+        },
+        {
+          "what": "starter: after the first charge and its webhook the plan is active",
+          "expected": "starter",
+          "actual": "starter",
+          "ok": true
+        },
+        {
+          "what": "business: a new subscription starts pending",
+          "expected": "PENDING",
+          "actual": "PENDING",
+          "ok": true
+        },
+        {
+          "what": "business: no benefits before the first charge",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        },
+        {
+          "what": "business: Razorpay was asked for the business plan",
+          "expected": "business",
+          "actual": "business",
+          "ok": true
+        },
+        {
+          "what": "business: after the first charge and its webhook the plan is active",
+          "expected": "business",
+          "actual": "business",
+          "ok": true
+        },
+        {
+          "what": "a team that already subscribes cannot start a second subscription",
+          "expected": "ALREADY_SUBSCRIBED",
+          "actual": "ALREADY_SUBSCRIBED",
+          "ok": true
+        }
+      ],
+      "evidence": {},
+      "error": null
+    },
+    {
+      "id": 2,
+      "name": "renewal",
+      "passed": true,
+      "checks": [
+        {
+          "what": "the period's included jobs are used up",
+          "expected": false,
+          "actual": false,
+          "ok": true
+        },
+        {
+          "what": "after the period ends and before the renewal is confirmed, no benefits",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        },
+        {
+          "what": "after the renewal is confirmed the plan is active again",
+          "expected": "starter",
+          "actual": "starter",
+          "ok": true
+        },
+        {
+          "what": "a new period gives a fresh allowance",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        }
+      ],
+      "evidence": {},
+      "error": null
+    },
+    {
+      "id": 3,
+      "name": "failed renewal",
+      "passed": true,
+      "checks": [
+        {
+          "what": "Razorpay says the renewal charge failed (pending): synced as past due",
+          "expected": "synced_past_due",
+          "actual": "synced_past_due",
+          "ok": true
+        },
+        {
+          "what": "a past-due team has no paid benefits",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        },
+        {
+          "what": "retries ran out (halted): synced as halted",
+          "expected": "synced_halted",
+          "actual": "synced_halted",
+          "ok": true
+        },
+        {
+          "what": "a halted team is still on free",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        },
+        {
+          "what": "when the customer pays, the plan comes back",
+          "expected": "starter",
+          "actual": "starter",
+          "ok": true
+        },
+        {
+          "what": "the same webhook delivered twice changes nothing",
+          "expected": "duplicate",
+          "actual": "duplicate",
+          "ok": true
+        }
+      ],
+      "evidence": {},
+      "error": null
+    },
+    {
+      "id": 4,
+      "name": "cancel",
+      "passed": true,
+      "checks": [
+        {
+          "what": "cancel is requested for the end of the paid period",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        },
+        {
+          "what": "Razorpay was told to cancel at the end of the cycle",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        },
+        {
+          "what": "the team keeps the plan it paid for",
+          "expected": "starter",
+          "actual": "starter",
+          "ok": true
+        },
+        {
+          "what": "cancelling twice sends only one request to Razorpay",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        },
+        {
+          "what": "when Razorpay ends it, the team drops to free",
+          "expected": "synced_cancelled",
+          "actual": "synced_cancelled",
+          "ok": true
+        },
+        {
+          "what": "after the end the plan is free",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        }
+      ],
+      "evidence": {},
+      "error": null
+    },
+    {
+      "id": 5,
+      "name": "hitting the free-tier limit",
+      "passed": true,
+      "checks": [
+        {
+          "what": "a new team is on free",
+          "expected": "free",
+          "actual": "free",
+          "ok": true
+        },
+        {
+          "what": "the first small job is included",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        },
+        {
+          "what": "the second small job is not included (pay the fixed price instead)",
+          "expected": false,
+          "actual": false,
+          "ok": true
+        },
+        {
+          "what": "a medium job is not included on free",
+          "expected": false,
+          "actual": false,
+          "ok": true
+        },
+        {
+          "what": "hosted requests up to the monthly allowance are served",
+          "expected": 0,
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "what": "the next hosted request is refused and points at an upgrade",
+          "expected": "REQUEST_LIMIT:starter",
+          "actual": "REQUEST_LIMIT:starter",
+          "ok": true
+        },
+        {
+          "what": "a new calendar month restores the allowance",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        }
+      ],
+      "evidence": {},
+      "error": null
+    },
+    {
+      "id": 6,
+      "name": "upgrade",
+      "passed": true,
+      "checks": [
+        {
+          "what": "on starter a large job is not included",
+          "expected": false,
+          "actual": false,
+          "ok": true
+        },
+        {
+          "what": "the plan changes now",
+          "expected": "business",
+          "actual": "business",
+          "ok": true
+        },
+        {
+          "what": "Razorpay moved the subscription to the business plan",
+          "expected": "business",
+          "actual": "business",
+          "ok": true
+        },
+        {
+          "what": "business includes the large size",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        },
+        {
+          "what": "this period's usage was kept (1 job, 100 requests)",
+          "expected": {
+            "jobs": 1,
+            "requests": 100
+          },
+          "actual": {
+            "jobs": 1,
+            "requests": 100
+          },
+          "ok": true
+        }
+      ],
+      "evidence": {},
+      "error": null
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0
+  },
+  "usage_for_dashboard_comparison": [
+    {
+      "team": "org-sub-starter",
+      "plan": "starter",
+      "status": "ACTIVE",
+      "subscription": "sub_001",
+      "effective_plan": "starter"
+    },
+    {
+      "team": "org-sub-business",
+      "plan": "business",
+      "status": "ACTIVE",
+      "subscription": "sub_002",
+      "effective_plan": "business"
+    },
+    {
+      "team": "org-renew",
+      "plan": "starter",
+      "status": "ACTIVE",
+      "subscription": "sub_003",
+      "effective_plan": "starter"
+    },
+    {
+      "team": "org-failed",
+      "plan": "starter",
+      "status": "ACTIVE",
+      "subscription": "sub_004",
+      "effective_plan": "starter"
+    },
+    {
+      "team": "org-cancel",
+      "plan": "starter",
+      "status": "CANCELLED",
+      "subscription": "sub_005",
+      "effective_plan": "free"
+    },
+    {
+      "team": "org-upgrade",
+      "plan": "business",
+      "status": "ACTIVE",
+      "subscription": "sub_006",
+      "effective_plan": "business"
+    }
+  ],
+  "prices_provisional": true,
+  "dashboard_check": "compare with the subscriptions list in the Razorpay test dashboard by hand and attach a screenshot with keys hidden (not done by this script)"
+}
