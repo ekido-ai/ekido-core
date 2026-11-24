@@ -1,0 +1,411 @@
+{
+ "run": "run12",
+ "recipe_id": "ticket-sorter-hinglish",
+ "floor": 0.8,
+ "provenance": {
+  "workers_commit": "558e8713be853447615a50306d8fc6567de5bf06",
+  "core_commit": "1d874ae48343e29a71e9729331fdd55ba1cfd75c (ekido-core v0.4.2)",
+  "code_sha256": {
+   "runtime/ekido_runtime/distill.py": "cdb17d6d3596d6b25f5f50d20344a79d378413a55ea910d22595ee7b15bae633",
+   "runtime/ekido_runtime/llm.py": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a",
+   "runtime/ekido_runtime/train.py": "abb9153518e16bf43b399c0605bfac72970de67409035199f103e8d9e44e7178",
+   "packages/ekido_core/ekido_core/recipes.py": "1c1a77ac39015a0e5f7700dd65a9cc3d890c82a3feebe22e566fc4650f607e80",
+   "packages/ekido_core/ekido_core/job_spec.py": "a69557983f43a73bb15413011bc0d9b07f7c15d8e8174f3bf9fadfc0e15c6459"
+  },
+  "data_sha256": {
+   "train.csv": "ef7b24c2835b8e21dd507f022c5dc83878b6a8e2f7e66c69aa4db332bc557773",
+   "test.csv": "4778906558df177f717a22214c0b91f3cbf72f76915bd59da2aa1a923d994e2d"
+  },
+  "models": {
+   "teacher": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "load": "4-bit"
+   },
+   "student": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "source": "pinned in ekido-core v0.4.2 job_spec.MODEL_REVISIONS"
+   },
+   "judge": "none - no full-labelled-data judge used in this run (30-seed claim)"
+  },
+  "test_eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29"
+ },
+ "settings": {
+  "seeds": 30,
+  "per_seed_main": 20,
+  "per_seed_other_extra": 30,
+  "generation_budget_note": "the six 'other' seeds received 50 total generations vs 20 for other labels, to counter the verified collapse of the 'other' class; still only 30 labelled seeds",
+  "generation": "distill.generate_rows @ workers PR #15 commit (temperature 0.8, top_p 0.95, max_new_tokens 96, attempts 3)",
+  "label_verification": "teacher self-consistency only; no full-labelled-data judge (30-seed claim)",
+  "arms": {
+   "verified": {
+    "rows": 446,
+    "validation_curve": {
+     "80": 0.79,
+     "160": 0.77,
+     "240": 0.78,
+     "320": 0.81,
+     "400": 0.8
+    }
+   },
+   "clean": {
+    "rows": 741,
+    "validation_curve": {
+     "80": 0.65,
+     "160": 0.79,
+     "240": 0.81,
+     "320": 0.74,
+     "400": 0.72
+    }
+   }
+  },
+  "spec_overrides": "build_student_spec with optimizer.lr=3e-4, checkpoint_every_steps=80, total steps 400, segments of 80 via stop_after/resume",
+  "exec_config": {
+   "micro_batch": 2,
+   "accumulation": 4,
+   "amp": "fp16",
+   "grad_checkpointing": true,
+   "attention_impl": "sdpa",
+   "loader_workers": 0
+  },
+  "selection_rule": "highest validation pass rate; ties -> verified arm, then earlier step"
+ },
+ "audit_file": "audit12.json",
+ "ambiguity_flags_file": "ambiguity_flags.json",
+ "base_student_validation": 0.69,
+ "selection": {
+  "arm": "verified",
+  "step": 320,
+  "validation_pass_rate": 0.81,
+  "checkpoint": "/kaggle/working/out12/train_verified/checkpoints/step-320"
+ },
+ "validation_detailed": {
+  "base": {
+   "pass_rate": 0.69,
+   "matrix_gold_rows_x_pred_cols": {
+    "complaint": {
+     "complaint": 15,
+     "order": 0,
+     "question": 1,
+     "refund": 3,
+     "other": 0,
+     "": 0
+    },
+    "order": {
+     "complaint": 0,
+     "order": 13,
+     "question": 5,
+     "refund": 3,
+     "other": 1,
+     "": 0
+    },
+    "question": {
+     "complaint": 4,
+     "order": 0,
+     "question": 17,
+     "refund": 2,
+     "other": 0,
+     "": 0
+    },
+    "refund": {
+     "complaint": 0,
+     "order": 0,
+     "question": 0,
+     "refund": 24,
+     "other": 0,
+     "": 0
+    },
+    "other": {
+     "complaint": 2,
+     "order": 0,
+     "question": 7,
+     "refund": 2,
+     "other": 0,
+     "": 1
+    }
+   },
+   "per_label": {
+    "complaint": {
+     "support": 19,
+     "correct": 15,
+     "accuracy": 0.7895
+    },
+    "order": {
+     "support": 22,
+     "correct": 13,
+     "accuracy": 0.5909
+    },
+    "question": {
+     "support": 23,
+     "correct": 17,
+     "accuracy": 0.7391
+    },
+    "refund": {
+     "support": 24,
+     "correct": 24,
+     "accuracy": 1.0
+    },
+    "other": {
+     "support": 12,
+     "correct": 0,
+     "accuracy": 0.0
+    }
+   }
+  },
+  "best_trained": {
+   "pass_rate": 0.81,
+   "matrix_gold_rows_x_pred_cols": {
+    "complaint": {
+     "complaint": 19,
+     "order": 0,
+     "question": 0,
+     "refund": 0,
+     "other": 0,
+     "": 0
+    },
+    "order": {
+     "complaint": 0,
+     "order": 21,
+     "question": 1,
+     "refund": 0,
+     "other": 0,
+     "": 0
+    },
+    "question": {
+     "complaint": 4,
+     "order": 1,
+     "question": 13,
+     "refund": 1,
+     "other": 4,
+     "": 0
+    },
+    "refund": {
+     "complaint": 0,
+     "order": 0,
+     "question": 0,
+     "refund": 24,
+     "other": 0,
+     "": 0
+    },
+    "other": {
+     "complaint": 1,
+     "order": 2,
+     "question": 0,
+     "refund": 1,
+     "other": 4,
+     "": 4
+    }
+   },
+   "per_label": {
+    "complaint": {
+     "support": 19,
+     "correct": 19,
+     "accuracy": 1.0
+    },
+    "order": {
+     "support": 22,
+     "correct": 21,
+     "accuracy": 0.9545
+    },
+    "question": {
+     "support": 23,
+     "correct": 13,
+     "accuracy": 0.5652
+    },
+    "refund": {
+     "support": 24,
+     "correct": 24,
+     "accuracy": 1.0
+    },
+    "other": {
+     "support": 12,
+     "correct": 4,
+     "accuracy": 0.3333
+    }
+   }
+  }
+ },
+ "historical_test_comparison": {
+  "note": "The recipe test.csv was used repeatedly in this experiment series (v4-v12), including checkpoint selection in early runs. These numbers are a historical comparison only, NOT an untouched independent test. No new approved held-out set exists; independent verification is pending.",
+  "base": {
+   "pass_rate": 0.66,
+   "matrix_gold_rows_x_pred_cols": {
+    "complaint": {
+     "complaint": 16,
+     "order": 2,
+     "question": 2,
+     "refund": 0,
+     "other": 0,
+     "": 0
+    },
+    "order": {
+     "complaint": 2,
+     "order": 14,
+     "question": 3,
+     "refund": 1,
+     "other": 0,
+     "": 0
+    },
+    "question": {
+     "complaint": 0,
+     "order": 3,
+     "question": 17,
+     "refund": 0,
+     "other": 0,
+     "": 0
+    },
+    "refund": {
+     "complaint": 2,
+     "order": 0,
+     "question": 2,
+     "refund": 16,
+     "other": 0,
+     "": 0
+    },
+    "other": {
+     "complaint": 3,
+     "order": 0,
+     "question": 12,
+     "refund": 1,
+     "other": 3,
+     "": 1
+    }
+   },
+   "per_label": {
+    "complaint": {
+     "support": 20,
+     "correct": 16,
+     "accuracy": 0.8
+    },
+    "order": {
+     "support": 20,
+     "correct": 14,
+     "accuracy": 0.7
+    },
+    "question": {
+     "support": 20,
+     "correct": 17,
+     "accuracy": 0.85
+    },
+    "refund": {
+     "support": 20,
+     "correct": 16,
+     "accuracy": 0.8
+    },
+    "other": {
+     "support": 20,
+     "correct": 3,
+     "accuracy": 0.15
+    }
+   }
+  },
+  "best_trained": {
+   "pass_rate": 0.71,
+   "matrix_gold_rows_x_pred_cols": {
+    "complaint": {
+     "complaint": 17,
+     "order": 3,
+     "question": 0,
+     "refund": 0,
+     "other": 0,
+     "": 0
+    },
+    "order": {
+     "complaint": 0,
+     "order": 20,
+     "question": 0,
+     "refund": 0,
+     "other": 0,
+     "": 0
+    },
+    "question": {
+     "complaint": 3,
+     "order": 3,
+     "question": 12,
+     "refund": 0,
+     "other": 2,
+     "": 0
+    },
+    "refund": {
+     "complaint": 3,
+     "order": 2,
+     "question": 0,
+     "refund": 15,
+     "other": 0,
+     "": 0
+    },
+    "other": {
+     "complaint": 3,
+     "order": 3,
+     "question": 1,
+     "refund": 0,
+     "other": 7,
+     "": 6
+    }
+   },
+   "per_label": {
+    "complaint": {
+     "support": 20,
+     "correct": 17,
+     "accuracy": 0.85
+    },
+    "order": {
+     "support": 20,
+     "correct": 20,
+     "accuracy": 1.0
+    },
+    "question": {
+     "support": 20,
+     "correct": 12,
+     "accuracy": 0.6
+    },
+    "refund": {
+     "support": 20,
+     "correct": 15,
+     "accuracy": 0.75
+    },
+    "other": {
+     "support": 20,
+     "correct": 7,
+     "accuracy": 0.35
+    }
+   }
+  }
+ },
+ "flagged_ambiguous_test_rows": {
+  "rows": 3,
+  "note": "Seller-registration style test rows flagged by a text screen. Labels are the ORIGINAL dataset labels, unchanged. Reported separately for transparency; the headline scores use all 100 rows with original labels.",
+  "base_pass_rate_on_flagged": 0.0,
+  "trained_pass_rate_on_flagged": 0.3333,
+  "trained_predictions": [
+   {
+    "gold": "other",
+    "predicted": "complaint",
+    "text": "Hum Jaipur me chhoti dukaan khol rahe hain, seller registration ki jaankari chahiye"
+   },
+   {
+    "gold": "other",
+    "predicted": "other",
+    "text": "We are opening a small shop in Patna and want to know about seller registration"
+   },
+   {
+    "gold": "other",
+    "predicted": "question",
+    "text": "How can our small shop register as a seller on your marketplace?"
+   }
+  ]
+ },
+ "floor_verdict": {
+  "on_validation": {
+   "score": 0.81,
+   "floor": 0.8,
+   "meets_floor": true
+  },
+  "on_historical_test": {
+   "score": 0.71,
+   "floor": 0.8,
+   "meets_floor": false
+  }
+ }
+}

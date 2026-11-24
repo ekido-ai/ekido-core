@@ -1,0 +1,23 @@
+{
+  "id": "vaibhavthegoat/ekido-invoice-challenge-eval",
+  "id_no": 146222969,
+  "title": "Ekido invoice challenge eval",
+  "code_file": "ekido-invoice-challenge-eval.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [],
+  "kernel_sources": [
+    "vaibhavthegoat/ekido-filtered-invoice"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:fc720c15545eb096a510e1f085b17fc118387a007599424d953a4f327b71cacf",
+  "machine_shape": "NvidiaTeslaT4"
+}

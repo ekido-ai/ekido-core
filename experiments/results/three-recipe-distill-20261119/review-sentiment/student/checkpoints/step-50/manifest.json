@@ -1,0 +1,36 @@
+{
+  "dataset_sha256": "d27bbe8adda76e547ff84506a0d02c2733f8e0f5ad7b93a60dd88a724fc380b9",
+  "exec_config": {
+    "accumulation": 8,
+    "amp": "fp16",
+    "attention_impl": "sdpa",
+    "grad_checkpointing": true,
+    "loader_workers": 0,
+    "micro_batch": 1
+  },
+  "files": {
+    "optimizer.safetensors": {
+      "bytes": 17482496,
+      "sha256": "b963759eb90e73a393e9cd82c9153b1c2f2b5aedaaa72dedc0893c79ba90e870"
+    },
+    "trainable.safetensors": {
+      "bytes": 8731992,
+      "sha256": "c885c3a1fe85457990ecbf4116a808cb697693daf2e77110875c1e2938155866"
+    }
+  },
+  "format": "GPCK/1",
+  "immutable_hash": "da7beb045d805853d38a3da31bd342ef04d22c6c85ab7a5284fc83987a761eaa",
+  "logical_step": 50,
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "recipe_id": "review-sentiment",
+  "scaler": {
+    "_growth_tracker": 20,
+    "backoff_factor": 0.5,
+    "growth_factor": 2.0,
+    "growth_interval": 2000,
+    "scale": 4096.0
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "ticket-sorter-hinglish",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "dataset": {
+    "sha256": "9e66ca80a2a24576abfa0072ba759bf4d143fce69ba7df0b90aa1d21e00a050e",
+    "bytes": 106267,
+    "train_rows": 626,
+    "test_rows": 100
+  },
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "max_seq_length": 512,
+  "logical_batch_size": 8,
+  "total_logical_steps": 400,
+  "seed": 42,
+  "checkpoint_every_steps": 80,
+  "optimizer": {
+    "name": "adamw",
+    "lr": 0.0003,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "max_grad_norm": 1.0
+  },
+  "lr_schedule": {
+    "name": "linear_warmup_linear_decay",
+    "warmup_steps": 10
+  }
+}

@@ -1,0 +1,1033 @@
+{
+  "core_revision": "0a9db037170024a1f32748e0b5dcbe14a1a88a3a",
+  "worker_revision": "74bf4e753ab30f4ce3b88a577a16b425c6fac923",
+  "llama_cpp_revision": "f8caa5ea30b5775512906ae3b7ee53b21a7a6e1d",
+  "source_checkpoint_step": 400,
+  "reference_pass_rate": 0.82,
+  "reference_eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+  "absolute_accuracy_tolerance": 0.05,
+  "tolerance_note": "Predeclared experiment tolerance, not a published policy",
+  "test_note": "Previously reused synthetic test; not an independent quality estimate",
+  "quantizations": {
+    "Q4_K_M": {
+      "pass_rate": 0.71,
+      "examples": 100,
+      "difference": -0.10999999999999999,
+      "within_tolerance": false,
+      "gguf_sha256": "f7662060ca12c4da39c732f0803e486fc9bb60b9d58989a3c54666c2a5dcde6d",
+      "gguf_bytes": 986048160,
+      "answers": [
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "category: order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "other",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "category: order",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        }
+      ]
+    },
+    "Q8_0": {
+      "pass_rate": 0.76,
+      "examples": 100,
+      "difference": -0.05999999999999994,
+      "within_tolerance": false,
+      "gguf_sha256": "f55f13555a84dd5452edabb9c35ab9310774036e0a1f1779cd79e16251c56380",
+      "gguf_bytes": 1646572704,
+      "answers": [
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "order",
+          "passed": false
+        },
+        {
+          "gold": "other",
+          "answer": "other",
+          "passed": true
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "complaint",
+          "passed": false
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "other",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "question",
+          "passed": false
+        },
+        {
+          "gold": "complaint",
+          "answer": "complaint",
+          "passed": true
+        },
+        {
+          "gold": "refund",
+          "answer": "refund",
+          "passed": true
+        },
+        {
+          "gold": "question",
+          "answer": "question",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        },
+        {
+          "gold": "order",
+          "answer": "order",
+          "passed": true
+        }
+      ]
+    }
+  }
+}

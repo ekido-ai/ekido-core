@@ -1,0 +1,122 @@
+[
+  {
+    "question": "कृपया अपॉइंटमेंट बुकिंग की जानकारी दें।",
+    "answer": "अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।"
+  },
+  {
+    "question": "कृपया क्लिनिक की टाइमिंग की जानकारी दें।",
+    "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"
+  },
+  {
+    "question": "Mujhe payment methods ke baare mein bata sakte hain?",
+    "answer": "Sample clinic cash aur UPI accept karta hai."
+  },
+  {
+    "question": "Mujhe consultation fee ke baare mein bata sakte hain?",
+    "answer": "Sample consultation ki fee 400 rupaye hai."
+  },
+  {
+    "question": "Kya aap online consultation ki jaankari de sakte hain?",
+    "answer": "Online consultation appointment se available hai."
+  },
+  {
+    "question": "मुझे अपॉइंटमेंट की तारीख बदलने के बारे में बताएँ।",
+    "answer": "अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से बात करें।"
+  },
+  {
+    "question": "appointment booking ki details chahiye.",
+    "answer": "Appointment reception desk par book kar sakte hain."
+  },
+  {
+    "question": "Kya aap visitor privacy ki jaankari de sakte hain?",
+    "answer": "Sample clinic ki privacy policy ke liye reception se poochhein."
+  },
+  {
+    "question": "रविवार की ओपनिंग के बारे में कुछ बताइए।",
+    "answer": "सैंपल क्लिनिक रविवार को बंद रहता है।"
+  },
+  {
+    "question": "Please available languages ki information dein.",
+    "answer": "Reception Hindi aur English mein baat kar sakta hai."
+  },
+  {
+    "question": "Please explain open days.",
+    "answer": "The sample clinic opens Monday to Saturday."
+  },
+  {
+    "question": "Could you tell me about open days?",
+    "answer": "The sample clinic opens Monday to Saturday."
+  },
+  {
+    "question": "I need information about booking appointments.",
+    "answer": "Book an appointment at the reception desk."
+  },
+  {
+    "question": "Please online consultation ki information dein.",
+    "answer": "Online consultation appointment se available hai."
+  },
+  {
+    "question": "ऑनलाइन कंसल्टेशन के बारे में कुछ बताइए।",
+    "answer": "ऑनलाइन कंसल्टेशन अपॉइंटमेंट से उपलब्ध है।"
+  },
+  {
+    "question": "Where can I find details about follow-up appointments?",
+    "answer": "Ask reception to arrange a follow-up appointment."
+  },
+  {
+    "question": "क्लिनिक की टाइमिंग की डिटेल चाहिए।",
+    "answer": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।"
+  },
+  {
+    "question": "I need information about receiving test reports online.",
+    "answer": "Ask reception whether your report can be shared online."
+  },
+  {
+    "question": "मुझे बिना बुकिंग विजिट के बारे में बताएँ।",
+    "answer": "बिना बुकिंग विजिट अपॉइंटमेंट की उपलब्धता पर निर्भर है।"
+  },
+  {
+    "question": "Can you share information about available languages?",
+    "answer": "Reception can communicate in Hindi and English."
+  },
+  {
+    "question": "online consultation ki details chahiye.",
+    "answer": "Online consultation appointment se available hai."
+  },
+  {
+    "question": "Can you share information about wheelchair access?",
+    "answer": "The sample clinic has a step-free entrance."
+  },
+  {
+    "question": "payment methods ki details chahiye.",
+    "answer": "Sample clinic cash aur UPI accept karta hai."
+  },
+  {
+    "question": "Where can I find details about opening hours?",
+    "answer": "The sample clinic is open from 9 am to 5 pm."
+  },
+  {
+    "question": "Please appointment cancellation ki information dein.",
+    "answer": "Appointment cancel karne ke liye reception se baat karein."
+  },
+  {
+    "question": "Kya aap report collection ki jaankari de sakte hain?",
+    "answer": "Report open hours mein reception se le sakte hain."
+  },
+  {
+    "question": "Can you share information about cancelling an appointment?",
+    "answer": "Ask reception to cancel an appointment."
+  },
+  {
+    "question": "Mujhe online consultation ke baare mein bata sakte hain?",
+    "answer": "Online consultation appointment se available hai."
+  },
+  {
+    "question": "report collection ki details chahiye.",
+    "answer": "Report open hours mein reception se le sakte hain."
+  },
+  {
+    "question": "इंतजार का समय के बारे में कुछ बताइए।",
+    "answer": "इंतजार अलग हो सकता है; मौजूदा अनुमान रिसेप्शन से पूछें।"
+  }
+]

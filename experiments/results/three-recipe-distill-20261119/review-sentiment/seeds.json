@@ -1,0 +1,122 @@
+[
+  {
+    "text": "यह desk lamp मेरी जरूरत के लिए अच्छा है।",
+    "label": "positive"
+  },
+  {
+    "text": "Main desk lamp se khush hoon, umeed par khara utara.",
+    "label": "positive"
+  },
+  {
+    "text": "Mere liye running shoe lena sahi faisla tha.",
+    "label": "positive"
+  },
+  {
+    "text": "Mere liye bedsheet lena sahi faisla tha.",
+    "label": "positive"
+  },
+  {
+    "text": "Really pleased with the frying pan; it meets my needs.",
+    "label": "positive"
+  },
+  {
+    "text": "desk lamp का अनुभव अच्छा रहा, मैं खुश हूँ।",
+    "label": "positive"
+  },
+  {
+    "text": "The desk lamp was a good purchase for me.",
+    "label": "positive"
+  },
+  {
+    "text": "मुझे backpack बहुत पसंद आया।",
+    "label": "positive"
+  },
+  {
+    "text": "Mujhe backpack bahut pasand aaya.",
+    "label": "positive"
+  },
+  {
+    "text": "मुझे power bank बहुत पसंद आया।",
+    "label": "positive"
+  },
+  {
+    "text": "water bottle का अनुभव खराब रहा, मैं नाराज हूँ।",
+    "label": "negative"
+  },
+  {
+    "text": "I regret buying the desk lamp; it was a poor experience.",
+    "label": "negative"
+  },
+  {
+    "text": "मुझे mug बिल्कुल पसंद नहीं आया।",
+    "label": "negative"
+  },
+  {
+    "text": "pillow ka experience kharab raha, main naraaz hoon.",
+    "label": "negative"
+  },
+  {
+    "text": "backpack se main asantusht hoon, achha nahi laga.",
+    "label": "negative"
+  },
+  {
+    "text": "यह frying pan मेरी जरूरत के लिए अच्छा नहीं है।",
+    "label": "negative"
+  },
+  {
+    "text": "The backpack did not meet my needs and I dislike it.",
+    "label": "negative"
+  },
+  {
+    "text": "I regret buying the power bank; it was a poor experience.",
+    "label": "negative"
+  },
+  {
+    "text": "मुझे water bottle बिल्कुल पसंद नहीं आया।",
+    "label": "negative"
+  },
+  {
+    "text": "The running shoe was a bad purchase for me.",
+    "label": "negative"
+  },
+  {
+    "text": "The pillow was delivered this morning.",
+    "label": "neutral"
+  },
+  {
+    "text": "मैंने notebook मेज पर रखा है।",
+    "label": "neutral"
+  },
+  {
+    "text": "backpack ek box mein aaya hai.",
+    "label": "neutral"
+  },
+  {
+    "text": "I received the frying pan today.",
+    "label": "neutral"
+  },
+  {
+    "text": "I have placed the power bank on the table.",
+    "label": "neutral"
+  },
+  {
+    "text": "मैंने backpack मेज पर रखा है।",
+    "label": "neutral"
+  },
+  {
+    "text": "I opened the package containing the bedsheet.",
+    "label": "neutral"
+  },
+  {
+    "text": "mug ek box mein aaya hai.",
+    "label": "neutral"
+  },
+  {
+    "text": "Maine running shoe ka package khola.",
+    "label": "neutral"
+  },
+  {
+    "text": "मैंने mug मेज पर रखा है।",
+    "label": "neutral"
+  }
+]

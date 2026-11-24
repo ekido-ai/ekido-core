@@ -1,0 +1,6 @@
+name: Ekido CodeQL config
+
+# experiments/results/ holds archived run scripts kept exactly as they ran (the evidence the numbers trace to).
+# They cannot be edited, so findings there could never be fixed. All other code is still scanned.
+paths-ignore:
+  - experiments/results/**

@@ -1,0 +1,36 @@
+{
+  "dataset_sha256": "2a3e623bdcf690f3301894c3b1b75e0e72bb8e63a99245e91760f4765083debc",
+  "exec_config": {
+    "accumulation": 8,
+    "amp": "fp16",
+    "attention_impl": "sdpa",
+    "grad_checkpointing": true,
+    "loader_workers": 0,
+    "micro_batch": 1
+  },
+  "files": {
+    "optimizer.safetensors": {
+      "bytes": 17482496,
+      "sha256": "afc450b5ea8917e6ec7b1d5ba0eef93898cb38e690fe864636ee787269b772ed"
+    },
+    "trainable.safetensors": {
+      "bytes": 8731992,
+      "sha256": "9a6a2a3b82520a79a7b13c5f366ebc61dfe7ede776d58c79024f0ffe863a9e12"
+    }
+  },
+  "format": "GPCK/1",
+  "immutable_hash": "80aa6f2e93ad18c41a4af1a248d26f8a2ecf0d1c4bb1f4381c59f1e862e04733",
+  "logical_step": 20,
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "recipe_id": "ticket-sorter-hinglish",
+  "scaler": {
+    "_growth_tracker": 5,
+    "backoff_factor": 0.5,
+    "growth_factor": 2.0,
+    "growth_interval": 2000,
+    "scale": 32768.0
+  }
+}

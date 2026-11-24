@@ -1,0 +1,3 @@
+# These files are run evidence; retain the exact bytes recorded by Kaggle.
+* -text
+run.py whitespace=cr-at-eol

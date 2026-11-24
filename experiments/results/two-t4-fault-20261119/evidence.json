@@ -1,0 +1,92 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "ticket-sorter-hinglish",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 2,
+    "accumulation": 4,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 400,
+  "completed_step": 400,
+  "resumed_from_step": 80,
+  "train_rows": 500,
+  "test_rows": 100,
+  "mean_loss_last_10": 0.00014067618503759148,
+  "base_eval": null,
+  "eval": {
+    "pass_rate": 0.82,
+    "score": 0.82,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+    "floor": 0.8,
+    "meets_floor": true,
+    "samples": [
+      {
+        "reference": "order",
+        "answer": " order",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      },
+      {
+        "reference": "complaint",
+        "answer": " complaint",
+        "passed": true
+      },
+      {
+        "reference": "other",
+        "answer": " other",
+        "passed": true
+      },
+      {
+        "reference": "question",
+        "answer": " question",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " refund",
+        "passed": true
+      },
+      {
+        "reference": "other",
+        "answer": " other",
+        "passed": true
+      },
+      {
+        "reference": "refund",
+        "answer": " order",
+        "passed": false
+      },
+      {
+        "reference": "complaint",
+        "answer": " order",
+        "passed": false
+      },
+      {
+        "reference": "complaint",
+        "answer": " complaint",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/two-t4-fault/train/checkpoints/step-160",
+    "/kaggle/working/two-t4-fault/train/checkpoints/step-240",
+    "/kaggle/working/two-t4-fault/train/checkpoints/step-320",
+    "/kaggle/working/two-t4-fault/train/checkpoints/step-400"
+  ],
+  "seconds": 328.9
+}

@@ -1,0 +1,71 @@
+{
+  "recipe_id": "review-sentiment",
+  "metric": "accuracy",
+  "pass_rate": 0.8,
+  "score": 0.8,
+  "examples": 100,
+  "eval_set_hash": "e2ad8e2df78d665c5d6b1ed61d00c9b8aa692d729f035ffac7f2c3a2d9c82a25",
+  "samples": [
+    {
+      "reference": "positive",
+      "answer": " Positive\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "negative",
+      "answer": " Negative\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "negative",
+      "answer": " Negative\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "negative",
+      "answer": " Negative\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "negative",
+      "answer": " Negative\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "positive",
+      "answer": " Positive\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "negative",
+      "answer": " Negative\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "negative",
+      "answer": " Negative\n\nThis review",
+      "passed": true
+    },
+    {
+      "reference": "neutral",
+      "answer": " Neutral\n\nThe given",
+      "passed": true
+    },
+    {
+      "reference": "neutral",
+      "answer": " Neutral\n\nThe sentiment",
+      "passed": true
+    }
+  ],
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "device": "cuda",
+  "seconds": 18.5,
+  "run_at": "2026-11-19T11:44:35+00:00",
+  "max_seq_length": 512,
+  "code_sha256": {
+    "baseline": "5358890457616ab81114048589f864268050fc2867bc27fcd38304dffcf16aca",
+    "recipes": "8866b2735c347314fd5c5b8162b8a0e7f4f7af670c9ed83d37926c4a223cd792",
+    "runtime": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a"
+  }
+}

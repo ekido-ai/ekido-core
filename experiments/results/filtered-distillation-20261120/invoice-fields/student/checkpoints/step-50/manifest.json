@@ -1,0 +1,36 @@
+{
+  "dataset_sha256": "d065047d75dde961fa10547fe718de8170a01f246fc08eb1e4cf4fb8ab886829",
+  "exec_config": {
+    "accumulation": 8,
+    "amp": "fp16",
+    "attention_impl": "sdpa",
+    "grad_checkpointing": true,
+    "loader_workers": 0,
+    "micro_batch": 1
+  },
+  "files": {
+    "optimizer.safetensors": {
+      "bytes": 17482496,
+      "sha256": "899614e80a8390920c989d35ac89e9d3c77ab32f2d7a2265f1d942d4c46f7d12"
+    },
+    "trainable.safetensors": {
+      "bytes": 8731992,
+      "sha256": "842e1f848666f41ad4ae46d3207ca52387413b9d0cf4b3ce4dfbf3143dfab26c"
+    }
+  },
+  "format": "GPCK/1",
+  "immutable_hash": "76a7aa949dc2305356820eeee1f025e46e84b92cd97303297e92f4a5505160a5",
+  "logical_step": 50,
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "recipe_id": "invoice-fields",
+  "scaler": {
+    "_growth_tracker": 50,
+    "backoff_factor": 0.5,
+    "growth_factor": 2.0,
+    "growth_interval": 2000,
+    "scale": 65536.0
+  }
+}

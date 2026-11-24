@@ -1,0 +1,71 @@
+{
+  "recipe_id": "faq-bot-hinglish",
+  "metric": "rouge_l",
+  "pass_rate": 0.0,
+  "score": 0.04236989759729053,
+  "examples": 60,
+  "eval_set_hash": "9c62a5fe1095cd4f5462c0f3041ec8bf1834dfccfcbd0807bbbc4b1c134a64ea",
+  "samples": [
+    {
+      "reference": "The sample clinic is open from 9 am to 5 pm.",
+      "answer": " Opening hours at our clinic are as follows:\n\nMonday - Friday: 8 AM to 6 PM\nSaturday and Sunday: 9 AM to 5 PM\n\nPlease note that we may have some additional hours or days of operation depending on the specific services you need. If you have any questions or need further clarification, please don't hesitate to ask! Let us know if there is anything else we can assist you with. \n\nWe hope this information helps you plan your visit. Have a great day! \nThank you for choosing our clinic. We look forward to serving you soon. \n[Your Name]  \n[Your Clinic Name]  \n[Your Contact Information]  \n[Your Address]  \n[City, State, ZIP Code]  \n[Phone Number]  \n[Email Address]  \n[",
+      "passed": false
+    },
+    {
+      "reference": "Sample clinic subah 9 se shaam 5 baje tak khula hai.",
+      "answer": " The timing of a clinic depends on several factors such as the type of service provided (e.g., physical therapy, medical care), the location, and the availability of staff. However, generally speaking, clinics are open 24/7 to accommodate patients at any time.\n\nIf you're looking for specific information about a particular service or need, I'd be happy to provide more detailed guidance based on your request. If you have any other questions related to healthcare or general health-related topics, feel free to ask! 😊😊😊\n\nI'm here to help with any questions you might have. 🌟✨✨✨\n\nPlease let me know if there's anything else I can assist you with! 😊😊😊\n\nThank you for reaching out. I'll do my best to answer",
+      "passed": false
+    },
+    {
+      "reference": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।",
+      "answer": " अपने बच्चों के लिए तुलना में आता है। उसे देखने के लिए वह भाग और शब्दों के लिए जानकारी देने वाले छोटे लड़कियाँ हैं। यदि उन्हें बच्चों के लिए जानकारी देने की जरूरत ह�",
+      "passed": false
+    },
+    {
+      "reference": "The sample clinic opens Monday to Saturday.",
+      "answer": " Open days are an opportunity to learn more about a new place or service. They can be held at various times of the year and often include information on facilities, staff, prices, and other details that may not be available during regular business hours. It is important to plan ahead and check the website or contact the clinic directly before attending an open day to ensure you get the most out of your experience. Additionally, it is always best to call ahead if you have any questions or concerns about the event. Overall, open days provide valuable opportunities to learn more about a new place or service and make informed decisions before visiting. Let me know if you need help with anything else! #OpenDays #NewPlace #ServiceExperience #CustomerSupport #Healthcare #Information #Planning #Visit #Knowledge #Experience #",
+      "passed": false
+    },
+    {
+      "reference": "Sample clinic Monday se Saturday khulta hai.",
+      "answer": " The clinic has various open days throughout the year. Some of these are:\n\n1. Monday to Friday: This is a regular working day and you can visit on any weekday.\n\n2. Saturday: You can visit on Saturdays as well.\n\n3. Sunday: It's also an option to visit on Sundays.\n\n4. Public holidays: If there are public holidays during your work week, you might be able to visit on those days too.\n\n5. Weekends: Depending on your availability, you could visit on weekends or even on some free days like Christmas Day or New Year's Day.\n\nIt's always best to check their website or call them directly to get the most accurate information about their opening hours. They may have specific guidelines based on your location or if you're visiting from outside your area. \n\n",
+      "passed": false
+    },
+    {
+      "reference": "सैंपल क्लिनिक सोमवार से शनिवार खुलता है।",
+      "answer": " इसका महत्व छोटा है। उन्हें अपने बच्चों के लिए आशा करने के लिए भी शुरू करना चाहिए। और उन्हें गर्म तक जानकारी देने के लिए अपने बच्चों के लिए भी शुरू करना चाहिए।\nThis answer is quite helpful and",
+      "passed": false
+    },
+    {
+      "reference": "The sample clinic is closed on Sundays.",
+      "answer": " Sunday is an exciting day to visit a clinic! Here are some key points you should consider:\n\n1. **Opening Hours**: Sundays are typically open from 8 AM to 5 PM. This flexibility allows patients to see their doctors without having to wait until the next business day.\n\n2. **Specialty Focus**: Some clinics may offer special services or treatments on Sundays. For example, dental offices might be open on Sundays for routine check-ups and cleaning appointments.\n\n3. **Patient Flow**: If you're visiting multiple clinics during the week, it can be challenging to manage patient flow. However, many clinics have flexible scheduling options that allow you to choose which clinic to visit on Sundays.\n\n4. **Accessibility**: Many clinics provide convenient parking options and shuttle services if needed. Additionally, some clinics offer free",
+      "passed": false
+    },
+    {
+      "reference": "Sample clinic Sunday ko band rehta hai.",
+      "answer": " The clinic is open on Sundays. It offers various services including medical consultations and treatments. If you're interested in their services or need more information about their schedule, please feel free to ask! They are always happy to assist you with your healthcare needs. [Note: This answer assumes that \"ek\" means \"yourself,\" which is a common way of asking for someone's opinion or advice.] \n\nIf you have any other questions or need further assistance, feel free to let me know! I'm here to help. [Note: This response acknowledges the use of \"ek\" as a casual way of addressing oneself.] \n\nI hope this helps clarify things for you. Let me know if there's anything else I can assist you with! [Note: This response uses informal language appropriate for a patient",
+      "passed": false
+    },
+    {
+      "reference": "सैंपल क्लिनिक रविवार को बंद रहता है।",
+      "answer": " रविवार की ओपनिंग पर क्या जानकारी है? इसलिए उत्तर अभिगमन होगा। रविवार के बाद में आदि की भौतिक शब्दों को खुशी और अच्छी तरह चुनाव करना चाहिए। यहाँ यह एक अभिगमन है जो रविव",
+      "passed": false
+    },
+    {
+      "reference": "Book an appointment at the reception desk.",
+      "answer": " Booking an appointment is a crucial step in ensuring that you receive the care and attention you need. Here are some key points to consider:\n\n1. Choose the right time: Make sure to choose a time when you feel most comfortable and ready to attend your appointment.\n\n2. Confirm your availability: Before making a reservation, make sure to confirm your availability with the doctor or clinic staff. This will help ensure that you don't end up waiting unnecessarily.\n\n3. Check the availability: Many clinics offer online scheduling tools where you can check if there are any available slots for your appointment. This can save you time by not having to call ahead.\n\n4. Book early: If possible, book your appointment as soon as possible after confirming your availability. This way, you'll be able to get into the clinic on",
+      "passed": false
+    }
+  ],
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "device": "cuda",
+  "seconds": 295.1,
+  "run_at": "2026-11-19T11:37:27+00:00",
+  "max_seq_length": 512,
+  "code_sha256": {
+    "baseline": "5358890457616ab81114048589f864268050fc2867bc27fcd38304dffcf16aca",
+    "recipes": "8866b2735c347314fd5c5b8162b8a0e7f4f7af670c9ed83d37926c4a223cd792",
+    "runtime": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "review-sentiment",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 1,
+    "accumulation": 8,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 20,
+  "completed_step": 20,
+  "resumed_from_step": 0,
+  "train_rows": 500,
+  "test_rows": 100,
+  "mean_loss_last_10": 5.200681111216545,
+  "base_eval": null,
+  "eval": {
+    "pass_rate": 0.63,
+    "score": 0.63,
+    "metric": "accuracy",
+    "examples": 100,
+    "eval_set_hash": "e2ad8e2df78d665c5d6b1ed61d00c9b8aa692d729f035ffac7f2c3a2d9c82a25",
+    "floor": 0.8,
+    "meets_floor": false,
+    "samples": [
+      {
+        "reference": "positive",
+        "answer": " positive.  Answer",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative.  This",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " positive\nThis review",
+        "passed": false
+      },
+      {
+        "reference": "negative",
+        "answer": " negative. ผ",
+        "passed": true
+      },
+      {
+        "reference": "negative",
+        "answer": " negative. ผ",
+        "passed": true
+      },
+      {
+        "reference": "positive",
+        "answer": " positiveHuman resources",
+        "passed": false
+      },
+      {
+        "reference": "negative",
+        "answer": " neutral\nThis review",
+        "passed": false
+      },
+      {
+        "reference": "negative",
+        "answer": " negativeHuman:",
+        "passed": false
+      },
+      {
+        "reference": "neutral",
+        "answer": " neutral. The given",
+        "passed": true
+      },
+      {
+        "reference": "neutral",
+        "answer": " neutralHuman resources",
+        "passed": false
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/cost-matrix/review-sentiment-qwen2.5-1.5b-instruct/training/checkpoints/step-20"
+  ],
+  "seconds": 63.6,
+  "training_metrics": {
+    "scope": "training loop including checkpoint writes; excludes model loading and evaluation",
+    "steps": 20,
+    "non_padding_tokens": 5816,
+    "input_tokens_including_padding": 5816,
+    "seconds": 43.51320920299986,
+    "non_padding_tokens_per_second": 133.660562080515,
+    "gpu_name": "Tesla T4",
+    "peak_allocated_bytes": 6814935552,
+    "peak_reserved_bytes": 7103053824
+  }
+}

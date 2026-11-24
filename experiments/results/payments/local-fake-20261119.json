@@ -1,0 +1,377 @@
+{
+  "tool": "experiments/payments/run_matrix.py",
+  "driver": "local",
+  "evidence_type": "fake gateway: proves the cases and the code paths, says nothing about Razorpay itself",
+  "run_at": "2026-11-19T16:15:05+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "id": 1,
+      "name": "pay with a UPI test ID",
+      "passed": true,
+      "checks": [
+        {
+          "what": "a new order starts CREATED",
+          "expected": "CREATED",
+          "actual": "CREATED",
+          "ok": true
+        },
+        {
+          "what": "the payment is held after the capture webhook",
+          "expected": "HELD",
+          "actual": "HELD",
+          "ok": true
+        },
+        {
+          "what": "the ledger holds exactly one CAPTURE of the order's amount",
+          "expected": [
+            [
+              "CAPTURE",
+              "",
+              11682
+            ]
+          ],
+          "actual": [
+            [
+              "CAPTURE",
+              "",
+              11682
+            ]
+          ],
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "93371d1e-0688-4298-ad96-cd1d9bff909e",
+        "payment": "pay_0002",
+        "method": "upi"
+      },
+      "error": null
+    },
+    {
+      "id": 2,
+      "name": "pay with a test card",
+      "passed": true,
+      "checks": [
+        {
+          "what": "a new order starts CREATED",
+          "expected": "CREATED",
+          "actual": "CREATED",
+          "ok": true
+        },
+        {
+          "what": "the payment is held after the capture webhook",
+          "expected": "HELD",
+          "actual": "HELD",
+          "ok": true
+        },
+        {
+          "what": "the ledger holds exactly one CAPTURE of the order's amount",
+          "expected": [
+            [
+              "CAPTURE",
+              "",
+              11682
+            ]
+          ],
+          "actual": [
+            [
+              "CAPTURE",
+              "",
+              11682
+            ]
+          ],
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "80cc628f-74aa-45b1-8e18-c617dbfff228",
+        "payment": "pay_0004",
+        "method": "card"
+      },
+      "error": null
+    },
+    {
+      "id": 3,
+      "name": "a failed payment",
+      "passed": true,
+      "checks": [
+        {
+          "what": "a failed payment leaves the order CREATED (the customer can try again)",
+          "expected": "CREATED",
+          "actual": "CREATED",
+          "ok": true
+        },
+        {
+          "what": "no money is recorded",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        },
+        {
+          "what": "a second, successful attempt on the same order is held",
+          "expected": "HELD",
+          "actual": "HELD",
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "f59ce192-9d3c-4a9f-8998-07a2cc19a01a",
+        "failed_payment": "pay_0006",
+        "retry_payment": "pay_0007"
+      },
+      "error": null
+    },
+    {
+      "id": 4,
+      "name": "a job that passes: payout split",
+      "passed": true,
+      "checks": [
+        {
+          "what": "the order is SETTLED",
+          "expected": "SETTLED",
+          "actual": "SETTLED",
+          "ok": true
+        },
+        {
+          "what": "what was paid equals what was allocated, to the paisa",
+          "expected": 11682,
+          "actual": 11682,
+          "ok": true
+        },
+        {
+          "what": "the provider earnings equal the split",
+          "expected": [
+            2970,
+            5940
+          ],
+          "actual": [
+            2970,
+            5940
+          ],
+          "ok": true
+        },
+        {
+          "what": "no refund was made",
+          "expected": false,
+          "actual": false,
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "93371d1e-0688-4298-ad96-cd1d9bff909e",
+        "split": {
+          "provider-a": 2970,
+          "provider-b": 5940
+        }
+      },
+      "error": null
+    },
+    {
+      "id": 5,
+      "name": "a job that fails the quality check: automatic refund",
+      "passed": true,
+      "checks": [
+        {
+          "what": "the order is REFUNDED",
+          "expected": "REFUNDED",
+          "actual": "REFUNDED",
+          "ok": true
+        },
+        {
+          "what": "Razorpay refunded the full amount",
+          "expected": 11682,
+          "actual": 11682,
+          "ok": true
+        },
+        {
+          "what": "the ledger nets to zero",
+          "expected": 0,
+          "actual": 0,
+          "ok": true
+        },
+        {
+          "what": "asking again refunds only once",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "80cc628f-74aa-45b1-8e18-c617dbfff228",
+        "payment": "pay_0004"
+      },
+      "error": null
+    },
+    {
+      "id": 6,
+      "name": "a duplicate webhook",
+      "passed": true,
+      "checks": [
+        {
+          "what": "the first delivery is processed",
+          "expected": "held",
+          "actual": "held",
+          "ok": true
+        },
+        {
+          "what": "the repeat is acknowledged and ignored",
+          "expected": "duplicate",
+          "actual": "duplicate",
+          "ok": true
+        },
+        {
+          "what": "the ledger still has one CAPTURE",
+          "expected": 1,
+          "actual": 1,
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "ddeb744d-05ee-49c4-833d-c571dc2fc6b2",
+        "payment": "pay_0010"
+      },
+      "error": null
+    },
+    {
+      "id": 7,
+      "name": "a webhook with a bad signature",
+      "passed": true,
+      "checks": [
+        {
+          "what": "a wrong signature is refused with 401",
+          "expected": 401,
+          "actual": 401,
+          "ok": true
+        },
+        {
+          "what": "no signature is refused with 401",
+          "expected": 401,
+          "actual": 401,
+          "ok": true
+        },
+        {
+          "what": "nothing was recorded",
+          "expected": [
+            "CREATED",
+            []
+          ],
+          "actual": [
+            "CREATED",
+            []
+          ],
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "order": "ea29a608-aa10-448d-8c18-a8502148ce37",
+        "note": "the forged webhook named a payment that does not exist at Razorpay"
+      },
+      "error": null
+    },
+    {
+      "id": 8,
+      "name": "reconciliation after all of them",
+      "passed": true,
+      "checks": [
+        {
+          "what": "reconciliation finds no difference",
+          "expected": true,
+          "actual": true,
+          "ok": true
+        },
+        {
+          "what": "unknown_payments is empty",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        },
+        {
+          "what": "not_held is empty",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        },
+        {
+          "what": "amount_mismatch is empty",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        },
+        {
+          "what": "refund_mismatch is empty",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        },
+        {
+          "what": "missing_at_gateway is empty",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        },
+        {
+          "what": "ledger_unbalanced is empty",
+          "expected": [],
+          "actual": [],
+          "ok": true
+        }
+      ],
+      "evidence": {
+        "report": {
+          "ok": true,
+          "checked": 4,
+          "unknown_payments": [],
+          "not_held": [],
+          "amount_mismatch": [],
+          "refund_mismatch": [],
+          "missing_at_gateway": [],
+          "ledger_unbalanced": []
+        }
+      },
+      "error": null
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0
+  },
+  "ledger_for_dashboard_comparison": [
+    {
+      "order": "order_0001",
+      "payment": "pay_0002",
+      "amount_paise": 11682,
+      "status": "SETTLED",
+      "customer_net_paise": 11682
+    },
+    {
+      "order": "order_0003",
+      "payment": "pay_0004",
+      "amount_paise": 11682,
+      "status": "REFUNDED",
+      "customer_net_paise": 0
+    },
+    {
+      "order": "order_0005",
+      "payment": "pay_0007",
+      "amount_paise": 11682,
+      "status": "HELD",
+      "customer_net_paise": 11682
+    },
+    {
+      "order": "order_0009",
+      "payment": "pay_0010",
+      "amount_paise": 11682,
+      "status": "HELD",
+      "customer_net_paise": 11682
+    },
+    {
+      "order": "order_0011",
+      "payment": null,
+      "amount_paise": 11682,
+      "status": "CREATED",
+      "customer_net_paise": 0
+    }
+  ],
+  "dashboard_check": "compare ledger_for_dashboard_comparison with the Razorpay test dashboard by hand and attach a screenshot with keys hidden (not done by this script)"
+}

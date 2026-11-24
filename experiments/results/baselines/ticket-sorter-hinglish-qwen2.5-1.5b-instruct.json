@@ -1,0 +1,71 @@
+{
+  "recipe_id": "ticket-sorter-hinglish",
+  "metric": "accuracy",
+  "pass_rate": 0.65,
+  "score": 0.65,
+  "examples": 100,
+  "eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+  "samples": [
+    {
+      "reference": "order",
+      "answer": " Order\n\nThis ticket",
+      "passed": true
+    },
+    {
+      "reference": "refund",
+      "answer": " refund\n\nThis ticket",
+      "passed": true
+    },
+    {
+      "reference": "complaint",
+      "answer": " Complaint\n\nThis ticket",
+      "passed": true
+    },
+    {
+      "reference": "other",
+      "answer": " Question\n\nThis ticket",
+      "passed": false
+    },
+    {
+      "reference": "question",
+      "answer": " Question\n\nThis ticket",
+      "passed": true
+    },
+    {
+      "reference": "refund",
+      "answer": " refund\n\nThis ticket",
+      "passed": true
+    },
+    {
+      "reference": "other",
+      "answer": " Complaint\n\nThis ticket",
+      "passed": false
+    },
+    {
+      "reference": "refund",
+      "answer": " Question\n\nThis ticket",
+      "passed": false
+    },
+    {
+      "reference": "complaint",
+      "answer": " Complaint\n\nThis ticket",
+      "passed": true
+    },
+    {
+      "reference": "complaint",
+      "answer": " Complaint\n\nThis ticket",
+      "passed": true
+    }
+  ],
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "device": "cuda",
+  "seconds": 19.2,
+  "run_at": "2026-11-19T11:24:26+00:00",
+  "max_seq_length": 512,
+  "code_sha256": {
+    "baseline": "5358890457616ab81114048589f864268050fc2867bc27fcd38304dffcf16aca",
+    "recipes": "8866b2735c347314fd5c5b8162b8a0e7f4f7af670c9ed83d37926c4a223cd792",
+    "runtime": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a"
+  }
+}

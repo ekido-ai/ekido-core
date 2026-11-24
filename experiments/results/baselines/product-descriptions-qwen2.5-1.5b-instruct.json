@@ -1,0 +1,71 @@
+{
+  "recipe_id": "product-descriptions",
+  "metric": "rouge_l",
+  "pass_rate": 0.0,
+  "score": 0.11760910192494571,
+  "examples": 60,
+  "eval_set_hash": "c13045b3f20bd67c6ba92f176bf843f00b4f1988159a7eda1d2a06dcc8b7dadb",
+  "samples": [
+    {
+      "reference": "In amber, this aluminium desk lamp has adjustable arm and is available in size 24 cm.",
+      "answer": " This desk lamp is made of high-quality aluminum and comes in an attractive amber color. It has a sturdy base that can support the weight of your laptop or other electronic devices. The unique adjustable arm allows you to position the light exactly where you need it for maximum comfort and convenience. Perfect for any workspace! Based on the provided details, here's a friendly product description:\n\n---\n\nIntroducing our latest innovation - the Desk Lamp! Crafted from premium aluminum, this sleek lamp offers both style and functionality.\n\nOur design features a striking amber finish, making it perfect for adding a touch of elegance to any room. With its robust base, this lamp",
+      "passed": false
+    },
+    {
+      "reference": "Size 31 cm: a amber desk lamp made from aluminium, with touch dimmer.",
+      "answer": " This is an elegant and practical desk lamp made of high-quality aluminum. It has a warm amber color that enhances your workspace while providing soft lighting for reading or working. The compact design measures 31 cm in height, making it perfect for any desktop. What sets this lamp apart is its built-in touch dimmer, allowing you to adjust the brightness with ease without needing to fumble with buttons or wires. Ideal for both home offices and small workspaces, this lamp adds a touch of sophistication and convenience to your daily routine. Enjoy clear focus and comfortable illumination wherever you need it most! Based on the provided details:\n\n---\n\n**Product Description",
+      "passed": false
+    },
+    {
+      "reference": "Made from aluminium, the amber desk lamp is size 38 cm and includes adjustable arm.",
+      "answer": " This desk lamp is made of high-quality aluminum and comes in an attractive amber color. It has a sturdy base that can support the weight of your laptop or other electronic devices. The unique adjustable arm allows you to position the light exactly where you need it for maximum comfort and convenience. Perfect for any workspace! Based on the provided details, here's a friendly product description:\n\n---\n\nIntroducing our latest innovation - the Desk Lamp! Crafted from premium aluminum, this sleek lamp offers both style and functionality.\n\nOur design features a striking amber finish, making it perfect for adding a touch of elegance to any room. With its robust base, this lamp",
+      "passed": false
+    },
+    {
+      "reference": "In ivory, this aluminium desk lamp has touch dimmer and is available in size 24 cm.",
+      "answer": " This sleek and stylish desk lamp is made of high-quality aluminum with an ivory finish. It has a compact design that fits perfectly on any desk or table. The lamp features a built-in touch dimmer for easy control over the brightness level. Perfect for adding a touch of elegance to your workspace! #LuxuryLamp #ElegantDesign #SmartFunctionality\n\nThis desk lamp combines style and functionality in one elegant package. Crafted from durable aluminum, it boasts a sophisticated ivory finish that complements any decor. Its compact yet robust design ensures it's perfect for placement on desks or tables, making it a versatile addition to any workspace.\n\n",
+      "passed": false
+    },
+    {
+      "reference": "Size 31 cm: a ivory desk lamp made from aluminium, with adjustable arm.",
+      "answer": " This desk lamp is made of high-quality aluminum and comes in an ivory color. It has a height of 31 cm and features an adjustable arm for easy positioning. Perfect for any workspace! Based on the provided details, here's a friendly product description:\n\nIntroducing our sleek and stylish Desk Lamp - your perfect companion for any workspace!\n\nCrafted from premium aluminum, this lamp exudes durability and elegance. Its ivory finish adds a touch of sophistication to any room, making it the ideal addition to your home or office.\n\nMeasuring at just 31 cm tall, this lamp is compact yet functional. The standout feature? Its adjustable",
+      "passed": false
+    },
+    {
+      "reference": "Made from aluminium, the ivory desk lamp is size 38 cm and includes touch dimmer.",
+      "answer": " This sleek and stylish desk lamp is made of high-quality aluminum with an ivory finish. It has a compact design that fits perfectly on any desk or table. The lamp features a built-in touch dimmer for easy control over the brightness level. Perfect for adding a touch of elegance to your workspace! #luxurylamps #designerlighting\n\nThis desk lamp is not only visually appealing but also functional. Its sleek design makes it perfect for any modern home office or study area. With its compact size, it can be easily stored away when not in use, making it ideal for those who want their space to remain clutter-free.\n\nThe",
+      "passed": false
+    },
+    {
+      "reference": "In amber, this natural rubber yoga mat has textured surface and is available in size 170 cm.",
+      "answer": " This is an amazing yoga mat made of natural rubber. It has a beautiful amber color and measures 170 cm in length. The unique texture on the surface makes it easy to grip and provides excellent traction for your practice. Perfect for any yoga enthusiast looking for a high-quality mat that's both stylish and functional. #yogamat #naturalrubber #ambersurface #texturedsurface\n\nThis is an amazing yoga mat made of natural rubber. It has a beautiful amber color and measures 170 cm in length. The unique texture on the surface makes it easy to grip and provides excellent traction for your practice. Perfect",
+      "passed": false
+    },
+    {
+      "reference": "Size 180 cm: a amber yoga mat made from natural rubber, with carrying strap.",
+      "answer": " This is an eco-friendly and durable yoga mat made of natural rubber. It comes in the color amber with a carrying strap for easy transport. Perfect for any home or studio space! 🧘‍♀️🧘‍♂️\n\n---\n\n### Product Description:\n\n**Yoga Mat**\n\n- **Material:** Natural Rubber\n- **Color:** Amber\n- **Size:** 180 cm\n- **Feature:** Carrying Strap\n\nThis eco-friendly and durable yoga mat is crafted from natural rubber, ensuring both comfort and longevity during your practice sessions. The vibrant amber color adds a touch of warmth to your space, making it",
+      "passed": false
+    },
+    {
+      "reference": "Made from natural rubber, the amber yoga mat is size 190 cm and includes textured surface.",
+      "answer": " This is an amazing yoga mat made of natural rubber. It has a beautiful amber color and measures 190 cm in length. The unique texture on the surface makes it easy to grip and provides excellent traction for your practice. Perfect for any yoga enthusiast! 🧘‍♀️🧘‍♂️\n\n---\n\n**Product Description:**\n\nIntroducing our premium yoga mat - the ultimate companion for all your yoga sessions! Crafted with high-quality natural rubber, this mat offers unparalleled comfort and durability.\n\n- **Material:** Made from eco-friendly natural rubber, ensuring sustainable use.\n- **Color:** A stunning amber hue that adds",
+      "passed": false
+    },
+    {
+      "reference": "In ivory, this natural rubber yoga mat has carrying strap and is available in size 170 cm.",
+      "answer": " This is an excellent choice for anyone who wants to practice yoga at home or in the gym. The natural rubber mat provides a comfortable and stable surface for your exercises, while the carrying strap makes it easy to transport your mat wherever you go. The ivory color adds a touch of elegance to any space, making it perfect for both beginners and experienced practitioners alike. Whether you're practicing on your own or with friends, this yoga mat will help you achieve better results and enjoy your practice more. It's also great for use as a floor mat when not practicing yoga.\n\nThis is an excellent choice for anyone who wants to practice yoga at home or in",
+      "passed": false
+    }
+  ],
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "device": "cuda",
+  "seconds": 271.9,
+  "run_at": "2026-11-19T10:10:51+00:00",
+  "max_seq_length": 512,
+  "code_sha256": {
+    "baseline": "5358890457616ab81114048589f864268050fc2867bc27fcd38304dffcf16aca",
+    "recipes": "8866b2735c347314fd5c5b8162b8a0e7f4f7af670c9ed83d37926c4a223cd792",
+    "runtime": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "recipe_id": "product-descriptions",
+  "metric": "rouge_l",
+  "pass_rate": 0.0,
+  "score": 0.10798170969648427,
+  "examples": 60,
+  "eval_set_hash": "c13045b3f20bd67c6ba92f176bf843f00b4f1988159a7eda1d2a06dcc8b7dadb",
+  "samples": [
+    {
+      "reference": "In amber, this aluminium desk lamp has adjustable arm and is available in size 24 cm.",
+      "answer": " Our desk lamp is made of high-quality aluminium and features an amber color. It has an adjustable arm that allows you to adjust the height and angle of the light source. This makes it perfect for any office or home setting where you need a bright and efficient lighting solution. The lamp also comes with a battery pack that can last up to 10 hours on a single charge. Whether you're working at your desk or relaxing in your living room, our desk lamp will provide you with the perfect amount of light without compromising on safety. Order now and experience the difference! 🌟\n\nThis product is designed to be functional and stylish,",
+      "passed": false
+    },
+    {
+      "reference": "Size 31 cm: a amber desk lamp made from aluminium, with touch dimmer.",
+      "answer": " Our desk lamp is made of high-quality aluminium and features an amber color. It has a touch dimmer that allows you to adjust the brightness of the light without having to reach for the switch. This makes it easy to work in any environment with minimal effort. The sleek design and comfortable grip make it perfect for use in various settings such as at home or on the go.\n\nThis desk lamp is designed to be both functional and stylish, making it a great addition to any workspace. Whether you're working from home or in a professional setting, this lamp will provide you with the lighting you need to stay focused and productive throughout the day. So",
+      "passed": false
+    },
+    {
+      "reference": "Made from aluminium, the amber desk lamp is size 38 cm and includes adjustable arm.",
+      "answer": " Our desk lamp is made of high-quality aluminium and features an amber color. It has an adjustable arm that allows you to adjust the height and angle of the light source. The lamp is perfect for use in any office setting and provides excellent lighting for both reading and working. Whether you're looking for a cozy nightstand or a bright workspace, our desk lamp is the perfect addition to your home or professional space. \n\nThis lamp comes with a battery pack and a USB port for charging. With its compact design, it's easy to carry around and set up wherever you need it.\n\nOur desk lamps are available in various sizes, so you can",
+      "passed": false
+    },
+    {
+      "reference": "In ivory, this aluminium desk lamp has touch dimmer and is available in size 24 cm.",
+      "answer": " Our desk lamp is made of high-quality aluminium and features an elegant touch dimmer. It's perfect for those who want to create a cozy and comfortable work environment. The sleek design with its large 24 cm diameter makes it ideal for any office or home setting. With the touch dimmer, you can easily adjust the brightness of the light without having to reach over to the switch. This desk lamp is durable and easy to use, making it a great investment for anyone looking to improve their workspace. \n\nThis desk lamp is also available in other sizes such as 18 cm, 30 cm, and 45 cm",
+      "passed": false
+    },
+    {
+      "reference": "Size 31 cm: a ivory desk lamp made from aluminium, with adjustable arm.",
+      "answer": " Our desk lamp is made of high-quality aluminium and features an elegant ivory design. It has an adjustable arm that allows you to adjust the height and angle of the light source for optimal lighting. The lampshade is also in a beautiful ivory color, adding a touch of elegance to your workspace. Whether you're working at home or on the go, our desk lamp will provide you with the perfect amount of light to help you stay focused and productive throughout the day.\n\nThis desk lamp is perfect for anyone who wants to improve their productivity and work environment. With its sleek design and adjustable arm, it's easy to customize to fit your personal style and",
+      "passed": false
+    },
+    {
+      "reference": "Made from aluminium, the ivory desk lamp is size 38 cm and includes touch dimmer.",
+      "answer": " Our desk lamp is made of high-quality aluminium and features an elegant touch dimmer. It's perfect for those who want to create a cozy and comfortable work environment. The sleek design with its large 38 cm height makes it ideal for any office or home setting. With the touch dimmer, you can easily adjust the brightness without having to reach for your phone or tablet. This desk lamp is durable and easy to use, making it a great investment for anyone looking to improve their workspace. Whether you're working on a laptop or using your phone, this desk lamp will provide you with the perfect lighting solution. So why wait? Get",
+      "passed": false
+    },
+    {
+      "reference": "In amber, this natural rubber yoga mat has textured surface and is available in size 170 cm.",
+      "answer": " Perfect for those who love to unwind and relax in their daily routine. Our natural rubber yoga mat is made of the finest quality rubber that feels smooth and comfortable against your skin. The amber color adds an extra touch of elegance and sophistication to any room or space. With its textured surface, you can easily wipe away sweat and dirt without leaving any residue behind. Whether you're practicing yoga, meditation, or simply relaxing, our yoga mat is the perfect choice for anyone looking to unwind and enjoy a peaceful moment. \n\nThis product is available in sizes ranging from 165cm to 180cm, making it versatile enough to suit",
+      "passed": false
+    },
+    {
+      "reference": "Size 180 cm: a amber yoga mat made from natural rubber, with carrying strap.",
+      "answer": " Perfect for those who want to enjoy the benefits of yoga without any discomfort or hassle. Made with natural rubber, this yoga mat is perfect for all types of activities and can be carried on your back or used as a cushion. The amber color adds an extra touch of elegance and sophistication to your yoga practice. Ideal for both beginners and experienced practitioners alike.\n\nYoga mats are essential tools in any yoga studio or home gym. They provide a soft base for poses and help maintain proper alignment. However, they can also become uncomfortable if not properly maintained. This yoga mat is made of natural rubber, which is safe and eco-friendly. It has a",
+      "passed": false
+    },
+    {
+      "reference": "Made from natural rubber, the amber yoga mat is size 190 cm and includes textured surface.",
+      "answer": " Perfect for those who love to unwind and relax in their daily routine. Our natural rubber yoga mat is made of the finest quality rubber that feels smooth and comfortable against your skin. The amber color adds an extra touch of elegance and sophistication to any room or space. With its textured surface, you can easily wipe away sweat and dirt without leaving any residue behind. Whether you're practicing yoga, meditation, or simply relaxing, our yoga mat is the perfect choice for anyone looking to unwind and enjoy a peaceful moment. \n\nThis product is available in sizes ranging from 180cm to 200cm, making it versatile enough to suit",
+      "passed": false
+    },
+    {
+      "reference": "In ivory, this natural rubber yoga mat has carrying strap and is available in size 170 cm.",
+      "answer": " Perfect for those who want to enjoy the benefits of yoga without any discomfort. Made with natural rubber, this yoga mat is soft and comfortable to touch. The ivory color makes it look stunning in any setting. With its carrying strap, you can easily carry your yoga mat wherever you go. Ideal for both beginners and experienced practitioners alike.\n\nThis product is made from natural rubber, which is safe for use by all ages. It's also eco-friendly and sustainable, making it a great choice for those who care about the environment. The ivory color adds a touch of elegance to any room or space, while the carrying strap ensures that your yoga mat stays",
+      "passed": false
+    }
+  ],
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "device": "cuda",
+  "seconds": 227.7,
+  "run_at": "2026-11-19T10:05:41+00:00",
+  "max_seq_length": 512,
+  "code_sha256": {
+    "baseline": "5358890457616ab81114048589f864268050fc2867bc27fcd38304dffcf16aca",
+    "recipes": "8866b2735c347314fd5c5b8162b8a0e7f4f7af670c9ed83d37926c4a223cd792",
+    "runtime": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a"
+  }
+}

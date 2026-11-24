@@ -1,0 +1,347 @@
+{
+  "challenge_sha256": "47ff511284557a865c5bad4b00538a525906385fcfc3d225e61652ab29e85780",
+  "eval_set_hash": "8a35f0efcf74fd805dc7b4f3b5857b9f64cf73c7b30f442d6630a6fbe8fc2075",
+  "rows": 24,
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "historical_student_rate": 0.83,
+  "note": "Exploratory AI-written mixed-sentiment challenge; subjective candidate labels not independently reviewed.",
+  "base": {
+    "pass_rate": 0.8333333333333334,
+    "mean_score": 0.8333333333333334,
+    "predictions": [
+      {
+        "input": "The backpack arrived late but the stitching is excellent and I am pleased overall.",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The lamp is a little dim yet the battery lasts so long that I am happy with it.",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The mug had too much packaging but it keeps tea warm and I would buy it again.",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "Delivery dheemi thi lekin bottle leak nahi hoti aur overall main khush hoon.",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "Pillow ka cover thoda rough hai par neend achhi aati hai aur main santusht hoon.",
+        "reference": "positive",
+        "answer": " Positive\nThis review",
+        "passed": true
+      },
+      {
+        "input": "जूते देर से आए लेकिन इतने आरामदायक हैं कि कुल मिलाकर मैं खुश हूँ।",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "कप का रंग अलग है फिर भी उसकी मजबूती से मैं संतुष्ट हूँ।",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "हालाँकि डिब्बा टूटा था पर बैग सही निकला और मुझे बहुत पसंद आया।",
+        "reference": "positive",
+        "answer": " Positive\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The pan looks nice but the handle broke immediately and I regret buying it.",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The notebook arrived quickly yet the pages tear so easily that I am disappointed.",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The scarf feels soft but its colour ran on the first wash so I would not recommend it.",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "Charger ki packing achhi thi par woh kaam nahi karta aur main niraash hoon.",
+        "reference": "negative",
+        "answer": " Negative\nThis review",
+        "passed": true
+      },
+      {
+        "input": "Bottle halki hai lekin dhakkan leak karta hai isliye mujhe kharidne ka afsos hai.",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "डिलीवरी जल्दी थी लेकिन बत्ती एक दिन में बंद हो गई और मैं नाराज़ हूँ।",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "कपड़ा मुलायम है पर सिलाई उधड़ गई इसलिए मैं असंतुष्ट हूँ।",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "डिब्बा अच्छा था मगर बर्तन टेढ़ा निकला और मेरी खरीद बेकार गई।",
+        "reference": "negative",
+        "answer": " Negative\n\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The chair is comfortable but assembly was difficult; the good and bad balance out for me.",
+        "reference": "neutral",
+        "answer": " Neutral\n\nThe review",
+        "passed": true
+      },
+      {
+        "input": "The case looks good and scratches easily; overall I feel neither pleased nor disappointed.",
+        "reference": "neutral",
+        "answer": " Neutral\nThis review",
+        "passed": true
+      },
+      {
+        "input": "The clock is quiet but the display is hard to read; my overall opinion is mixed.",
+        "reference": "neutral",
+        "answer": " Neutral\nThe review",
+        "passed": true
+      },
+      {
+        "input": "Bag mazboot hai par kaafi bhaari hai; kul milakar mera anubhav mila jula hai.",
+        "reference": "neutral",
+        "answer": " Positive\nThis review",
+        "passed": false
+      },
+      {
+        "input": "Kapda naram hai lekin size chhota hai; main na khush hoon na naraaz.",
+        "reference": "neutral",
+        "answer": " Negative\nThis review",
+        "passed": false
+      },
+      {
+        "input": "बोतल हल्की है लेकिन ढक्कन खोलना कठिन है; कुल अनुभव मिला जुला है।",
+        "reference": "neutral",
+        "answer": " Negative\n\nThis review",
+        "passed": false
+      },
+      {
+        "input": "रोशनी अच्छी है पर तार छोटा है; मैं न संतुष्ट हूँ न असंतुष्ट।",
+        "reference": "neutral",
+        "answer": " Negative\n\nThis review",
+        "passed": false
+      },
+      {
+        "input": "किताब की छपाई साफ है लेकिन कागज पतला है; मेरी राय मिली जुली है।",
+        "reference": "neutral",
+        "answer": " Neutral\n\nThis review",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoint_manifest": {
+    "dataset_sha256": "d27bbe8adda76e547ff84506a0d02c2733f8e0f5ad7b93a60dd88a724fc380b9",
+    "exec_config": {
+      "accumulation": 8,
+      "amp": "fp16",
+      "attention_impl": "sdpa",
+      "grad_checkpointing": true,
+      "loader_workers": 0,
+      "micro_batch": 1
+    },
+    "files": {
+      "optimizer.safetensors": {
+        "bytes": 17482496,
+        "sha256": "b963759eb90e73a393e9cd82c9153b1c2f2b5aedaaa72dedc0893c79ba90e870"
+      },
+      "trainable.safetensors": {
+        "bytes": 8731992,
+        "sha256": "c885c3a1fe85457990ecbf4116a808cb697693daf2e77110875c1e2938155866"
+      }
+    },
+    "format": "GPCK/1",
+    "immutable_hash": "da7beb045d805853d38a3da31bd342ef04d22c6c85ab7a5284fc83987a761eaa",
+    "logical_step": 50,
+    "model": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "recipe_id": "review-sentiment",
+    "scaler": {
+      "_growth_tracker": 20,
+      "backoff_factor": 0.5,
+      "growth_factor": 2.0,
+      "growth_interval": 2000,
+      "scale": 4096.0
+    }
+  },
+  "student": {
+    "pass_rate": 0.625,
+    "mean_score": 0.625,
+    "predictions": [
+      {
+        "input": "The backpack arrived late but the stitching is excellent and I am pleased overall.",
+        "reference": "positive",
+        "answer": " neutral",
+        "passed": false
+      },
+      {
+        "input": "The lamp is a little dim yet the battery lasts so long that I am happy with it.",
+        "reference": "positive",
+        "answer": " neutral",
+        "passed": false
+      },
+      {
+        "input": "The mug had too much packaging but it keeps tea warm and I would buy it again.",
+        "reference": "positive",
+        "answer": " neutral",
+        "passed": false
+      },
+      {
+        "input": "Delivery dheemi thi lekin bottle leak nahi hoti aur overall main khush hoon.",
+        "reference": "positive",
+        "answer": " neutral",
+        "passed": false
+      },
+      {
+        "input": "Pillow ka cover thoda rough hai par neend achhi aati hai aur main santusht hoon.",
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "input": "जूते देर से आए लेकिन इतने आरामदायक हैं कि कुल मिलाकर मैं खुश हूँ।",
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "input": "कप का रंग अलग है फिर भी उसकी मजबूती से मैं संतुष्ट हूँ।",
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "input": "हालाँकि डिब्बा टूटा था पर बैग सही निकला और मुझे बहुत पसंद आया।",
+        "reference": "positive",
+        "answer": " positive",
+        "passed": true
+      },
+      {
+        "input": "The pan looks nice but the handle broke immediately and I regret buying it.",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "The notebook arrived quickly yet the pages tear so easily that I am disappointed.",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "The scarf feels soft but its colour ran on the first wash so I would not recommend it.",
+        "reference": "negative",
+        "answer": " neutral",
+        "passed": false
+      },
+      {
+        "input": "Charger ki packing achhi thi par woh kaam nahi karta aur main niraash hoon.",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "Bottle halki hai lekin dhakkan leak karta hai isliye mujhe kharidne ka afsos hai.",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "डिलीवरी जल्दी थी लेकिन बत्ती एक दिन में बंद हो गई और मैं नाराज़ हूँ।",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "कपड़ा मुलायम है पर सिलाई उधड़ गई इसलिए मैं असंतुष्ट हूँ।",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "डिब्बा अच्छा था मगर बर्तन टेढ़ा निकला और मेरी खरीद बेकार गई।",
+        "reference": "negative",
+        "answer": " negative",
+        "passed": true
+      },
+      {
+        "input": "The chair is comfortable but assembly was difficult; the good and bad balance out for me.",
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      },
+      {
+        "input": "The case looks good and scratches easily; overall I feel neither pleased nor disappointed.",
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      },
+      {
+        "input": "The clock is quiet but the display is hard to read; my overall opinion is mixed.",
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      },
+      {
+        "input": "Bag mazboot hai par kaafi bhaari hai; kul milakar mera anubhav mila jula hai.",
+        "reference": "neutral",
+        "answer": " positive",
+        "passed": false
+      },
+      {
+        "input": "Kapda naram hai lekin size chhota hai; main na khush hoon na naraaz.",
+        "reference": "neutral",
+        "answer": " neutral",
+        "passed": true
+      },
+      {
+        "input": "बोतल हल्की है लेकिन ढक्कन खोलना कठिन है; कुल अनुभव मिला जुला है।",
+        "reference": "neutral",
+        "answer": " negative",
+        "passed": false
+      },
+      {
+        "input": "रोशनी अच्छी है पर तार छोटा है; मैं न संतुष्ट हूँ न असंतुष्ट।",
+        "reference": "neutral",
+        "answer": " negative",
+        "passed": false
+      },
+      {
+        "input": "किताब की छपाई साफ है लेकिन कागज पतला है; मेरी राय मिली जुली है।",
+        "reference": "neutral",
+        "answer": " negative",
+        "passed": false
+      }
+    ]
+  }
+}

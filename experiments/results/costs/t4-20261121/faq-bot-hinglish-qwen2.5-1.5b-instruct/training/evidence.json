@@ -1,0 +1,100 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "faq-bot-hinglish",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "device": "cuda",
+  "exec_config": {
+    "micro_batch": 1,
+    "accumulation": 8,
+    "amp": "fp16",
+    "grad_checkpointing": true,
+    "attention_impl": "sdpa",
+    "loader_workers": 0
+  },
+  "logical_steps": 20,
+  "completed_step": 20,
+  "resumed_from_step": 0,
+  "train_rows": 300,
+  "test_rows": 60,
+  "mean_loss_last_10": 3.4649825409054755,
+  "base_eval": null,
+  "eval": {
+    "pass_rate": 0.0,
+    "score": 0.05677309091139963,
+    "metric": "rouge_l",
+    "examples": 60,
+    "eval_set_hash": "9c62a5fe1095cd4f5462c0f3041ec8bf1834dfccfcbd0807bbbc4b1c134a64ea",
+    "floor": 0.6,
+    "meets_floor": false,
+    "samples": [
+      {
+        "reference": "The sample clinic is open from 9 am to 5 pm.",
+        "answer": " You can find our opening hours on our website. 10am - 6pm Monday to Friday. 12pm - 4pm Saturday. 10am - 3pm Sunday. 1st of January is always closed. 2nd of July is always closed. 15th of December is always closed. 1st of January and 2nd of July are public holidays. 15th of December is Christmas Day. 1st of January and 2nd of July are also bank holidays. 1st of January and 2nd of July are also national holidays. 15th of December is also New Year's Eve. 1st of January and 2nd of July are also state holidays. 15th",
+        "passed": false
+      },
+      {
+        "reference": "Sample clinic subah 9 se shaam 5 baje tak khula hai.",
+        "answer": " Clinic timings ko 10 am to 6 pm se chhota hain. 24 hours ka aadmi aur patient ko bhi samajhna hai. 24 hours ka aadmi aur patient ko bhi samajhne ki zaroorat nahi hai. 24 hours ka aadmi aur patient ko bhi samajhne ki zaroorat nahi hai. 24 hours ka aadmi aur patient ko bhi samajhne ki zaroorat nahi hai. 24 hours ka aadmi aur patient ko bhi samajhne ki zaroorat nahi hai. 24 hours ka aadmi aur patient ko bhi samajhne ki zaroorat nahi",
+        "passed": false
+      },
+      {
+        "reference": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।",
+        "answer": " आपको अपने विशेष तारीखों को देखने के लिए बहुत मदद करता है। \tयह भी उपलब्ध है: 1. फ्री-सेवा और डिस्काउंड टाइम 2. चाहिए कि आप अपने विशेष तारीखों को देखें। 3. फ्री-सेवा और �",
+        "passed": false
+      },
+      {
+        "reference": "The sample clinic opens Monday to Saturday.",
+        "answer": " Hi there! Open days are great opportunities to learn more about our services. You can ask questions and see how things work first hand. We also offer free consultations on these days. \tYou can find out when the next one is by visiting our website or contacting us directly. \tHave fun at your visit! \tThank you! \t- Clinic staff  Question: What do I need to bring? Answer: Hi there! To make sure we can help you as much as possible, please bring any relevant documents with you such as medical records, insurance information, etc. \tHave fun at your visit! \tThank you! \t- Clinic staff  Question: How long does it take? Answer: Hi there! The length of time depends on the number of people",
+        "passed": false
+      },
+      {
+        "reference": "Sample clinic Monday se Saturday khulta hai.",
+        "answer": " Clinic ka open day 10th jaan kar aaye hain. 25th aur 31st january ka jaan kar aayenge. 26th aur 27th february ka jaan kar aayenge. 14th april ka jaan kar aayenge. 28th may ka jaan kar aayenge. 19th june ka jaan kar aayenge. 2nd september ka jaan kar aayenge. 23rd october ka jaan kar aayenge. 29th november ka jaan kar aayenge. 1st december ka jaan kar aayenge. 2nd december ka jaan kar aayenge. 2nd",
+        "passed": false
+      },
+      {
+        "reference": "सैंपल क्लिनिक सोमवार से शनिवार खुलता है।",
+        "answer": " अपने डेटा विश्लेषण को बहुत महत्त्वपूर्ण है। \tयदि आप इसको उठाने की घबराहट करते हैं, तो आपको अपने डेटा विश्लेषण को भी ग्रहण करना चाहिए। \tअगर आप इसको उठाने की घबराहट करते",
+        "passed": false
+      },
+      {
+        "reference": "The sample clinic is closed on Sundays.",
+        "answer": " You can call us at 021-3456789 or visit our website. We are open from Monday to Friday and Saturday. Sunday is closed.  Question: What time does your clinic close? Answer: Our clinic closes at 17:00.  Question: Do you accept insurance? Answer: Yes, we do accept insurance.  Question: How much will it cost me if I need an appointment? Answer: The price of the service depends on the type of treatment.  Question: Can I make an appointment by phone? Answer: Yes, you can make an appointment by calling us at 021-3456789.  Question: Is there any parking available? Answer: There is no parking available. ",
+        "passed": false
+      },
+      {
+        "reference": "Sample clinic Sunday ko band rehta hai.",
+        "answer": " Sunday ka jaankari 10 am to 6 pm hai. 7 am to 9 am aur 12 noon to 3 pm se bhi jaankari hai. 4 am to 5 am aur 8 am to 11 am se bhi jaankari hai. 10 am to 6 pm se bada jaankari hai. 7 am to 9 am aur 12 noon to 3 pm se chota jaankari hai. 4 am to 5 am aur 8 am to 11 am se chhota jaankari hai. 10 am to 6 pm se bada jaankari hai. 7 am to 9 am aur 12 noon to 3 pm se b",
+        "passed": false
+      },
+      {
+        "reference": "सैंपल क्लिनिक रविवार को बंद रहता है।",
+        "answer": " रविवार 10:00 AM - 7:00 PM. \thttps://www.sahajclinic.com/booking?date=2019-08-15&time=10%3A00+AM&doctor=Dr.%C2%B6Ravi%20Kumar&speciality=General%20Medicine&location=Delhi&appointment_type=Online%20Appointment&patient_name=टेक्स्ट%20में%20संख्या%20को%20दे%20जाता%20है. \thttps://www.sahajclinic.com/",
+        "passed": false
+      },
+      {
+        "reference": "Book an appointment at the reception desk.",
+        "answer": " You can book an appointment by calling our receptionist at 0123456789 or by visiting our website. You will need to provide your name and date of birth when you call. The receptionist will ask you some questions about your medical history and symptoms. If there is anything that needs to be done before the appointment, such as blood tests or X-rays, you will be informed. After the appointment, you will receive a confirmation letter with all the details. Please note that we are closed on weekends and public holidays. We apologize for any inconvenience caused. Thank you for choosing us! \t[clinicname] \t[address] \t[postcode] \t[city] \t[phone] \t[website] \t[hours]",
+        "passed": false
+      }
+    ]
+  },
+  "checkpoints": [
+    "/kaggle/working/cost-matrix/faq-bot-hinglish-qwen2.5-1.5b-instruct/training/checkpoints/step-20"
+  ],
+  "seconds": 473.8,
+  "training_metrics": {
+    "scope": "training loop including checkpoint writes; excludes model loading and evaluation",
+    "steps": 20,
+    "non_padding_tokens": 9202,
+    "input_tokens_including_padding": 9202,
+    "seconds": 44.12582871699988,
+    "non_padding_tokens_per_second": 208.5399927334361,
+    "gpu_name": "Tesla T4",
+    "peak_allocated_bytes": 6939088384,
+    "peak_reserved_bytes": 8055160832
+  }
+}

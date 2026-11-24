@@ -1,0 +1,117 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<03:56,  1.43it/s]
+Loading weights:  37%|███▋      | 124/338 [00:00<00:01, 206.63it/s]
+Loading weights:  57%|█████▋    | 192/338 [00:01<00:00, 228.81it/s]
+Loading weights:  71%|███████▏  | 241/338 [00:01<00:00, 226.43it/s]
+Loading weights:  83%|████████▎ | 280/338 [00:01<00:00, 228.30it/s]
+Loading weights:  93%|█████████▎| 313/338 [00:01<00:00, 241.75it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 202.82it/s]
+[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+step 1/400 loss 12.1422 lr 3.00e-05
+step 2/400 loss 12.4656 lr 6.00e-05
+step 3/400 loss 11.3519 lr 9.00e-05
+step 4/400 loss 11.2524 lr 1.20e-04
+step 5/400 loss 11.1387 lr 1.50e-04
+step 6/400 loss 10.4279 lr 1.80e-04
+step 7/400 loss 10.0009 lr 2.10e-04
+step 8/400 loss 10.0315 lr 2.40e-04
+step 9/400 loss 9.0786 lr 2.70e-04
+step 10/400 loss 7.4245 lr 3.00e-04
+step 11/400 loss 6.4967 lr 3.00e-04
+step 12/400 loss 5.0920 lr 2.99e-04
+step 13/400 loss 3.3880 lr 2.98e-04
+step 14/400 loss 2.0956 lr 2.98e-04
+step 15/400 loss 0.7726 lr 2.97e-04
+step 16/400 loss 0.2590 lr 2.96e-04
+step 17/400 loss 0.3179 lr 2.95e-04
+step 18/400 loss 0.3327 lr 2.95e-04
+step 19/400 loss 0.2814 lr 2.94e-04
+step 20/400 loss 0.1430 lr 2.93e-04
+step 21/400 loss 0.6229 lr 2.92e-04
+step 22/400 loss 0.0861 lr 2.92e-04
+step 23/400 loss 0.3480 lr 2.91e-04
+step 24/400 loss 1.1172 lr 2.90e-04
+step 25/400 loss 0.0918 lr 2.89e-04
+step 26/400 loss 0.2552 lr 2.88e-04
+step 27/400 loss 0.7958 lr 2.88e-04
+step 28/400 loss 0.1013 lr 2.87e-04
+step 29/400 loss 0.2265 lr 2.86e-04
+step 30/400 loss 0.2772 lr 2.85e-04
+step 31/400 loss 0.3371 lr 2.85e-04
+step 32/400 loss 0.2390 lr 2.84e-04
+step 33/400 loss 0.2307 lr 2.83e-04
+step 34/400 loss 0.1789 lr 2.82e-04
+step 35/400 loss 0.3400 lr 2.82e-04
+step 36/400 loss 0.0026 lr 2.81e-04
+step 37/400 loss 0.0419 lr 2.80e-04
+step 38/400 loss 0.1080 lr 2.79e-04
+step 39/400 loss 0.2714 lr 2.78e-04
+step 40/400 loss 0.1384 lr 2.78e-04
+step 41/400 loss 0.4971 lr 2.77e-04
+step 42/400 loss 0.0494 lr 2.76e-04
+step 43/400 loss 0.0353 lr 2.75e-04
+step 44/400 loss 0.0193 lr 2.75e-04
+step 45/400 loss 0.0149 lr 2.74e-04
+step 46/400 loss 1.1321 lr 2.73e-04
+step 47/400 loss 0.1464 lr 2.72e-04
+step 48/400 loss 0.8174 lr 2.72e-04
+step 49/400 loss 0.0124 lr 2.71e-04
+step 50/400 loss 0.2266 lr 2.70e-04
+step 51/400 loss 0.0115 lr 2.69e-04
+step 52/400 loss 0.0049 lr 2.68e-04
+step 53/400 loss 0.2202 lr 2.68e-04
+step 54/400 loss 0.3903 lr 2.67e-04
+step 55/400 loss 0.5746 lr 2.66e-04
+step 56/400 loss 0.0119 lr 2.65e-04
+step 57/400 loss 0.7308 lr 2.65e-04
+step 58/400 loss 0.0339 lr 2.64e-04
+step 59/400 loss 0.0041 lr 2.63e-04
+step 60/400 loss 0.0014 lr 2.62e-04
+step 61/400 loss 0.7180 lr 2.62e-04
+step 62/400 loss 0.0048 lr 2.61e-04
+step 63/400 loss 0.1464 lr 2.60e-04
+step 64/400 loss 0.0034 lr 2.59e-04
+step 65/400 loss 0.0232 lr 2.58e-04
+step 66/400 loss 0.0423 lr 2.58e-04
+step 67/400 loss 0.0091 lr 2.57e-04
+step 68/400 loss 0.0247 lr 2.56e-04
+step 69/400 loss 0.0087 lr 2.55e-04
+step 70/400 loss 0.0018 lr 2.55e-04
+step 71/400 loss 0.2499 lr 2.54e-04
+step 72/400 loss 0.0053 lr 2.53e-04
+step 73/400 loss 0.3583 lr 2.52e-04
+step 74/400 loss 0.0133 lr 2.52e-04
+step 75/400 loss 0.0154 lr 2.51e-04
+step 76/400 loss 0.0540 lr 2.50e-04
+step 77/400 loss 0.0007 lr 2.49e-04
+step 78/400 loss 0.1498 lr 2.48e-04
+step 79/400 loss 0.0006 lr 2.48e-04
+step 80/400 loss 0.0077 lr 2.47e-04
+step 81/400 loss 0.0401 lr 2.46e-04
+step 82/400 loss 0.0021 lr 2.45e-04
+step 83/400 loss 0.0007 lr 2.45e-04
+step 84/400 loss 0.8743 lr 2.44e-04
+step 85/400 loss 0.6367 lr 2.43e-04
+step 86/400 loss 0.0066 lr 2.42e-04
+step 87/400 loss 0.0170 lr 2.42e-04
+step 88/400 loss 0.0289 lr 2.41e-04
+step 89/400 loss 0.0010 lr 2.40e-04
+step 90/400 loss 0.0187 lr 2.39e-04
+step 91/400 loss 0.3710 lr 2.38e-04
+step 92/400 loss 0.0011 lr 2.38e-04
+step 93/400 loss 0.6126 lr 2.37e-04
+step 94/400 loss 0.0060 lr 2.36e-04
+step 95/400 loss 0.0038 lr 2.35e-04
+step 96/400 loss 0.0274 lr 2.35e-04
+step 97/400 loss 0.0833 lr 2.34e-04
+step 98/400 loss 0.0030 lr 2.33e-04
+step 99/400 loss 0.0009 lr 2.32e-04
+step 100/400 loss 0.0008 lr 2.32e-04
+step 101/400 loss 0.0015 lr 2.31e-04
+step 102/400 loss 0.0013 lr 2.30e-04
+step 103/400 loss 0.0009 lr 2.29e-04
+step 104/400 loss 0.2238 lr 2.28e-04
+step 105/400 loss 0.0016 lr 2.28e-04

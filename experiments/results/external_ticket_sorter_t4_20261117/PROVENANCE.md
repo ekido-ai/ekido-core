@@ -6,9 +6,20 @@ The training evidence identifies `Qwen/Qwen2.5-0.5B-Instruct` at revision `7ae55
 
 The supplied training evidence reports a base pass rate of 0.35 and a trained pass rate of 0.49; the latter is below the stated recipe floor of 0.8. The distillation evidence reports 0.48 on the same test-set hash against a 0.35 base. Only ten sample answers per evaluation are included, so the complete set of individual predictions cannot be checked from these files. The teacher outputs, generation settings, teacher revision and full student checkpoint are not present; this single small run does not complete issue #33.
 
+This was an early, short run, not a measurement of the recipe's performance
+ceiling. The training evidence reports 30 completed logical steps, micro-batch
+16, accumulation 1 and 500 training rows: 480 training positions, roughly
+one pass if rows were sampled once per position. `C10.json` separately reports
+`merged_step: 30`. The samples do not establish how rows were sampled or how
+a longer run would perform. In the ten stored **base** answers, nine begin
+with `complaint`; in the ten stored **trained** answers, only one does. These
+samples are too small to establish the output distribution over all 100 rows.
+The later, longer [two-T4 run](https://github.com/ekido-ai/ekido-core/pull/81)
+is separate evidence, evaluated on the same reused synthetic test set.
+
 The summary identifies the GPU and records a failed GGUF export stage. A separate `C10.json` reports output sizes and a zero CLI exit code but has an empty captured answer; neither file establishes that the model served a useful answer on staging. Both are retained as supplied rather than treated as a successful serving result. The summary's elapsed times and the training file's `seconds` field describe different scopes and must not be used as a per-recipe training-cost benchmark.
 
-The files are evidence of what was supplied, not a standalone output of `baseline.py`. They do not complete [issue #29](https://github.com/ekido-ai/ekido-internal/issues/29): the matrix requires both models on all five recipes with their own dated result files. The remaining runs, independent reproduction and final review are still needed.
+The files are evidence of what was supplied, not a standalone output of `baseline.py`. This supplied run alone did not complete [issue #29](https://github.com/ekido-ai/ekido-internal/issues/29); the later baseline matrix was recorded separately in [PR #82](https://github.com/ekido-ai/ekido-core/pull/82).
 
 SHA-256 of the original LF-encoded files:
 

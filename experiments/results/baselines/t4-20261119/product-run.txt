@@ -1,0 +1,22 @@
+[{"stream_name":"stdout","time":8.850682146,"data":"GPU: Tesla T4\n"}
+,{"stream_name":"stdout","time":8.868232305,"data":"Source core: e2187d404284d9c7aa3ca6a8421c0a7625fedd98 workers: c4cf5de05b52ae0d4ee05612451bcbda2741868c\n"}
+,{"stream_name":"stdout","time":8.976134292,"data":"PASS\n"}
+,{"stream_name":"stderr","time":33.576839811,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":35.295090404,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":45.737506375,"data":"\rLoading weights:   0%|          | 0/290 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/290 [00:00\u003c02:11,  2.20it/s]\rLoading weights: 100%|██████████| 290/290 [00:00\u003c00:00, 541.72it/s]\n"}
+,{"stream_name":"stdout","time":274.496003761,"data":"product-descriptions on Qwen/Qwen2.5-0.5B-Instruct: 0.0% of 60 passed (mean rouge_l 0.108)\n"}
+,{"stream_name":"stdout","time":274.496049755,"data":"wrote /kaggle/working/product-baselines/product-descriptions-qwen2.5-0.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":285.586805624,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":287.126889414,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":310.883725004,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:17,  1.31it/s]\rLoading weights:  44%|████▍     | 150/338 [00:00\u003c00:00, 235.36it/s]\rLoading weights:  70%|███████   | 237/338 [00:01\u003c00:00, 237.05it/s]\rLoading weights:  88%|████████▊ | 296/338 [00:01\u003c00:00, 230.61it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 207.89it/s]\n"}
+,{"stream_name":"stdout","time":585.05449,"data":"product-descriptions on Qwen/Qwen2.5-1.5B-Instruct: 0.0% of 60 passed (mean rouge_l 0.118)\n"}
+,{"stream_name":"stdout","time":585.054548288,"data":"wrote /kaggle/working/product-baselines/product-descriptions-qwen2.5-1.5b-instruct.json\n"}
+,{"stream_name":"stdout","time":586.220135427,"data":"RESULT product-descriptions-qwen2.5-0.5b-instruct.json 60 0.0 0.10798170969648427\n"}
+,{"stream_name":"stdout","time":586.220353798,"data":"RESULT product-descriptions-qwen2.5-1.5b-instruct.json 60 0.0 0.11760910192494571\n"}
+,{"stream_name":"stderr","time":588.799568222,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":588.799594504,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":589.055663323,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":589.055685903,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":589.869754801,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":590.926251187,"data":"[NbConvertApp] Writing 400897 bytes to __results__.html\n"}
+]

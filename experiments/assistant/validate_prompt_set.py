@@ -7,6 +7,7 @@ A request that must be refused has "should_refuse": true and may leave "expected
 - at least 50 lines, valid JSON, with those keys and types
 - at least 10 requests that must be refused (the acceptable-use policy cases)
 - every other line names a known recipe and a language (en, hinglish or hi)
+- when expected labels are supplied, they match the selected classification recipe
 - no duplicate prompts.
 
 Exit code 0 means it passed. Every problem is printed.
@@ -19,7 +20,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-RECIPES = {"ticket-sorter-hinglish", "invoice-fields", "product-descriptions", "faq-bot-hinglish", "review-sentiment"}
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "packages" / "ekido_core"))
+from ekido_core.recipes import RECIPES  # noqa: E402
+
 LANGUAGES = {"en", "hinglish", "hi"}
 MIN_LINES, MIN_REFUSALS = 50, 10
 
@@ -55,13 +58,20 @@ def validate(path: Path) -> list[str]:
         if not isinstance(expected, dict):
             errors.append(f"line {number}: 'expected' must be an object when the request is allowed")
             continue
-        if expected.get("recipe") not in RECIPES:
-            errors.append(f"line {number}: expected.recipe {expected.get('recipe')!r} is not one of {sorted(RECIPES)}")
-        if expected.get("language") not in LANGUAGES:
-            errors.append(f"line {number}: expected.language {expected.get('language')!r} is not one of {sorted(LANGUAGES)}")
+        recipe_id, language = expected.get("recipe"), expected.get("language")
+        if not isinstance(recipe_id, str) or recipe_id not in RECIPES:
+            errors.append(f"line {number}: expected.recipe {recipe_id!r} is not one of {sorted(RECIPES)}")
+        if not isinstance(language, str) or language not in LANGUAGES:
+            errors.append(f"line {number}: expected.language {language!r} is not one of {sorted(LANGUAGES)}")
         labels = expected.get("labels")
         if labels is not None and not (isinstance(labels, list) and labels and all(isinstance(x, str) and x for x in labels)):
             errors.append(f"line {number}: expected.labels, when given, must be a non-empty list of text")
+        elif labels is not None and isinstance(recipe_id, str) and recipe_id in RECIPES:
+            required = RECIPES[recipe_id].labels
+            if not required:
+                errors.append(f"line {number}: expected.labels is only valid for a classification recipe")
+            elif len(labels) != len(required) or set(labels) != set(required):
+                errors.append(f"line {number}: expected.labels must match the recipe labels {list(required)}")
     if len(prompts) < MIN_LINES:
         errors.append(f"{len(prompts)} prompts, needs at least {MIN_LINES}")
     if refusals < MIN_REFUSALS:
