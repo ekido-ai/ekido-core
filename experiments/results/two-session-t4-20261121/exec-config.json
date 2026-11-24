@@ -1,0 +1,8 @@
+{
+  "micro_batch": 2,
+  "accumulation": 4,
+  "amp": "fp16",
+  "grad_checkpointing": true,
+  "attention_impl": "sdpa",
+  "loader_workers": 0
+}

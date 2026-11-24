@@ -1,0 +1,408 @@
+{
+  "recipe_id": "faq-bot-hinglish",
+  "trainer_pass_rate": 0.11666666666666667,
+  "rerun_pass_rate": 0.11666666666666667,
+  "trainer_score": 0.18378386433491428,
+  "rerun_score": 0.18378386433491428,
+  "examples": 60,
+  "eval_set_hash": "9c62a5fe1095cd4f5462c0f3041ec8bf1834dfccfcbd0807bbbc4b1c134a64ea",
+  "checkpoint_manifest": {
+    "dataset_sha256": "25def2c929ed8091a192eba458bded346601a491867dbf6817c3f5d16f22101a",
+    "exec_config": {
+      "accumulation": 8,
+      "amp": "fp16",
+      "attention_impl": "sdpa",
+      "grad_checkpointing": true,
+      "loader_workers": 0,
+      "micro_batch": 1
+    },
+    "files": {
+      "optimizer.safetensors": {
+        "bytes": 17482496,
+        "sha256": "3324d1016d015b59df72930119dbc5c95da3dcad81773e8b6b6f9e0b2b0e00e6"
+      },
+      "trainable.safetensors": {
+        "bytes": 8731992,
+        "sha256": "c9ac4953eae0eb79e824d6a653a397182bab8002d78159e77ef3396907421e44"
+      }
+    },
+    "format": "GPCK/1",
+    "immutable_hash": "10a2d5525997b297ecbf1c21985fbeb3c2a2d864d7b0a4e7229f890898ef8841",
+    "logical_step": 50,
+    "model": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "recipe_id": "faq-bot-hinglish",
+    "scaler": {
+      "_growth_tracker": 50,
+      "backoff_factor": 0.5,
+      "growth_factor": 2.0,
+      "growth_interval": 2000,
+      "scale": 65536.0
+    }
+  },
+  "note": "Independent execution of the same checkpoint and reused synthetic test; not an independent test set",
+  "predictions": [
+    {
+      "input": "I have a question: what should I know about opening hours?",
+      "reference": "The sample clinic is open from 9 am to 5 pm.",
+      "answer": " The clinic is open from 09.00 to 18.00 daily.",
+      "passed": true
+    },
+    {
+      "input": "Ek sawaal hai: clinic timing ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic subah 9 se shaam 5 baje tak khula hai.",
+      "answer": " Clinic timings ko 10 am to 6 pm se chal sakte hain.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: क्लिनिक की टाइमिंग पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक सुबह 9 से शाम 5 बजे तक खुला है।",
+      "answer": " अपने बॉक्स में खुद कोई भी सवाल दें।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about open days?",
+      "reference": "The sample clinic opens Monday to Saturday.",
+      "answer": " Open day is an opportunity to see our facilities and meet staff.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: clinic ke open days ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic Monday se Saturday khulta hai.",
+      "answer": " Clinic ka open day se 10 am to 5 pm hain.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: क्लिनिक के खुले दिन पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक सोमवार से शनिवार खुलता है।",
+      "answer": " इसके अनुसार आपको वह समय देता है जब शिफागत भाषा में ब्रॉज़र टेस्ट किया जाता है।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about Sunday opening?",
+      "reference": "The sample clinic is closed on Sundays.",
+      "answer": " The clinic is open on Sundays.",
+      "passed": true
+    },
+    {
+      "input": "Ek sawaal hai: Sunday opening ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic Sunday ko band rehta hai.",
+      "answer": " Sunday ka aisa time table hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: रविवार की ओपनिंग पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक रविवार को बंद रहता है।",
+      "answer": " आज रविवार की ओपनिंग 10:00 AM से 6:00 PM।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about booking appointments?",
+      "reference": "Book an appointment at the reception desk.",
+      "answer": " To book an appointment at our clinic, please call reception.",
+      "passed": true
+    },
+    {
+      "input": "Ek sawaal hai: appointment booking ke baare mein kya jaankari hai?",
+      "reference": "Appointment reception desk par book kar sakte hain.",
+      "answer": " Appointment booking se ek email ko send kar sakte hain.",
+      "passed": true
+    },
+    {
+      "input": "एक सवाल है: अपॉइंटमेंट बुकिंग पर क्या जानकारी है?",
+      "reference": "अपॉइंटमेंट रिसेप्शन डेस्क पर बुक कर सकते हैं।",
+      "answer": " आपको इसे देखना चाहिए।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about rescheduling an appointment?",
+      "reference": "Ask reception to change the appointment date.",
+      "answer": " Reschedule your appointment at least 24 hours before.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: appointment reschedule ke baare mein kya jaankari hai?",
+      "reference": "Appointment ki date badalne ke liye reception se baat karein.",
+      "answer": " Appointment reschedule se ek email mai notification send ho jata hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: अपॉइंटमेंट की तारीख बदलने पर क्या जानकारी है?",
+      "reference": "अपॉइंटमेंट की तारीख बदलने के लिए रिसेप्शन से बात करें।",
+      "answer": " आपको इस विषय में दिखाई देगा।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about cancelling an appointment?",
+      "reference": "Ask reception to cancel an appointment.",
+      "answer": " Call receptionist to cancel your appointment.",
+      "passed": true
+    },
+    {
+      "input": "Ek sawaal hai: appointment cancellation ke baare mein kya jaankari hai?",
+      "reference": "Appointment cancel karne ke liye reception se baat karein.",
+      "answer": " Appointment cancellation se ek email mai notification send ho jata hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: अपॉइंटमेंट रद्द करने पर क्या जानकारी है?",
+      "reference": "अपॉइंटमेंट रद्द करने के लिए रिसेप्शन से बात करें।",
+      "answer": " आपको इस विषय में बताया जाता है।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about walk-in visits?",
+      "reference": "Walk-ins are subject to appointment availability.",
+      "answer": " Walk-ins are not accepted at this time.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: walk-in visit ke baare mein kya jaankari hai?",
+      "reference": "Walk-in visit appointment availability par depend karti hai.",
+      "answer": " Walk-in visit ko 10-20 minutes lagta hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: बिना बुकिंग विजिट पर क्या जानकारी है?",
+      "reference": "बिना बुकिंग विजिट अपॉइंटमेंट की उपलब्धता पर निर्भर है।",
+      "answer": " इसे अपने बुकिंग में देखें।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about online consultations?",
+      "reference": "Online consultations are available by appointment.",
+      "answer": " Online consultation is available at our clinic.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: online consultation ke baare mein kya jaankari hai?",
+      "reference": "Online consultation appointment se available hai.",
+      "answer": " Online consultation se 15-20 minutes time lag deti hai.",
+      "passed": true
+    },
+    {
+      "input": "एक सवाल है: ऑनलाइन कंसल्टेशन पर क्या जानकारी है?",
+      "reference": "ऑनलाइन कंसल्टेशन अपॉइंटमेंट से उपलब्ध है।",
+      "answer": " अपने सवालों को बताते हुए आपको विभिन्न प्रकार की सहायता मिलेगी।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about consultation fee?",
+      "reference": "The sample consultation fee is 400 rupees.",
+      "answer": " The consultation fee is 100 TL.",
+      "passed": true
+    },
+    {
+      "input": "Ek sawaal hai: consultation fee ke baare mein kya jaankari hai?",
+      "reference": "Sample consultation ki fee 400 rupaye hai.",
+      "answer": " Consultation fee se 10% jante hain.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: कंसल्टेशन फीस पर क्या जानकारी है?",
+      "reference": "सैंपल कंसल्टेशन फीस 400 रुपये है।",
+      "answer": " अपने सवालों को कंसल्टेशन में पूछें।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about payment methods?",
+      "reference": "The sample clinic accepts cash and UPI.",
+      "answer": " Payment methods are accepted at all clinics.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: payment methods ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic cash aur UPI accept karta hai.",
+      "answer": " Payment method se ek aur jannat hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: भुगतान के तरीके पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक नकद और यूपीआई स्वीकार करता है।",
+      "answer": " आपको इसे बेहतर दिखाने के लिए अपने विशेषज्ञ को प्रशासिए।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about payment receipts?",
+      "reference": "Ask reception for a payment receipt.",
+      "answer": " Payment receipt is an important document.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: payment receipt ke baare mein kya jaankari hai?",
+      "reference": "Payment receipt ke liye reception se poochhein.",
+      "answer": " Payment receipt se ek email aur SMS send kar sakte hain.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: पेमेंट रसीद पर क्या जानकारी है?",
+      "reference": "भुगतान की रसीद के लिए रिसेप्शन से पूछें।",
+      "answer": " पेमेंट रसीद मुख्य विषयों के बारे में जानकारी है।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about report collection?",
+      "reference": "Reports can be collected at reception during open hours.",
+      "answer": " Report collection is an important part of your treatment.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: report collection ke baare mein kya jaankari hai?",
+      "reference": "Report open hours mein reception se le sakte hain.",
+      "answer": " Report collection se 1-2 days lagta hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: रिपोर्ट लेने पर क्या जानकारी है?",
+      "reference": "रिपोर्ट खुले समय में रिसेप्शन से ले सकते हैं।",
+      "answer": " डेटा विश्लेषण में इसका उपयोग किया जाता है।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about waiting times?",
+      "reference": "Waiting time varies; ask reception for the current estimate.",
+      "answer": " The clinic has no waiting time.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: waiting time ke baare mein kya jaankari hai?",
+      "reference": "Waiting time alag ho sakta hai; current estimate reception se poochhein.",
+      "answer": " Customer ko wait time se bata sakte hain.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: इंतजार का समय पर क्या जानकारी है?",
+      "reference": "इंतजार अलग हो सकता है; मौजूदा अनुमान रिसेप्शन से पूछें।",
+      "answer": " अपने आशियों को बताता हूँ।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about visits by minors?",
+      "reference": "A parent or guardian should accompany a minor.",
+      "answer": " For minor patients, you need to bring their birth certificate.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: bachchon ki visit ke baare mein kya jaankari hai?",
+      "reference": "Minor ke saath parent ya guardian aana chahiye.",
+      "answer": " Clinic se bachchan ko visit karne ka tarika hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: बच्चों की विजिट पर क्या जानकारी है?",
+      "reference": "नाबालिग के साथ अभिभावक आना चाहिए।",
+      "answer": " अपने दोस्तों को भेजें।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about available languages?",
+      "reference": "Reception can communicate in Hindi and English.",
+      "answer": " The clinic offers 10 languages.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: available languages ke baare mein kya jaankari hai?",
+      "reference": "Reception Hindi aur English mein baat kar sakta hai.",
+      "answer": " Hindi aur Marathi se bahut samajh rahi hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: उपलब्ध भाषाओं पर क्या जानकारी है?",
+      "reference": "रिसेप्शन हिंदी और अंग्रेजी में बात कर सकता है।",
+      "answer": " मुझे इस सवाल को देखना चाहिए।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about wheelchair access?",
+      "reference": "The sample clinic has a step-free entrance.",
+      "answer": " Wheelchair users are welcome at all times.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: wheelchair access ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic mein step-free entrance hai.",
+      "answer": " Wheelchair accessible.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: व्हीलचेयर एक्सेस पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक में बिना सीढ़ियों वाला प्रवेश है।",
+      "answer": " इसे ब्रिटिश भाषा में \"What is a Whipple test?\" कहते हैं।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about parking?",
+      "reference": "The sample clinic has limited parking.",
+      "answer": " The parking lot is on the ground floor.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: parking ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic mein limited parking hai.",
+      "answer": " Parking se ek aadmi 15 min. time lagta hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: पार्किंग पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक में सीमित पार्किंग है।",
+      "answer": " पार्किंग में 200 गुना अधिक बचत होती है।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about follow-up appointments?",
+      "reference": "Ask reception to arrange a follow-up appointment.",
+      "answer": " Follow up appointment is an important part of your treatment.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: follow-up appointment ke baare mein kya jaankari hai?",
+      "reference": "Follow-up appointment ke liye reception se baat karein.",
+      "answer": " Follow up appointment se 1-2 days wait time hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: फॉलो-अप अपॉइंटमेंट पर क्या जानकारी है?",
+      "reference": "फॉलो-अप अपॉइंटमेंट के लिए रिसेप्शन से बात करें।",
+      "answer": " आपको इसे दिखाएँ।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about visitor privacy?",
+      "reference": "Ask reception about the sample clinic privacy policy.",
+      "answer": " Ask your doctor or receptionist if you can bring a friend.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: visitor privacy ke baare mein kya jaankari hai?",
+      "reference": "Sample clinic ki privacy policy ke liye reception se poochhein.",
+      "answer": " Visitor privacy ko patient care policy se protect kar sakte hain.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: विजिटर प्राइवेसी पर क्या जानकारी है?",
+      "reference": "सैंपल क्लिनिक की प्राइवेसी पॉलिसी के लिए रिसेप्शन से पूछें।",
+      "answer": " विजिटर प्राइवेसी में आपको अपने बच्चों की जानकारी दी जाती है।",
+      "passed": false
+    },
+    {
+      "input": "I have a question: what should I know about receiving test reports online?",
+      "reference": "Ask reception whether your report can be shared online.",
+      "answer": " The patient can receive their results by email.",
+      "passed": false
+    },
+    {
+      "input": "Ek sawaal hai: online test report ke baare mein kya jaankari hai?",
+      "reference": "Apni report online mil sakti hai ya nahi, reception se poochhein.",
+      "answer": " Online test report se 1-2 days lagta hai.",
+      "passed": false
+    },
+    {
+      "input": "एक सवाल है: ऑनलाइन टेस्ट रिपोर्ट पर क्या जानकारी है?",
+      "reference": "आपकी रिपोर्ट ऑनलाइन मिल सकती है या नहीं, रिसेप्शन से पूछें।",
+      "answer": " अपने टेस्ट डाउनलोड करें।",
+      "passed": false
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "recipe_id": "ticket-sorter-hinglish",
+  "metric": "accuracy",
+  "pass_rate": 0.35,
+  "score": 0.35,
+  "examples": 100,
+  "eval_set_hash": "6cde355819a157aff27ddc281d148e14fb5fad454a2ea583076a51178f663c29",
+  "samples": [
+    {
+      "reference": "order",
+      "answer": " order. \n\nThe",
+      "passed": true
+    },
+    {
+      "reference": "refund",
+      "answer": " complaint. \n\nThe",
+      "passed": false
+    },
+    {
+      "reference": "complaint",
+      "answer": " complaint. \n\nReason",
+      "passed": true
+    },
+    {
+      "reference": "other",
+      "answer": " complaint. \n\nThe",
+      "passed": false
+    },
+    {
+      "reference": "question",
+      "answer": " complaint. \n\nThe",
+      "passed": false
+    },
+    {
+      "reference": "refund",
+      "answer": " complaint. \n\nThe",
+      "passed": false
+    },
+    {
+      "reference": "other",
+      "answer": " complaint. \n\nReason",
+      "passed": false
+    },
+    {
+      "reference": "refund",
+      "answer": " complaint. \n\nThe",
+      "passed": false
+    },
+    {
+      "reference": "complaint",
+      "answer": " complaint. \n\nReason",
+      "passed": true
+    },
+    {
+      "reference": "complaint",
+      "answer": " Complaint\n\nThe customer",
+      "passed": true
+    }
+  ],
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "device": "cuda",
+  "seconds": 15.3,
+  "run_at": "2026-11-19T11:23:29+00:00",
+  "max_seq_length": 512,
+  "code_sha256": {
+    "baseline": "5358890457616ab81114048589f864268050fc2867bc27fcd38304dffcf16aca",
+    "recipes": "8866b2735c347314fd5c5b8162b8a0e7f4f7af670c9ed83d37926c4a223cd792",
+    "runtime": "e3cb02a2cfad62dcf99484dd7759756897a1fe7239ea1e8bf880e6c63869bf6a"
+  }
+}

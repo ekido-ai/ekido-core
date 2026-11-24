@@ -1,0 +1,15 @@
+[{"stream_name":"stdout","time":1.348041816,"data":"Found existing installation: torchao 0.10.0\n"}
+,{"stream_name":"stdout","time":1.4167949690000001,"data":"Uninstalling torchao-0.10.0:\n"}
+,{"stream_name":"stdout","time":1.691770014,"data":"  Successfully uninstalled torchao-0.10.0\n"}
+,{"stream_name":"stderr","time":26.458792505,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":27.890444696,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":51.533175263,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:12,  1.34it/s]\rLoading weights:  43%|████▎     | 147/338 [00:00\u003c00:00, 222.85it/s]\rLoading weights:  62%|██████▏   | 211/338 [00:01\u003c00:00, 236.36it/s]\rLoading weights:  76%|███████▋  | 258/338 [00:01\u003c00:00, 232.63it/s]\rLoading weights:  88%|████████▊ | 296/338 [00:01\u003c00:00, 235.42it/s]\rLoading weights:  97%|█████████▋| 329/338 [00:01\u003c00:00, 237.49it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 207.56it/s]\n"}
+,{"stream_name":"stdout","time":344.023977341,"data":"CHALLENGE base 0.9833333333333333 0.9966666666666666\n"}
+,{"stream_name":"stdout","time":555.586093445,"data":"CHALLENGE student 1.0 1.0\n"}
+,{"stream_name":"stderr","time":560.577667822,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":560.577716011,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":560.778927606,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":560.778955368,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":561.507620402,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":562.422790391,"data":"[NbConvertApp] Writing 440135 bytes to __results__.html\n"}
+]

@@ -1,0 +1,780 @@
+{
+  "challenge_sha256": "17c7eefa1542fa6a2902a5310ff5e6f5ab205bb937f5ab93194bf61f652c89c4",
+  "eval_set_hash": "2cc79e934d2b53e0f09db385c76d3e61e19d863a2a5142aeba00719d50ae5284",
+  "rows": 60,
+  "output_instruction": "Return date as YYYY-MM-DD and total as a decimal string with two digits after the point and no commas.",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "historical_student_rate": 1.0,
+  "note": "Exploratory evaluation of a newly generated synthetic challenge. Not a customer-data result or a quality gate.",
+  "base": {
+    "pass_rate": 0.9833333333333333,
+    "mean_score": 0.9966666666666666,
+    "predictions": [
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 07ZZZPZ0500Z1Z8\nAddress: Fictional Lane, Example District\nDocument: DOC-0731-X\nInvoice date: 2024-01-13\nItem A: INR 900.00\nItem B: INR 300.00\nTax: INR 37.00\nGrand total: INR 1237.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0731-X\", \"date\": \"2024-01-13\", \"total\": \"1237.00\", \"gstin\": \"07ZZZPZ0500Z1Z8\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0731-X\", \"date\": \"2024-01-13\", \"total\": \"1237.00\", \"gstin\": \"07ZZZPZ0500Z1Z8\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Amber Kite Supplies\",\n    \"invoice_no\": \"DOC-0731-X\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2025/0131\nInvoice date: 17/01/2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 09ZZZPZ0501Z1Z3\nItem A: INR 913.00\nItem B: INR 307.00\nTax: INR 38.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,258.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0131\", \"date\": \"2024-01-17\", \"total\": \"1258.00\", \"gstin\": \"09ZZZPZ0501Z1Z3\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0131\", \"date\": \"2024-01-17\", \"total\": \"1258.00\", \"gstin\": \"09ZZZPZ0501Z1Z3\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Blue Elm Workshop\",\n    \"invoice_no\": \"AK/2025/0",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1279.00\nDocument: DOC-0733-X\nInvoice date: 21 Jan 2024\nAddress: Fictional Lane, Example District\nItem A: INR 926.00\nItem B: INR 314.00\nTax: INR 39.00\nSeller: Fictional Copper Lake Goods\nTax registration: 19ZZZPZ0502Z1Z1",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0733-X\", \"date\": \"2024-01-21\", \"total\": \"1279.00\", \"gstin\": \"19ZZZPZ0502Z1Z1\"}",
+        "answer": " {\"vendor\":\"Fictional Copper Lake Goods\",\"invoice_no\":\"DOC-0733-X\",\"date\":\"2024-01-21\",\"total\":\"1279.00\",\"gstin\":\"19ZZZPZ0502Z1Z1\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Copper Lake Goods\",\n    \"invoice_no\": \"DOC-0733-X\",\n    \"date\": \"2024-01-21\",\n    \"total\": \"1279",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 27ZZZPZ0503Z1Z3\nGrand total: INR 1,300.00\nItem A: INR 939.00\nItem B: INR 321.00\nTax: INR 40.00\nDocument: AK/2024/0133\nInvoice date: 2024-01-25",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0133\", \"date\": \"2024-01-25\", \"total\": \"1300.00\", \"gstin\": \"27ZZZPZ0503Z1Z3\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0133\", \"date\": \"2024-01-25\", \"total\": \"1300.00\", \"gstin\": \"27ZZZPZ0503Z1Z3\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Ivory Finch Traders\",\n    \"invoice_no\": \"AK/2024/0133\",\n    \"date\": \"20",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 952.00\nItem B: INR 328.00\nTax: INR 41.00\nDocument: DOC-0735-X\nInvoice date: 13/02/2024\nSeller: Fictional Violet Reed Tools\nTax registration: 29ZZZPZ0504Z1ZY\nGrand total: INR 1321.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0735-X\", \"date\": \"2024-02-13\", \"total\": \"1321.00\", \"gstin\": \"29ZZZPZ0504Z1ZY\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0735-X\", \"date\": \"2024-02-13\", \"total\": \"1321.00\", \"gstin\": \"29ZZZPZ0504Z1ZY\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Violet Reed Tools\",\n    \"invoice_no\": \"DOC-0735-X\",\n    \"date\": \"2024-02-13\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 33ZZZPZ0505Z1Z8\nAddress: Fictional Lane, Example District\nDocument: AK/2026/0135\nInvoice date: 17 Feb 2024\nItem A: INR 965.00\nItem B: INR 335.00\nTax: INR 42.00\nGrand total: INR 1,342.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0135\", \"date\": \"2024-02-17\", \"total\": \"1342.00\", \"gstin\": \"33ZZZPZ0505Z1Z8\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0135\", \"date\": \"2024-02-17\", \"total\": \"1342.00\", \"gstin\": \"33ZZZPZ0505Z1Z8\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Silver Fern Textiles\",\n    \"invoice_no\": \"AK/2026",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0737-X\nInvoice date: 2024-02-21\nSeller: Fictional Cedar Moon Parts\nTax registration: 07ZZZPZ0506Z1Z2\nItem A: INR 978.00\nItem B: INR 342.00\nTax: INR 43.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1363.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0737-X\", \"date\": \"2024-02-21\", \"total\": \"1363.00\", \"gstin\": \"07ZZZPZ0506Z1Z2\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0737-X\", \"date\": \"2024-02-21\", \"total\": \"1363.00\", \"gstin\": \"07ZZZPZ0506Z1Z2\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Cedar Moon Parts\",\n    \"invoice_no\": \"DOC-0737-X\",\n    \"date\": \"2024-02-21\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1,384.00\nDocument: AK/2025/0137\nInvoice date: 25/02/2024\nAddress: Fictional Lane, Example District\nItem A: INR 991.00\nItem B: INR 349.00\nTax: INR 44.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 09ZZZPZ0507Z1ZX",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2025/0137\", \"date\": \"2024-02-25\", \"total\": \"1384.00\", \"gstin\": \"09ZZZPZ0507Z1ZX\"}",
+        "answer": " {\"vendor\":\"Fictional Paper Cloud Studio\",\"invoice_no\":\"AK/2025/0137\",\"date\":\"2024-02-25\",\"total\":\"1384.00\",\"gstin\":\"09ZZZPZ0507Z1ZX\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Paper Cloud Studio\",\n    \"invoice_no\": \"AK/2025/0137\",\n    \"date\": \"2024-02-25\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 19ZZZPZ0508Z1ZV\nGrand total: INR 1405.00\nItem A: INR 1004.00\nItem B: INR 356.00\nTax: INR 45.00\nDocument: DOC-0739-X\nInvoice date: 13 Mar 2024",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0739-X\", \"date\": \"2024-03-13\", \"total\": \"1405.00\", \"gstin\": \"19ZZZPZ0508Z1ZV\"}",
+        "answer": " {\"vendor\":\"Fictional Coral Grove Store\",\"invoice_no\":\"DOC-0739-X\",\"date\":\"2024-03-13\",\"total\":\"1405.00\",\"gstin\":\"19ZZZPZ0508Z1ZV\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Coral Grove Store\",\n    \"invoice_no\": \"DOC-0739-X\",\n    \"date\": \"2024-03-13\",\n    \"total\": \"1405.",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1017.00\nItem B: INR 363.00\nTax: INR 46.00\nDocument: AK/2024/0139\nInvoice date: 2024-03-17\nSeller: Fictional Maple Stone Materials\nTax registration: 27ZZZPZ0509Z1ZX\nGrand total: INR 1,426.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0139\", \"date\": \"2024-03-17\", \"total\": \"1426.00\", \"gstin\": \"27ZZZPZ0509Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0139\", \"date\": \"2024-03-17\", \"total\": \"1426.00\", \"gstin\": \"27ZZZPZ0509Z1ZX\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Maple Stone Materials\",\n    \"invoice_no\": \"AK/2024/0139\",\n    \"date\": \"2024-",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 29ZZZPZ0510Z1Z0\nAddress: Fictional Lane, Example District\nDocument: DOC-0741-X\nInvoice date: 21/03/2024\nItem A: INR 1030.00\nItem B: INR 370.00\nTax: INR 47.00\nGrand total: INR 1447.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0741-X\", \"date\": \"2024-03-21\", \"total\": \"1447.00\", \"gstin\": \"29ZZZPZ0510Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0741-X\", \"date\": \"2024-03-21\", \"total\": \"1447.00\", \"gstin\": \"29ZZZPZ0510Z1Z0\"} Here's how you can extract the required information from the given invoice data and format it into a JSON object:\n\n```json\n{\n    \"vendor\": \"Fictional Amber Kite Supplies\",\n    \"invoice_no\": \"DOC-0741-X\",\n    \"date",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2026/0141\nInvoice date: 25 Mar 2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 33ZZZPZ0511Z1ZA\nItem A: INR 1043.00\nItem B: INR 377.00\nTax: INR 48.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,468.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0141\", \"date\": \"2024-03-25\", \"total\": \"1468.00\", \"gstin\": \"33ZZZPZ0511Z1ZA\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0141\", \"date\": \"2024-03-25\", \"total\": \"1468.00\", \"gstin\": \"33ZZZPZ0511Z1ZA\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Blue Elm Workshop\",\n    \"invoice_no\": \"AK/2026/0141\",\n    \"date\": \"2024-",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1489.00\nDocument: DOC-0743-X\nInvoice date: 2024-04-13\nAddress: Fictional Lane, Example District\nItem A: INR 1056.00\nItem B: INR 384.00\nTax: INR 49.00\nSeller: Fictional Copper Lake Goods\nTax registration: 07ZZZPZ0512Z1Z4",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0743-X\", \"date\": \"2024-04-13\", \"total\": \"1489.00\", \"gstin\": \"07ZZZPZ0512Z1Z4\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0743-X\", \"date\": \"2024-04-13\", \"total\": \"1489.00\", \"gstin\": \"07ZZZPZ0512Z1Z4\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Copper Lake Goods\",\n    \"invoice_no\": \"DOC-0743-X\",\n    \"date\": \"2024-04-13\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 09ZZZPZ0513Z1ZZ\nGrand total: INR 1,510.00\nItem A: INR 1069.00\nItem B: INR 391.00\nTax: INR 50.00\nDocument: AK/2025/0143\nInvoice date: 17/04/2024",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2025/0143\", \"date\": \"2024-04-17\", \"total\": \"1510.00\", \"gstin\": \"09ZZZPZ0513Z1ZZ\"}",
+        "answer": " {\"vendor\":\"Fictional Ivory Finch Traders\",\"invoice_no\":\"AK/2025/0143\",\"date\":\"2024-04-17\",\"total\":\"1510.00\",\"gstin\":\"09ZZZPZ0513Z1ZZ\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Ivory Finch Traders\",\n    \"invoice_no\": \"AK/2025/0143\",\n    \"date\": \"2024-04-17\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1082.00\nItem B: INR 398.00\nTax: INR 51.00\nDocument: DOC-0745-X\nInvoice date: 21 Apr 2024\nSeller: Fictional Violet Reed Tools\nTax registration: 19ZZZPZ0514Z1ZX\nGrand total: INR 1531.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0745-X\", \"date\": \"2024-04-21\", \"total\": \"1531.00\", \"gstin\": \"19ZZZPZ0514Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0745-X\", \"date\": \"2024-04-21\", \"total\": \"1531.00\", \"gstin\": \"19ZZZPZ0514Z1ZX\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Violet Reed Tools\",\n    \"invoice_no\": \"DOC-0745-X\",\n    \"date\": \"2024-04-21\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 27ZZZPZ0515Z1ZZ\nAddress: Fictional Lane, Example District\nDocument: AK/2024/0145\nInvoice date: 2024-04-25\nItem A: INR 1095.00\nItem B: INR 405.00\nTax: INR 52.00\nGrand total: INR 1,552.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0145\", \"date\": \"2024-04-25\", \"total\": \"1552.00\", \"gstin\": \"27ZZZPZ0515Z1ZZ\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0145\", \"date\": \"2024-04-25\", \"total\": \"1552.00\", \"gstin\": \"27ZZZPZ0515Z1ZZ\"} Here's how you can extract the required information from the given invoice data and format it into a JSON object:\n\n```json\n{\n    \"vendor\": \"Fictional Silver Fern Textiles\",\n    \"invoice_no\": \"AK/2024/0",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0747-X\nInvoice date: 13/05/2024\nSeller: Fictional Cedar Moon Parts\nTax registration: 29ZZZPZ0516Z1ZU\nItem A: INR 1108.00\nItem B: INR 412.00\nTax: INR 53.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1573.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0747-X\", \"date\": \"2024-05-13\", \"total\": \"1573.00\", \"gstin\": \"29ZZZPZ0516Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0747-X\", \"date\": \"2024-05-13\", \"total\": \"1573.00\", \"gstin\": \"29ZZZPZ0516Z1ZU\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Cedar Moon Parts\",\n    \"invoice_no\": \"DOC-0747-X\",\n    \"date\": \"2024-05-13\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1,594.00\nDocument: AK/2026/0147\nInvoice date: 17 May 2024\nAddress: Fictional Lane, Example District\nItem A: INR 1121.00\nItem B: INR 419.00\nTax: INR 54.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 33ZZZPZ0517Z1Z4",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2026/0147\", \"date\": \"2024-05-17\", \"total\": \"1594.00\", \"gstin\": \"33ZZZPZ0517Z1Z4\"}",
+        "answer": " {\"vendor\":\"Fictional Paper Cloud Studio\",\"invoice_no\":\"AK/2026/0147\",\"date\":\"2024-05-17\",\"total\":\"1594.00\",\"gstin\":\"33ZZZPZ0517Z1Z4\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Paper Cloud Studio\",\n    \"invoice_no\": \"AK/2026/0147\",\n    \"date\": \"2024-05-17\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 07ZZZPZ0518Z1ZY\nGrand total: INR 1615.00\nItem A: INR 1134.00\nItem B: INR 426.00\nTax: INR 55.00\nDocument: DOC-0749-X\nInvoice date: 2024-05-21",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0749-X\", \"date\": \"2024-05-21\", \"total\": \"1615.00\", \"gstin\": \"07ZZZPZ0518Z1ZY\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0749-X\", \"date\": \"2024-05-21\", \"total\": \"1615.00\", \"gstin\": \"07ZZZPZ0518Z1ZY\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Coral Grove Store\",\n    \"invoice_no\": \"DOC-0749-X\",\n    \"date\": \"2024-05-21\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1147.00\nItem B: INR 433.00\nTax: INR 56.00\nDocument: AK/2025/0149\nInvoice date: 25/05/2024\nSeller: Fictional Maple Stone Materials\nTax registration: 09ZZZPZ0519Z1ZT\nGrand total: INR 1,636.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0149\", \"date\": \"2024-05-25\", \"total\": \"1636.00\", \"gstin\": \"09ZZZPZ0519Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0149\", \"date\": \"2024-05-25\", \"total\": \"1636.00\", \"gstin\": \"09ZZZPZ0519Z1ZT\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Maple Stone Materials\",\n    \"invoice_no\": \"AK/2025/0149\",\n    \"date\": \"2024",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 19ZZZPZ0520Z1ZZ\nAddress: Fictional Lane, Example District\nDocument: DOC-0751-X\nInvoice date: 13 Jun 2024\nItem A: INR 1160.00\nItem B: INR 440.00\nTax: INR 57.00\nGrand total: INR 1657.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0751-X\", \"date\": \"2024-06-13\", \"total\": \"1657.00\", \"gstin\": \"19ZZZPZ0520Z1ZZ\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0751-X\", \"date\": \"2024-06-13\", \"total\": \"1657.00\", \"gstin\": \"19ZZZPZ0520Z1ZZ\"} Here's how you can extract the required information from the given invoice data and format it into a JSON object:\n\n```json\n{\n    \"vendor\": \"Fictional Amber Kite Supplies\",\n    \"invoice_no\": \"DOC-0751-X\",\n    \"date\":",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2024/0151\nInvoice date: 2024-06-17\nSeller: Fictional Blue Elm Workshop\nTax registration: 27ZZZPZ0521Z1Z1\nItem A: INR 1173.00\nItem B: INR 447.00\nTax: INR 58.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,678.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0151\", \"date\": \"2024-06-17\", \"total\": \"1678.00\", \"gstin\": \"27ZZZPZ0521Z1Z1\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0151\", \"date\": \"2024-06-17\", \"total\": \"1678.00\", \"gstin\": \"27ZZZPZ0521Z1Z1\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Blue Elm Workshop\",\n    \"invoice_no\": \"AK/2024/0151\",\n    \"date\": \"2024",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1699.00\nDocument: DOC-0753-X\nInvoice date: 21/06/2024\nAddress: Fictional Lane, Example District\nItem A: INR 1186.00\nItem B: INR 454.00\nTax: INR 59.00\nSeller: Fictional Copper Lake Goods\nTax registration: 29ZZZPZ0522Z1ZW",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0753-X\", \"date\": \"2024-06-21\", \"total\": \"1699.00\", \"gstin\": \"29ZZZPZ0522Z1ZW\"}",
+        "answer": " {\"vendor\":\"Fictional Copper Lake Goods\",\"invoice_no\":\"DOC-0753-X\",\"date\":\"2024-06-21\",\"total\":\"1699.00\",\"gstin\":\"29ZZZPZ0522Z1ZW\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Copper Lake Goods\",\n    \"invoice_no\": \"DOC-0753-X\",\n    \"date\": \"2024-06-21\",\n    \"total\": \"1699.",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 33ZZZPZ0523Z1Z6\nGrand total: INR 1,720.00\nItem A: INR 1199.00\nItem B: INR 461.00\nTax: INR 60.00\nDocument: AK/2026/0153\nInvoice date: 25 Jun 2024",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2026/0153\", \"date\": \"2024-06-25\", \"total\": \"1720.00\", \"gstin\": \"33ZZZPZ0523Z1Z6\"}",
+        "answer": " {\"vendor\":\"Fictional Ivory Finch Traders\",\"invoice_no\":\"AK/2026/0153\",\"date\":\"2024-06-25\",\"total\":\"1720.00\",\"gstin\":\"33ZZZPZ0523Z1Z6\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Ivory Finch Traders\",\n    \"invoice_no\": \"AK/2026/0153\",\n    \"date\": \"2024-06-25\",\n",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1212.00\nItem B: INR 468.00\nTax: INR 61.00\nDocument: DOC-0755-X\nInvoice date: 2024-07-13\nSeller: Fictional Violet Reed Tools\nTax registration: 07ZZZPZ0524Z1Z0\nGrand total: INR 1741.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0755-X\", \"date\": \"2024-07-13\", \"total\": \"1741.00\", \"gstin\": \"07ZZZPZ0524Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0755-X\", \"date\": \"2024-07-13\", \"total\": \"1741.00\", \"gstin\": \"07ZZZPZ0524Z1Z0\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Violet Reed Tools\",\n    \"invoice_no\": \"DOC-0755-X\",\n    \"date\": \"2024-07-13\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 09ZZZPZ0525Z1ZV\nAddress: Fictional Lane, Example District\nDocument: AK/2025/0155\nInvoice date: 17/07/2024\nItem A: INR 1225.00\nItem B: INR 475.00\nTax: INR 62.00\nGrand total: INR 1,762.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0155\", \"date\": \"2024-07-17\", \"total\": \"1762.00\", \"gstin\": \"09ZZZPZ0525Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0155\", \"date\": \"2024-07-17\", \"total\": \"1762.00\", \"gstin\": \"09ZZZPZ0525Z1ZV\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Silver Fern Textiles\",\n    \"invoice_no\": \"AK/2025/0155\",\n    \"date\": \"2",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0757-X\nInvoice date: 21 Jul 2024\nSeller: Fictional Cedar Moon Parts\nTax registration: 19ZZZPZ0526Z1ZT\nItem A: INR 1238.00\nItem B: INR 482.00\nTax: INR 63.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1783.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0757-X\", \"date\": \"2024-07-21\", \"total\": \"1783.00\", \"gstin\": \"19ZZZPZ0526Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0757-X\", \"date\": \"2024-07-21\", \"total\": \"1783.00\", \"gstin\": \"19ZZZPZ0526Z1ZT\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Cedar Moon Parts\",\n    \"invoice_no\": \"DOC-0757-X\",\n    \"date\": \"2024-07-21\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1,804.00\nDocument: AK/2024/0157\nInvoice date: 2024-07-25\nAddress: Fictional Lane, Example District\nItem A: INR 1251.00\nItem B: INR 489.00\nTax: INR 64.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 27ZZZPZ0527Z1ZV",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2024/0157\", \"date\": \"2024-07-25\", \"total\": \"1804.00\", \"gstin\": \"27ZZZPZ0527Z1ZV\"}",
+        "answer": " {\"vendor\":\"Fictional Paper Cloud Studio\",\"invoice_no\":\"AK/2024/0157\",\"date\":\"2024-07-25\",\"total\":\"1804.00\",\"gstin\":\"27ZZZPZ0527Z1ZV\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Paper Cloud Studio\",\n    \"invoice_no\": \"AK/2024/0157\",\n    \"date\": \"2024-07-25\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 29ZZZPZ0528Z1ZQ\nGrand total: INR 1825.00\nItem A: INR 1264.00\nItem B: INR 496.00\nTax: INR 65.00\nDocument: DOC-0759-X\nInvoice date: 13/08/2024",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0759-X\", \"date\": \"2024-08-13\", \"total\": \"1825.00\", \"gstin\": \"29ZZZPZ0528Z1ZQ\"}",
+        "answer": " {\"vendor\":\"Fictional Coral Grove Store\",\"invoice_no\":\"DOC-0759-X\",\"date\":\"2024-08-13\",\"total\":\"1825.00\",\"gstin\":\"29ZZZPZ0528Z1ZQ\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Coral Grove Store\",\n    \"invoice_no\": \"DOC-0759-X\",\n    \"date\": \"2024-08-13\",\n    \"total\": \"1825.",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1277.00\nItem B: INR 503.00\nTax: INR 66.00\nDocument: AK/2026/0159\nInvoice date: 17 Aug 2024\nSeller: Fictional Maple Stone Materials\nTax registration: 33ZZZPZ0529Z1Z0\nGrand total: INR 1,846.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0159\", \"date\": \"2024-08-17\", \"total\": \"1846.00\", \"gstin\": \"33ZZZPZ0529Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0159\", \"date\": \"2024-08-17\", \"total\": \"1846.00\", \"gstin\": \"33ZZZPZ0529Z1Z0\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Maple Stone Materials\",\n    \"invoice_no\": \"AK/2026/0159\",\n    \"date\": \"2024",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 07ZZZPZ0530Z1Z2\nAddress: Fictional Lane, Example District\nDocument: DOC-0761-X\nInvoice date: 2024-08-21\nItem A: INR 1290.00\nItem B: INR 510.00\nTax: INR 67.00\nGrand total: INR 1867.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0761-X\", \"date\": \"2024-08-21\", \"total\": \"1867.00\", \"gstin\": \"07ZZZPZ0530Z1Z2\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0761-X\", \"date\": \"2024-08-21\", \"total\": \"1867.00\", \"gstin\": \"07ZZZPZ0530Z1Z2\"} Here's how you can extract the required information from the given invoice data and format it into a JSON object:\n\n```json\n{\n    \"vendor\": \"Fictional Amber Kite Supplies\",\n    \"invoice_no\": \"DOC-0761-X\",\n    \"date",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2025/0161\nInvoice date: 25/08/2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 09ZZZPZ0531Z1ZX\nItem A: INR 1303.00\nItem B: INR 517.00\nTax: INR 68.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,888.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0161\", \"date\": \"2024-08-25\", \"total\": \"1888.00\", \"gstin\": \"09ZZZPZ0531Z1ZX\"}",
+        "answer": " {\"vendor\":\"Fictional Blue Elm Workshop\",\"invoice_no\":\"AK/2025/0161\",\"date\":\"2024-08-25\",\"total\":\"1888.00\",\"gstin\":\"09ZZZPZ0531Z1ZX\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Blue Elm Workshop\",\n    \"invoice_no\": \"AK/2025/0161\",\n    \"date\": \"2024-08-25\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1909.00\nDocument: DOC-0763-X\nInvoice date: 13 Sep 2024\nAddress: Fictional Lane, Example District\nItem A: INR 1316.00\nItem B: INR 524.00\nTax: INR 69.00\nSeller: Fictional Copper Lake Goods\nTax registration: 19ZZZPZ0532Z1ZV",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0763-X\", \"date\": \"2024-09-13\", \"total\": \"1909.00\", \"gstin\": \"19ZZZPZ0532Z1ZV\"}",
+        "answer": " {\"vendor\":\"Fictional Copper Lake Goods\",\"invoice_no\":\"DOC-0763-X\",\"date\":\"2024-09-13\",\"total\":\"1909.00\",\"gstin\":\"19ZZZPZ0532Z1ZV\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Copper Lake Goods\",\n    \"invoice_no\": \"DOC-0763-X\",\n    \"date\": \"2024-09-13\",\n    \"total\": \"1909",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 27ZZZPZ0533Z1ZX\nGrand total: INR 1,930.00\nItem A: INR 1329.00\nItem B: INR 531.00\nTax: INR 70.00\nDocument: AK/2024/0163\nInvoice date: 2024-09-17",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0163\", \"date\": \"2024-09-17\", \"total\": \"1930.00\", \"gstin\": \"27ZZZPZ0533Z1ZX\"}",
+        "answer": " {\"vendor\":\"Fictional Ivory Finch Traders\",\"invoice_no\":\"AK/2024/0163\",\"date\":\"2024-09-17\",\"total\":\"1930.00\",\"gstin\":\"27ZZZPZ0533Z1ZX\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Ivory Finch Traders\",\n    \"invoice_no\": \"AK/2024/0163\",\n    \"date\": \"2024-09-17\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1342.00\nItem B: INR 538.00\nTax: INR 71.00\nDocument: DOC-0765-X\nInvoice date: 21/09/2024\nSeller: Fictional Violet Reed Tools\nTax registration: 29ZZZPZ0534Z1ZS\nGrand total: INR 1951.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0765-X\", \"date\": \"2024-09-21\", \"total\": \"1951.00\", \"gstin\": \"29ZZZPZ0534Z1ZS\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0765-X\", \"date\": \"2024-09-21\", \"total\": \"1951.00\", \"gstin\": \"29ZZZPZ0534Z1ZS\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Violet Reed Tools\",\n    \"invoice_no\": \"DOC-0765-X\",\n    \"date\": \"2024-09-21\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 33ZZZPZ0535Z1Z2\nAddress: Fictional Lane, Example District\nDocument: AK/2026/0165\nInvoice date: 25 Sep 2024\nItem A: INR 1355.00\nItem B: INR 545.00\nTax: INR 72.00\nGrand total: INR 1,972.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0165\", \"date\": \"2024-09-25\", \"total\": \"1972.00\", \"gstin\": \"33ZZZPZ0535Z1Z2\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0165\", \"date\": \"2024-09-25\", \"total\": \"1972.00\", \"gstin\": \"33ZZZPZ0535Z1Z2\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Silver Fern Textiles\",\n    \"invoice_no\": \"AK/2026",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0767-X\nInvoice date: 2024-10-13\nSeller: Fictional Cedar Moon Parts\nTax registration: 07ZZZPZ0536Z1ZW\nItem A: INR 1368.00\nItem B: INR 552.00\nTax: INR 73.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1993.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0767-X\", \"date\": \"2024-10-13\", \"total\": \"1993.00\", \"gstin\": \"07ZZZPZ0536Z1ZW\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0767-X\", \"date\": \"2024-10-13\", \"total\": \"1993.00\", \"gstin\": \"07ZZZPZ0536Z1ZW\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Cedar Moon Parts\",\n    \"invoice_no\": \"DOC-0767-X\",\n    \"date\": \"2024-10-13\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2,014.00\nDocument: AK/2025/0167\nInvoice date: 17/10/2024\nAddress: Fictional Lane, Example District\nItem A: INR 1381.00\nItem B: INR 559.00\nTax: INR 74.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 09ZZZPZ0537Z1ZR",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2025/0167\", \"date\": \"2024-10-17\", \"total\": \"2014.00\", \"gstin\": \"09ZZZPZ0537Z1ZR\"}",
+        "answer": " {\"vendor\":\"Fictional Paper Cloud Studio\",\"invoice_no\":\"AK/2025/0167\",\"date\":\"2024-10-17\",\"total\":\"2014.00\",\"gstin\":\"09ZZZPZ0537Z1ZR\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Paper Cloud Studio\",\n    \"invoice_no\": \"AK/2025/0167\",\n    \"date\": \"2024-10-17\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 19ZZZPZ0538Z1ZP\nGrand total: INR 2035.00\nItem A: INR 1394.00\nItem B: INR 566.00\nTax: INR 75.00\nDocument: DOC-0769-X\nInvoice date: 21 Oct 2024",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0769-X\", \"date\": \"2024-10-21\", \"total\": \"2035.00\", \"gstin\": \"19ZZZPZ0538Z1ZP\"}",
+        "answer": " {\"vendor\":\"Fictional Coral Grove Store\",\"invoice_no\":\"DOC-0769-X\",\"date\":\"2024-10-21\",\"total\":\"2035.00\",\"gstin\":\"19ZZZPZ0538Z1ZP\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Coral Grove Store\",\n    \"invoice_no\": \"DOC-0769-X\",\n    \"date\": \"2024-10-21\",\n    \"total\": \"2035.",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1407.00\nItem B: INR 573.00\nTax: INR 76.00\nDocument: AK/2024/0169\nInvoice date: 2024-10-25\nSeller: Fictional Maple Stone Materials\nTax registration: 27ZZZPZ0539Z1ZR\nGrand total: INR 2,056.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0169\", \"date\": \"2024-10-25\", \"total\": \"2056.00\", \"gstin\": \"27ZZZPZ0539Z1ZR\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0169\", \"date\": \"2024-10-25\", \"total\": \"2056.00\", \"gstin\": \"27ZZZPZ0539Z1ZR\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Maple Stone Materials\",\n    \"invoice_no\": \"AK/2024/0169\",\n    \"date\": \"2024-",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 29ZZZPZ0540Z1ZU\nAddress: Fictional Lane, Example District\nDocument: DOC-0771-X\nInvoice date: 13/11/2024\nItem A: INR 1420.00\nItem B: INR 580.00\nTax: INR 77.00\nGrand total: INR 2077.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0771-X\", \"date\": \"2024-11-13\", \"total\": \"2077.00\", \"gstin\": \"29ZZZPZ0540Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0771-X\", \"date\": \"2024-11-13\", \"total\": \"2077.00\", \"gstin\": \"29ZZZPZ0540Z1ZU\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Amber Kite Supplies\",\n    \"invoice_no\": \"DOC-0771-X\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2026/0171\nInvoice date: 17 Nov 2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 33ZZZPZ0541Z1Z4\nItem A: INR 1433.00\nItem B: INR 587.00\nTax: INR 78.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2,098.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0171\", \"date\": \"2024-11-17\", \"total\": \"2098.00\", \"gstin\": \"33ZZZPZ0541Z1Z4\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0171\", \"date\": \"2024-11-17\", \"total\": \"2098.00\", \"gstin\": \"33ZZZPZ0541Z1Z4\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Blue Elm Workshop\",\n    \"invoice_no\": \"AK/2026/0171\",\n    \"date\": \"2024",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2119.00\nDocument: DOC-0773-X\nInvoice date: 2024-11-21\nAddress: Fictional Lane, Example District\nItem A: INR 1446.00\nItem B: INR 594.00\nTax: INR 79.00\nSeller: Fictional Copper Lake Goods\nTax registration: 07ZZZPZ0542Z1ZY",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0773-X\", \"date\": \"2024-11-21\", \"total\": \"2119.00\", \"gstin\": \"07ZZZPZ0542Z1ZY\"}",
+        "answer": " {\"vendor\":\"Fictional Copper Lake Goods\",\"invoice_no\":\"DOC-0773-X\",\"date\":\"2024-11-21\",\"total\":\"2119.00\",\"gstin\":\"07ZZZPZ0542Z1ZY\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Copper Lake Goods\",\n    \"invoice_no\": \"DOC-0773-X\",\n    \"date\": \"2024-11-21\",\n    \"total\": \"2119.",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 09ZZZPZ0543Z1ZT\nGrand total: INR 2,140.00\nItem A: INR 1459.00\nItem B: INR 601.00\nTax: INR 80.00\nDocument: AK/2025/0173\nInvoice date: 25/11/2024",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2025/0173\", \"date\": \"2024-11-25\", \"total\": \"2140.00\", \"gstin\": \"09ZZZPZ0543Z1ZT\"}",
+        "answer": " {\"vendor\":\"Fictional Ivory Finch Traders\",\"invoice_no\":\"AK/2025/0173\",\"date\":\"2024-11-25\",\"total\":\"2140.00\",\"gstin\":\"09ZZZPZ0543Z1ZT\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Ivory Finch Traders\",\n    \"invoice_no\": \"AK/2025/0173\",\n    \"date\": \"2024-11-25\",\n",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1472.00\nItem B: INR 608.00\nTax: INR 81.00\nDocument: DOC-0775-X\nInvoice date: 13 Dec 2024\nSeller: Fictional Violet Reed Tools\nTax registration: 19ZZZPZ0544Z1ZR\nGrand total: INR 2161.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0775-X\", \"date\": \"2024-12-13\", \"total\": \"2161.00\", \"gstin\": \"19ZZZPZ0544Z1ZR\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0775-X\", \"date\": \"2024-12-13\", \"total\": \"2161.00\", \"gstin\": \"19ZZZPZ0544Z1ZR\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Violet Reed Tools\",\n    \"invoice_no\": \"DOC-0775-X\",\n    \"date\": \"2024-12-13\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 27ZZZPZ0545Z1ZT\nAddress: Fictional Lane, Example District\nDocument: AK/2024/0175\nInvoice date: 2024-12-17\nItem A: INR 1485.00\nItem B: INR 615.00\nTax: INR 82.00\nGrand total: INR 2,182.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0175\", \"date\": \"2024-12-17\", \"total\": \"2182.00\", \"gstin\": \"27ZZZPZ0545Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0175\", \"date\": \"2024-12-17\", \"total\": \"2182.00\", \"gstin\": \"27ZZZPZ0545Z1ZT\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Silver Fern Textiles\",\n    \"invoice_no\": \"AK/2024",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0777-X\nInvoice date: 21/12/2024\nSeller: Fictional Cedar Moon Parts\nTax registration: 29ZZZPZ0546Z1ZO\nItem A: INR 1498.00\nItem B: INR 622.00\nTax: INR 83.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2203.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0777-X\", \"date\": \"2024-12-21\", \"total\": \"2203.00\", \"gstin\": \"29ZZZPZ0546Z1ZO\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0777-X\", \"date\": \"2024-12-21\", \"total\": \"2203.00\", \"gstin\": \"29ZZZPZ0546Z1ZO\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Cedar Moon Parts\",\n    \"invoice_no\": \"DOC-0777-X\",\n    \"date\": \"2024-12-21\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2,224.00\nDocument: AK/2026/0177\nInvoice date: 25 Dec 2024\nAddress: Fictional Lane, Example District\nItem A: INR 1511.00\nItem B: INR 629.00\nTax: INR 84.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 33ZZZPZ0547Z1ZY",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2026/0177\", \"date\": \"2024-12-25\", \"total\": \"2224.00\", \"gstin\": \"33ZZZPZ0547Z1ZY\"}",
+        "answer": " {\"vendor\":\"Fictional Paper Cloud Studio\",\"invoice_no\":\"AK/2026/0177\",\"date\":\"2024-12-25\",\"total\":\"2224.00\",\"gstin\":\"33ZZZPZ0547Z1ZY\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Paper Cloud Studio\",\n    \"invoice_no\": \"AK/2026/0177\",\n    \"date\": \"2024-12-25\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 07ZZZPZ0548Z1ZS\nGrand total: INR 2245.00\nItem A: INR 1524.00\nItem B: INR 636.00\nTax: INR 85.00\nDocument: DOC-0779-X\nInvoice date: 2025-01-13",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0779-X\", \"date\": \"2025-01-13\", \"total\": \"2245.00\", \"gstin\": \"07ZZZPZ0548Z1ZS\"}",
+        "answer": " {\"vendor\":\"Fictional Coral Grove Store\",\"invoice_no\":\"DOC-0779-X\",\"date\":\"2025-01-13T00:00:00+00:00\",\"total\":\"2245.00\",\"gstin\":\"07ZZZPZ0548Z1ZS\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Coral Grove Store\",\n    \"invoice_no\": \"DOC-0779-X\",\n    \"date\": \"2025-0",
+        "passed": false
+      },
+      {
+        "input": "Item A: INR 1537.00\nItem B: INR 643.00\nTax: INR 86.00\nDocument: AK/2025/0179\nInvoice date: 17/01/2025\nSeller: Fictional Maple Stone Materials\nTax registration: 09ZZZPZ0549Z1ZN\nGrand total: INR 2,266.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0179\", \"date\": \"2025-01-17\", \"total\": \"2266.00\", \"gstin\": \"09ZZZPZ0549Z1ZN\"}",
+        "answer": " {\"vendor\":\"Fictional Maple Stone Materials\",\"invoice_no\":\"AK/2025/0179\",\"date\":\"2025-01-17\",\"total\":\"2266.00\",\"gstin\":\"09ZZZPZ0549Z1ZN\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Maple Stone Materials\",\n    \"invoice_no\": \"AK/2025/0179\",\n    \"date\": \"2025-01-17\",\n    \"total",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 19ZZZPZ0550Z1ZT\nAddress: Fictional Lane, Example District\nDocument: DOC-0781-X\nInvoice date: 21 Jan 2025\nItem A: INR 1550.00\nItem B: INR 650.00\nTax: INR 87.00\nGrand total: INR 2287.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0781-X\", \"date\": \"2025-01-21\", \"total\": \"2287.00\", \"gstin\": \"19ZZZPZ0550Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0781-X\", \"date\": \"2025-01-21\", \"total\": \"2287.00\", \"gstin\": \"19ZZZPZ0550Z1ZT\"} Here's how you can extract the required information from the given invoice data and format it into a JSON object:\n\n```json\n{\n    \"vendor\": \"Fictional Amber Kite Supplies\",\n    \"invoice_no\": \"DOC-0781-X\",\n    \"date",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2024/0181\nInvoice date: 2025-01-25\nSeller: Fictional Blue Elm Workshop\nTax registration: 27ZZZPZ0551Z1ZV\nItem A: INR 1563.00\nItem B: INR 657.00\nTax: INR 88.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2,308.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0181\", \"date\": \"2025-01-25\", \"total\": \"2308.00\", \"gstin\": \"27ZZZPZ0551Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0181\", \"date\": \"2025-01-25\", \"total\": \"2308.00\", \"gstin\": \"27ZZZPZ0551Z1ZV\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Blue Elm Workshop\",\n    \"invoice_no\": \"AK/2024/0181\",\n    \"date\": \"2025",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2329.00\nDocument: DOC-0783-X\nInvoice date: 13/02/2025\nAddress: Fictional Lane, Example District\nItem A: INR 1576.00\nItem B: INR 664.00\nTax: INR 89.00\nSeller: Fictional Copper Lake Goods\nTax registration: 29ZZZPZ0552Z1ZQ",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0783-X\", \"date\": \"2025-02-13\", \"total\": \"2329.00\", \"gstin\": \"29ZZZPZ0552Z1ZQ\"}",
+        "answer": " {\"vendor\":\"Fictional Copper Lake Goods\",\"invoice_no\":\"DOC-0783-X\",\"date\":\"2025-02-13\",\"total\":\"2329.00\",\"gstin\":\"29ZZZPZ0552Z1ZQ\"} Here is the JSON representation of the given invoice data:\n\n```json\n{\n    \"vendor\": \"Fictional Copper Lake Goods\",\n    \"invoice_no\": \"DOC-0783-X\",\n    \"date\": \"2025-02-13\",\n    \"total\": \"2329",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 33ZZZPZ0553Z1Z0\nGrand total: INR 2,350.00\nItem A: INR 1589.00\nItem B: INR 671.00\nTax: INR 90.00\nDocument: AK/2026/0183\nInvoice date: 17 Feb 2025",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2026/0183\", \"date\": \"2025-02-17\", \"total\": \"2350.00\", \"gstin\": \"33ZZZPZ0553Z1Z0\"}",
+        "answer": " {\"vendor\":\"Fictional Ivory Finch Traders\",\"invoice_no\":\"AK/2026/0183\",\"date\":\"2025-02-17\",\"total\":\"2350.00\",\"gstin\":\"33ZZZPZ0553Z1Z0\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Ivory Finch Traders\",\n    \"invoice_no\": \"AK/2026/0183\",\n    \"date\": \"2025-02-17\",\n",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1602.00\nItem B: INR 678.00\nTax: INR 91.00\nDocument: DOC-0785-X\nInvoice date: 2025-02-21\nSeller: Fictional Violet Reed Tools\nTax registration: 07ZZZPZ0554Z1ZU\nGrand total: INR 2371.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0785-X\", \"date\": \"2025-02-21\", \"total\": \"2371.00\", \"gstin\": \"07ZZZPZ0554Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0785-X\", \"date\": \"2025-02-21\", \"total\": \"2371.00\", \"gstin\": \"07ZZZPZ0554Z1ZU\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Violet Reed Tools\",\n    \"invoice_no\": \"DOC-0785-X\",\n    \"date\": \"2025-02-21\",\n   ",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 09ZZZPZ0555Z1ZP\nAddress: Fictional Lane, Example District\nDocument: AK/2025/0185\nInvoice date: 25/02/2025\nItem A: INR 1615.00\nItem B: INR 685.00\nTax: INR 92.00\nGrand total: INR 2,392.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0185\", \"date\": \"2025-02-25\", \"total\": \"2392.00\", \"gstin\": \"09ZZZPZ0555Z1ZP\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0185\", \"date\": \"2025-02-25\", \"total\": \"2392.00\", \"gstin\": \"09ZZZPZ0555Z1ZP\"} Here's how you can extract the required information from the given invoice data and format it into the specified JSON structure:\n\n```json\n{\n    \"vendor\": \"Fictional Silver Fern Textiles\",\n    \"invoice_no\": \"AK/2025",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0787-X\nInvoice date: 13 Mar 2025\nSeller: Fictional Cedar Moon Parts\nTax registration: 19ZZZPZ0556Z1ZN\nItem A: INR 1628.00\nItem B: INR 692.00\nTax: INR 93.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2413.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0787-X\", \"date\": \"2025-03-13\", \"total\": \"2413.00\", \"gstin\": \"19ZZZPZ0556Z1ZN\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0787-X\", \"date\": \"2025-03-13\", \"total\": \"2413.00\", \"gstin\": \"19ZZZPZ0556Z1ZN\"} Here is the JSON representation of the given information:\n\n```json\n{\n    \"vendor\": \"Fictional Cedar Moon Parts\",\n    \"invoice_no\": \"DOC-0787-X\",\n    \"date\": \"2025-03-13\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2,434.00\nDocument: AK/2024/0187\nInvoice date: 2025-03-17\nAddress: Fictional Lane, Example District\nItem A: INR 1641.00\nItem B: INR 699.00\nTax: INR 94.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 27ZZZPZ0557Z1ZP",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2024/0187\", \"date\": \"2025-03-17\", \"total\": \"2434.00\", \"gstin\": \"27ZZZPZ0557Z1ZP\"}",
+        "answer": " {\"vendor\":\"Fictional Paper Cloud Studio\",\"invoice_no\":\"AK/2024/0187\",\"date\":\"2025-03-17\",\"total\":\"2434.00\",\"gstin\":\"27ZZZPZ0557Z1ZP\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Paper Cloud Studio\",\n    \"invoice_no\": \"AK/2024/0187\",\n    \"date\": \"2025-03-17\",\n    \"",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 29ZZZPZ0558Z1ZK\nGrand total: INR 2455.00\nItem A: INR 1654.00\nItem B: INR 706.00\nTax: INR 95.00\nDocument: DOC-0789-X\nInvoice date: 21/03/2025",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0789-X\", \"date\": \"2025-03-21\", \"total\": \"2455.00\", \"gstin\": \"29ZZZPZ0558Z1ZK\"}",
+        "answer": " {\"vendor\":\"Fictional Coral Grove Store\",\"invoice_no\":\"DOC-0789-X\",\"date\":\"2025-03-21\",\"total\":\"2455.00\",\"gstin\":\"29ZZZPZ0558Z1ZK\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Coral Grove Store\",\n    \"invoice_no\": \"DOC-0789-X\",\n    \"date\": \"2025-03-21\",\n    \"total\": \"2455.",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1667.00\nItem B: INR 713.00\nTax: INR 96.00\nDocument: AK/2026/0189\nInvoice date: 25 Mar 2025\nSeller: Fictional Maple Stone Materials\nTax registration: 33ZZZPZ0559Z1ZU\nGrand total: INR 2,476.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0189\", \"date\": \"2025-03-25\", \"total\": \"2476.00\", \"gstin\": \"33ZZZPZ0559Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0189\", \"date\": \"2025-03-25\", \"total\": \"2476.00\", \"gstin\": \"33ZZZPZ0559Z1ZU\"} Here is the JSON representation of the given invoice:\n\n```json\n{\n    \"vendor\": \"Fictional Maple Stone Materials\",\n    \"invoice_no\": \"AK/2026/0189\",\n    \"date\": \"2025",
+        "passed": true
+      }
+    ]
+  },
+  "checkpoint_manifest": {
+    "dataset_sha256": "d065047d75dde961fa10547fe718de8170a01f246fc08eb1e4cf4fb8ab886829",
+    "exec_config": {
+      "accumulation": 8,
+      "amp": "fp16",
+      "attention_impl": "sdpa",
+      "grad_checkpointing": true,
+      "loader_workers": 0,
+      "micro_batch": 1
+    },
+    "files": {
+      "optimizer.safetensors": {
+        "bytes": 17482496,
+        "sha256": "899614e80a8390920c989d35ac89e9d3c77ab32f2d7a2265f1d942d4c46f7d12"
+      },
+      "trainable.safetensors": {
+        "bytes": 8731992,
+        "sha256": "842e1f848666f41ad4ae46d3207ca52387413b9d0cf4b3ce4dfbf3143dfab26c"
+      }
+    },
+    "format": "GPCK/1",
+    "immutable_hash": "76a7aa949dc2305356820eeee1f025e46e84b92cd97303297e92f4a5505160a5",
+    "logical_step": 50,
+    "model": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "recipe_id": "invoice-fields",
+    "scaler": {
+      "_growth_tracker": 50,
+      "backoff_factor": 0.5,
+      "growth_factor": 2.0,
+      "growth_interval": 2000,
+      "scale": 65536.0
+    }
+  },
+  "student": {
+    "pass_rate": 1.0,
+    "mean_score": 1.0,
+    "predictions": [
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 07ZZZPZ0500Z1Z8\nAddress: Fictional Lane, Example District\nDocument: DOC-0731-X\nInvoice date: 2024-01-13\nItem A: INR 900.00\nItem B: INR 300.00\nTax: INR 37.00\nGrand total: INR 1237.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0731-X\", \"date\": \"2024-01-13\", \"total\": \"1237.00\", \"gstin\": \"07ZZZPZ0500Z1Z8\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0731-X\", \"date\": \"2024-01-13\", \"total\": \"1237.00\", \"gstin\": \"07ZZZPZ0500Z1Z8\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2025/0131\nInvoice date: 17/01/2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 09ZZZPZ0501Z1Z3\nItem A: INR 913.00\nItem B: INR 307.00\nTax: INR 38.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,258.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0131\", \"date\": \"2024-01-17\", \"total\": \"1258.00\", \"gstin\": \"09ZZZPZ0501Z1Z3\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0131\", \"date\": \"2024-01-17\", \"total\": \"1258.00\", \"gstin\": \"09ZZZPZ0501Z1Z3\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1279.00\nDocument: DOC-0733-X\nInvoice date: 21 Jan 2024\nAddress: Fictional Lane, Example District\nItem A: INR 926.00\nItem B: INR 314.00\nTax: INR 39.00\nSeller: Fictional Copper Lake Goods\nTax registration: 19ZZZPZ0502Z1Z1",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0733-X\", \"date\": \"2024-01-21\", \"total\": \"1279.00\", \"gstin\": \"19ZZZPZ0502Z1Z1\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0733-X\", \"date\": \"2024-01-21\", \"total\": \"1279.00\", \"gstin\": \"19ZZZPZ0502Z1Z1\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 27ZZZPZ0503Z1Z3\nGrand total: INR 1,300.00\nItem A: INR 939.00\nItem B: INR 321.00\nTax: INR 40.00\nDocument: AK/2024/0133\nInvoice date: 2024-01-25",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0133\", \"date\": \"2024-01-25\", \"total\": \"1300.00\", \"gstin\": \"27ZZZPZ0503Z1Z3\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0133\", \"date\": \"2024-01-25\", \"total\": \"1300.00\", \"gstin\": \"27ZZZPZ0503Z1Z3\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 952.00\nItem B: INR 328.00\nTax: INR 41.00\nDocument: DOC-0735-X\nInvoice date: 13/02/2024\nSeller: Fictional Violet Reed Tools\nTax registration: 29ZZZPZ0504Z1ZY\nGrand total: INR 1321.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0735-X\", \"date\": \"2024-02-13\", \"total\": \"1321.00\", \"gstin\": \"29ZZZPZ0504Z1ZY\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0735-X\", \"date\": \"2024-02-13\", \"total\": \"1321.00\", \"gstin\": \"29ZZZPZ0504Z1ZY\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 33ZZZPZ0505Z1Z8\nAddress: Fictional Lane, Example District\nDocument: AK/2026/0135\nInvoice date: 17 Feb 2024\nItem A: INR 965.00\nItem B: INR 335.00\nTax: INR 42.00\nGrand total: INR 1,342.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0135\", \"date\": \"2024-02-17\", \"total\": \"1342.00\", \"gstin\": \"33ZZZPZ0505Z1Z8\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0135\", \"date\": \"2024-02-17\", \"total\": \"1342.00\", \"gstin\": \"33ZZZPZ0505Z1Z8\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0737-X\nInvoice date: 2024-02-21\nSeller: Fictional Cedar Moon Parts\nTax registration: 07ZZZPZ0506Z1Z2\nItem A: INR 978.00\nItem B: INR 342.00\nTax: INR 43.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1363.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0737-X\", \"date\": \"2024-02-21\", \"total\": \"1363.00\", \"gstin\": \"07ZZZPZ0506Z1Z2\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0737-X\", \"date\": \"2024-02-21\", \"total\": \"1363.00\", \"gstin\": \"07ZZZPZ0506Z1Z2\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1,384.00\nDocument: AK/2025/0137\nInvoice date: 25/02/2024\nAddress: Fictional Lane, Example District\nItem A: INR 991.00\nItem B: INR 349.00\nTax: INR 44.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 09ZZZPZ0507Z1ZX",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2025/0137\", \"date\": \"2024-02-25\", \"total\": \"1384.00\", \"gstin\": \"09ZZZPZ0507Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2025/0137\", \"date\": \"2024-02-25\", \"total\": \"1384.00\", \"gstin\": \"09ZZZPZ0507Z1ZX\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 19ZZZPZ0508Z1ZV\nGrand total: INR 1405.00\nItem A: INR 1004.00\nItem B: INR 356.00\nTax: INR 45.00\nDocument: DOC-0739-X\nInvoice date: 13 Mar 2024",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0739-X\", \"date\": \"2024-03-13\", \"total\": \"1405.00\", \"gstin\": \"19ZZZPZ0508Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0739-X\", \"date\": \"2024-03-13\", \"total\": \"1405.00\", \"gstin\": \"19ZZZPZ0508Z1ZV\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1017.00\nItem B: INR 363.00\nTax: INR 46.00\nDocument: AK/2024/0139\nInvoice date: 2024-03-17\nSeller: Fictional Maple Stone Materials\nTax registration: 27ZZZPZ0509Z1ZX\nGrand total: INR 1,426.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0139\", \"date\": \"2024-03-17\", \"total\": \"1426.00\", \"gstin\": \"27ZZZPZ0509Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0139\", \"date\": \"2024-03-17\", \"total\": \"1426.00\", \"gstin\": \"27ZZZPZ0509Z1ZX\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 29ZZZPZ0510Z1Z0\nAddress: Fictional Lane, Example District\nDocument: DOC-0741-X\nInvoice date: 21/03/2024\nItem A: INR 1030.00\nItem B: INR 370.00\nTax: INR 47.00\nGrand total: INR 1447.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0741-X\", \"date\": \"2024-03-21\", \"total\": \"1447.00\", \"gstin\": \"29ZZZPZ0510Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0741-X\", \"date\": \"2024-03-21\", \"total\": \"1447.00\", \"gstin\": \"29ZZZPZ0510Z1Z0\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2026/0141\nInvoice date: 25 Mar 2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 33ZZZPZ0511Z1ZA\nItem A: INR 1043.00\nItem B: INR 377.00\nTax: INR 48.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,468.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0141\", \"date\": \"2024-03-25\", \"total\": \"1468.00\", \"gstin\": \"33ZZZPZ0511Z1ZA\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0141\", \"date\": \"2024-03-25\", \"total\": \"1468.00\", \"gstin\": \"33ZZZPZ0511Z1ZA\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1489.00\nDocument: DOC-0743-X\nInvoice date: 2024-04-13\nAddress: Fictional Lane, Example District\nItem A: INR 1056.00\nItem B: INR 384.00\nTax: INR 49.00\nSeller: Fictional Copper Lake Goods\nTax registration: 07ZZZPZ0512Z1Z4",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0743-X\", \"date\": \"2024-04-13\", \"total\": \"1489.00\", \"gstin\": \"07ZZZPZ0512Z1Z4\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0743-X\", \"date\": \"2024-04-13\", \"total\": \"1489.00\", \"gstin\": \"07ZZZPZ0512Z1Z4\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 09ZZZPZ0513Z1ZZ\nGrand total: INR 1,510.00\nItem A: INR 1069.00\nItem B: INR 391.00\nTax: INR 50.00\nDocument: AK/2025/0143\nInvoice date: 17/04/2024",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2025/0143\", \"date\": \"2024-04-17\", \"total\": \"1510.00\", \"gstin\": \"09ZZZPZ0513Z1ZZ\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2025/0143\", \"date\": \"2024-04-17\", \"total\": \"1510.00\", \"gstin\": \"09ZZZPZ0513Z1ZZ\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1082.00\nItem B: INR 398.00\nTax: INR 51.00\nDocument: DOC-0745-X\nInvoice date: 21 Apr 2024\nSeller: Fictional Violet Reed Tools\nTax registration: 19ZZZPZ0514Z1ZX\nGrand total: INR 1531.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0745-X\", \"date\": \"2024-04-21\", \"total\": \"1531.00\", \"gstin\": \"19ZZZPZ0514Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0745-X\", \"date\": \"2024-04-21\", \"total\": \"1531.00\", \"gstin\": \"19ZZZPZ0514Z1ZX\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 27ZZZPZ0515Z1ZZ\nAddress: Fictional Lane, Example District\nDocument: AK/2024/0145\nInvoice date: 2024-04-25\nItem A: INR 1095.00\nItem B: INR 405.00\nTax: INR 52.00\nGrand total: INR 1,552.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0145\", \"date\": \"2024-04-25\", \"total\": \"1552.00\", \"gstin\": \"27ZZZPZ0515Z1ZZ\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0145\", \"date\": \"2024-04-25\", \"total\": \"1552.00\", \"gstin\": \"27ZZZPZ0515Z1ZZ\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0747-X\nInvoice date: 13/05/2024\nSeller: Fictional Cedar Moon Parts\nTax registration: 29ZZZPZ0516Z1ZU\nItem A: INR 1108.00\nItem B: INR 412.00\nTax: INR 53.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1573.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0747-X\", \"date\": \"2024-05-13\", \"total\": \"1573.00\", \"gstin\": \"29ZZZPZ0516Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0747-X\", \"date\": \"2024-05-13\", \"total\": \"1573.00\", \"gstin\": \"29ZZZPZ0516Z1ZU\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1,594.00\nDocument: AK/2026/0147\nInvoice date: 17 May 2024\nAddress: Fictional Lane, Example District\nItem A: INR 1121.00\nItem B: INR 419.00\nTax: INR 54.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 33ZZZPZ0517Z1Z4",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2026/0147\", \"date\": \"2024-05-17\", \"total\": \"1594.00\", \"gstin\": \"33ZZZPZ0517Z1Z4\"}",
+        "answer": " {\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2026/0147\", \"date\": \"2024-05-17\", \"total\": \"1594.00\", \"gstin\": \"33ZZZPZ0517Z1Z4\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 07ZZZPZ0518Z1ZY\nGrand total: INR 1615.00\nItem A: INR 1134.00\nItem B: INR 426.00\nTax: INR 55.00\nDocument: DOC-0749-X\nInvoice date: 2024-05-21",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0749-X\", \"date\": \"2024-05-21\", \"total\": \"1615.00\", \"gstin\": \"07ZZZPZ0518Z1ZY\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0749-X\", \"date\": \"2024-05-21\", \"total\": \"1615.00\", \"gstin\": \"07ZZZPZ0518Z1ZY\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1147.00\nItem B: INR 433.00\nTax: INR 56.00\nDocument: AK/2025/0149\nInvoice date: 25/05/2024\nSeller: Fictional Maple Stone Materials\nTax registration: 09ZZZPZ0519Z1ZT\nGrand total: INR 1,636.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0149\", \"date\": \"2024-05-25\", \"total\": \"1636.00\", \"gstin\": \"09ZZZPZ0519Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0149\", \"date\": \"2024-05-25\", \"total\": \"1636.00\", \"gstin\": \"09ZZZPZ0519Z1ZT\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 19ZZZPZ0520Z1ZZ\nAddress: Fictional Lane, Example District\nDocument: DOC-0751-X\nInvoice date: 13 Jun 2024\nItem A: INR 1160.00\nItem B: INR 440.00\nTax: INR 57.00\nGrand total: INR 1657.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0751-X\", \"date\": \"2024-06-13\", \"total\": \"1657.00\", \"gstin\": \"19ZZZPZ0520Z1ZZ\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0751-X\", \"date\": \"2024-06-13\", \"total\": \"1657.00\", \"gstin\": \"19ZZZPZ0520Z1ZZ\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2024/0151\nInvoice date: 2024-06-17\nSeller: Fictional Blue Elm Workshop\nTax registration: 27ZZZPZ0521Z1Z1\nItem A: INR 1173.00\nItem B: INR 447.00\nTax: INR 58.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,678.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0151\", \"date\": \"2024-06-17\", \"total\": \"1678.00\", \"gstin\": \"27ZZZPZ0521Z1Z1\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0151\", \"date\": \"2024-06-17\", \"total\": \"1678.00\", \"gstin\": \"27ZZZPZ0521Z1Z1\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1699.00\nDocument: DOC-0753-X\nInvoice date: 21/06/2024\nAddress: Fictional Lane, Example District\nItem A: INR 1186.00\nItem B: INR 454.00\nTax: INR 59.00\nSeller: Fictional Copper Lake Goods\nTax registration: 29ZZZPZ0522Z1ZW",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0753-X\", \"date\": \"2024-06-21\", \"total\": \"1699.00\", \"gstin\": \"29ZZZPZ0522Z1ZW\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0753-X\", \"date\": \"2024-06-21\", \"total\": \"1699.00\", \"gstin\": \"29ZZZPZ0522Z1ZW\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 33ZZZPZ0523Z1Z6\nGrand total: INR 1,720.00\nItem A: INR 1199.00\nItem B: INR 461.00\nTax: INR 60.00\nDocument: AK/2026/0153\nInvoice date: 25 Jun 2024",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2026/0153\", \"date\": \"2024-06-25\", \"total\": \"1720.00\", \"gstin\": \"33ZZZPZ0523Z1Z6\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2026/0153\", \"date\": \"2024-06-25\", \"total\": \"1720.00\", \"gstin\": \"33ZZZPZ0523Z1Z6\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1212.00\nItem B: INR 468.00\nTax: INR 61.00\nDocument: DOC-0755-X\nInvoice date: 2024-07-13\nSeller: Fictional Violet Reed Tools\nTax registration: 07ZZZPZ0524Z1Z0\nGrand total: INR 1741.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0755-X\", \"date\": \"2024-07-13\", \"total\": \"1741.00\", \"gstin\": \"07ZZZPZ0524Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0755-X\", \"date\": \"2024-07-13\", \"total\": \"1741.00\", \"gstin\": \"07ZZZPZ0524Z1Z0\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 09ZZZPZ0525Z1ZV\nAddress: Fictional Lane, Example District\nDocument: AK/2025/0155\nInvoice date: 17/07/2024\nItem A: INR 1225.00\nItem B: INR 475.00\nTax: INR 62.00\nGrand total: INR 1,762.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0155\", \"date\": \"2024-07-17\", \"total\": \"1762.00\", \"gstin\": \"09ZZZPZ0525Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0155\", \"date\": \"2024-07-17\", \"total\": \"1762.00\", \"gstin\": \"09ZZZPZ0525Z1ZV\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0757-X\nInvoice date: 21 Jul 2024\nSeller: Fictional Cedar Moon Parts\nTax registration: 19ZZZPZ0526Z1ZT\nItem A: INR 1238.00\nItem B: INR 482.00\nTax: INR 63.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1783.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0757-X\", \"date\": \"2024-07-21\", \"total\": \"1783.00\", \"gstin\": \"19ZZZPZ0526Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0757-X\", \"date\": \"2024-07-21\", \"total\": \"1783.00\", \"gstin\": \"19ZZZPZ0526Z1ZT\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1,804.00\nDocument: AK/2024/0157\nInvoice date: 2024-07-25\nAddress: Fictional Lane, Example District\nItem A: INR 1251.00\nItem B: INR 489.00\nTax: INR 64.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 27ZZZPZ0527Z1ZV",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2024/0157\", \"date\": \"2024-07-25\", \"total\": \"1804.00\", \"gstin\": \"27ZZZPZ0527Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2024/0157\", \"date\": \"2024-07-25\", \"total\": \"1804.00\", \"gstin\": \"27ZZZPZ0527Z1ZV\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 29ZZZPZ0528Z1ZQ\nGrand total: INR 1825.00\nItem A: INR 1264.00\nItem B: INR 496.00\nTax: INR 65.00\nDocument: DOC-0759-X\nInvoice date: 13/08/2024",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0759-X\", \"date\": \"2024-08-13\", \"total\": \"1825.00\", \"gstin\": \"29ZZZPZ0528Z1ZQ\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0759-X\", \"date\": \"2024-08-13\", \"total\": \"1825.00\", \"gstin\": \"29ZZZPZ0528Z1ZQ\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1277.00\nItem B: INR 503.00\nTax: INR 66.00\nDocument: AK/2026/0159\nInvoice date: 17 Aug 2024\nSeller: Fictional Maple Stone Materials\nTax registration: 33ZZZPZ0529Z1Z0\nGrand total: INR 1,846.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0159\", \"date\": \"2024-08-17\", \"total\": \"1846.00\", \"gstin\": \"33ZZZPZ0529Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0159\", \"date\": \"2024-08-17\", \"total\": \"1846.00\", \"gstin\": \"33ZZZPZ0529Z1Z0\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 07ZZZPZ0530Z1Z2\nAddress: Fictional Lane, Example District\nDocument: DOC-0761-X\nInvoice date: 2024-08-21\nItem A: INR 1290.00\nItem B: INR 510.00\nTax: INR 67.00\nGrand total: INR 1867.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0761-X\", \"date\": \"2024-08-21\", \"total\": \"1867.00\", \"gstin\": \"07ZZZPZ0530Z1Z2\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0761-X\", \"date\": \"2024-08-21\", \"total\": \"1867.00\", \"gstin\": \"07ZZZPZ0530Z1Z2\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2025/0161\nInvoice date: 25/08/2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 09ZZZPZ0531Z1ZX\nItem A: INR 1303.00\nItem B: INR 517.00\nTax: INR 68.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1,888.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0161\", \"date\": \"2024-08-25\", \"total\": \"1888.00\", \"gstin\": \"09ZZZPZ0531Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2025/0161\", \"date\": \"2024-08-25\", \"total\": \"1888.00\", \"gstin\": \"09ZZZPZ0531Z1ZX\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 1909.00\nDocument: DOC-0763-X\nInvoice date: 13 Sep 2024\nAddress: Fictional Lane, Example District\nItem A: INR 1316.00\nItem B: INR 524.00\nTax: INR 69.00\nSeller: Fictional Copper Lake Goods\nTax registration: 19ZZZPZ0532Z1ZV",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0763-X\", \"date\": \"2024-09-13\", \"total\": \"1909.00\", \"gstin\": \"19ZZZPZ0532Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0763-X\", \"date\": \"2024-09-13\", \"total\": \"1909.00\", \"gstin\": \"19ZZZPZ0532Z1ZV\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 27ZZZPZ0533Z1ZX\nGrand total: INR 1,930.00\nItem A: INR 1329.00\nItem B: INR 531.00\nTax: INR 70.00\nDocument: AK/2024/0163\nInvoice date: 2024-09-17",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0163\", \"date\": \"2024-09-17\", \"total\": \"1930.00\", \"gstin\": \"27ZZZPZ0533Z1ZX\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2024/0163\", \"date\": \"2024-09-17\", \"total\": \"1930.00\", \"gstin\": \"27ZZZPZ0533Z1ZX\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1342.00\nItem B: INR 538.00\nTax: INR 71.00\nDocument: DOC-0765-X\nInvoice date: 21/09/2024\nSeller: Fictional Violet Reed Tools\nTax registration: 29ZZZPZ0534Z1ZS\nGrand total: INR 1951.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0765-X\", \"date\": \"2024-09-21\", \"total\": \"1951.00\", \"gstin\": \"29ZZZPZ0534Z1ZS\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0765-X\", \"date\": \"2024-09-21\", \"total\": \"1951.00\", \"gstin\": \"29ZZZPZ0534Z1ZS\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 33ZZZPZ0535Z1Z2\nAddress: Fictional Lane, Example District\nDocument: AK/2026/0165\nInvoice date: 25 Sep 2024\nItem A: INR 1355.00\nItem B: INR 545.00\nTax: INR 72.00\nGrand total: INR 1,972.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0165\", \"date\": \"2024-09-25\", \"total\": \"1972.00\", \"gstin\": \"33ZZZPZ0535Z1Z2\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2026/0165\", \"date\": \"2024-09-25\", \"total\": \"1972.00\", \"gstin\": \"33ZZZPZ0535Z1Z2\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0767-X\nInvoice date: 2024-10-13\nSeller: Fictional Cedar Moon Parts\nTax registration: 07ZZZPZ0536Z1ZW\nItem A: INR 1368.00\nItem B: INR 552.00\nTax: INR 73.00\nAddress: Fictional Lane, Example District\nGrand total: INR 1993.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0767-X\", \"date\": \"2024-10-13\", \"total\": \"1993.00\", \"gstin\": \"07ZZZPZ0536Z1ZW\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0767-X\", \"date\": \"2024-10-13\", \"total\": \"1993.00\", \"gstin\": \"07ZZZPZ0536Z1ZW\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2,014.00\nDocument: AK/2025/0167\nInvoice date: 17/10/2024\nAddress: Fictional Lane, Example District\nItem A: INR 1381.00\nItem B: INR 559.00\nTax: INR 74.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 09ZZZPZ0537Z1ZR",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2025/0167\", \"date\": \"2024-10-17\", \"total\": \"2014.00\", \"gstin\": \"09ZZZPZ0537Z1ZR\"}",
+        "answer": " {\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2025/0167\", \"date\": \"2024-10-17\", \"total\": \"2014.00\", \"gstin\": \"09ZZZPZ0537Z1ZR\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 19ZZZPZ0538Z1ZP\nGrand total: INR 2035.00\nItem A: INR 1394.00\nItem B: INR 566.00\nTax: INR 75.00\nDocument: DOC-0769-X\nInvoice date: 21 Oct 2024",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0769-X\", \"date\": \"2024-10-21\", \"total\": \"2035.00\", \"gstin\": \"19ZZZPZ0538Z1ZP\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0769-X\", \"date\": \"2024-10-21\", \"total\": \"2035.00\", \"gstin\": \"19ZZZPZ0538Z1ZP\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1407.00\nItem B: INR 573.00\nTax: INR 76.00\nDocument: AK/2024/0169\nInvoice date: 2024-10-25\nSeller: Fictional Maple Stone Materials\nTax registration: 27ZZZPZ0539Z1ZR\nGrand total: INR 2,056.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0169\", \"date\": \"2024-10-25\", \"total\": \"2056.00\", \"gstin\": \"27ZZZPZ0539Z1ZR\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2024/0169\", \"date\": \"2024-10-25\", \"total\": \"2056.00\", \"gstin\": \"27ZZZPZ0539Z1ZR\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 29ZZZPZ0540Z1ZU\nAddress: Fictional Lane, Example District\nDocument: DOC-0771-X\nInvoice date: 13/11/2024\nItem A: INR 1420.00\nItem B: INR 580.00\nTax: INR 77.00\nGrand total: INR 2077.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0771-X\", \"date\": \"2024-11-13\", \"total\": \"2077.00\", \"gstin\": \"29ZZZPZ0540Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0771-X\", \"date\": \"2024-11-13\", \"total\": \"2077.00\", \"gstin\": \"29ZZZPZ0540Z1ZU\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2026/0171\nInvoice date: 17 Nov 2024\nSeller: Fictional Blue Elm Workshop\nTax registration: 33ZZZPZ0541Z1Z4\nItem A: INR 1433.00\nItem B: INR 587.00\nTax: INR 78.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2,098.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0171\", \"date\": \"2024-11-17\", \"total\": \"2098.00\", \"gstin\": \"33ZZZPZ0541Z1Z4\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2026/0171\", \"date\": \"2024-11-17\", \"total\": \"2098.00\", \"gstin\": \"33ZZZPZ0541Z1Z4\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2119.00\nDocument: DOC-0773-X\nInvoice date: 2024-11-21\nAddress: Fictional Lane, Example District\nItem A: INR 1446.00\nItem B: INR 594.00\nTax: INR 79.00\nSeller: Fictional Copper Lake Goods\nTax registration: 07ZZZPZ0542Z1ZY",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0773-X\", \"date\": \"2024-11-21\", \"total\": \"2119.00\", \"gstin\": \"07ZZZPZ0542Z1ZY\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0773-X\", \"date\": \"2024-11-21\", \"total\": \"2119.00\", \"gstin\": \"07ZZZPZ0542Z1ZY\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 09ZZZPZ0543Z1ZT\nGrand total: INR 2,140.00\nItem A: INR 1459.00\nItem B: INR 601.00\nTax: INR 80.00\nDocument: AK/2025/0173\nInvoice date: 25/11/2024",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2025/0173\", \"date\": \"2024-11-25\", \"total\": \"2140.00\", \"gstin\": \"09ZZZPZ0543Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2025/0173\", \"date\": \"2024-11-25\", \"total\": \"2140.00\", \"gstin\": \"09ZZZPZ0543Z1ZT\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1472.00\nItem B: INR 608.00\nTax: INR 81.00\nDocument: DOC-0775-X\nInvoice date: 13 Dec 2024\nSeller: Fictional Violet Reed Tools\nTax registration: 19ZZZPZ0544Z1ZR\nGrand total: INR 2161.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0775-X\", \"date\": \"2024-12-13\", \"total\": \"2161.00\", \"gstin\": \"19ZZZPZ0544Z1ZR\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0775-X\", \"date\": \"2024-12-13\", \"total\": \"2161.00\", \"gstin\": \"19ZZZPZ0544Z1ZR\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 27ZZZPZ0545Z1ZT\nAddress: Fictional Lane, Example District\nDocument: AK/2024/0175\nInvoice date: 2024-12-17\nItem A: INR 1485.00\nItem B: INR 615.00\nTax: INR 82.00\nGrand total: INR 2,182.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0175\", \"date\": \"2024-12-17\", \"total\": \"2182.00\", \"gstin\": \"27ZZZPZ0545Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2024/0175\", \"date\": \"2024-12-17\", \"total\": \"2182.00\", \"gstin\": \"27ZZZPZ0545Z1ZT\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0777-X\nInvoice date: 21/12/2024\nSeller: Fictional Cedar Moon Parts\nTax registration: 29ZZZPZ0546Z1ZO\nItem A: INR 1498.00\nItem B: INR 622.00\nTax: INR 83.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2203.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0777-X\", \"date\": \"2024-12-21\", \"total\": \"2203.00\", \"gstin\": \"29ZZZPZ0546Z1ZO\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0777-X\", \"date\": \"2024-12-21\", \"total\": \"2203.00\", \"gstin\": \"29ZZZPZ0546Z1ZO\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2,224.00\nDocument: AK/2026/0177\nInvoice date: 25 Dec 2024\nAddress: Fictional Lane, Example District\nItem A: INR 1511.00\nItem B: INR 629.00\nTax: INR 84.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 33ZZZPZ0547Z1ZY",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2026/0177\", \"date\": \"2024-12-25\", \"total\": \"2224.00\", \"gstin\": \"33ZZZPZ0547Z1ZY\"}",
+        "answer": " {\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2026/0177\", \"date\": \"2024-12-25\", \"total\": \"2224.00\", \"gstin\": \"33ZZZPZ0547Z1ZY\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 07ZZZPZ0548Z1ZS\nGrand total: INR 2245.00\nItem A: INR 1524.00\nItem B: INR 636.00\nTax: INR 85.00\nDocument: DOC-0779-X\nInvoice date: 2025-01-13",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0779-X\", \"date\": \"2025-01-13\", \"total\": \"2245.00\", \"gstin\": \"07ZZZPZ0548Z1ZS\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0779-X\", \"date\": \"2025-01-13\", \"total\": \"2245.00\", \"gstin\": \"07ZZZPZ0548Z1ZS\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1537.00\nItem B: INR 643.00\nTax: INR 86.00\nDocument: AK/2025/0179\nInvoice date: 17/01/2025\nSeller: Fictional Maple Stone Materials\nTax registration: 09ZZZPZ0549Z1ZN\nGrand total: INR 2,266.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0179\", \"date\": \"2025-01-17\", \"total\": \"2266.00\", \"gstin\": \"09ZZZPZ0549Z1ZN\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2025/0179\", \"date\": \"2025-01-17\", \"total\": \"2266.00\", \"gstin\": \"09ZZZPZ0549Z1ZN\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Amber Kite Supplies\nTax registration: 19ZZZPZ0550Z1ZT\nAddress: Fictional Lane, Example District\nDocument: DOC-0781-X\nInvoice date: 21 Jan 2025\nItem A: INR 1550.00\nItem B: INR 650.00\nTax: INR 87.00\nGrand total: INR 2287.00",
+        "reference": "{\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0781-X\", \"date\": \"2025-01-21\", \"total\": \"2287.00\", \"gstin\": \"19ZZZPZ0550Z1ZT\"}",
+        "answer": " {\"vendor\": \"Fictional Amber Kite Supplies\", \"invoice_no\": \"DOC-0781-X\", \"date\": \"2025-01-21\", \"total\": \"2287.00\", \"gstin\": \"19ZZZPZ0550Z1ZT\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: AK/2024/0181\nInvoice date: 2025-01-25\nSeller: Fictional Blue Elm Workshop\nTax registration: 27ZZZPZ0551Z1ZV\nItem A: INR 1563.00\nItem B: INR 657.00\nTax: INR 88.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2,308.00",
+        "reference": "{\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0181\", \"date\": \"2025-01-25\", \"total\": \"2308.00\", \"gstin\": \"27ZZZPZ0551Z1ZV\"}",
+        "answer": " {\"vendor\": \"Fictional Blue Elm Workshop\", \"invoice_no\": \"AK/2024/0181\", \"date\": \"2025-01-25\", \"total\": \"2308.00\", \"gstin\": \"27ZZZPZ0551Z1ZV\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2329.00\nDocument: DOC-0783-X\nInvoice date: 13/02/2025\nAddress: Fictional Lane, Example District\nItem A: INR 1576.00\nItem B: INR 664.00\nTax: INR 89.00\nSeller: Fictional Copper Lake Goods\nTax registration: 29ZZZPZ0552Z1ZQ",
+        "reference": "{\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0783-X\", \"date\": \"2025-02-13\", \"total\": \"2329.00\", \"gstin\": \"29ZZZPZ0552Z1ZQ\"}",
+        "answer": " {\"vendor\": \"Fictional Copper Lake Goods\", \"invoice_no\": \"DOC-0783-X\", \"date\": \"2025-02-13\", \"total\": \"2329.00\", \"gstin\": \"29ZZZPZ0552Z1ZQ\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Ivory Finch Traders\nTax registration: 33ZZZPZ0553Z1Z0\nGrand total: INR 2,350.00\nItem A: INR 1589.00\nItem B: INR 671.00\nTax: INR 90.00\nDocument: AK/2026/0183\nInvoice date: 17 Feb 2025",
+        "reference": "{\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2026/0183\", \"date\": \"2025-02-17\", \"total\": \"2350.00\", \"gstin\": \"33ZZZPZ0553Z1Z0\"}",
+        "answer": " {\"vendor\": \"Fictional Ivory Finch Traders\", \"invoice_no\": \"AK/2026/0183\", \"date\": \"2025-02-17\", \"total\": \"2350.00\", \"gstin\": \"33ZZZPZ0553Z1Z0\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1602.00\nItem B: INR 678.00\nTax: INR 91.00\nDocument: DOC-0785-X\nInvoice date: 2025-02-21\nSeller: Fictional Violet Reed Tools\nTax registration: 07ZZZPZ0554Z1ZU\nGrand total: INR 2371.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0785-X\", \"date\": \"2025-02-21\", \"total\": \"2371.00\", \"gstin\": \"07ZZZPZ0554Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Violet Reed Tools\", \"invoice_no\": \"DOC-0785-X\", \"date\": \"2025-02-21\", \"total\": \"2371.00\", \"gstin\": \"07ZZZPZ0554Z1ZU\"}",
+        "passed": true
+      },
+      {
+        "input": "Seller: Fictional Silver Fern Textiles\nTax registration: 09ZZZPZ0555Z1ZP\nAddress: Fictional Lane, Example District\nDocument: AK/2025/0185\nInvoice date: 25/02/2025\nItem A: INR 1615.00\nItem B: INR 685.00\nTax: INR 92.00\nGrand total: INR 2,392.00",
+        "reference": "{\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0185\", \"date\": \"2025-02-25\", \"total\": \"2392.00\", \"gstin\": \"09ZZZPZ0555Z1ZP\"}",
+        "answer": " {\"vendor\": \"Fictional Silver Fern Textiles\", \"invoice_no\": \"AK/2025/0185\", \"date\": \"2025-02-25\", \"total\": \"2392.00\", \"gstin\": \"09ZZZPZ0555Z1ZP\"}",
+        "passed": true
+      },
+      {
+        "input": "Document: DOC-0787-X\nInvoice date: 13 Mar 2025\nSeller: Fictional Cedar Moon Parts\nTax registration: 19ZZZPZ0556Z1ZN\nItem A: INR 1628.00\nItem B: INR 692.00\nTax: INR 93.00\nAddress: Fictional Lane, Example District\nGrand total: INR 2413.00",
+        "reference": "{\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0787-X\", \"date\": \"2025-03-13\", \"total\": \"2413.00\", \"gstin\": \"19ZZZPZ0556Z1ZN\"}",
+        "answer": " {\"vendor\": \"Fictional Cedar Moon Parts\", \"invoice_no\": \"DOC-0787-X\", \"date\": \"2025-03-13\", \"total\": \"2413.00\", \"gstin\": \"19ZZZPZ0556Z1ZN\"}",
+        "passed": true
+      },
+      {
+        "input": "Grand total: INR 2,434.00\nDocument: AK/2024/0187\nInvoice date: 2025-03-17\nAddress: Fictional Lane, Example District\nItem A: INR 1641.00\nItem B: INR 699.00\nTax: INR 94.00\nSeller: Fictional Paper Cloud Studio\nTax registration: 27ZZZPZ0557Z1ZP",
+        "reference": "{\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2024/0187\", \"date\": \"2025-03-17\", \"total\": \"2434.00\", \"gstin\": \"27ZZZPZ0557Z1ZP\"}",
+        "answer": " {\"vendor\": \"Fictional Paper Cloud Studio\", \"invoice_no\": \"AK/2024/0187\", \"date\": \"2025-03-17\", \"total\": \"2434.00\", \"gstin\": \"27ZZZPZ0557Z1ZP\"}",
+        "passed": true
+      },
+      {
+        "input": "Address: Fictional Lane, Example District\nSeller: Fictional Coral Grove Store\nTax registration: 29ZZZPZ0558Z1ZK\nGrand total: INR 2455.00\nItem A: INR 1654.00\nItem B: INR 706.00\nTax: INR 95.00\nDocument: DOC-0789-X\nInvoice date: 21/03/2025",
+        "reference": "{\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0789-X\", \"date\": \"2025-03-21\", \"total\": \"2455.00\", \"gstin\": \"29ZZZPZ0558Z1ZK\"}",
+        "answer": " {\"vendor\": \"Fictional Coral Grove Store\", \"invoice_no\": \"DOC-0789-X\", \"date\": \"2025-03-21\", \"total\": \"2455.00\", \"gstin\": \"29ZZZPZ0558Z1ZK\"}",
+        "passed": true
+      },
+      {
+        "input": "Item A: INR 1667.00\nItem B: INR 713.00\nTax: INR 96.00\nDocument: AK/2026/0189\nInvoice date: 25 Mar 2025\nSeller: Fictional Maple Stone Materials\nTax registration: 33ZZZPZ0559Z1ZU\nGrand total: INR 2,476.00\nAddress: Fictional Lane, Example District",
+        "reference": "{\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0189\", \"date\": \"2025-03-25\", \"total\": \"2476.00\", \"gstin\": \"33ZZZPZ0559Z1ZU\"}",
+        "answer": " {\"vendor\": \"Fictional Maple Stone Materials\", \"invoice_no\": \"AK/2026/0189\", \"date\": \"2025-03-25\", \"total\": \"2476.00\", \"gstin\": \"33ZZZPZ0559Z1ZU\"}",
+        "passed": true
+      }
+    ]
+  }
+}

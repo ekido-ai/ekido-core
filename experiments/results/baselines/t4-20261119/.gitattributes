@@ -1,0 +1,4 @@
+# Preserve the downloaded GPU evidence and exact executed scripts.
+* -text
+*.py whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol

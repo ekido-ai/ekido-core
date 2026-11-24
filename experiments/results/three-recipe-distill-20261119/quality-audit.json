@@ -1,0 +1,16 @@
+{
+  "invoice": {
+    "rows": 76,
+    "missing_any_target_value": 76,
+    "missing_vendor": 64,
+    "missing_invoice_no": 76,
+    "missing_date": 74,
+    "missing_total": 76,
+    "missing_gstin": 69
+  },
+  "faq": {
+    "rows": 90,
+    "answer_verbatim_in_question": 15,
+    "new_question_marker": 22
+  }
+}

@@ -36,6 +36,11 @@ def read_test(folder: Path) -> list[dict]:
         return list(csv.DictReader(handle))
 
 
+def source_sha256(function) -> str:
+    """Hash the underlying implementation, including for decorated functions."""
+    return hashlib.sha256(Path(inspect.getfile(inspect.unwrap(function))).read_bytes()).hexdigest()
+
+
 def summarise(recipe_id: str, rows: list[dict], answers: list[str]) -> dict:
     """The result for a set of answers. Separate from the model so it can be tested without one."""
     r = recipe(recipe_id)
@@ -91,7 +96,7 @@ def main(argv: list[str] | None = None) -> int:
                   run_at=datetime.now(timezone.utc).isoformat(timespec="seconds"), max_seq_length=args.max_seq_length,
                   code_sha256={"baseline": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                                "recipes": hashlib.sha256(Path(inspect.getfile(recipe)).read_bytes()).hexdigest(),
-                               "runtime": hashlib.sha256(Path(inspect.getfile(generate_answers)).read_bytes()).hexdigest()})
+                               "runtime": source_sha256(generate_answers)})
 
     args.out.mkdir(parents=True, exist_ok=True)
     target = args.out / f"{r.recipe_id}-{args.model.split('/')[-1].lower()}.json"

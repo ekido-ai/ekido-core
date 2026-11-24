@@ -1,0 +1,16 @@
+{
+  "core_revision": "0a9db037170024a1f32748e0b5dcbe14a1a88a3a",
+  "worker_revision": "74bf4e753ab30f4ce3b88a577a16b425c6fac923",
+  "gpu_info": "0, GPU-6d60420b-ddfc-71e2-b7e1-a4a4e22bc01f, Tesla T4, 14912 MiB, 54\n1, GPU-493f3aeb-e2ba-d3db-2e93-f446d4623f12, Tesla T4, 14912 MiB, 53\n",
+  "first_gpu_index": 0,
+  "resume_gpu_index": 1,
+  "killed_after_step": 105,
+  "resumed_step": 80,
+  "lost_steps": 25,
+  "seconds_until_first_resumed_step": 14.636,
+  "completed_step": 400,
+  "test_pass_rate": 0.82,
+  "test_examples": 100,
+  "test_note": "Previously reused synthetic test; not an independent evaluation",
+  "staging_note": "Local two-GPU process fault; not an end-to-end staging settlement"
+}

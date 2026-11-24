@@ -183,6 +183,28 @@ class PromptSet(unittest.TestCase):
         lines[1]["prompt"] = lines[0]["prompt"].upper()
         self.assertIn("duplicated prompts", "\n".join(prompts.validate(self.write(lines))))
 
+    def test_expected_labels_must_match_the_selected_recipe(self):
+        lines = self.good()
+        lines[0]["expected"]["labels"] = ["complaint", "order"]
+        lines[1]["expected"]["labels"] = ["complaint", "order", "question", "refund", "other", "other"]
+        lines[2]["expected"] = {"recipe": "faq-bot-hinglish", "language": "en", "labels": ["yes"]}
+        errors = prompts.validate(self.write(lines))
+        self.assertEqual(sum("must match the recipe labels" in error for error in errors), 2)
+        self.assertTrue(any("only valid for a classification recipe" in error for error in errors))
+        lines[0]["expected"]["labels"] = ["other", "refund", "question", "order", "complaint"]
+        del lines[1]["expected"]["labels"]
+        del lines[2]["expected"]["labels"]
+        self.assertEqual(prompts.validate(self.write(lines)), [])
+
+    def test_unhashable_recipe_and_language_report_errors(self):
+        lines = self.good()
+        lines[0]["expected"]["recipe"] = []
+        lines[0]["expected"]["language"] = {}
+        lines[0]["expected"]["labels"] = ["x"]
+        errors = prompts.validate(self.write(lines))
+        self.assertTrue(any("expected.recipe" in error for error in errors))
+        self.assertTrue(any("expected.language" in error for error in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,20 @@
+{
+  "core_revision": "0a9db037170024a1f32748e0b5dcbe14a1a88a3a",
+  "worker_revision": "69f37fe0dd5b88f8773085f7f1dbdd221d2b8906",
+  "seed_selection": "Random(42), 10 per class for sentiment and 30 random for other recipes",
+  "teacher_model": "Qwen/Qwen2.5-7B-Instruct",
+  "teacher_4bit": true,
+  "bitsandbytes_version": "0.50.2",
+  "student_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "runs": {
+    "invoice-fields": {
+      "status": "complete",
+      "seed_rows": 30,
+      "generated_rows": 36,
+      "base": 0.0,
+      "student": 1.0,
+      "whole_run_seconds": 1618.82,
+      "peak_allocated_bytes_teacher_and_student": 10745312768
+    }
+  }
+}

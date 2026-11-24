@@ -1,0 +1,122 @@
+[
+  {
+    "text": "साइज़ M वाला winter jacket चार्ट से बिल्कुल अलग है, फिट ही नहीं हो रहा",
+    "label": "complaint"
+  },
+  {
+    "text": "laptop ki packing phati hui thi aur andar product par scratch the",
+    "label": "complaint"
+  },
+  {
+    "text": "Galat item bhej diya order 4266 me, maine to wireless earbuds order kiya tha",
+    "label": "complaint"
+  },
+  {
+    "text": "Kal se air fryer me ajeeb si awaaz aa rahi hai, dar lag raha hai use karne me",
+    "label": "complaint"
+  },
+  {
+    "text": "My power bank stopped charging, I have already raised this twice with no response",
+    "label": "complaint"
+  },
+  {
+    "text": "डिलीवरी वाला बदतमीज़ी से बात करके चला गया, laptop चेक भी नहीं करने दिया",
+    "label": "complaint"
+  },
+  {
+    "text": "I want to order the headphones as a gift, please add gift wrapping",
+    "label": "order"
+  },
+  {
+    "text": "I want to pre-order the running shoes in size M, when can I book it",
+    "label": "order"
+  },
+  {
+    "text": "Office ke liye 6 mixer grinder ka bulk order lagana hai",
+    "label": "order"
+  },
+  {
+    "text": "Please change the quantity of washing machine in my order 8504 to 2",
+    "label": "order"
+  },
+  {
+    "text": "Office ke liye 4 ceiling fan ka bulk order lagana hai",
+    "label": "order"
+  },
+  {
+    "text": "Order 9312 ka rang green se badalna hai, dusra rang bhej dijiye",
+    "label": "order"
+  },
+  {
+    "text": "What material is this running shoes made of",
+    "label": "question"
+  },
+  {
+    "text": "Can the washing machine be used with a voltage of 220 volts",
+    "label": "question"
+  },
+  {
+    "text": "Kya abhi silk saree par koi offer chal raha hai",
+    "label": "question"
+  },
+  {
+    "text": "Size S wala cotton kurti sahi size ka aata hai ya chota bada",
+    "label": "question"
+  },
+  {
+    "text": "What is the difference between this air fryer and the costlier model",
+    "label": "question"
+  },
+  {
+    "text": "मन बदल जाए तो air fryer की रिटर्न विंडो कितने दिन की है",
+    "label": "question"
+  },
+  {
+    "text": "I received a refund message but the Rs 1,499 is not in my bank yet",
+    "label": "refund"
+  },
+  {
+    "text": "ऑर्डर 6682 का रिफ़ंड ओरिजिनल पेमेंट मेथड पर ही भेजिए",
+    "label": "refund"
+  },
+  {
+    "text": "Half the refund amount came for my denim jeans, where is the rest",
+    "label": "refund"
+  },
+  {
+    "text": "I cancelled order 5668 before dispatch, please process the refund",
+    "label": "refund"
+  },
+  {
+    "text": "रिफ़ंड गलत खाते में चला गया है, ऑर्डर 6224 चेक कीजिए",
+    "label": "refund"
+  },
+  {
+    "text": "My ceiling fan return was approved but the money has not come back",
+    "label": "refund"
+  },
+  {
+    "text": "Please share the store timings for your Nagpur outlet",
+    "label": "other"
+  },
+  {
+    "text": "मैं Kanpur शिफ़्ट हो रहा हूँ, क्या मेरा खाता वहाँ भी चलेगा",
+    "label": "other"
+  },
+  {
+    "text": "pink वाले headphones से खुश हूँ, फ़ीडबैक भेज रहा हूँ जैसे माँगा था",
+    "label": "other"
+  },
+  {
+    "text": "मैं Lucknow शिफ़्ट हो रहा हूँ, क्या मेरा खाता वहाँ भी चलेगा",
+    "label": "other"
+  },
+  {
+    "text": "Kya regular kharidne walo ke liye loyalty programme hai",
+    "label": "other"
+  },
+  {
+    "text": "Main Kanpur shift ho raha hu, kya mera account wahan bhi chalega",
+    "label": "other"
+  }
+]

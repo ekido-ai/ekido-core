@@ -1,0 +1,43 @@
+{
+  "template": "llm-lora/v1",
+  "recipe_id": "invoice-fields",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "dataset": {
+    "sha256": "687b7aebcb3554b333567e0f5dec651c867942387b837523c3403b48fbb89721",
+    "bytes": 40382,
+    "train_rows": 76,
+    "test_rows": 50
+  },
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "max_seq_length": 512,
+  "logical_batch_size": 8,
+  "total_logical_steps": 50,
+  "seed": 42,
+  "checkpoint_every_steps": 50,
+  "optimizer": {
+    "name": "adamw",
+    "lr": 0.0002,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "max_grad_norm": 1.0
+  },
+  "lr_schedule": {
+    "name": "linear_warmup_linear_decay",
+    "warmup_steps": 5
+  }
+}

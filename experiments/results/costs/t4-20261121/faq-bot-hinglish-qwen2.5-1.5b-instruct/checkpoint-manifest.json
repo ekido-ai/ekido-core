@@ -1,0 +1,36 @@
+{
+  "dataset_sha256": "dc5918dbf377192f3a0d5b342354b2e4c895c8cbf8e2f47646bc798807f17513",
+  "exec_config": {
+    "accumulation": 8,
+    "amp": "fp16",
+    "attention_impl": "sdpa",
+    "grad_checkpointing": true,
+    "loader_workers": 0,
+    "micro_batch": 1
+  },
+  "files": {
+    "optimizer.safetensors": {
+      "bytes": 17482496,
+      "sha256": "51a82bc0ec6163342cff073d31aab602cdeb3c91905383d071d6b78d9cba1bad"
+    },
+    "trainable.safetensors": {
+      "bytes": 8731992,
+      "sha256": "4147d31532ee2b2574c6345926f250dbd3d2069dc5478cea64813018a2f1b16a"
+    }
+  },
+  "format": "GPCK/1",
+  "immutable_hash": "1d1c0d22098845798d2525ea24073bea0fc05084baeeaf6102fdc4576c781c3c",
+  "logical_step": 20,
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "recipe_id": "faq-bot-hinglish",
+  "scaler": {
+    "_growth_tracker": 8,
+    "backoff_factor": 0.5,
+    "growth_factor": 2.0,
+    "growth_interval": 2000,
+    "scale": 32768.0
+  }
+}

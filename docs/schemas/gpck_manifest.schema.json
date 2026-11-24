@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "required": ["format", "job_id", "attempt", "fencing_token", "logical_step", "epoch", "immutable_hash", "model", "dataset_fingerprint", "exec", "scaler", "canary", "environment", "files", "parent_manifest_hash", "adaptation_manifest_hash", "created_at", "signer", "signature"],
   "properties": {
-    "format": { "const": "GPCK/1" },
+    "format": { "enum": ["GPCK/1", "GPCK/2"], "description": "GPCK/2 is GPCK/1 with every file encrypted to the job's age recipient: `sha256` and `bytes` describe the stored (encrypted) blob, and each file also carries `plaintext_sha256`, `plaintext_bytes` and `encryption`." },
     "job_id": { "type": "string", "format": "uuid" },
     "attempt": { "type": "integer", "minimum": 1 },
     "fencing_token": { "type": "integer", "minimum": 1 },
@@ -85,6 +85,8 @@
     "signer": { "$ref": "#/$defs/address" },
     "signature": { "type": "string", "pattern": "^0x[0-9a-fA-F]{130}$" }
   },
+  "if": { "properties": { "format": { "const": "GPCK/2" } }, "required": ["format"] },
+  "then": { "properties": { "files": { "properties": { "trainable.safetensors": { "$ref": "#/$defs/encryptedFile" }, "optimizer.safetensors": { "$ref": "#/$defs/encryptedFile" } } } } },
   "$defs": {
     "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "address": { "type": "string", "pattern": "^0x[0-9a-fA-F]{40}$" },
@@ -94,8 +96,15 @@
       "required": ["sha256", "bytes"],
       "properties": {
         "sha256": { "$ref": "#/$defs/sha256" },
-        "bytes": { "type": "integer", "minimum": 1 }
+        "bytes": { "type": "integer", "minimum": 1 },
+        "plaintext_sha256": { "$ref": "#/$defs/sha256" },
+        "plaintext_bytes": { "type": "integer", "minimum": 1 },
+        "encryption": { "const": "age-v1" }
       }
+    },
+    "encryptedFile": {
+      "type": "object",
+      "required": ["sha256", "bytes", "plaintext_sha256", "plaintext_bytes", "encryption"]
     }
   }
 }

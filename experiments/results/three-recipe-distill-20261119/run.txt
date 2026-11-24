@@ -1,0 +1,195 @@
+[{"stream_name":"stdout","time":1.417215853,"data":"Found existing installation: torchao 0.10.0\n"}
+,{"stream_name":"stdout","time":1.492879603,"data":"Uninstalling torchao-0.10.0:\n"}
+,{"stream_name":"stdout","time":1.754902245,"data":"  Successfully uninstalled torchao-0.10.0\n"}
+,{"stream_name":"stdout","time":2.6391889920000002,"data":"Collecting bitsandbytes\u003c1,\u003e=0.46.1\n"}
+,{"stream_name":"stdout","time":3.135375298,"data":"  Downloading bitsandbytes-0.50.2-py3-none-manylinux_2_24_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":3.2973123380000002,"data":"Downloading bitsandbytes-0.50.2-py3-none-manylinux_2_24_x86_64.whl (43.1 MB)\n"}
+,{"stream_name":"stdout","time":4.998782299,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 31.7 MB/s  0:00:01\n"}
+,{"stream_name":"stdout","time":5.195912721,"data":"Installing collected packages: bitsandbytes\n"}
+,{"stream_name":"stdout","time":5.896212784,"data":"Successfully installed bitsandbytes-0.50.2\n"}
+,{"stream_name":"stdout","time":12.02654695,"data":"GPU Tesla T4\n"}
+,{"stream_name":"stdout","time":12.19404524,"data":"PASS\n"}
+,{"stream_name":"stdout","time":12.324937032,"data":"PASS\n"}
+,{"stream_name":"stdout","time":12.450516207,"data":"PASS\n"}
+,{"stream_name":"stdout","time":12.46616515,"data":"START review-sentiment\n"}
+,{"stream_name":"stderr","time":31.271792965,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":116.63189169,"data":"\rFetching 4 files:   0%|          | 0/4 [00:00\u003c?, ?it/s]\rFetching 4 files:  25%|██▌       | 1/4 [00:51\u003c02:35, 51.70s/it]\rFetching 4 files:  50%|█████     | 2/4 [01:17\u003c01:12, 36.32s/it]\rFetching 4 files: 100%|██████████| 4/4 [01:17\u003c00:00, 19.31s/it]\n"}
+,{"stream_name":"stderr","time":147.727402066,"data":"\rLoading weights:   0%|          | 0/339 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/339 [00:01\u003c06:55,  1.23s/it]\rLoading weights:   1%|          | 2/339 [00:04\u003c13:12,  2.35s/it]\rLoading weights:   1%|          | 4/339 [00:04\u003c05:06,  1.09it/s]\rLoading weights:   5%|▍         | 16/339 [00:04\u003c00:49,  6.52it/s]\rLoading weights:   8%|▊         | 26/339 [00:04\u003c00:25, 12.26it/s]\rLoading weights:  10%|▉         | 33/339 [00:04\u003c00:18, 16.65it/s]\rLoading weights:  12%|█▏        | 41/339 [00:04\u003c00:12, 23.07it/s]\rLoading weights:  16%|█▌        | 53/339 [00:05\u003c00:08, 33.84it/s]\rLoading weights:  19%|█▉        | 64/339 [00:05\u003c00:06, 44.57it/s]\rLoading weights:  22%|██▏       | 76/339 [00:05\u003c00:04, 54.32it/s]\rLoading weights:  26%|██▌       | 88/339 [00:05\u003c00:04, 62.74it/s]\rLoading weights:  29%|██▉       | 100/339 [00:05\u003c00:03, 69.47it/s]\rLoading weights:  33%|███▎      | 112/339 [00:05\u003c00:03, 74.28it/s]\rLoading weights:  37%|███▋      | 124/339 [00:06\u003c00:05, 42.05it/s]\rLoading weights:  39%|███▊      | 131/339 [00:07\u003c00:10, 19.44it/s]\rLoading weights:  40%|████      | 136/339 [00:08\u003c00:13, 15.56it/s]\rLoading weights:  41%|████▏     | 140/339 [00:09\u003c00:19, 10.26it/s]\rLoading weights:  42%|████▏     | 143/339 [00:09\u003c00:17, 11.32it/s]\rLoading weights:  43%|████▎     | 146/339 [00:09\u003c00:15, 12.58it/s]\rLoading weights:  44%|████▍     | 149/339 [00:10\u003c00:26,  7.27it/s]\rLoading weights:  45%|████▍     | 151/339 [00:10\u003c00:29,  6.32it/s]\rLoading weights:  45%|████▌     | 154/339 [00:11\u003c00:23,  7.85it/s]\rLoading weights:  46%|████▌     | 156/339 [00:11\u003c00:20,  8.90it/s]\rLoading weights:  47%|████▋     | 161/339 [00:11\u003c00:13, 12.95it/s]\rLoading weights:  51%|█████     | 172/339 [00:11\u003c00:10, 16.26it/s]\rLoading weights:  52%|█████▏    | 175/339 [00:12\u003c00:13, 11.79it/s]\rLoading weights:  54%|█████▍    | 184/339 [00:12\u003c00:10, 14.66it/s]\rLoading weights:  55%|█████▍    | 186/339 [00:13\u003c00:18,  8.40it/s]\rLoading weights:  57%|█████▋    | 192/339 [00:13\u003c00:13, 11.16it/s]\rLoading weights:  58%|█████▊    | 196/339 [00:14\u003c00:14,  9.83it/s]\rLoading weights:  58%|█████▊    | 198/339 [00:15\u003c00:23,  5.99it/s]\rLoading weights:  60%|█████▉    | 202/339 [00:15\u003c00:17,  7.98it/s]\rLoading weights:  60%|██████    | 204/339 [00:15\u003c00:15,  8.90it/s]\rLoading weights:  61%|██████▏   | 208/339 [00:16\u003c00:15,  8.21it/s]\rLoading weights:  62%|██████▏   | 210/339 [00:17\u003c00:26,  4.93it/s]\rLoading weights:  63%|██████▎   | 214/339 [00:17\u003c00:17,  7.11it/s]\rLoading weights:  64%|██████▎   | 216/339 [00:17\u003c00:15,  8.14it/s]\rLoading weights:  65%|██████▍   | 220/339 [00:18\u003c00:15,  7.75it/s]\rLoading weights:  65%|██████▌   | 222/339 [00:19\u003c00:25,  4.65it/s]\rLoading weights:  67%|██████▋   | 226/339 [00:19\u003c00:16,  6.88it/s]\rLoading weights:  67%|██████▋   | 228/339 [00:19\u003c00:13,  7.96it/s]\rLoading weights:  68%|██████▊   | 232/339 [00:20\u003c00:14,  7.64it/s]\rLoading weights:  69%|██████▉   | 234/339 [00:20\u003c00:13,  8.01it/s]\rLoading weights:  73%|███████▎  | 246/339 [00:20\u003c00:04, 19.30it/s]\rLoading weights:  76%|███████▌  | 257/339 [00:20\u003c00:02, 30.97it/s]\rLoading weights:  79%|███████▉  | 268/339 [00:21\u003c00:02, 26.13it/s]\rLoading weights:  83%|████████▎ | 280/339 [00:21\u003c00:02, 24.11it/s]\rLoading weights:  84%|████████▍ | 284/339 [00:22\u003c00:04, 13.08it/s]\rLoading weights:  85%|████████▍ | 287/339 [00:22\u003c00:03, 14.10it/s]\rLoading weights:  86%|████████▌ | 290/339 [00:22\u003c00:03, 15.28it/s]\rLoading weights:  86%|████████▋ | 293/339 [00:24\u003c00:05,  8.14it/s]\rLoading weights:  87%|████████▋ | 296/339 [00:24\u003c00:05,  7.39it/s]\rLoading weights:  88%|████████▊ | 298/339 [00:24\u003c00:04,  8.21it/s]\rLoading weights:  88%|████████▊ | 300/339 [00:24\u003c00:04,  9.26it/s]\rLoading weights:  90%|████████▉ | 304/339 [00:25\u003c00:04,  8.38it/s]\rLoading weights:  90%|█████████ | 306/339 [00:26\u003c00:06,  4.87it/s]\rLoading weights:  91%|█████████▏| 310/339 [00:26\u003c00:04,  7.15it/s]\rLoading weights:  92%|█████████▏| 312/339 [00:26\u003c00:03,  8.23it/s]\rLoading weights:  93%|█████████▎| 316/339 [00:27\u003c00:02,  7.79it/s]\rLoading weights:  94%|█████████▍| 318/339 [00:28\u003c00:04,  4.75it/s]\rLoading weights:  95%|█████████▍| 322/339 [00:28\u003c00:02,  7.06it/s]\rLoading weights:  96%|█████████▌| 326/339 [00:28\u003c00:01,  9.82it/s]\rLoading weights:  97%|█████████▋| 329/339 [00:29\u003c00:01,  5.86it/s]\rLoading weights:  98%|█████████▊| 331/339 [00:30\u003c00:01,  5.28it/s]\rLoading weights:  99%|█████████▊| 334/339 [00:30\u003c00:00,  7.03it/s]\rLoading weights:  99%|█████████▉| 336/339 [00:30\u003c00:00,  8.24it/s]\rLoading weights: 100%|██████████| 339/339 [00:30\u003c00:00, 11.20it/s]\n"}
+,{"stream_name":"stdout","time":1131.948512986,"data":"teacher generated 83 usable rows from 30 seeds\n"}
+,{"stream_name":"stderr","time":1134.874356623,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":1157.90571899,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:00,  1.40it/s]\rLoading weights:  37%|███▋      | 125/338 [00:00\u003c00:01, 206.55it/s]\rLoading weights:  58%|█████▊    | 196/338 [00:01\u003c00:00, 220.74it/s]\rLoading weights:  73%|███████▎  | 246/338 [00:01\u003c00:00, 222.77it/s]\rLoading weights:  84%|████████▍ | 285/338 [00:01\u003c00:00, 222.30it/s]\rLoading weights:  94%|█████████▍| 318/338 [00:01\u003c00:00, 214.18it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 198.33it/s]\n"}
+,{"stream_name":"stdout","time":1179.557551553,"data":"base model: 80.0% pass on 100 test rows\n"}
+,{"stream_name":"stderr","time":1179.561865018,"data":"[transformers] `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.\n"}
+,{"stream_name":"stdout","time":1182.058441865,"data":"step 1/50 loss 13.0507 lr 4.00e-05\n"}
+,{"stream_name":"stdout","time":1184.457161667,"data":"step 2/50 loss 13.0340 lr 8.00e-05\n"}
+,{"stream_name":"stdout","time":1186.730489631,"data":"step 3/50 loss 12.7222 lr 1.20e-04\n"}
+,{"stream_name":"stdout","time":1188.949174149,"data":"step 4/50 loss 11.8803 lr 1.60e-04\n"}
+,{"stream_name":"stdout","time":1191.188515462,"data":"step 5/50 loss 11.3974 lr 2.00e-04\n"}
+,{"stream_name":"stdout","time":1193.462379926,"data":"step 6/50 loss 10.0537 lr 2.00e-04\n"}
+,{"stream_name":"stdout","time":1195.688728561,"data":"step 7/50 loss 9.7189 lr 1.96e-04\n"}
+,{"stream_name":"stdout","time":1197.950459919,"data":"step 8/50 loss 8.4217 lr 1.91e-04\n"}
+,{"stream_name":"stdout","time":1200.482908814,"data":"step 9/50 loss 8.3762 lr 1.87e-04\n"}
+,{"stream_name":"stdout","time":1202.819497695,"data":"step 10/50 loss 7.1505 lr 1.82e-04\n"}
+,{"stream_name":"stdout","time":1205.052099617,"data":"step 11/50 loss 5.6568 lr 1.78e-04\n"}
+,{"stream_name":"stdout","time":1207.306707745,"data":"step 12/50 loss 5.1126 lr 1.73e-04\n"}
+,{"stream_name":"stdout","time":1209.538171118,"data":"step 13/50 loss 3.8019 lr 1.69e-04\n"}
+,{"stream_name":"stdout","time":1211.76085151,"data":"step 14/50 loss 3.2293 lr 1.64e-04\n"}
+,{"stream_name":"stdout","time":1214.012582347,"data":"step 15/50 loss 1.8685 lr 1.60e-04\n"}
+,{"stream_name":"stdout","time":1216.250961222,"data":"step 16/50 loss 2.2709 lr 1.56e-04\n"}
+,{"stream_name":"stdout","time":1218.468507561,"data":"step 17/50 loss 1.3171 lr 1.51e-04\n"}
+,{"stream_name":"stdout","time":1220.696869392,"data":"step 18/50 loss 1.1852 lr 1.47e-04\n"}
+,{"stream_name":"stdout","time":1222.996886426,"data":"step 19/50 loss 0.5383 lr 1.42e-04\n"}
+,{"stream_name":"stdout","time":1225.247575111,"data":"step 20/50 loss 0.4434 lr 1.38e-04\n"}
+,{"stream_name":"stdout","time":1227.476976337,"data":"step 21/50 loss 0.1022 lr 1.33e-04\n"}
+,{"stream_name":"stdout","time":1229.722099416,"data":"step 22/50 loss 0.0930 lr 1.29e-04\n"}
+,{"stream_name":"stdout","time":1231.972904901,"data":"step 23/50 loss 0.2487 lr 1.24e-04\n"}
+,{"stream_name":"stdout","time":1234.254547437,"data":"step 24/50 loss 0.0299 lr 1.20e-04\n"}
+,{"stream_name":"stdout","time":1236.538741985,"data":"step 25/50 loss 0.0435 lr 1.16e-04\n"}
+,{"stream_name":"stdout","time":1238.765306638,"data":"step 26/50 loss 0.2990 lr 1.11e-04\n"}
+,{"stream_name":"stdout","time":1241.006505301,"data":"step 27/50 loss 0.7857 lr 1.07e-04\n"}
+,{"stream_name":"stdout","time":1243.275850551,"data":"step 28/50 loss 0.4084 lr 1.02e-04\n"}
+,{"stream_name":"stdout","time":1245.484872246,"data":"step 29/50 loss 0.4218 lr 9.78e-05\n"}
+,{"stream_name":"stdout","time":1247.760205935,"data":"step 30/50 loss 0.3839 lr 9.33e-05\n"}
+,{"stream_name":"stdout","time":1250.012661976,"data":"step 31/50 loss 0.1693 lr 8.89e-05\n"}
+,{"stream_name":"stdout","time":1252.253713946,"data":"step 32/50 loss 0.0162 lr 8.44e-05\n"}
+,{"stream_name":"stdout","time":1254.527370601,"data":"step 33/50 loss 0.0608 lr 8.00e-05\n"}
+,{"stream_name":"stdout","time":1256.811608622,"data":"step 34/50 loss 0.0515 lr 7.56e-05\n"}
+,{"stream_name":"stdout","time":1259.054350574,"data":"step 35/50 loss 0.0517 lr 7.11e-05\n"}
+,{"stream_name":"stdout","time":1261.319009272,"data":"step 36/50 loss 0.2689 lr 6.67e-05\n"}
+,{"stream_name":"stdout","time":1263.658203379,"data":"step 37/50 loss 0.0127 lr 6.22e-05\n"}
+,{"stream_name":"stdout","time":1265.937670869,"data":"step 38/50 loss 0.2466 lr 5.78e-05\n"}
+,{"stream_name":"stdout","time":1268.201654495,"data":"step 39/50 loss 0.3447 lr 5.33e-05\n"}
+,{"stream_name":"stdout","time":1270.449319912,"data":"step 40/50 loss 0.1347 lr 4.89e-05\n"}
+,{"stream_name":"stdout","time":1272.758779751,"data":"step 41/50 loss 0.1517 lr 4.44e-05\n"}
+,{"stream_name":"stdout","time":1275.027045863,"data":"step 42/50 loss 0.0128 lr 4.00e-05\n"}
+,{"stream_name":"stdout","time":1277.287131692,"data":"step 43/50 loss 0.0156 lr 3.56e-05\n"}
+,{"stream_name":"stdout","time":1279.515625144,"data":"step 44/50 loss 0.0061 lr 3.11e-05\n"}
+,{"stream_name":"stdout","time":1281.766273556,"data":"step 45/50 loss 0.0168 lr 2.67e-05\n"}
+,{"stream_name":"stdout","time":1284.046369168,"data":"step 46/50 loss 0.1281 lr 2.22e-05\n"}
+,{"stream_name":"stdout","time":1286.314307482,"data":"step 47/50 loss 0.0334 lr 1.78e-05\n"}
+,{"stream_name":"stdout","time":1288.549584454,"data":"step 48/50 loss 0.0372 lr 1.33e-05\n"}
+,{"stream_name":"stdout","time":1290.771855114,"data":"step 49/50 loss 0.1672 lr 8.89e-06\n"}
+,{"stream_name":"stdout","time":1293.300675017,"data":"step 50/50 loss 0.0215 lr 4.44e-06\n"}
+,{"stream_name":"stdout","time":1305.412921824,"data":"trained model: 83.0% pass on 100 test rows\n"}
+,{"stream_name":"stdout","time":1305.96351526,"data":"FINISH review-sentiment {'status': 'complete', 'seed_rows': 30, 'generated_rows': 83, 'base': 0.8, 'student': 0.83, 'whole_run_seconds': 1293.05, 'peak_allocated_bytes_teacher_and_student': 10610746368}\n"}
+,{"stream_name":"stdout","time":1305.96355597,"data":"START invoice-fields\n"}
+,{"stream_name":"stderr","time":1337.244897517,"data":"\rLoading weights:   0%|          | 0/339 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/339 [00:03\u003c17:36,  3.13s/it]\rLoading weights:   1%|          | 2/339 [00:07\u003c20:21,  3.62s/it]\rLoading weights:   2%|▏         | 6/339 [00:07\u003c04:44,  1.17it/s]\rLoading weights:   5%|▌         | 18/339 [00:07\u003c01:06,  4.82it/s]\rLoading weights:   9%|▉         | 30/339 [00:07\u003c00:32,  9.54it/s]\rLoading weights:  12%|█▏        | 42/339 [00:07\u003c00:19, 15.43it/s]\rLoading weights:  16%|█▌        | 54/339 [00:07\u003c00:12, 22.51it/s]\rLoading weights:  19%|█▉        | 66/339 [00:07\u003c00:09, 30.29it/s]\rLoading weights:  22%|██▏       | 76/339 [00:08\u003c00:09, 26.40it/s]\rLoading weights:  24%|██▍       | 83/339 [00:09\u003c00:16, 15.40it/s]\rLoading weights:  26%|██▌       | 88/339 [00:10\u003c00:18, 13.69it/s]\rLoading weights:  27%|██▋       | 92/339 [00:10\u003c00:17, 14.18it/s]\rLoading weights:  30%|███       | 102/339 [00:10\u003c00:11, 20.49it/s]\rLoading weights:  33%|███▎      | 113/339 [00:10\u003c00:07, 29.60it/s]\rLoading weights:  37%|███▋      | 124/339 [00:11\u003c00:08, 26.04it/s]\rLoading weights:  38%|███▊      | 129/339 [00:12\u003c00:14, 14.20it/s]\rLoading weights:  39%|███▉      | 133/339 [00:12\u003c00:13, 14.99it/s]\rLoading weights:  40%|████      | 137/339 [00:13\u003c00:21,  9.62it/s]\rLoading weights:  41%|████▏     | 140/339 [00:13\u003c00:22,  8.73it/s]\rLoading weights:  42%|████▏     | 142/339 [00:13\u003c00:20,  9.47it/s]\rLoading weights:  44%|████▎     | 148/339 [00:14\u003c00:17, 10.69it/s]\rLoading weights:  44%|████▍     | 150/339 [00:14\u003c00:16, 11.20it/s]\rLoading weights:  47%|████▋     | 160/339 [00:14\u003c00:11, 14.95it/s]\rLoading weights:  48%|████▊     | 162/339 [00:15\u003c00:22,  7.87it/s]\rLoading weights:  49%|████▉     | 166/339 [00:16\u003c00:17,  9.99it/s]\rLoading weights:  50%|████▉     | 169/339 [00:16\u003c00:14, 11.74it/s]\rLoading weights:  51%|█████     | 172/339 [00:16\u003c00:17,  9.28it/s]\rLoading weights:  51%|█████▏    | 174/339 [00:17\u003c00:26,  6.29it/s]\rLoading weights:  54%|█████▍    | 184/339 [00:17\u003c00:14, 10.41it/s]\rLoading weights:  55%|█████▍    | 186/339 [00:19\u003c00:23,  6.46it/s]\rLoading weights:  56%|█████▌    | 190/339 [00:19\u003c00:17,  8.45it/s]\rLoading weights:  57%|█████▋    | 193/339 [00:19\u003c00:14, 10.17it/s]\rLoading weights:  58%|█████▊    | 196/339 [00:19\u003c00:16,  8.44it/s]\rLoading weights:  58%|█████▊    | 198/339 [00:20\u003c00:27,  5.06it/s]\rLoading weights:  60%|█████▉    | 202/339 [00:20\u003c00:18,  7.32it/s]\rLoading weights:  60%|██████    | 205/339 [00:21\u003c00:14,  9.24it/s]\rLoading weights:  61%|██████▏   | 208/339 [00:21\u003c00:16,  7.81it/s]\rLoading weights:  62%|██████▏   | 210/339 [00:21\u003c00:18,  7.16it/s]\rLoading weights:  65%|██████▍   | 220/339 [00:22\u003c00:07, 15.58it/s]\rLoading weights:  66%|██████▌   | 224/339 [00:22\u003c00:06, 16.58it/s]\rLoading weights:  68%|██████▊   | 232/339 [00:22\u003c00:04, 23.62it/s]\rLoading weights:  70%|██████▉   | 236/339 [00:23\u003c00:08, 12.47it/s]\rLoading weights:  71%|███████   | 239/339 [00:23\u003c00:07, 13.94it/s]\rLoading weights:  71%|███████▏  | 242/339 [00:23\u003c00:06, 15.54it/s]\rLoading weights:  72%|███████▏  | 245/339 [00:24\u003c00:12,  7.31it/s]\rLoading weights:  73%|███████▎  | 247/339 [00:25\u003c00:14,  6.17it/s]\rLoading weights:  74%|███████▎  | 250/339 [00:25\u003c00:11,  7.88it/s]\rLoading weights:  74%|███████▍  | 252/339 [00:25\u003c00:09,  9.04it/s]\rLoading weights:  76%|███████▌  | 256/339 [00:25\u003c00:10,  8.19it/s]\rLoading weights:  76%|███████▌  | 258/339 [00:26\u003c00:17,  4.71it/s]\rLoading weights:  77%|███████▋  | 262/339 [00:27\u003c00:10,  7.01it/s]\rLoading weights:  78%|███████▊  | 264/339 [00:27\u003c00:09,  8.12it/s]\rLoading weights:  79%|███████▉  | 268/339 [00:27\u003c00:06, 11.42it/s]\rLoading weights:  80%|███████▉  | 271/339 [00:28\u003c00:10,  6.30it/s]\rLoading weights:  81%|████████  | 274/339 [00:28\u003c00:08,  8.10it/s]\rLoading weights:  82%|████████▏ | 277/339 [00:28\u003c00:06, 10.28it/s]\rLoading weights:  83%|████████▎ | 280/339 [00:28\u003c00:04, 12.71it/s]\rLoading weights:  83%|████████▎ | 283/339 [00:28\u003c00:03, 14.21it/s]\rLoading weights:  86%|████████▌ | 292/339 [00:28\u003c00:01, 26.52it/s]\rLoading weights:  88%|████████▊ | 297/339 [00:29\u003c00:01, 27.65it/s]\rLoading weights:  90%|████████▉ | 304/339 [00:29\u003c00:00, 35.20it/s]\rLoading weights:  91%|█████████ | 309/339 [00:29\u003c00:01, 28.66it/s]\rLoading weights:  93%|█████████▎| 316/339 [00:29\u003c00:00, 34.77it/s]\rLoading weights:  95%|█████████▍| 321/339 [00:29\u003c00:00, 32.76it/s]\rLoading weights:  97%|█████████▋| 328/339 [00:29\u003c00:00, 40.10it/s]\rLoading weights:  98%|█████████▊| 333/339 [00:30\u003c00:00, 30.95it/s]\rLoading weights: 100%|██████████| 339/339 [00:30\u003c00:00, 11.26it/s]\n"}
+,{"stream_name":"stdout","time":2358.728213705,"data":"teacher generated 76 usable rows from 30 seeds\n"}
+,{"stream_name":"stderr","time":2362.365816052,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:01\u003c05:47,  1.03s/it]\rLoading weights:  54%|█████▍    | 183/338 [00:01\u003c00:00, 199.35it/s]\rLoading weights:  71%|███████   | 239/338 [00:01\u003c00:00, 155.35it/s]\rLoading weights:  81%|████████  | 274/338 [00:02\u003c00:00, 134.43it/s]\rLoading weights:  88%|████████▊ | 299/338 [00:02\u003c00:00, 145.67it/s]\rLoading weights:  96%|█████████▌| 324/338 [00:02\u003c00:00, 153.20it/s]\rLoading weights: 100%|██████████| 338/338 [00:02\u003c00:00, 139.37it/s]\n"}
+,{"stream_name":"stdout","time":2612.88526966,"data":"base model: 0.0% pass on 50 test rows\n"}
+,{"stream_name":"stdout","time":2615.19550095,"data":"step 1/50 loss 1.8671 lr 4.00e-05\n"}
+,{"stream_name":"stdout","time":2617.435386445,"data":"step 2/50 loss 1.7702 lr 8.00e-05\n"}
+,{"stream_name":"stdout","time":2619.659559634,"data":"step 3/50 loss 1.7935 lr 1.20e-04\n"}
+,{"stream_name":"stdout","time":2621.901963944,"data":"step 4/50 loss 1.7648 lr 1.60e-04\n"}
+,{"stream_name":"stdout","time":2624.153299122,"data":"step 5/50 loss 1.5968 lr 2.00e-04\n"}
+,{"stream_name":"stdout","time":2626.405847,"data":"step 6/50 loss 1.6768 lr 2.00e-04\n"}
+,{"stream_name":"stdout","time":2628.615973974,"data":"step 7/50 loss 1.0633 lr 1.96e-04\n"}
+,{"stream_name":"stdout","time":2630.834513789,"data":"step 8/50 loss 1.7187 lr 1.91e-04\n"}
+,{"stream_name":"stdout","time":2633.121402616,"data":"step 9/50 loss 1.2751 lr 1.87e-04\n"}
+,{"stream_name":"stdout","time":2635.369125703,"data":"step 10/50 loss 1.5189 lr 1.82e-04\n"}
+,{"stream_name":"stdout","time":2637.597681186,"data":"step 11/50 loss 1.4734 lr 1.78e-04\n"}
+,{"stream_name":"stdout","time":2639.81605244,"data":"step 12/50 loss 1.3804 lr 1.73e-04\n"}
+,{"stream_name":"stdout","time":2642.040700561,"data":"step 13/50 loss 1.1319 lr 1.69e-04\n"}
+,{"stream_name":"stdout","time":2644.316768686,"data":"step 14/50 loss 1.3104 lr 1.64e-04\n"}
+,{"stream_name":"stdout","time":2646.558526352,"data":"step 15/50 loss 1.1714 lr 1.60e-04\n"}
+,{"stream_name":"stdout","time":2648.817453866,"data":"step 16/50 loss 1.0812 lr 1.56e-04\n"}
+,{"stream_name":"stdout","time":2651.059953206,"data":"step 17/50 loss 0.7998 lr 1.51e-04\n"}
+,{"stream_name":"stdout","time":2653.310923695,"data":"step 18/50 loss 1.0082 lr 1.47e-04\n"}
+,{"stream_name":"stdout","time":2655.531298581,"data":"step 19/50 loss 1.0423 lr 1.42e-04\n"}
+,{"stream_name":"stdout","time":2657.770664698,"data":"step 20/50 loss 1.0069 lr 1.38e-04\n"}
+,{"stream_name":"stdout","time":2659.999844634,"data":"step 21/50 loss 0.8686 lr 1.33e-04\n"}
+,{"stream_name":"stdout","time":2662.245319449,"data":"step 22/50 loss 0.8065 lr 1.29e-04\n"}
+,{"stream_name":"stdout","time":2664.508937443,"data":"step 23/50 loss 0.7658 lr 1.24e-04\n"}
+,{"stream_name":"stdout","time":2666.744545305,"data":"step 24/50 loss 0.8596 lr 1.20e-04\n"}
+,{"stream_name":"stdout","time":2668.949821543,"data":"step 25/50 loss 0.7472 lr 1.16e-04\n"}
+,{"stream_name":"stdout","time":2671.186917248,"data":"step 26/50 loss 0.7024 lr 1.11e-04\n"}
+,{"stream_name":"stdout","time":2673.43304379,"data":"step 27/50 loss 0.6635 lr 1.07e-04\n"}
+,{"stream_name":"stdout","time":2675.626233432,"data":"step 28/50 loss 0.6136 lr 1.02e-04\n"}
+,{"stream_name":"stdout","time":2677.842715004,"data":"step 29/50 loss 0.5880 lr 9.78e-05\n"}
+,{"stream_name":"stdout","time":2680.028648498,"data":"step 30/50 loss 0.4265 lr 9.33e-05\n"}
+,{"stream_name":"stdout","time":2682.284958522,"data":"step 31/50 loss 0.5587 lr 8.89e-05\n"}
+,{"stream_name":"stdout","time":2684.534847411,"data":"step 32/50 loss 0.5283 lr 8.44e-05\n"}
+,{"stream_name":"stdout","time":2687.065577869,"data":"step 33/50 loss 0.5483 lr 8.00e-05\n"}
+,{"stream_name":"stdout","time":2689.288476727,"data":"step 34/50 loss 0.4579 lr 7.56e-05\n"}
+,{"stream_name":"stdout","time":2691.530757172,"data":"step 35/50 loss 0.4995 lr 7.11e-05\n"}
+,{"stream_name":"stdout","time":2693.803639401,"data":"step 36/50 loss 0.5194 lr 6.67e-05\n"}
+,{"stream_name":"stdout","time":2696.051362663,"data":"step 37/50 loss 0.3867 lr 6.22e-05\n"}
+,{"stream_name":"stdout","time":2698.257296801,"data":"step 38/50 loss 0.4688 lr 5.78e-05\n"}
+,{"stream_name":"stdout","time":2700.475687504,"data":"step 39/50 loss 0.4133 lr 5.33e-05\n"}
+,{"stream_name":"stdout","time":2702.776496288,"data":"step 40/50 loss 0.3599 lr 4.89e-05\n"}
+,{"stream_name":"stdout","time":2705.059144029,"data":"step 41/50 loss 0.4781 lr 4.44e-05\n"}
+,{"stream_name":"stdout","time":2707.326462317,"data":"step 42/50 loss 0.3614 lr 4.00e-05\n"}
+,{"stream_name":"stdout","time":2709.546565136,"data":"step 43/50 loss 0.3971 lr 3.56e-05\n"}
+,{"stream_name":"stdout","time":2711.7945519,"data":"step 44/50 loss 0.4247 lr 3.11e-05\n"}
+,{"stream_name":"stdout","time":2714.121030935,"data":"step 45/50 loss 0.3721 lr 2.67e-05\n"}
+,{"stream_name":"stdout","time":2716.445551292,"data":"step 46/50 loss 0.3585 lr 2.22e-05\n"}
+,{"stream_name":"stdout","time":2718.691395064,"data":"step 47/50 loss 0.3723 lr 1.78e-05\n"}
+,{"stream_name":"stdout","time":2720.949151575,"data":"step 48/50 loss 0.3970 lr 1.33e-05\n"}
+,{"stream_name":"stdout","time":2723.243969476,"data":"step 49/50 loss 0.3803 lr 8.89e-06\n"}
+,{"stream_name":"stdout","time":2725.675499777,"data":"step 50/50 loss 0.3398 lr 4.44e-06\n"}
+,{"stream_name":"stdout","time":2911.520070995,"data":"trained model: 12.0% pass on 50 test rows\n"}
+,{"stream_name":"stdout","time":2912.097876706,"data":"FINISH invoice-fields {'status': 'complete', 'seed_rows': 30, 'generated_rows': 76, 'base': 0.0, 'student': 0.12, 'whole_run_seconds': 1605.67, 'peak_allocated_bytes_teacher_and_student': 10757949952}\n"}
+,{"stream_name":"stdout","time":2912.097913286,"data":"START faq-bot-hinglish\n"}
+,{"stream_name":"stderr","time":2922.729050137,"data":"\rLoading weights:   0%|          | 0/339 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/339 [00:03\u003c21:58,  3.90s/it]\rLoading weights:   1%|          | 2/339 [00:04\u003c11:44,  2.09s/it]\rLoading weights:   2%|▏         | 6/339 [00:04\u003c02:47,  1.99it/s]\rLoading weights:   5%|▌         | 18/339 [00:04\u003c00:40,  7.96it/s]\rLoading weights:   9%|▉         | 30/339 [00:05\u003c00:20, 15.20it/s]\rLoading weights:  12%|█▏        | 42/339 [00:05\u003c00:12, 23.55it/s]\rLoading weights:  16%|█▌        | 54/339 [00:05\u003c00:08, 32.71it/s]\rLoading weights:  19%|█▉        | 66/339 [00:05\u003c00:06, 41.59it/s]\rLoading weights:  23%|██▎       | 77/339 [00:05\u003c00:05, 51.51it/s]\rLoading weights:  26%|██▌       | 88/339 [00:05\u003c00:04, 61.27it/s]\rLoading weights:  29%|██▉       | 100/339 [00:05\u003c00:03, 68.34it/s]\rLoading weights:  32%|███▏      | 110/339 [00:05\u003c00:03, 74.44it/s]\rLoading weights:  35%|███▌      | 120/339 [00:06\u003c00:02, 74.07it/s]\rLoading weights:  38%|███▊      | 129/339 [00:06\u003c00:02, 75.16it/s]\rLoading weights:  41%|████      | 138/339 [00:06\u003c00:02, 72.31it/s]\rLoading weights:  44%|████▍     | 149/339 [00:06\u003c00:02, 81.10it/s]\rLoading weights:  47%|████▋     | 161/339 [00:06\u003c00:02, 83.94it/s]\rLoading weights:  51%|█████     | 173/339 [00:06\u003c00:01, 85.39it/s]\rLoading weights:  54%|█████▎    | 182/339 [00:07\u003c00:03, 45.53it/s]\rLoading weights:  56%|█████▌    | 189/339 [00:07\u003c00:03, 48.08it/s]\rLoading weights:  58%|█████▊    | 196/339 [00:07\u003c00:04, 32.35it/s]\rLoading weights:  60%|██████    | 204/339 [00:07\u003c00:03, 38.67it/s]\rLoading weights:  62%|██████▏   | 210/339 [00:07\u003c00:03, 40.38it/s]\rLoading weights:  65%|██████▌   | 221/339 [00:08\u003c00:02, 53.05it/s]\rLoading weights:  68%|██████▊   | 232/339 [00:08\u003c00:01, 64.74it/s]\rLoading weights:  71%|███████   | 241/339 [00:08\u003c00:01, 70.44it/s]\rLoading weights:  74%|███████▎  | 250/339 [00:08\u003c00:01, 71.26it/s]\rLoading weights:  76%|███████▋  | 259/339 [00:08\u003c00:01, 71.66it/s]\rLoading weights:  79%|███████▉  | 269/339 [00:08\u003c00:00, 78.02it/s]\rLoading weights:  83%|████████▎ | 281/339 [00:08\u003c00:00, 81.10it/s]\rLoading weights:  86%|████████▋ | 293/339 [00:08\u003c00:00, 83.17it/s]\rLoading weights:  90%|████████▉ | 304/339 [00:09\u003c00:00, 89.37it/s]\rLoading weights:  93%|█████████▎| 316/339 [00:09\u003c00:00, 89.15it/s]\rLoading weights:  97%|█████████▋| 328/339 [00:09\u003c00:00, 87.51it/s]\rLoading weights:  99%|█████████▉| 337/339 [00:09\u003c00:00, 88.06it/s]\rLoading weights: 100%|██████████| 339/339 [00:09\u003c00:00, 36.10it/s]\n"}
+,{"stream_name":"stdout","time":3444.712973957,"data":"teacher generated 90 usable rows from 30 seeds\n"}
+,{"stream_name":"stderr","time":3447.584174516,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:09,  1.35it/s]\rLoading weights:  41%|████      | 137/338 [00:00\u003c00:00, 218.15it/s]\rLoading weights:  62%|██████▏   | 211/338 [00:01\u003c00:00, 216.60it/s]\rLoading weights:  77%|███████▋  | 261/338 [00:01\u003c00:00, 223.83it/s]\rLoading weights:  89%|████████▉ | 301/338 [00:01\u003c00:00, 221.08it/s]\rLoading weights:  99%|█████████▉| 335/338 [00:01\u003c00:00, 211.40it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 190.85it/s]\n"}
+,{"stream_name":"stdout","time":3818.853614979,"data":"base model: 0.0% pass on 60 test rows\n"}
+,{"stream_name":"stdout","time":3821.108729795,"data":"step 1/50 loss 5.2917 lr 4.00e-05\n"}
+,{"stream_name":"stdout","time":3823.386312137,"data":"step 2/50 loss 4.7231 lr 8.00e-05\n"}
+,{"stream_name":"stdout","time":3825.617567267,"data":"step 3/50 loss 3.5839 lr 1.20e-04\n"}
+,{"stream_name":"stdout","time":3827.862077057,"data":"step 4/50 loss 3.6174 lr 1.60e-04\n"}
+,{"stream_name":"stdout","time":3830.110531869,"data":"step 5/50 loss 3.1773 lr 2.00e-04\n"}
+,{"stream_name":"stdout","time":3832.343904519,"data":"step 6/50 loss 4.2809 lr 2.00e-04\n"}
+,{"stream_name":"stdout","time":3834.595555715,"data":"step 7/50 loss 3.0169 lr 1.96e-04\n"}
+,{"stream_name":"stdout","time":3836.834995243,"data":"step 8/50 loss 3.5068 lr 1.91e-04\n"}
+,{"stream_name":"stdout","time":3839.056006557,"data":"step 9/50 loss 2.5326 lr 1.87e-04\n"}
+,{"stream_name":"stdout","time":3841.280952627,"data":"step 10/50 loss 3.9104 lr 1.82e-04\n"}
+,{"stream_name":"stdout","time":3843.543339144,"data":"step 11/50 loss 3.6063 lr 1.78e-04\n"}
+,{"stream_name":"stdout","time":3845.767603015,"data":"step 12/50 loss 1.6974 lr 1.73e-04\n"}
+,{"stream_name":"stdout","time":3848.007878307,"data":"step 13/50 loss 2.3601 lr 1.69e-04\n"}
+,{"stream_name":"stdout","time":3850.23119767,"data":"step 14/50 loss 3.4030 lr 1.64e-04\n"}
+,{"stream_name":"stdout","time":3852.464248568,"data":"step 15/50 loss 2.8257 lr 1.60e-04\n"}
+,{"stream_name":"stdout","time":3854.70544773,"data":"step 16/50 loss 3.3136 lr 1.56e-04\n"}
+,{"stream_name":"stdout","time":3856.941803019,"data":"step 17/50 loss 2.4439 lr 1.51e-04\n"}
+,{"stream_name":"stdout","time":3859.137735037,"data":"step 18/50 loss 1.9186 lr 1.47e-04\n"}
+,{"stream_name":"stdout","time":3861.344098398,"data":"step 19/50 loss 1.7698 lr 1.42e-04\n"}
+,{"stream_name":"stdout","time":3863.580919841,"data":"step 20/50 loss 1.9469 lr 1.38e-04\n"}
+,{"stream_name":"stdout","time":3865.80491135,"data":"step 21/50 loss 2.9582 lr 1.33e-04\n"}
+,{"stream_name":"stdout","time":3868.05770258,"data":"step 22/50 loss 1.5811 lr 1.29e-04\n"}
+,{"stream_name":"stdout","time":3870.323213679,"data":"step 23/50 loss 1.5119 lr 1.24e-04\n"}
+,{"stream_name":"stdout","time":3872.59494097,"data":"step 24/50 loss 1.7081 lr 1.20e-04\n"}
+,{"stream_name":"stdout","time":3874.815730997,"data":"step 25/50 loss 1.6048 lr 1.16e-04\n"}
+,{"stream_name":"stdout","time":3877.03117208,"data":"step 26/50 loss 1.4627 lr 1.11e-04\n"}
+,{"stream_name":"stdout","time":3879.209337475,"data":"step 27/50 loss 1.2773 lr 1.07e-04\n"}
+,{"stream_name":"stdout","time":3881.417541698,"data":"step 28/50 loss 1.9555 lr 1.02e-04\n"}
+,{"stream_name":"stdout","time":3883.665447758,"data":"step 29/50 loss 1.6165 lr 9.78e-05\n"}
+,{"stream_name":"stdout","time":3885.876245609,"data":"step 30/50 loss 1.4879 lr 9.33e-05\n"}
+,{"stream_name":"stdout","time":3888.088992912,"data":"step 31/50 loss 1.4815 lr 8.89e-05\n"}
+,{"stream_name":"stdout","time":3890.285205382,"data":"step 32/50 loss 1.5673 lr 8.44e-05\n"}
+,{"stream_name":"stdout","time":3892.830223533,"data":"step 33/50 loss 1.8685 lr 8.00e-05\n"}
+,{"stream_name":"stdout","time":3895.036935107,"data":"step 34/50 loss 1.5834 lr 7.56e-05\n"}
+,{"stream_name":"stdout","time":3897.257640569,"data":"step 35/50 loss 0.7843 lr 7.11e-05\n"}
+,{"stream_name":"stdout","time":3899.457353543,"data":"step 36/50 loss 1.8622 lr 6.67e-05\n"}
+,{"stream_name":"stdout","time":3901.67396194,"data":"step 37/50 loss 1.5710 lr 6.22e-05\n"}
+,{"stream_name":"stdout","time":3903.955755134,"data":"step 38/50 loss 1.1217 lr 5.78e-05\n"}
+,{"stream_name":"stdout","time":3906.181748206,"data":"step 39/50 loss 1.6039 lr 5.33e-05\n"}
+,{"stream_name":"stdout","time":3908.40681531,"data":"step 40/50 loss 1.2353 lr 4.89e-05\n"}
+,{"stream_name":"stdout","time":3910.64398873,"data":"step 41/50 loss 1.3330 lr 4.44e-05\n"}
+,{"stream_name":"stdout","time":3912.92578694,"data":"step 42/50 loss 1.5382 lr 4.00e-05\n"}
+,{"stream_name":"stdout","time":3915.181093863,"data":"step 43/50 loss 1.4769 lr 3.56e-05\n"}
+,{"stream_name":"stdout","time":3917.505993526,"data":"step 44/50 loss 0.9679 lr 3.11e-05\n"}
+,{"stream_name":"stdout","time":3919.744232805,"data":"step 45/50 loss 1.4413 lr 2.67e-05\n"}
+,{"stream_name":"stdout","time":3922.025327327,"data":"step 46/50 loss 1.5400 lr 2.22e-05\n"}
+,{"stream_name":"stdout","time":3924.30997492,"data":"step 47/50 loss 1.7477 lr 1.78e-05\n"}
+,{"stream_name":"stdout","time":3926.584011947,"data":"step 48/50 loss 1.1283 lr 1.33e-05\n"}
+,{"stream_name":"stdout","time":3928.821586937,"data":"step 49/50 loss 1.2028 lr 8.89e-06\n"}
+,{"stream_name":"stdout","time":3931.286813055,"data":"step 50/50 loss 1.6103 lr 4.44e-06\n"}
+,{"stream_name":"stdout","time":4001.831872321,"data":"trained model: 10.0% pass on 60 test rows\n"}
+,{"stream_name":"stdout","time":4002.39142295,"data":"FINISH faq-bot-hinglish {'status': 'complete', 'seed_rows': 30, 'generated_rows': 90, 'base': 0.0, 'student': 0.1, 'whole_run_seconds': 1089.84, 'peak_allocated_bytes_teacher_and_student': 10737035776}\n"}
+,{"stream_name":"stderr","time":4008.962903325,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4008.962926203,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4009.199600884,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4009.199628176,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4010.541480036,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4011.469014308,"data":"[NbConvertApp] Writing 433108 bytes to __results__.html\n"}
+]

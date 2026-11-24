@@ -1,0 +1,55 @@
+[{"stream_name":"stdout","time":10.284158925,"data":"GPU: Tesla T4\n"}
+,{"stream_name":"stdout","time":10.307278205,"data":"Source core: e2187d404284d9c7aa3ca6a8421c0a7625fedd98 workers: c4cf5de05b52ae0d4ee05612451bcbda2741868c\n"}
+,{"stream_name":"stdout","time":10.42162878,"data":"PASS\n"}
+,{"stream_name":"stdout","time":10.555061609,"data":"PASS\n"}
+,{"stream_name":"stdout","time":10.675031428,"data":"PASS\n"}
+,{"stream_name":"stdout","time":10.809823716,"data":"PASS\n"}
+,{"stream_name":"stderr","time":38.501790985,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":39.957433649,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":49.678645198,"data":"\rLoading weights:   0%|          | 0/290 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/290 [00:00\u003c01:38,  2.94it/s]\rLoading weights:  71%|███████▏  | 207/290 [00:00\u003c00:00, 592.08it/s]\rLoading weights: 100%|██████████| 290/290 [00:00\u003c00:00, 517.90it/s]\n"}
+,{"stream_name":"stdout","time":65.99557083,"data":"ticket-sorter-hinglish on Qwen/Qwen2.5-0.5B-Instruct: 35.0% of 100 passed (mean accuracy 0.350)\n"}
+,{"stream_name":"stdout","time":65.995609035,"data":"wrote /kaggle/working/product-baselines/ticket-sorter-hinglish-qwen2.5-0.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":78.12787599,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":79.423127929,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":101.662880664,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:42,  1.19it/s]\rLoading weights:  43%|████▎     | 147/338 [00:00\u003c00:00, 204.63it/s]\rLoading weights:  63%|██████▎   | 213/338 [00:01\u003c00:00, 206.91it/s]\rLoading weights:  77%|███████▋  | 259/338 [00:01\u003c00:00, 204.28it/s]\rLoading weights:  87%|████████▋ | 295/338 [00:01\u003c00:00, 208.19it/s]\rLoading weights:  96%|█████████▋| 326/338 [00:01\u003c00:00, 220.13it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 184.08it/s]\n"}
+,{"stream_name":"stdout","time":123.144711714,"data":"ticket-sorter-hinglish on Qwen/Qwen2.5-1.5B-Instruct: 65.0% of 100 passed (mean accuracy 0.650)\n"}
+,{"stream_name":"stdout","time":123.144779521,"data":"wrote /kaggle/working/product-baselines/ticket-sorter-hinglish-qwen2.5-1.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":133.0880064,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":134.255553924,"data":"\rLoading weights:   0%|          | 0/290 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/290 [00:00\u003c01:58,  2.45it/s]\rLoading weights:  85%|████████▍ | 246/290 [00:00\u003c00:00, 633.12it/s]\rLoading weights: 100%|██████████| 290/290 [00:00\u003c00:00, 518.70it/s]\n"}
+,{"stream_name":"stdout","time":335.522187001,"data":"invoice-fields on Qwen/Qwen2.5-0.5B-Instruct: 0.0% of 50 passed (mean field_f1 0.696)\n"}
+,{"stream_name":"stdout","time":335.522248416,"data":"wrote /kaggle/working/product-baselines/invoice-fields-qwen2.5-0.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":345.435300905,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":347.874299459,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c03:33,  1.58it/s]\rLoading weights:  33%|███▎      | 113/338 [00:00\u003c00:01, 207.21it/s]\rLoading weights:  53%|█████▎    | 179/338 [00:01\u003c00:00, 220.29it/s]\rLoading weights:  67%|██████▋   | 226/338 [00:01\u003c00:00, 219.40it/s]\rLoading weights:  78%|███████▊  | 263/338 [00:01\u003c00:00, 224.41it/s]\rLoading weights:  88%|████████▊ | 296/338 [00:01\u003c00:00, 215.97it/s]\rLoading weights:  96%|█████████▌| 324/338 [00:01\u003c00:00, 227.85it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 198.29it/s]\n"}
+,{"stream_name":"stdout","time":596.550102155,"data":"invoice-fields on Qwen/Qwen2.5-1.5B-Instruct: 0.0% of 50 passed (mean field_f1 0.712)\n"}
+,{"stream_name":"stdout","time":596.550175776,"data":"wrote /kaggle/working/product-baselines/invoice-fields-qwen2.5-1.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":606.410228218,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":607.582822982,"data":"\rLoading weights:   0%|          | 0/290 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/290 [00:00\u003c01:24,  3.41it/s]\rLoading weights:  63%|██████▎   | 183/290 [00:00\u003c00:00, 580.03it/s]\rLoading weights:  97%|█████████▋| 281/290 [00:00\u003c00:00, 610.32it/s]\rLoading weights: 100%|██████████| 290/290 [00:00\u003c00:00, 523.97it/s]\n"}
+,{"stream_name":"stdout","time":903.621576631,"data":"faq-bot-hinglish on Qwen/Qwen2.5-0.5B-Instruct: 0.0% of 60 passed (mean rouge_l 0.042)\n"}
+,{"stream_name":"stdout","time":903.621635229,"data":"wrote /kaggle/working/product-baselines/faq-bot-hinglish-qwen2.5-0.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":913.318776362,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":915.663549441,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c03:52,  1.45it/s]\rLoading weights:  40%|███▉      | 135/338 [00:00\u003c00:00, 221.39it/s]\rLoading weights:  59%|█████▉    | 199/338 [00:01\u003c00:00, 226.82it/s]\rLoading weights:  72%|███████▏  | 245/338 [00:01\u003c00:00, 224.15it/s]\rLoading weights:  83%|████████▎ | 281/338 [00:01\u003c00:00, 216.38it/s]\rLoading weights:  93%|█████████▎| 315/338 [00:01\u003c00:00, 226.64it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 202.65it/s]\n"}
+,{"stream_name":"stdout","time":1273.763968219,"data":"faq-bot-hinglish on Qwen/Qwen2.5-1.5B-Instruct: 0.0% of 60 passed (mean rouge_l 0.048)\n"}
+,{"stream_name":"stdout","time":1273.764017309,"data":"wrote /kaggle/working/product-baselines/faq-bot-hinglish-qwen2.5-1.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":1283.390355699,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":1284.59505057,"data":"\rLoading weights:   0%|          | 0/290 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/290 [00:00\u003c01:26,  3.35it/s]\rLoading weights:  67%|██████▋   | 195/290 [00:00\u003c00:00, 615.93it/s]\rLoading weights: 100%|██████████| 290/290 [00:00\u003c00:00, 546.75it/s]\n"}
+,{"stream_name":"stdout","time":1298.847120674,"data":"review-sentiment on Qwen/Qwen2.5-0.5B-Instruct: 51.0% of 100 passed (mean accuracy 0.510)\n"}
+,{"stream_name":"stdout","time":1298.847163572,"data":"wrote /kaggle/working/product-baselines/review-sentiment-qwen2.5-0.5b-instruct.json\n"}
+,{"stream_name":"stderr","time":1308.457985129,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":1310.794885337,"data":"\rLoading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/338 [00:00\u003c04:33,  1.23it/s]\rLoading weights:  47%|████▋     | 159/338 [00:00\u003c00:00, 236.93it/s]\rLoading weights:  74%|███████▍  | 251/338 [00:01\u003c00:00, 235.68it/s]\rLoading weights:  92%|█████████▏| 312/338 [00:01\u003c00:00, 231.41it/s]\rLoading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 202.06it/s]\n"}
+,{"stream_name":"stdout","time":1331.480633796,"data":"review-sentiment on Qwen/Qwen2.5-1.5B-Instruct: 80.0% of 100 passed (mean accuracy 0.800)\n"}
+,{"stream_name":"stdout","time":1331.480671675,"data":"wrote /kaggle/working/product-baselines/review-sentiment-qwen2.5-1.5b-instruct.json\n"}
+,{"stream_name":"stdout","time":1332.863672586,"data":"RESULT faq-bot-hinglish-qwen2.5-0.5b-instruct.json 60 0.0 0.04236989759729053\n"}
+,{"stream_name":"stdout","time":1332.863886656,"data":"RESULT faq-bot-hinglish-qwen2.5-1.5b-instruct.json 60 0.0 0.04813127237566533\n"}
+,{"stream_name":"stdout","time":1332.864148807,"data":"RESULT invoice-fields-qwen2.5-0.5b-instruct.json 50 0.0 0.6960000000000001\n"}
+,{"stream_name":"stdout","time":1332.864391392,"data":"RESULT invoice-fields-qwen2.5-1.5b-instruct.json 50 0.0 0.7120000000000001\n"}
+,{"stream_name":"stdout","time":1332.864586117,"data":"RESULT review-sentiment-qwen2.5-0.5b-instruct.json 100 0.51 0.51\n"}
+,{"stream_name":"stdout","time":1332.8647244,"data":"RESULT review-sentiment-qwen2.5-1.5b-instruct.json 100 0.8 0.8\n"}
+,{"stream_name":"stdout","time":1332.864850606,"data":"RESULT ticket-sorter-hinglish-qwen2.5-0.5b-instruct.json 100 0.35 0.35\n"}
+,{"stream_name":"stdout","time":1332.86497244,"data":"RESULT ticket-sorter-hinglish-qwen2.5-1.5b-instruct.json 100 0.65 0.65\n"}
+,{"stream_name":"stderr","time":1335.574455063,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1335.574484448,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1335.850457304,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1335.850484953,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1336.737196026,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1337.857032718,"data":"[NbConvertApp] Writing 440998 bytes to __results__.html\n"}
+]

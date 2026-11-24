@@ -1,0 +1,20 @@
+{
+ "test": [
+  {
+   "row_index": 6,
+   "label": "other",
+   "text": "Hum Jaipur me chhoti dukaan khol rahe hain, seller registration ki jaankari chahiye"
+  },
+  {
+   "row_index": 17,
+   "label": "other",
+   "text": "We are opening a small shop in Patna and want to know about seller registration"
+  },
+  {
+   "row_index": 32,
+   "label": "other",
+   "text": "How can our small shop register as a seller on your marketplace?"
+  }
+ ],
+ "validation": []
+}

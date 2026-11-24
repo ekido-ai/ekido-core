@@ -1,0 +1,1486 @@
+{
+  "purpose": "exploratory equal seed weighting; reused validation and historical test are not independent",
+  "source_run12_dataset_sha256": "9097601e2a66f98e0463472071370980b974ce05a4f53c8312a431ad69d7edaf",
+  "dataset_sha256": "9e66ca80a2a24576abfa0072ba759bf4d143fce69ba7df0b90aa1d21e00a050e",
+  "seed_count": 30,
+  "seed_rule": "6 per label, Random(42) from original train.csv",
+  "training_rows": 626,
+  "training_labels": {
+    "complaint": 119,
+    "order": 135,
+    "question": 129,
+    "refund": 145,
+    "other": 98
+  },
+  "intervention": "446 previously generated verified rows plus 30 original seed rows; repeat every seed five more times",
+  "extra_label_uses": "100 labelled validation rows; prior run12 also used additional labels for diagnostics",
+  "base_validation": 0.69,
+  "validation_curve": {
+    "80": 0.88,
+    "160": 0.88,
+    "240": 0.88,
+    "320": 0.87,
+    "400": 0.89
+  },
+  "selected_step": 400,
+  "selection_rule": "fixed final step 400 before evaluation",
+  "validation": {
+    "correct": 89,
+    "total": 100,
+    "per_label": {
+      "complaint": {
+        "correct": 19,
+        "total": 19
+      },
+      "order": {
+        "correct": 20,
+        "total": 22
+      },
+      "question": {
+        "correct": 21,
+        "total": 23
+      },
+      "refund": {
+        "correct": 24,
+        "total": 24
+      },
+      "other": {
+        "correct": 5,
+        "total": 12
+      }
+    },
+    "examples": [
+      {
+        "text": "I ordered a white cotton kurti but the quality is very poor, threads are coming out",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mujhe ek grey electric kettle order karna hai, total bata dijiye",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "I want a full refund for this power bank, not a replacement",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Order 2257 ka rang black se badalna hai, dusra rang bhej dijiye",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "My smart watch return was approved but the money has not come back",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Your delivery partner in Bhopal was very polite, five stars",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "I ordered a green winter jacket but the quality is very poor, threads are coming out",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "ऑफ़िस के लिए 5 pressure cooker का बल्क ऑर्डर लगाना है",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "winter jacket ka pickup hue 3 din ho gaye, refund abhi bhi pending hai",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Please refund the delivery charges also along with the pressure cooker amount",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "क्या cotton kurti blue रंग और साइज़ XL में उपलब्ध है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Size M wala t-shirt chart se bilkul alag hai, fit hi nahi ho raha",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Please add a wishlist option in the app for the smart watch",
+        "gold": "other",
+        "answer": " suggestion",
+        "predicted": "",
+        "passed": false
+      },
+      {
+        "text": "Is baar denim jeans size M me reorder karna hai",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Please change the quantity of wireless earbuds in my order 5837 to 5",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Maine order 1894 dispatch se pehle cancel kiya tha, refund process kijiye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "साइज़ XL वाला denim jeans सही साइज़ का आता है या छोटा बड़ा",
+        "gold": "question",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "ऑर्डर 6764 में गलत सामान भेज दिया, मैंने तो pressure cooker ऑर्डर किया था",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Is installation included with this air fryer",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "मेरा laptop वाला ऑर्डर वीकेंड पर Patna में डिलीवर करवाना है",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "यह study table lamp किस मटेरियल से बना है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Mujhe steel water bottle gift ke liye order karna hai, gift wrap add kar dijiye",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Dhanyavaad, mera wireless earbuds aaj aa gaya aur main khush hu",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "The electric kettle delivered to me is defective, it does not switch on at all",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mera order 3430 refund kar dijiye, ab mujhe denim jeans nahi chahiye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Maine electric kettle 6 din pehle return kiya tha, Rs 999 ka refund kab aayega",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Order 1509 ke kharab bluetooth speaker ka refund shuru kar dijiye please",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Book a laptop for me under order value Rs 499, cash on delivery",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Maine wireless earbuds 12 din pehle return kiya tha, Rs 7,999 ka refund kab aayega",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "I cancelled order 8291 before dispatch, please process the refund",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Mann badal jaye to steel water bottle ki return window kitne din ki hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "grey wale electric kettle se khush hu, feedback bhej raha hu jaise manga tha",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "I want to order the laptop as a gift, please add gift wrapping",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "रिफ़ंड का मैसेज आ गया पर 749 रुपये बैंक में अभी तक नहीं आए",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Can the power bank be used with a voltage of 220 volts",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "cotton kurti ki packing phati hui thi aur andar product par scratch the",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Refund galat account me chala gaya hai, order 3290 check kijiye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "इस study table lamp और महंगे वाले मॉडल में क्या फ़र्क है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Mere power bank ka refund abhi tak account me nahi aaya",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Please change the quantity of running shoes in my order 2902 to 3",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "The delivery person was rude and refused to wait while I checked the bluetooth speaker",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Does this bluetooth speaker come with a charger in the box",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "The electric kettle I received is damaged, there is a crack on it",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Maine order 1567 dispatch se pehle cancel kiya tha, refund process kijiye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "I am shifting to Surat, will my account work there as well",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "मेरे ceiling fan की इनवॉइस कॉपी दोबारा भेज दीजिए",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "इसी t-shirt के लिए तीसरी बार शिकायत कर रहा हूँ, कोई सुन ही नहीं रहा",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mere bluetooth speaker ka refund abhi tak account me nahi aaya",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Please send me the invoice copy for my bed sheet set purchase again",
+        "gold": "other",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": false
+      },
+      {
+        "text": "ऑर्डर 5636 में mobile phone आया ही नहीं, बॉक्स में उसकी जगह खाली थी",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mujhe size L me cotton kurti pre-order karna hai, booking kab hogi",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "I want to place an order for a red power bank, please confirm the total",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "मेरा winter jacket का ऑर्डर लगा दीजिए और कन्फ़र्मेशन भेज दीजिए",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "मन बदल जाए तो electric kettle की रिटर्न विंडो कितने दिन की है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Can I pay for the laptop in two parts",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Ek mobile phone book kar dijiye Rs 999 wala, cash on delivery rahega",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "I want to reorder the denim jeans but in size M this time",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Is bluetooth speaker ka battery backup kitna hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "साइज़ 44 वाला running shoes सही साइज़ का आता है या छोटा बड़ा",
+        "gold": "question",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Mere steel water bottle ki invoice copy dobara bhej dijiye please",
+        "gold": "other",
+        "answer": " question",
+        "predicted": "question",
+        "passed": false
+      },
+      {
+        "text": "What is the battery backup of this smart watch",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Your app is very slow since the last update, please look into it",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "मेरा denim jeans वाला ऑर्डर वीकेंड पर Lucknow में डिलीवर करवाना है",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "क्या मैं अपने ऑर्डर 9782 में एक और mixer grinder जोड़ सकता हूँ",
+        "gold": "order",
+        "answer": " question",
+        "predicted": "question",
+        "passed": false
+      },
+      {
+        "text": "इस winter jacket को साफ़ और मेंटेन कैसे करते हैं",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "I would like to order 5 pieces of study table lamp for delivery to Indore",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "silk saree ke amount ke saath delivery charges bhi refund kijiye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Kya cotton kurti red rang aur size 44 me available hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "t-shirt ka rang pehli dhulai me hi utar gaya, paise barbaad ho gaye",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Why was Rs 1,499 deducted from my refund for the bluetooth speaker",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Is headphones aur mehange wale model me kya farak hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "रिफ़ंड गलत खाते में चला गया है, ऑर्डर 3703 चेक कीजिए",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Is cotton kurti ki warranty kitne saal ki hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "The cotton kurti size M is completely different from the size chart on the app",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "साइज़ M वाला t-shirt चार्ट से बिल्कुल अलग है, फिट ही नहीं हो रहा",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Kal se mixer grinder me ajeeb si awaaz aa rahi hai, dar lag raha hai use karne me",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mera laptop ka order laga dijiye aur confirmation bhej dijiye",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "इस laptop और महंगे वाले मॉडल में क्या फ़र्क है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Aapka app last update ke baad bahut slow ho gaya hai, dekhiye zara",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "Ek steel water bottle book kar dijiye Rs 1,999 wala, cash on delivery rahega",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Please schedule my study table lamp order for weekend delivery in Kanpur",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Happy with the grey air fryer, sharing feedback as requested",
+        "gold": "other",
+        "answer": " feedback",
+        "predicted": "",
+        "passed": false
+      },
+      {
+        "text": "यह air fryer किस मटेरियल से बना है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Size L wala running shoes sahi size ka aata hai ya chota bada",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "इस winter jacket की वारंटी कितने साल की है",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Half the refund amount came for my yoga mat, where is the rest",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "How many days does delivery of bed sheet set take to Patna",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "smart watch की राशि के साथ डिलीवरी चार्ज भी रिफ़ंड कीजिए",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "मेरे running shoes की इनवॉइस कॉपी दोबारा भेज दीजिए",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "क्या मेरा सिंगल power bank ऑर्डर कॉम्बो ऑर्डर में बदल सकते हैं",
+        "gold": "order",
+        "answer": " question",
+        "predicted": "question",
+        "passed": false
+      },
+      {
+        "text": "Size XL wala cotton kurti sahi size ka aata hai ya chota bada",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "I paid Rs 1,999 for this running shoes and it broke within a week, unacceptable",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Refund galat account me chala gaya hai, order 9791 check kijiye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Order 7164 ke kharab backpack ka refund shuru kar dijiye please",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "The silk saree I received is damaged, there is a crack on it",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mere wireless earbuds ke refund me se Rs 2,999 kyun kaat liye gaye",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "मेरे silk saree का रिफ़ंड अभी तक खाते में नहीं आया",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "My hair dryer stopped working after just 4 days, this is very disappointing",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "My mobile phone stopped charging, I have already raised this twice with no response",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Wrong item delivered in order 2638, I asked for yoga mat and got something else",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      }
+    ]
+  },
+  "historical_test": {
+    "correct": 72,
+    "total": 100,
+    "per_label": {
+      "complaint": {
+        "correct": 19,
+        "total": 20
+      },
+      "order": {
+        "correct": 17,
+        "total": 20
+      },
+      "question": {
+        "correct": 15,
+        "total": 20
+      },
+      "refund": {
+        "correct": 9,
+        "total": 20
+      },
+      "other": {
+        "correct": 12,
+        "total": 20
+      }
+    },
+    "examples": [
+      {
+        "text": "t-shirt ka order laga raha hu, size XL aur black rang chahiye mujhe",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Kindly return the full amount of the wireless earbuds to my wallet instead of bank",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Order 8752 wale denim jeans ko lekar shikayat hai, haalat theek nahi hai uski",
+        "gold": "complaint",
+        "answer": " order",
+        "predicted": "order",
+        "passed": false
+      },
+      {
+        "text": "Kindly mail me a summary of all my purchases from last month",
+        "gold": "other",
+        "answer": " order",
+        "predicted": "order",
+        "passed": false
+      },
+      {
+        "text": "yoga mat लेने से पहले यह जानना था कि इसकी सर्विस सपोर्ट कितने समय तक मिलती है",
+        "gold": "question",
+        "answer": " other",
+        "predicted": "other",
+        "passed": false
+      },
+      {
+        "text": "ऑर्डर 6395 के पैसे वापस करने की रिक्वेस्ट है क्योंकि अब mixer grinder की ज़रूरत नहीं रही",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Hum Jaipur me chhoti dukaan khol rahe hain, seller registration ki jaankari chahiye",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "Order 3419 ke paise wapas karne ki request hai kyunki ab yoga mat ki zarurat nahi rahi",
+        "gold": "refund",
+        "answer": " order",
+        "predicted": "order",
+        "passed": false
+      },
+      {
+        "text": "Sirf 3 din hue kharide hue aur mera electric kettle band pad gaya, turant dekho isko",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "मेरे washing machine की दिक्कत पर कॉलबैक का बोला था 15 दिन पहले, अभी तक कुछ नहीं हुआ",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "ऑर्डर 6846 वाले ceiling fan को लेकर शिकायत है, उसकी हालत ठीक नहीं है",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "For order 6104 please add 4 more items of the same cotton kurti",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "black वाला t-shirt बहुत पसंद आया, घर वाले पूछ रहे हैं कहाँ से लिया",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "I am unhappy with the yoga mat from order 9363, it looks used and old",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Will this mixer grinder work on the inverter during a power cut",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "पिछले महीने की मेरी सारी खरीद की समरी मेल कर दीजिए",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "After a single wash the stitching of my winter jacket started opening up, very poor finishing",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "We are opening a small shop in Patna and want to know about seller registration",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "जूते का साइज़ UK 7 और UK 8 है, पैर नापकर सही विकल्प कैसे चुनूँ?",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Kindly book the office chair for me today itself, I will pay Rs 299 online",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Checkout par washing machine ke Rs 1,499 ke upar kuch extra charges bhi lagenge kya",
+        "gold": "question",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "For order 8418 please add 6 more items of the same running shoes",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Will this electric kettle work on the inverter during a power cut",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "कुर्ती की छाती की माप 38 इंच है, साइज़ चार्ट में कौनसा विकल्प चुनूँ?",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Kya bluetooth speaker fast charging support karta hai ya sirf normal speed wala hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Sirf 4 din hue kharide hue aur mera bluetooth speaker band pad gaya, turant dekho isko",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Go ahead and order the grey variant of the mobile phone for me",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Before I buy the yoga mat, can you tell me whether it is suitable for outdoor use?",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Are there any extra charges above Rs 749 for the dinner set at checkout",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Loved the red running shoes, my family is asking where I got it from",
+        "gold": "other",
+        "answer": " question",
+        "predicted": "question",
+        "passed": false
+      },
+      {
+        "text": "Between size S and the next one, which fits better for a regular build",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "ऑर्डर 7262 के पैसे वापस करने की रिक्वेस्ट है क्योंकि अब running shoes की ज़रूरत नहीं रही",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "How can our small shop register as a seller on your marketplace?",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "My mixer grinder is making a grinding sound and vibrating a lot since morning",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Please update the contact number linked to my account before my next order",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "Agli order se pehle mere account se juda number badalna hai, madad kijiye",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Pichhle mahine ki meri saari kharid ki summary mail kar dijiye",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "winter jacket का ऑर्डर लगा रहा हूँ, साइज़ M और red रंग चाहिए मुझे",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "बस यह कहना था कि running shoes की पैकिंग साफ़ सुथरी थी और डिलीवरी भी तमीज़ से हुई",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "I am unhappy with the mixer grinder from order 6172, it looks used and old",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "एक ही धुलाई में मेरे bed sheet set की सिलाई खुलने लगी, फ़िनिशिंग बहुत घटिया है",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Aaj order karu to washing machine Indore kab tak pahuch jayega",
+        "gold": "question",
+        "answer": " order",
+        "predicted": "order",
+        "passed": false
+      },
+      {
+        "text": "mobile phone बहुत गर्म हो जाता है और अपने आप बंद हो जाता है, खराब लगता है",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "आज ही मेरा office chair बुक कर दीजिए, 1,299 रुपये ऑनलाइन भर दूँगा",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Does the mobile phone support fast charging or only the normal speed",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "The smart watch heats up badly and shuts down on its own, this piece seems faulty",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Pickup par air fryer quality check me fail ho gaya tha, paisa wapas kab shuru hoga",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Checkout par bluetooth speaker ke Rs 4,999 ke upar kuch extra charges bhi lagenge kya",
+        "gold": "question",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "ऑर्डर 5053 के पैसे वापस करने की रिक्वेस्ट है क्योंकि अब ceiling fan की ज़रूरत नहीं रही",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "We need 5 units of wireless earbuds ordered for our shop before the month ends",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Placing my order for the t-shirt, I need it in size L and green shade",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "yoga mat वाला सेक्शन देखते देखते ऐप ने अचानक लॉगआउट कर दिया मुझे",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "Suggestion: please start same day delivery in Nagpur as well",
+        "gold": "other",
+        "answer": " suggestion",
+        "predicted": "",
+        "passed": false
+      },
+      {
+        "text": "ऑर्डर 3521 में उसी yoga mat के 2 आइटम और जोड़ दीजिए",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Please share the status of the money return for order 2352 today",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "denim jeans ka order laga raha hu, size 44 aur black rang chahiye mujhe",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Aaj hi mera air fryer book kar dijiye, Rs 1,299 online bhar dunga",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Shaam se website ka offers wala page error dikha raha hai",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "bluetooth speaker वाला सेक्शन देखते देखते ऐप ने अचानक लॉगआउट कर दिया मुझे",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Checkout par bed sheet set ke Rs 4,999 ke upar kuch extra charges bhi lagenge kya",
+        "gold": "question",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "pink wala air fryer bahut pasand aaya, ghar wale pooch rahe hain kahan se liya",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "I would like to buy the study table lamp for my home in Bhopal, please place the order",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "आज ऑर्डर करूँ तो t-shirt Nagpur कब तक पहुँच जाएगा",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "The seams on my new t-shirt came loose after the first wash. Can someone help?",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "मेरा laptop खरीदना पक्का है, डिलीवरी इसी हफ़्ते में हो जानी चाहिए",
+        "gold": "order",
+        "answer": " other",
+        "predicted": "other",
+        "passed": false
+      },
+      {
+        "text": "Mere bluetooth speaker ki dikkat par callback ka bola tha 4 din pehle, abhi tak kuch nahi",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Only part of my ceiling fan money came back, the remaining balance is still due",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Mere saved payment method se yoga mat ka naya order laga dijiye",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Ek hi dhulai me mere winter jacket ki silai khulne lagi, finishing bahut ghatiya hai",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Mere bed sheet set ke paise aadhe hi wapas aaye hain, bacha hua hissa abhi baki hai",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "2 दिन पहले वाले pressure cooker रिटर्न का पैसा बैंक में अभी तक दिख ही नहीं रहा",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "The refund was marked complete yesterday but my card statement still shows no credit.",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "आज ऑर्डर करूँ तो power bank Surat कब तक पहुँच जाएगा",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "मेरा running shoes खरीदना पक्का है, डिलीवरी इसी हफ़्ते में हो जानी चाहिए",
+        "gold": "order",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Since the hair dryer failed the quality check at pickup, when does the payback start",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "ऑर्डर 7753 वाले study table lamp को लेकर शिकायत है, उसकी हालत ठीक नहीं है",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Subah se mixer grinder me ghisne jaisi awaaz aa rahi hai aur hil bhi raha hai bahut",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "The offers page on the website is showing an error since evening",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "Poora ceiling fan wala amount bank ki jagah mere wallet me wapas kar dijiye",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Sirf 5 din hue kharide hue aur mera ceiling fan band pad gaya, turant dekho isko",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Does the bluetooth speaker support fast charging or only the normal speed",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Kindly return the full amount of the running shoes to my wallet instead of bank",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Order 8617 ke paise wapas karne ki request hai kyunki ab silk saree ki zarurat nahi rahi",
+        "gold": "refund",
+        "answer": " order",
+        "predicted": "order",
+        "passed": false
+      },
+      {
+        "text": "Loved the red hair dryer, my family is asking where I got it from",
+        "gold": "other",
+        "answer": " other",
+        "predicted": "other",
+        "passed": true
+      },
+      {
+        "text": "The stitching on the running shoes tore after I cleaned them once; I am disappointed.",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "Before buying the power bank I wanted to know how long its service support lasts",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Bas ye kehna tha ki winter jacket ki packing saaf suthri thi aur delivery bhi tameez se hui",
+        "gold": "other",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "12 din pehle wale office chair return ka paisa bank me abhi tak dikh hi nahi raha",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Is denim jeans ka grey rang machine me dho sakte hain ya sirf dry clean hoga",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "Mere liye white t-shirt XL mein khareed do, checkout main baad mein kar lunga.",
+        "gold": "order",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "My bank shows no credit yet against the pressure cooker return from 10 days ago",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "blue wala silk saree bahut pasand aaya, ghar wale pooch rahe hain kahan se liya",
+        "gold": "other",
+        "answer": " question",
+        "predicted": "question",
+        "passed": false
+      },
+      {
+        "text": "Mahina khatm hone se pehle dukaan ke liye 5 office chair order karne hain",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "The air fryer has been picked up from my home, by when should I expect Rs 1,999 back",
+        "gold": "refund",
+        "answer": " refund",
+        "predicted": "refund",
+        "passed": true
+      },
+      {
+        "text": "Poora steel water bottle wala amount bank ki jagah mere wallet me wapas kar dijiye",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "Customer care promised a callback about my power bank issue 10 days ago, still nothing",
+        "gold": "complaint",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": true
+      },
+      {
+        "text": "गलती से दो बार पेमेंट हो गया था, कृपया अतिरिक्त भुगतान मेरे बैंक में वापस कर दें।",
+        "gold": "refund",
+        "answer": " complaint",
+        "predicted": "complaint",
+        "passed": false
+      },
+      {
+        "text": "ceiling fan lene se pehle ye janna tha ki iski service support kitne time tak milti hai",
+        "gold": "question",
+        "answer": " question",
+        "predicted": "question",
+        "passed": true
+      },
+      {
+        "text": "I would like to buy the ceiling fan for my home in Lucknow, please place the order",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      },
+      {
+        "text": "Indore me ghar ke liye office chair lena hai, order kar dijiye aap",
+        "gold": "order",
+        "answer": " order",
+        "predicted": "order",
+        "passed": true
+      }
+    ]
+  },
+  "independent_test": null,
+  "gpu": "Tesla T4",
+  "training_seconds": 583.1
+}
