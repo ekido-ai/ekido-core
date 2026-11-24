@@ -8,8 +8,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 result = json.loads((HERE / 'summary.json').read_text(encoding='utf-8'))
-original = (HERE / 'original-prompts.jsonl').read_bytes()
-corrected = (HERE / 'corrected-prompts.jsonl').read_bytes()
+# Git can check out text as CRLF on Windows; the run hashed LF source bytes.
+original = (HERE / 'original-prompts.jsonl').read_bytes().replace(b'\r\n', b'\n')
+corrected = (HERE / 'corrected-prompts.jsonl').read_bytes().replace(b'\r\n', b'\n')
 assert hashlib.sha256(original).hexdigest() == result['original_prompt_sha256']
 assert hashlib.sha256(corrected).hexdigest() == result['prompt_set_sha256']
 before = [json.loads(line) for line in original.decode('utf-8').splitlines() if line.strip()]
