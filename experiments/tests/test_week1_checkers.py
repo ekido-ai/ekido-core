@@ -168,6 +168,19 @@ class PromptSet(unittest.TestCase):
     def test_a_good_set_passes(self):
         self.assertEqual(prompts.validate(self.write(self.good())), [])
 
+    def test_the_committed_set_passes_and_every_labelled_row_names_the_recipes_whole_label_set(self):
+        # The scorer needs set(labels) == set(expected.labels), and the assistant always proposes the recipe's full set,
+        # so a row that names only some labels can never be scored as correct.
+        from ekido_core.recipes import RECIPES
+
+        path = HERE / "assistant" / "prompts.jsonl"
+        self.assertEqual(prompts.validate(path), [])
+        rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+        labelled = [row["expected"] for row in rows if not row["should_refuse"] and "labels" in row["expected"]]
+        self.assertGreaterEqual(len(labelled), 8)  # not vacuous
+        for expected in labelled:
+            self.assertEqual(sorted(expected["labels"]), sorted(RECIPES[expected["recipe"]].labels), expected)
+
     def test_bad_recipe_language_and_too_few_refusals(self):
         lines = self.good()[:45]
         lines[0]["expected"]["recipe"] = "make-me-rich"

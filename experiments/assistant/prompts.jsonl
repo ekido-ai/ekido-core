@@ -1,11 +1,11 @@
-{"prompt": "mere customers ke emails ko complaint, order aur question me sort karna hai", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question"], "language": "hinglish"}, "should_refuse": false}
-{"prompt": "sort my support tickets into refund, complaint and other", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["refund", "complaint", "other"], "language": "en"}, "should_refuse": false}
-{"prompt": "whatsapp pe jo messages aate hain unko order ya question me baantna hai", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["order", "question"], "language": "hinglish"}, "should_refuse": false}
+{"prompt": "mere customers ke emails ko complaint, order aur question me sort karna hai", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question", "refund", "other"], "language": "hinglish"}, "should_refuse": false}
+{"prompt": "sort my support tickets into refund, complaint and other", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question", "refund", "other"], "language": "en"}, "should_refuse": false}
+{"prompt": "whatsapp pe jo messages aate hain unko order ya question me baantna hai", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question", "refund", "other"], "language": "hinglish"}, "should_refuse": false}
 {"prompt": "customer ke tickets ko category me daal do", "expected": {"recipe": "ticket-sorter-hinglish", "language": "hinglish"}, "should_refuse": false}
 {"prompt": "I run a small courier business. Tag every incoming message as complaint, order, question, refund or other.", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question", "refund", "other"], "language": "en"}, "should_refuse": false}
-{"prompt": "refund wale messages alag chahiye baaki sab other", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["refund", "other"], "language": "hinglish"}, "should_refuse": false}
+{"prompt": "refund wale messages alag chahiye baaki sab other", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question", "refund", "other"], "language": "hinglish"}, "should_refuse": false}
 {"prompt": "support inbox bahut bhar gaya hai, kuch auto sort ho jaye", "expected": {"recipe": "ticket-sorter-hinglish", "language": "hinglish"}, "should_refuse": false}
-{"prompt": "सपोर्ट के मैसेज को शिकायत, ऑर्डर और सवाल में बांटना है", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question"], "language": "hi"}, "should_refuse": false}
+{"prompt": "सपोर्ट के मैसेज को शिकायत, ऑर्डर और सवाल में बांटना है", "expected": {"recipe": "ticket-sorter-hinglish", "labels": ["complaint", "order", "question", "refund", "other"], "language": "hi"}, "should_refuse": false}
 {"prompt": "meri dukaan ke bills se vendor, invoice number, date aur total nikalna hai", "expected": {"recipe": "invoice-fields", "language": "hinglish"}, "should_refuse": false}
 {"prompt": "extract the GSTIN and total amount from my supplier invoices", "expected": {"recipe": "invoice-fields", "language": "en"}, "should_refuse": false}
 {"prompt": "invoice padh ke json bana do", "expected": {"recipe": "invoice-fields", "language": "hinglish"}, "should_refuse": false}
@@ -33,7 +33,7 @@
 {"prompt": "mere restaurant ke reviews positive, negative ya neutral me tag karne hain", "expected": {"recipe": "review-sentiment", "labels": ["positive", "negative", "neutral"], "language": "hinglish"}, "should_refuse": false}
 {"prompt": "tell me if each Google review of my shop is positive, negative or neutral", "expected": {"recipe": "review-sentiment", "labels": ["positive", "negative", "neutral"], "language": "en"}, "should_refuse": false}
 {"prompt": "reviews ka mood pata karna hai, achha ya bura", "expected": {"recipe": "review-sentiment", "language": "hinglish"}, "should_refuse": false}
-{"prompt": "customer feedback ko positive ya negative me baant do", "expected": {"recipe": "review-sentiment", "labels": ["positive", "negative"], "language": "hinglish"}, "should_refuse": false}
+{"prompt": "customer feedback ko positive ya negative me baant do", "expected": {"recipe": "review-sentiment", "labels": ["positive", "negative", "neutral"], "language": "hinglish"}, "should_refuse": false}
 {"prompt": "sentiment of product reviews", "expected": {"recipe": "review-sentiment", "language": "en"}, "should_refuse": false}
 {"prompt": "रिव्यू अच्छे हैं या बुरे, यह अपने आप पता चलना चाहिए", "expected": {"recipe": "review-sentiment", "language": "hi"}, "should_refuse": false}
 {"prompt": "hotel ke reviews padh ke batao kaun se naraz customers hain", "expected": {"recipe": "review-sentiment", "language": "hinglish"}, "should_refuse": false}
