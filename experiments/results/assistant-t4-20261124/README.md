@@ -4,6 +4,9 @@ Related to [internal #17](https://github.com/ekido-ai/ekido-internal/issues/17).
 This is the saved version-4 private Kaggle run, retrieved on 24 November 2026.
 The Qwen2.5-1.5B-Instruct Q4_K_M model ran through llama.cpp and a local Platform
 test client with synthetic dataset manifests. It is not a staging evaluation.
+It uses the earlier Platform commit recorded in `summary.json`; it predates the
+dedicated guard added by [platform #25](https://github.com/ekido-ai/ekido-platform/pull/25)
+and therefore does not evaluate the current guarded assistant path.
 
 All 50 prompts received responses. The scorer recorded **0/40 valid specs** on
 allowed prompts and **10/10 refusals** on prompts marked for refusal. The 90%
