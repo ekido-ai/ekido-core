@@ -186,6 +186,34 @@ class WrappingTests(unittest.TestCase):
         with self.assertRaises(JobKeyError):
             jobkeys.unwrap_job_key(wrapped, "job-9", jobkeys.LocalWrapper())  # a different local key
 
+    def test_a_damaged_local_wrapped_payload_always_raises_the_one_error_type(self):
+        # age-encrypt to the wrapper's own key so decryption succeeds and the damage is inside: only JobKeyError may escape.
+        local = str(jobkeys.x25519.Identity.generate())
+        wrapper = jobkeys.LocalWrapper(local)
+        recipient = str(jobkeys.x25519.Identity.from_str(local).to_public())
+        good = self.key.identity
+        payloads = {
+            "not json": b"this is not json",
+            "not utf-8": b"\xff\xfe\x00",
+            "a list": b"[1, 2, 3]",
+            "a string": b'"just text"',
+            "no identity field": json.dumps({"job_id": "job-1"}).encode(),
+            "identity is a number": json.dumps({"job_id": "job-1", "identity": 7}).encode(),
+            "identity is not a key": json.dumps({"job_id": "job-1", "identity": "not a key"}).encode(),
+            "null": b"null",
+        }
+        for name, plain in payloads.items():
+            with self.subTest(name):
+                with self.assertRaises(JobKeyError):
+                    wrapper.unwrap(jobkeys.encrypt_bytes(plain, recipient), "job-1")
+        # and the good payload still works, so the checks above are about the damage and not about the helper
+        ok = json.dumps({"job_id": "job-1", "identity": good}).encode()
+        self.assertEqual(wrapper.unwrap(jobkeys.encrypt_bytes(ok, recipient), "job-1"), good)
+
+    def test_the_module_does_not_promise_that_an_identity_is_erased_from_memory(self):
+        self.assertIn("never written down", jobkeys.__doc__)
+        self.assertIn("cannot be wiped", jobkeys.__doc__)
+
     def test_wrapping_logs_nothing_secret(self):
         with self.assertLogs(level="DEBUG") as captured:
             logging.getLogger("probe").debug("start")
