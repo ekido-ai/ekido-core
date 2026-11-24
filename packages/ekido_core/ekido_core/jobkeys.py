@@ -5,6 +5,9 @@ Every job gets its own X25519 keypair. Data (datasets, checkpoints, models) is e
 read. The identity is kept only in memory while it is needed; at rest it exists only *wrapped* (encrypted) by AWS KMS
 (`alias/ekido-data`, with the job id as encryption context) or, in tests, by a local key.
 
+"In memory only" means *never written down*, not *erased after use*: a Python `str` cannot be wiped, so an identity can stay in
+the process's memory until the interpreter reuses it. Do not promise more than that (for example in a privacy policy).
+
 No cryptography is written here. Encryption and decryption are `pyrage` (the Rust `age` crate); KMS does the
 wrapping. This module only chooses the keys, moves bytes through them and binds a wrapped identity to its job.
 
@@ -213,10 +216,17 @@ class LocalWrapper:
         return encrypt_bytes(payload.encode("ascii"), self._local_recipient)
 
     def unwrap(self, wrapped: bytes, job_id: str) -> str:
-        payload = json.loads(decrypt_bytes(wrapped, self._local))
-        if payload.get("job_id") != _check_job_id(job_id):
+        plain = decrypt_bytes(wrapped, self._local)  # raises JobKeyError for a wrong key or a damaged age file
+        try:
+            payload = json.loads(plain)
+            found_job, identity = payload.get("job_id"), payload["identity"]
+        except (ValueError, KeyError, TypeError, AttributeError):
+            # Callers only ever see one error type, whatever the damage: bad JSON, not an object, a missing field, bad bytes.
+            raise JobKeyError("the wrapped identity is damaged") from None
+        if found_job != _check_job_id(job_id):
             raise JobKeyError("this wrapped identity belongs to a different job")
-        identity = payload["identity"]
+        if not isinstance(identity, str):
+            raise JobKeyError("the wrapped identity is damaged")
         _identity(identity)
         return identity
 
