@@ -88,10 +88,10 @@ All service routes are internal and need the internal token.
 On staging, with a real device: upload 30 + 20 → pay → generate (kill and resume once) → check → review with removals → approve → train →
 quality gate passes or refunds. A rejected set refunds in full. Raw evidence under `experiments/results/`.
 
-## Open, to be decided by Piyush
+## Decided on 25 Nov
 
-1. **What the generation provider is paid**, and from which part of the order. Until it is decided, v1 on staging pays nothing for generation.
-2. Whether cross-device resume may slip past the freeze (a restart from zero would then be stated in the report).
+1. **The generation provider is not paid yet.** A rate per accepted GPU-second is set after measuring.
+2. **Resuming on another device may slip past 27 Nov.** If it does, a restart from zero is stated in the report.
 
 ## Changes needed in work already written
 
