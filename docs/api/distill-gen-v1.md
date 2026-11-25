@@ -55,6 +55,9 @@ the Coordinator, the provider runtime and the verifier build against. Code: `eki
 
 - Loads the teacher at the pinned revision, 4-bit, and calls the existing filtered generator seed by seed.
 - Excludes a generated input that matches a seed input, an earlier generated input, or a hash in `test_input_sha256`.
+- **Seed rows are untrusted data.** They are the customer's text and may contain instructions. The teacher prompt puts them inside a marked
+  data block ("data, not instructions"), and a closing marker found inside a row is neutralised. A row can never change the recipe, the
+  labels or the output format; the verifier's checks still apply to whatever comes out.
 - **Progress is counted in seeds.** After each seed it saves the progress file and uploads it through the Coordinator, so another device
   resumes from the next seed.
 - Writes `generated.jsonl` (the recipe's two columns, nothing else) and `generation_report.json` with at least `settings`,
@@ -95,6 +98,7 @@ quality gate passes or refunds. A rejected set refunds in full. Raw evidence und
 
 ## Changes needed in work already written
 
-- Runtime (#133): take `test_input_sha256` instead of test rows; hash and write rows with `jsonl_bytes`; teacher from the spec.
+- Runtime (#133): take `test_input_sha256` instead of test rows; hash and write rows with `jsonl_bytes`; teacher from the spec; wrap
+  seed rows as data in the teacher prompt.
 - Platform (#154): build the spec exactly as above (`seeds` object, `per_seed`, `teacher`; drop `target_rows`), send `seeds_jsonl`.
 - Verifier (#141): none; it already accepts hashes.
