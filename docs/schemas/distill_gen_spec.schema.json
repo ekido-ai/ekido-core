@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ekido/distill_gen_spec/v1",
+  "title": "DistillGenSpec",
+  "description": "A generation job: a teacher writes training rows from a customer's seed examples. Immutable for the job.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["template", "recipe_id", "teacher", "seeds", "test_input_sha256", "per_seed", "generation_seed", "max_new_tokens", "attempts", "filter_version", "attempt"],
+  "properties": {
+    "template": { "const": "distill-gen/v1" },
+    "recipe_id": { "type": "string" },
+    "teacher": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision", "quantization"],
+      "properties": {
+        "id": { "const": "Qwen/Qwen2.5-7B-Instruct" },
+        "revision": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "quantization": { "const": "4bit" }
+      }
+    },
+    "seeds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "bytes", "rows"],
+      "properties": {
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1, "maximum": 4000000 },
+        "rows": { "type": "integer", "minimum": 1, "maximum": 100 }
+      }
+    },
+    "test_input_sha256": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10000,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+    },
+    "per_seed": { "type": "integer", "minimum": 1, "maximum": 20 },
+    "generation_seed": { "type": "integer", "minimum": 0, "maximum": 2147483647 },
+    "max_new_tokens": { "type": "integer", "minimum": 1, "maximum": 512 },
+    "attempts": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "filter_version": { "const": 1 },
+    "attempt": { "type": "integer", "minimum": 0, "maximum": 1 }
+  }
+}
