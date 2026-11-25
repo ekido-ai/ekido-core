@@ -46,7 +46,7 @@ paths:
         content: {application/json: {schema: {type: object, required: [email], properties: {email: {type: string, format: email}}}}}
       responses:
         "202": {description: Sent if the address is valid. The response is the same whether or not an account exists.}
-        "429": {$ref: "#/components/responses/Error"}
+        "429": {$ref: "#/components/responses/Limited"}
   /v1/auth/email/verify:
     post:
       tags: [auth]
@@ -130,7 +130,15 @@ paths:
       requestBody:
         required: true
         content: {application/json: {schema: {type: object, required: [email, role], properties: {email: {type: string, format: email}, role: {$ref: "#/components/schemas/Role"}}}}}
-      responses: {"202": {description: Invitation sent}, "403": {$ref: "#/components/responses/Error"}}
+      description: >-
+        Sends an invite email that names the team and the inviter. The person is listed with status "invited" until
+        they sign in, from the invite's link or any other sign-in. The address gets at most 5 emails an hour
+        (sign-in links and invites together); past that the answer is 429 TOO_MANY_INVITES with `retry_after`, and
+        nobody is added.
+      responses:
+        "202": {description: Invitation sent}
+        "403": {$ref: "#/components/responses/Error"}
+        "429": {$ref: "#/components/responses/Limited"}
   /v1/orgs/{org_id}/members/{user_id}:
     parameters: [{$ref: "#/components/parameters/OrgId"}, {name: user_id, in: path, required: true, schema: {type: string}}]
     delete:
@@ -376,11 +384,23 @@ components:
     Error:
       description: An error
       content: {application/json: {schema: {$ref: "#/components/schemas/Error"}}}
+    Limited:
+      description: Too many emails to this address in the last hour (TOO_MANY_LINKS or TOO_MANY_INVITES). Also sent as the Retry-After header.
+      headers: {Retry-After: {schema: {type: integer}, description: Seconds to wait}}
+      content: {application/json: {schema: {$ref: "#/components/schemas/Limited"}}}
   schemas:
     Error:
       type: object
       required: [error, detail]
       properties: {error: {type: string, example: QUOTE_EXPIRED}, detail: {type: string}}
+    Limited:
+      type: object
+      required: [error, detail, retry_after, retry_at]
+      properties:
+        error: {type: string, enum: [TOO_MANY_LINKS, TOO_MANY_INVITES]}
+        detail: {type: string}
+        retry_after: {type: integer, description: Seconds until another email can go, rounded up to whole minutes}
+        retry_at: {type: string, format: date-time}
     Problems:
       type: object
       required: [error, problems]
@@ -400,7 +420,17 @@ components:
       properties:
         org_id: {type: string}
         name: {type: string}
-        members: {type: array, items: {type: object, properties: {user_id: {type: string}, email: {type: string}, role: {$ref: "#/components/schemas/Role"}}}}
+        members: {type: array, items: {$ref: "#/components/schemas/Member"}}
+    Member:
+      type: object
+      required: [user_id, email, role, status]
+      properties:
+        user_id: {type: string}
+        email: {type: string}
+        role: {$ref: "#/components/schemas/Role"}
+        status: {type: string, enum: [joined, invited], description: '"invited" until the person signs in after being invited'}
+        invited_at: {type: string, format: date-time, nullable: true}
+        joined_at: {type: string, format: date-time, nullable: true}
     ApiKey:
       type: object
       required: [key_id, name, mode, prefix, created_at]
