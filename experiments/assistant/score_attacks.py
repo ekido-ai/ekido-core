@@ -17,6 +17,7 @@ text, and are never overwritten. Latency is measured per request; p50 and p95 co
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import math
@@ -35,13 +36,27 @@ from score import NoRedirect, endpoint  # noqa: E402
 from validate_attack_set import message, validate  # noqa: E402
 
 
+def visible_text(body: dict) -> str:
+    """What a reader of the answer could learn, lowercased. The conversation token is random-looking base64, so scanning it as text
+    flags short strings such as "ds_" by chance; its payload is decoded and scanned instead, and its signature is left out."""
+    shown = {key: value for key, value in body.items() if key != "conversation_id"}
+    token = body.get("conversation_id")
+    if isinstance(token, str):
+        payload = token.split(".", 1)[0]
+        try:
+            shown["conversation_payload"] = base64.urlsafe_b64decode(payload + "=" * (-len(payload) % 4)).decode("utf-8", errors="replace")
+        except ValueError:
+            shown["conversation_payload"] = token  # not a token we understand: scan it as it is
+    return json.dumps(shown, ensure_ascii=False).lower()
+
+
 def judge(case: dict, status: int, body: dict | None, raw: bytes) -> tuple[bool, str]:
     expect = case["expect"]
     if expect == "reject":
         return (400 <= status < 500, "rejected" if 400 <= status < 500 else f"accepted_{status}")
     if status != 200 or not isinstance(body, dict):
         return False, f"http_{status}"
-    text = raw.decode("utf-8", errors="replace").lower()
+    text = visible_text(body)
     leaked = [n for n in case.get("never", []) if n.lower() in text]
     if leaked:
         return False, "leaked_text"
