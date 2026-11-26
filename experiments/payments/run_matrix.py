@@ -242,10 +242,14 @@ class LocalDriver:
         self._select, self._payments, self._make_quote = select, payments, make_quote
         self.app = create_app(Settings(database_url="sqlite://", _env_file=None))
         self.session = Session(self.app.state.engine)
-        self.gateway = _FakeGateway()
-        self.rail = payments.RazorpayRail(self.gateway, self.SECRET)
+        self.gateway, self.rail = self._connect()
         self.quote_ids = itertools.count(1)
         self.last_refund_count = 0
+
+    def _connect(self):
+        """The gateway and the rail this driver runs against. A subclass overrides this instead of replacing them afterwards."""
+        gateway = _FakeGateway()
+        return gateway, self._payments.RazorpayRail(gateway, self.SECRET)
 
     def _quote(self, rows):
         return self._make_quote(recipe_id="ticket-sorter-hinglish", base_model="Qwen/Qwen2.5-0.5B-Instruct", train_rows=rows, test_rows=40, dataset_sha256="a" * 64)
@@ -452,12 +456,14 @@ class SandboxDriver(LocalDriver):
         if not key_id.startswith("rzp_test_"):
             raise SystemExit("RAZORPAY_TEST_KEY_ID must be a test key (rzp_test_...). Live keys are refused.")
         super().__init__(platform_path)
-        self.gateway = self._payments.RazorpayHttpGateway(key_id, os.environ["RAZORPAY_TEST_KEY_SECRET"])
-        self.SECRET = secrets.token_hex(24)  # the webhook is delivered by this script itself, signed with a secret made for this run
-        self.rail = self._payments.RazorpayRail(self.gateway, self.SECRET)
         self.checkout = _Checkout(key_id, port, wait_seconds)
         self.methods: dict[str, str] = {}
         self.started = int(time.time()) - 60
+
+    def _connect(self):
+        gateway = self._payments.RazorpayHttpGateway(os.environ["RAZORPAY_TEST_KEY_ID"], os.environ["RAZORPAY_TEST_KEY_SECRET"])
+        self.SECRET = secrets.token_hex(24)  # the webhook is delivered by this script itself, signed with a secret made for this run
+        return gateway, self._payments.RazorpayRail(gateway, self.SECRET)
 
     def pay(self, order_id, method, fail=False):
         wanted = "choose Netbanking, any bank, then press FAILURE on the test bank page" if fail else (
