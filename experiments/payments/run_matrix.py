@@ -29,6 +29,9 @@ import hashlib
 import hmac
 import itertools
 import json
+import threading
+import secrets
+import queue
 import os
 import sys
 import time
@@ -239,10 +242,14 @@ class LocalDriver:
         self._select, self._payments, self._make_quote = select, payments, make_quote
         self.app = create_app(Settings(database_url="sqlite://", _env_file=None))
         self.session = Session(self.app.state.engine)
-        self.gateway = _FakeGateway()
-        self.rail = payments.RazorpayRail(self.gateway, self.SECRET)
+        self.gateway, self.rail = self._connect()
         self.quote_ids = itertools.count(1)
         self.last_refund_count = 0
+
+    def _connect(self):
+        """The gateway and the rail this driver runs against. A subclass overrides this instead of replacing them afterwards."""
+        gateway = _FakeGateway()
+        return gateway, self._payments.RazorpayRail(gateway, self.SECRET)
 
     def _quote(self, rows):
         return self._make_quote(recipe_id="ticket-sorter-hinglish", base_model="Qwen/Qwen2.5-0.5B-Instruct", train_rows=rows, test_rows=40, dataset_sha256="a" * 64)
@@ -350,6 +357,156 @@ class _FakeGateway:
         return [dict(p) for p in self.payments.values()]
 
 
+# ---------------------------------------------------------------------------------------------------- the sandbox driver
+
+
+CHECKOUT_PAGE = """<!doctype html><meta charset="utf-8"><title>Ekido test payments</title>
+<body style="font-family:sans-serif;max-width:40rem;margin:2rem auto"><h2>Razorpay TEST payments</h2><p id="what">Waiting for the next step...</p>
+<button id="pay" style="font-size:1.2rem;padding:.6rem 1.4rem" hidden>Open payment</button><p>No real money moves. Leave this tab open.</p>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script><script>
+let current = null;
+async function poll() {
+  const step = await (await fetch("/current")).json();
+  if (step.done) { what.textContent = "All steps are finished. You can close this tab."; pay.hidden = true; return; }
+  if (step.id && step.id !== current) { current = step.id; what.textContent = "Step " + step.number + ": " + step.instruction; pay.hidden = false;
+    pay.onclick = () => { const checkout = new Razorpay({ key: step.key_id, order_id: step.order, name: "Ekido test", prefill: { contact: "+919000000000", email: "test@example.com" },
+        handler: r => report(step.id, r.razorpay_payment_id) });
+      checkout.on("payment.failed", e => { report(step.id, e.error.metadata.payment_id); checkout.close(); });
+      checkout.open(); }; }
+  setTimeout(poll, 1000);
+}
+async function report(id, payment) { await fetch("/done", { method: "POST", body: JSON.stringify({ id, payment }) }); what.textContent = "Recorded. Waiting for the next step..."; pay.hidden = true; poll(); }
+poll();
+</script></body>"""
+
+
+class _Checkout:
+    """A tiny local page on 127.0.0.1 where a person makes each payment in Razorpay Checkout (a captcha stops automation, and should)."""
+
+    def __init__(self, key_id: str, port: int, wait_seconds: int):
+        from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+        self.key_id, self.wait_seconds, self.step, self.number, self.finished = key_id, wait_seconds, None, 0, False
+        self.answer: queue.Queue = queue.Queue()
+        self.probe_every = 4.0
+        outer = self
+
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+
+            def _send(self, body: bytes, kind: str):
+                self.send_response(200)
+                self.send_header("Content-Type", kind)
+                self.send_header("Cache-Control", "no-store")
+                self.end_headers()
+                self.wfile.write(body)
+
+            def do_GET(self):
+                if self.path == "/current":
+                    self._send(json.dumps({"done": True} if outer.finished else (outer.step or {})).encode(), "application/json")
+                else:
+                    self._send(CHECKOUT_PAGE.encode(), "text/html; charset=utf-8")
+
+            def do_POST(self):
+                data = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
+                if outer.step and data.get("id") == outer.step["id"] and str(data.get("payment", "")).startswith("pay_"):
+                    outer.step = None
+                    outer.answer.put(data["payment"])
+                self._send(b"{}", "application/json")
+
+        self.server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
+        threading.Thread(target=self.server.serve_forever, daemon=True).start()
+        print(f"open http://127.0.0.1:{port}/ in your browser and follow the steps", flush=True)
+
+    def pay(self, gateway_order: str, instruction: str, probe=None) -> str:
+        """Wait for the person to pay. `probe` asks Razorpay whether the order has been paid, because the page's report can be lost (for
+        example when someone retries inside the same popup after a failed attempt)."""
+        self.number += 1
+        self.step = {"id": f"step{self.number}", "number": self.number, "instruction": instruction, "order": gateway_order, "key_id": self.key_id}
+        print(f"waiting for step {self.number}: {instruction}", flush=True)
+        deadline = time.monotonic() + self.wait_seconds
+        while True:
+            left = deadline - time.monotonic()
+            if left <= 0:
+                break
+            try:
+                return self.answer.get(timeout=min(left, self.probe_every))
+            except queue.Empty:
+                found = probe() if probe is not None else None
+                if found:
+                    self.step = None
+                    print(f"step {self.number}: found the payment at Razorpay (the page did not report it)", flush=True)
+                    return found
+        self.step = None
+        raise RuntimeError(f"nobody completed step {self.number} within {self.wait_seconds} seconds")
+
+
+class SandboxDriver(LocalDriver):
+    """The Platform's payment code in this process against Razorpay's real TEST API; a person pays in Checkout. Not staging."""
+
+    name = "sandbox"
+    evidence_type = "Razorpay TEST mode with the Platform code run locally (not the staging server): payments made by a person in Checkout"
+
+    def __init__(self, platform_path: str | None, port: int = 5599, wait_seconds: int = 900):
+        missing = [v for v in ("RAZORPAY_TEST_KEY_ID", "RAZORPAY_TEST_KEY_SECRET") if not os.environ.get(v)]
+        if missing:
+            raise SystemExit("set these environment variables first (never paste them anywhere): " + ", ".join(missing))
+        key_id = os.environ["RAZORPAY_TEST_KEY_ID"]
+        if not key_id.startswith("rzp_test_"):
+            raise SystemExit("RAZORPAY_TEST_KEY_ID must be a test key (rzp_test_...). Live keys are refused.")
+        super().__init__(platform_path)
+        self.checkout = _Checkout(key_id, port, wait_seconds)
+        self.methods: dict[str, str] = {}
+        self.started = int(time.time()) - 60
+
+    def _connect(self):
+        gateway = self._payments.RazorpayHttpGateway(os.environ["RAZORPAY_TEST_KEY_ID"], os.environ["RAZORPAY_TEST_KEY_SECRET"])
+        self.SECRET = secrets.token_hex(24)  # the webhook is delivered by this script itself, signed with a secret made for this run
+        return gateway, self._payments.RazorpayRail(gateway, self.SECRET)
+
+    def pay(self, order_id, method, fail=False):
+        wanted = "choose Netbanking, any bank, then press FAILURE on the test bank page" if fail else (
+            f"pay with {method.upper()} if it is offered (UPI ID success@razorpay, or the test card), otherwise Netbanking, any bank, then SUCCESS")
+        gateway_order = self._order(order_id).gateway_order_id
+
+        def captured():
+            try:
+                items = self.gateway._call("GET", f"/orders/{gateway_order}/payments").get("items", [])
+            except self._payments.PaymentError:
+                return None
+            return next((p["id"] for p in items if p.get("status") == "captured"), None)
+
+        payment = self.checkout.pay(gateway_order, wanted, probe=None if fail else captured)
+        for _ in range(20):  # Razorpay may take a moment to capture
+            entity = self.gateway.fetch_payment(payment)
+            if entity.get("status") in ("captured", "failed"):
+                break
+            time.sleep(1)
+        self.methods[payment] = f"{entity.get('method')} ({entity.get('status')}), asked for {method}{' failure' if fail else ''}"
+        return payment
+
+    def _webhook(self, name, payment_id, event_id):
+        raw = json.dumps({"event": name, "payload": {"payment": {"entity": self.gateway.fetch_payment(payment_id)}}}, separators=(",", ":")).encode()
+        return self.rail.handle_webhook(self.session, raw, hmac.new(self.SECRET.encode(), raw, hashlib.sha256).hexdigest(), event_id)
+
+    def refunded_amount(self, payment_id):
+        return self.gateway.fetch_payment(payment_id).get("amount_refunded")
+
+    def refund_count(self, payment_id):
+        return self.gateway._call("GET", f"/payments/{payment_id}/refunds").get("count")
+
+    def reconcile(self):
+        self.checkout.finished = True
+        return self.rail.reconcile(self.session, from_ts=self.started, to_ts=int(time.time()) + 60).as_dict()
+
+    def ledger_table(self):
+        rows = super().ledger_table()
+        for row in rows:
+            row["method"] = self.methods.get(row["payment"])
+        return rows
+
+
 # ---------------------------------------------------------------------------------------------------- the staging driver
 
 
@@ -393,7 +550,7 @@ class StagingDriver:
 
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--driver", choices=("local", "staging"), default="local")
+    parser.add_argument("--driver", choices=("local", "sandbox", "staging"), default="local")
     parser.add_argument("--out", type=Path, help="result file; refused if it already exists")
     parser.add_argument("--platform", help="path to the ekido-platform checkout (local driver)")
     parser.add_argument("--url", default="https://ekido-staging-api.duckdns.org/sepolia", help="the staging API (staging driver)")
@@ -407,7 +564,7 @@ def main(argv: list[str]) -> int:
     if args.out is not None and args.out.exists():
         print(f"{args.out} already exists; choose a new name so an earlier result is never overwritten", file=sys.stderr)
         return 2
-    driver = LocalDriver(args.platform) if args.driver == "local" else StagingDriver(args.url)
+    driver = LocalDriver(args.platform) if args.driver == "local" else SandboxDriver(args.platform) if args.driver == "sandbox" else StagingDriver(args.url)
     result = run_matrix(driver)
     text = json.dumps(result, indent=2, default=str) + "\n"
     if args.out is not None:

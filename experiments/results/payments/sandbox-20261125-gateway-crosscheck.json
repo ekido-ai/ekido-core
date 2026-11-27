@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-11-25T09:07:19+00:00",
+  "source": "Razorpay TEST API, read with the same test keys",
+  "all_match": true,
+  "orders": [
+    {
+      "order": "order_U4LjOpwDpkThod",
+      "payment": "pay_U4LkxMDioHPxXo",
+      "our_status": "SETTLED",
+      "our_net_paise": 11682,
+      "razorpay_order_status": "paid",
+      "razorpay_payment_status": "captured",
+      "razorpay_method": "netbanking",
+      "razorpay_net_paise": 11682,
+      "match": true
+    },
+    {
+      "order": "order_U4LlI79pDpkgVw",
+      "payment": "pay_U4LlSGaRB4ZpFc",
+      "our_status": "REFUNDED",
+      "our_net_paise": 0,
+      "razorpay_order_status": "paid",
+      "razorpay_payment_status": "refunded",
+      "razorpay_method": "netbanking",
+      "razorpay_net_paise": 0,
+      "match": true
+    },
+    {
+      "order": "order_U4LlkCrsZ2sxpj",
+      "payment": "pay_U4LmwREMovuFDZ",
+      "our_status": "HELD",
+      "our_net_paise": 11682,
+      "razorpay_order_status": "paid",
+      "razorpay_payment_status": "captured",
+      "razorpay_method": "wallet",
+      "razorpay_net_paise": 11682,
+      "match": true
+    },
+    {
+      "order": "order_U4LuCeC8HowoTR",
+      "payment": "pay_U4LvQ6YsICvZKu",
+      "our_status": "HELD",
+      "our_net_paise": 11682,
+      "razorpay_order_status": "paid",
+      "razorpay_payment_status": "captured",
+      "razorpay_method": "wallet",
+      "razorpay_net_paise": 11682,
+      "match": true
+    },
+    {
+      "order": "order_U4LvlzT5jVWWVl",
+      "payment": null,
+      "our_status": "CREATED",
+      "our_net_paise": 0,
+      "razorpay_order_status": "created",
+      "razorpay_payment_status": null,
+      "razorpay_method": null,
+      "razorpay_net_paise": 0,
+      "match": true
+    }
+  ]
+}
