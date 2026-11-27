@@ -1,0 +1,100 @@
+{"text": "running shoe खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "water bottle खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "pillow khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "desk lamp खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "bedsheet खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "I am pleased that the water bottle suits what I needed.", "label": "positive"}
+{"text": "Meri zarurat ke hisaab se power bank bura nikla, main dukhi hoon.", "label": "negative"}
+{"text": "I am unhappy that the backpack does not suit what I needed.", "label": "negative"}
+{"text": "शाम को मैंने bedsheet पैकेट से निकाला।", "label": "neutral"}
+{"text": "The parcel included one scarf.", "label": "neutral"}
+{"text": "Meri zarurat ke hisaab se t-shirt bura nikla, main dukhi hoon.", "label": "negative"}
+{"text": "Parcel ke andar ek bedsheet tha.", "label": "neutral"}
+{"text": "I am pleased that the backpack suits what I needed.", "label": "positive"}
+{"text": "पार्सल के अंदर एक backpack था।", "label": "neutral"}
+{"text": "water bottle khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "desk lamp khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "Shaam ko maine running shoe unpack kiya.", "label": "neutral"}
+{"text": "The parcel included one power bank.", "label": "neutral"}
+{"text": "Shaam ko maine water bottle unpack kiya.", "label": "neutral"}
+{"text": "I unpacked the backpack in the evening.", "label": "neutral"}
+{"text": "backpack khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "मेरी जरूरत के हिसाब से pillow खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"text": "Meri zarurat ke hisaab se water bottle achha nikla, main khush hoon.", "label": "positive"}
+{"text": "पार्सल के अंदर एक notebook था।", "label": "neutral"}
+{"text": "Shaam ko maine pillow unpack kiya.", "label": "neutral"}
+{"text": "मेरी जरूरत के हिसाब से running shoe अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"text": "मेरी जरूरत के हिसाब से water bottle खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"text": "frying pan खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "शाम को मैंने power bank पैकेट से निकाला।", "label": "neutral"}
+{"text": "Parcel ke andar ek power bank tha.", "label": "neutral"}
+{"text": "running shoe khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "The parcel included one desk lamp.", "label": "neutral"}
+{"text": "I am pleased that the notebook suits what I needed.", "label": "positive"}
+{"text": "scarf खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "Parcel ke andar ek t-shirt tha.", "label": "neutral"}
+{"text": "मेरी जरूरत के हिसाब से power bank अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"text": "शाम को मैंने pillow पैकेट से निकाला।", "label": "neutral"}
+{"text": "Shaam ko maine backpack unpack kiya.", "label": "neutral"}
+{"text": "Meri zarurat ke hisaab se desk lamp bura nikla, main dukhi hoon.", "label": "negative"}
+{"text": "शाम को मैंने water bottle पैकेट से निकाला।", "label": "neutral"}
+{"text": "शाम को मैंने t-shirt पैकेट से निकाला।", "label": "neutral"}
+{"text": "desk lamp खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "I am pleased that the t-shirt suits what I needed.", "label": "positive"}
+{"text": "I am pleased that the running shoe suits what I needed.", "label": "positive"}
+{"text": "bedsheet khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "मेरी जरूरत के हिसाब से t-shirt अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"text": "backpack खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "scarf khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "The mug has been a pleasant purchase and I am satisfied.", "label": "positive"}
+{"text": "notebook खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "Shaam ko maine bedsheet unpack kiya.", "label": "neutral"}
+{"text": "I am unhappy that the water bottle does not suit what I needed.", "label": "negative"}
+{"text": "शाम को मैंने notebook पैकेट से निकाला।", "label": "neutral"}
+{"text": "scarf खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "Parcel ke andar ek backpack tha.", "label": "neutral"}
+{"text": "शाम को मैंने desk lamp पैकेट से निकाला।", "label": "neutral"}
+{"text": "frying pan khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "running shoe खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "Shaam ko maine power bank unpack kiya.", "label": "neutral"}
+{"text": "The desk lamp has been an unpleasant purchase and I am dissatisfied.", "label": "negative"}
+{"text": "The water bottle has been a pleasant purchase and I am satisfied.", "label": "positive"}
+{"text": "पार्सल के अंदर एक bedsheet था।", "label": "neutral"}
+{"text": "The t-shirt has been an unpleasant purchase and I am dissatisfied.", "label": "negative"}
+{"text": "desk lamp khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "मेरी जरूरत के हिसाब से notebook अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"text": "pillow khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "mug खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "I am pleased that the mug suits what I needed.", "label": "positive"}
+{"text": "water bottle खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "I unpacked the pillow in the evening.", "label": "neutral"}
+{"text": "power bank खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "The running shoe has been an unpleasant purchase and I am dissatisfied.", "label": "negative"}
+{"text": "power bank khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "Meri zarurat ke hisaab se mug achha nikla, main khush hoon.", "label": "positive"}
+{"text": "I am pleased that the desk lamp suits what I needed.", "label": "positive"}
+{"text": "पार्सल के अंदर एक water bottle था।", "label": "neutral"}
+{"text": "scarf khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "pillow खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "pillow खरीदकर मुझे काफी निराशा हुई।", "label": "negative"}
+{"text": "मेरी जरूरत के हिसाब से scarf खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"text": "I am unhappy that the notebook does not suit what I needed.", "label": "negative"}
+{"text": "notebook khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "Parcel ke andar ek notebook tha.", "label": "neutral"}
+{"text": "मेरी जरूरत के हिसाब से running shoe खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"text": "Shaam ko maine notebook unpack kiya.", "label": "neutral"}
+{"text": "Parcel ke andar ek scarf tha.", "label": "neutral"}
+{"text": "mug khareedkar mujhe kaafi khushi hui.", "label": "positive"}
+{"text": "t-shirt खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "Shaam ko maine frying pan unpack kiya.", "label": "neutral"}
+{"text": "The parcel included one t-shirt.", "label": "neutral"}
+{"text": "bedsheet खरीदकर मुझे काफी खुशी हुई।", "label": "positive"}
+{"text": "I am pleased that the frying pan suits what I needed.", "label": "positive"}
+{"text": "Meri zarurat ke hisaab se running shoe bura nikla, main dukhi hoon.", "label": "negative"}
+{"text": "Meri zarurat ke hisaab se notebook bura nikla, main dukhi hoon.", "label": "negative"}
+{"text": "I am unhappy that the desk lamp does not suit what I needed.", "label": "negative"}
+{"text": "water bottle khareedkar mujhe kaafi niraasha hui.", "label": "negative"}
+{"text": "मेरी जरूरत के हिसाब से backpack अच्छा निकला, मैं खुश हूँ।", "label": "positive"}
+{"text": "मेरी जरूरत के हिसाब से notebook खराब निकला, मैं दुखी हूँ।", "label": "negative"}
+{"text": "Parcel ke andar ek running shoe tha.", "label": "neutral"}
+{"text": "पार्सल के अंदर एक t-shirt था।", "label": "neutral"}
