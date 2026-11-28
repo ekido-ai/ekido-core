@@ -1,0 +1,64 @@
+{
+  "hash": "sha256",
+  "rule": "payouts_hash = lowercase hex of sha256(salt || body), where salt is the 32 raw bytes of `salt` (hex here) and body is the canonical JSON (RFC 8785: keys sorted, no spaces, UTF-8) of {\"kind\": \"ekido.payouts.v2\", \"payouts\": [[payee, paise], ...]} with the pairs sorted by payee",
+  "kind": "ekido.payouts.v2",
+  "notes": [
+    "payee order in `payouts` does not matter; the pairs are sorted by payee before hashing",
+    "every amount is a positive whole number of paise; a salt that is not 32 bytes, or is all zero, must be refused",
+    "the same payouts with a different salt give a different hash, so a customer who does not have the salt cannot check a guessed split"
+  ],
+  "cases": [
+    {
+      "name": "one payee",
+      "payouts": {
+        "0x00000000000000000000000000000000000000a1": 10000
+      },
+      "salt": "d1b3f9ad93914d87f6a28a2e351e22f7244d10419730e834f7b23d89b31a5e3d",
+      "payouts_hash": "0beff767fb518ce98f564f826abf9e07eeee0e9ca5394e290b9e8dc5c779ff39"
+    },
+    {
+      "name": "two payees",
+      "payouts": {
+        "0x00000000000000000000000000000000000000a1": 6300,
+        "0x00000000000000000000000000000000000000b2": 2700
+      },
+      "salt": "3b621cfce50b6f98502b017596008d1acca92d2e4927f92621e19b5aff8a859e",
+      "payouts_hash": "a00fd1c4955b31c897cb884e9ad0c365ac9f9b852f5eeace5310ff768268f271"
+    },
+    {
+      "name": "two payees, listed in the other order",
+      "payouts": {
+        "0x00000000000000000000000000000000000000b2": 2700,
+        "0x00000000000000000000000000000000000000a1": 6300
+      },
+      "salt": "3b621cfce50b6f98502b017596008d1acca92d2e4927f92621e19b5aff8a859e",
+      "payouts_hash": "a00fd1c4955b31c897cb884e9ad0c365ac9f9b852f5eeace5310ff768268f271"
+    },
+    {
+      "name": "three payees",
+      "payouts": {
+        "0x00000000000000000000000000000000000000c3": 1,
+        "0x00000000000000000000000000000000000000a1": 5000,
+        "0x00000000000000000000000000000000000000b2": 4999
+      },
+      "salt": "1181ed894e70fc88ea39cf8ee76852acd183cabdb576e730395860d15247d4cc",
+      "payouts_hash": "23380e5697fa480aebeb4dbfa21c55fc292623b53e77893ea4a43cdb0c6ba84e"
+    },
+    {
+      "name": "a large amount",
+      "payouts": {
+        "0x00000000000000000000000000000000000000a1": 9999999999
+      },
+      "salt": "c5f321bd8d8f83657e7a599f32b4b5a2d507a0f07e3f91d02170bb6e08768417",
+      "payouts_hash": "ee1f6b7e3900e4ba36072ef775e1ed9a62f31d3903c725ce246a7bb23a6dbfa4"
+    }
+  ],
+  "same_payouts_different_salt": {
+    "payouts": {
+      "0x00000000000000000000000000000000000000a1": 6300,
+      "0x00000000000000000000000000000000000000b2": 2700
+    },
+    "salt": "b2b6be63b15a32ffd65e8edd3d841ed71e51b9597aa84732d8f8d518e0d1a6c9",
+    "payouts_hash": "831819cb6e18fa4736b84d4e09a9f35021b15960d0f2bd56a60bb4fa42dca560"
+  }
+}

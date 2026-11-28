@@ -1,3 +1,5 @@
+import hashlib
+import inspect
 import json
 import unittest
 from pathlib import Path
@@ -5,6 +7,7 @@ from pathlib import Path
 from eth_utils import keccak
 
 from ekido_core import proofs
+from ekido_core.canonical import canonical_bytes
 from ekido_core.merkle import MerkleError, audit_path, leaf_hash, node_hash, root, verify_audit_path
 
 VECTORS = Path(__file__).resolve().parents[3] / "docs" / "schemas" / "vectors" / "proofs" / "merkle_vectors.json"
@@ -125,28 +128,85 @@ class VectorTests(unittest.TestCase):
 class ProofRecordTests(unittest.TestCase):
     T, V = "a" * 64, "b" * 64
     SPLIT = {"provider-b": 700, "provider-a": 300}
+    SALT = bytes(range(1, 33))  # a fixed salt, for repeatable tests only; real jobs use proofs.new_salt()
 
-    def record(self, job="job-1", split=None):
-        return proofs.proof_record(job, self.T, self.V, split or self.SPLIT)
+    def record(self, job="job-1", split=None, salt=None):
+        return proofs.proof_record(job, self.T, self.V, split or self.SPLIT, salt or self.SALT)
 
     def test_a_record_holds_only_hashes_and_the_job_id(self):
         record = self.record()
         self.assertEqual(set(record), {"kind", "job_id", "terms_hash", "verdict_hash", "payouts_hash"})
         self.assertNotIn("provider", json.dumps(record))  # no payee names, only their split's hash
+        self.assertNotIn(self.SALT.hex(), json.dumps(record))  # and never the salt
 
     def test_the_payout_hash_ignores_dict_order_and_sees_every_change(self):
-        self.assertEqual(proofs.payouts_hash({"b": 2, "a": 1}), proofs.payouts_hash({"a": 1, "b": 2}))
-        base = proofs.payouts_hash({"a": 1, "b": 2})
+        salt = self.SALT
+        self.assertEqual(proofs.payouts_hash({"b": 2, "a": 1}, salt), proofs.payouts_hash({"a": 1, "b": 2}, salt))
+        base = proofs.payouts_hash({"a": 1, "b": 2}, salt)
         for other in ({"a": 2, "b": 1}, {"a": 1, "b": 3}, {"a": 1}, {"a": 1, "c": 2}):
-            self.assertNotEqual(proofs.payouts_hash(other), base)
+            self.assertNotEqual(proofs.payouts_hash(other, salt), base)
+
+    def test_the_same_split_with_another_salt_hashes_differently(self):
+        other = bytes(range(2, 34))
+        self.assertNotEqual(proofs.payouts_hash(self.SPLIT, self.SALT), proofs.payouts_hash(self.SPLIT, other))
+        self.assertEqual(proofs.payouts_hash(self.SPLIT, self.SALT), proofs.payouts_hash(self.SPLIT, bytes(self.SALT)))
+
+    def test_a_customer_who_guesses_the_split_cannot_confirm_it(self):
+        """The attack in core #99: the customer's record, public wallets, and a guessed split. Without the salt the guess cannot be checked."""
+        wallets = ["0x" + f"{n:040x}" for n in range(1, 6)]
+        secret_split = {wallets[2]: 6_300, wallets[4]: 2_700}
+        record = self.record(split=secret_split, salt=proofs.new_salt())
+        unsalted_v1 = hashlib.sha256(canonical_bytes({"kind": "ekido.payouts.v1", "payouts": [[p, secret_split[p]] for p in sorted(secret_split)]})).hexdigest()
+        self.assertNotEqual(record["payouts_hash"], unsalted_v1)  # the old, guessable form no longer matches
+        guesses = [{a: 6_300, b: 2_700} for a in wallets for b in wallets if a != b]
+        for guess in guesses:  # every guess without the salt, including the right one, fails to match
+            for fake_salt in (bytes(range(1, 33)), bytes([255]) * 32):
+                self.assertNotEqual(proofs.payouts_hash(guess, fake_salt), record["payouts_hash"])
+
+    def test_the_shared_vectors_reproduce_with_the_library_and_with_an_independent_reference(self):
+        vec = json.loads((VECTORS.parent / "payouts_vectors.json").read_text(encoding="utf-8"))
+        self.assertEqual(vec["kind"], "ekido.payouts.v2")
+        self.assertGreaterEqual(len(vec["cases"]), 5)
+        for case in vec["cases"]:
+            salt = bytes.fromhex(case["salt"])
+            self.assertEqual(proofs.payouts_hash(case["payouts"], salt), case["payouts_hash"], case["name"])
+            # The rule written out by hand: sha256(salt || canonical JSON), with plain json (ASCII only, keys sorted, no spaces).
+            body = json.dumps({"kind": "ekido.payouts.v2", "payouts": [[p, case["payouts"][p]] for p in sorted(case["payouts"])]}, separators=(",", ":"), sort_keys=True).encode()
+            self.assertEqual(hashlib.sha256(salt + body).hexdigest(), case["payouts_hash"], case["name"])
+        by_name = {c["name"]: c for c in vec["cases"]}
+        self.assertEqual(by_name["two payees"]["payouts_hash"], by_name["two payees, listed in the other order"]["payouts_hash"])
+        other = vec["same_payouts_different_salt"]
+        self.assertEqual(proofs.payouts_hash(other["payouts"], bytes.fromhex(other["salt"])), other["payouts_hash"])
+        self.assertNotEqual(other["payouts_hash"], by_name["two payees"]["payouts_hash"])
+
+    def test_the_salt_is_32_random_bytes_and_new_each_time(self):
+        a, b = proofs.new_salt(), proofs.new_salt()
+        self.assertEqual((len(a), len(b)), (32, 32))
+        self.assertNotEqual(a, b)
+
+    def test_there_is_no_unsalted_form(self):
+        for function in (proofs.payouts_hash, proofs.proof_record):  # the salt is a required argument: it has no default, so no call can leave it out
+            self.assertIs(inspect.signature(function).parameters["salt"].default, inspect.Parameter.empty, function.__name__)
+        for salt in (None, b"", b"short", bytes(31), bytes(33), "a" * 32, 5, bytes(32)):
+            with self.subTest(salt=salt), self.assertRaises(MerkleError):
+                proofs.payouts_hash(self.SPLIT, salt)
+
+    def test_a_paid_provider_or_the_operator_can_check_their_split_with_the_salt(self):
+        record = self.record()
+        self.assertTrue(proofs.verify_payouts(record, self.SPLIT, self.SALT))
+        self.assertFalse(proofs.verify_payouts(record, {"provider-b": 701, "provider-a": 299}, self.SALT))
+        self.assertFalse(proofs.verify_payouts(record, self.SPLIT, bytes(range(2, 34))))
+        for junk in ({}, None, {"payouts_hash": 5}):
+            self.assertFalse(proofs.verify_payouts(junk, self.SPLIT, self.SALT))
+        self.assertFalse(proofs.verify_payouts(record, self.SPLIT, b"short"))
 
     def test_bad_inputs_are_refused(self):
         for split in ({}, None, {"a": 0}, {"a": -1}, {"a": 1.5}, {"": 5}, {"a": True and "1"}):
             with self.subTest(split=split), self.assertRaises(MerkleError):
-                proofs.payouts_hash(split)
+                proofs.payouts_hash(split, self.SALT)
         for job, terms, verdict in (("", self.T, self.V), ("j", "A" * 64, self.V), ("j", self.T, "b" * 63), ("j", None, self.V), (None, self.T, self.V)):
             with self.subTest(job=job, terms=terms), self.assertRaises(MerkleError):
-                proofs.proof_record(job, terms, verdict, self.SPLIT)
+                proofs.proof_record(job, terms, verdict, self.SPLIT, self.SALT)
         with self.assertRaises(MerkleError):
             proofs.record_bytes({"kind": "other"})
         with self.assertRaises(MerkleError):
@@ -162,7 +222,7 @@ class ProofRecordTests(unittest.TestCase):
             self.assertFalse(proofs.verify_proof(proof, "0x" + "00" * 32))
         proof = proofs.prove(records, 3)
         tampered = json.loads(json.dumps(proof))
-        tampered["record"]["payouts_hash"] = proofs.payouts_hash({"p": 999})
+        tampered["record"]["payouts_hash"] = proofs.payouts_hash({"p": 999}, self.SALT)
         self.assertFalse(proofs.verify_proof(tampered, top.hex()))
         swapped = json.loads(json.dumps(proof)); swapped["index"] = 4
         self.assertFalse(proofs.verify_proof(swapped, top.hex()))
