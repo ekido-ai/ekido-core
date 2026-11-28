@@ -6,6 +6,11 @@ All notable changes to this project are recorded here. The format follows [Keep 
 
 ### Changed
 
+- **`payouts_hash` in a proof record is now salted (core #99).** `proofs.payouts_hash(payouts, salt)` and `proofs.proof_record(..., payouts, salt)` take a 32-byte random salt (`proofs.new_salt()`), and there is no unsalted form.
+  - Why: provider wallets are public and the split follows from the price, so a customer holding their record could hash guessed splits until one matched and learn which providers trained their job.
+  - The hash is `sha256(salt || canonical({kind: "ekido.payouts.v2", payouts}))`. The salt is not in the record. Give it, and the split, only to the paid providers and the operator.
+  - New: `proofs.verify_payouts(record, payouts, salt)`, and known-answer vectors in `docs/schemas/vectors/proofs/payouts_vectors.json`.
+  - Callers must pass a salt and store it beside the proof: the Coordinator's batcher does not yet (it needs a column and a migration).
 - **Renamed the project from GPUChain to Ekido.**
   - The Python packages are now `ekido_core`, `ekido_coordinator`, `ekido_agent`, `ekido_runtime` and `ekido_verifier`.
   - Environment variables use the `EKIDO_` prefix.
