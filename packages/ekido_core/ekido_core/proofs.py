@@ -1,4 +1,4 @@
-﻿"""A job's public proof (ticket C25): its terms, its quality verdict and its payout split, fingerprinted.
+"""A job's public proof (ticket C25): its terms, its quality verdict and its payout split, fingerprinted.
 
 Every paid job leaves one proof record. The record holds only hashes, never the data or any name: the quote's
 `terms_hash`, the `verdict_hash` (the hash of the signed verdict) and `payouts_hash` (the payout split, sorted by payee,
