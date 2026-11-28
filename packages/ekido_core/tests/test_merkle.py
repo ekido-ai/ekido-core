@@ -1,4 +1,5 @@
 import hashlib
+import inspect
 import json
 import unittest
 from pathlib import Path
@@ -184,10 +185,8 @@ class ProofRecordTests(unittest.TestCase):
         self.assertNotEqual(a, b)
 
     def test_there_is_no_unsalted_form(self):
-        with self.assertRaises(TypeError):
-            proofs.payouts_hash(self.SPLIT)  # type: ignore[call-arg]
-        with self.assertRaises(TypeError):
-            proofs.proof_record("j", self.T, self.V, self.SPLIT)  # type: ignore[call-arg]
+        for function in (proofs.payouts_hash, proofs.proof_record):  # the salt is a required argument: it has no default, so no call can leave it out
+            self.assertIs(inspect.signature(function).parameters["salt"].default, inspect.Parameter.empty, function.__name__)
         for salt in (None, b"", b"short", bytes(31), bytes(33), "a" * 32, 5, bytes(32)):
             with self.subTest(salt=salt), self.assertRaises(MerkleError):
                 proofs.payouts_hash(self.SPLIT, salt)
